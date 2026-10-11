@@ -42,6 +42,9 @@ jobs:
           --health-timeout 5s
           --health-retries 10
     env:
+      # prisma validate 需要解析 schema 中的 env("DATABASE_URL")（P1012），
+      # CI 无 .env 文件，这里指向本 job 的 Postgres 服务容器（validate 不建连接）
+      DATABASE_URL: postgresql://teamup:teamup_dev@127.0.0.1:5432/teamup_test?schema=public
       TEST_DATABASE_URL: postgresql://teamup:teamup_dev@127.0.0.1:5432/teamup_test?schema=public
       REDIS_URL: redis://127.0.0.1:6379
     steps:
