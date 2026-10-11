@@ -60,7 +60,7 @@
 
 **平台能力**
 
-- 双登录：邮箱验证码（首次即注册）+ 密码。本地开发走 console provider（验证码进日志 / dev 模式响应回显）；**生产环境禁止 console provider 启动**，必须配置真实 SMTP——见 [路线图](#路线图)
+- 双登录：邮箱验证码（首次即注册）+ 密码。本地开发走 console provider（验证码进日志 / dev 模式响应回显）；生产走 QQ 邮箱 SMTP 真实发信，且禁止 console provider 启动。发码自带配额（60s 冷却 / 同邮箱日 5 次 / 同 IP 日 20 次 / 全局分钟 10 封 / 全局每日默认 200 封，`MAIL_GLOBAL_DAILY_LIMIT` 可调），每次发送（成功或失败）落 `MailLog` 供排查——见 [路线图](#路线图)
 - **反馈渠道**（2026-09-27）：导航栏「功能问题反馈」（自动附页面路径）+ 竞赛详情页「竞赛信息反馈」（自动附竞赛名快照）双入口，游客可提交；后台按日期查看并导出单日反馈 JSON
 - 管理后台：竞赛编辑、竞赛自定义字段、来源 / 异常、纠错处理台、版本回滚、公告、举报、用户管理、反馈管理；CONTRIBUTOR（贡献者）角色可参与竞赛共建（编辑竞赛 / 维护补充字段，修改留痕可回滚），普通用户权限不变
 - 品牌视觉：校徽深蓝 `#0F4C8C` + 银杏黄 `#F5B901` 玻璃拟态设计系统
@@ -69,7 +69,7 @@
 
 | 层 | 选型 |
 |---|---|
-| 后端 | NestJS 10 · Prisma 5 · PostgreSQL 16（pg_trgm 模糊搜索）· Redis 7（会话 / 验证码 / cron 防重入锁） |
+| 后端 | NestJS 10 · Prisma 5 · PostgreSQL 16（pg_trgm 模糊搜索）· Redis 7（会话 / 验证码 / 发码配额 / cron 防重入锁）· nodemailer（QQ SMTP） |
 | 前端 | Vue 3 · Vite 5 · Pinia · Vue Router · Element Plus · UnoCSS · FullCalendar |
 | 共享 | `packages/shared`：前后端枚举与类型单一来源（与 [docs/FIELDS.md](./docs/FIELDS.md) 对齐） |
 | 工程 | pnpm workspace 单体 monorepo · TypeScript 5 · `node:test`（tsx 直跑） |
@@ -156,7 +156,7 @@ pnpm dev:web -- --host   # vite 暴露到局域网，手机连同一 Wi-Fi 访�
 
 ### 演示账号（种子数据）
 
-演示用户的初始密码取自环境变量 `SEED_ADMIN_PASSWORD`（未设置则不写入密码，此时走邮箱验证码登录——**本阶段验证码从服务端日志获取**，登录后在「个人中心」设置密码）。
+演示用户的初始密码取自环境变量 `SEED_ADMIN_PASSWORD`（未设置则不写入密码，此时走邮箱验证码登录——本地开发从服务端日志 / dev 回显取码，登录后在「个人中心」设置密码）。
 
 ```bash
 SEED_ADMIN_PASSWORD='<自定义强密码>' pnpm db:seed
@@ -166,11 +166,11 @@ SEED_ADMIN_PASSWORD='<自定义强密码>' pnpm db:seed
 |---|---|
 | `2024080909015@std.uestc.edu.cn` | 管理员，登录后进 `/admin` 后台 |
 | `2024080909000@std.uestc.edu.cn` | 普通测试用户 |
-| 其余 4 个演示用户 | 未设密码，用验证码登录（本阶段从服务端日志取码）后在「个人中心」设置密码 |
+| 其余 4 个演示用户 | 未设密码，用验证码登录（本地开发从日志 / dev 回显取码）后在「个人中心」设置密码 |
 
 > 该 seed 脚本会**清空全库**再写入。`NODE_ENV=production` 时默认拒绝执行，确需在生产执行须显式设置 `ALLOW_PROD_SEED=true`。
 
-**邮件发信说明**：本地开发默认 `MAIL_PROVIDER=console`，验证码打印到后端控制台，dev 模式另随响应 `dev.devCode` 回显（生产环境不回显）。**生产环境（`NODE_ENV=production`）下 console provider 会被拒绝启动**——验证码等价登录凭据，不能落日志兜底；生产部署必须配置 `MAIL_PROVIDER=qq` 及 SMTP 授权码——见 [生产部署](#生产部署)。
+**邮件发信说明**：本地开发默认 `MAIL_PROVIDER=console`，验证码打印到后端控制台，dev 模式另随响应 `dev.devCode` 回显（生产环境不回显）。生产走 `QqSmtpProvider`（nodemailer + `smtp.qq.com:465` SSL，含连接超时与启动时异步连接自检）——**生产环境（`NODE_ENV=production`）下 console provider 会被拒绝启动**，且配置 `qq` 但缺 SMTP 凭据同样拒绝启动（验证码等价登录凭据，不能落日志兜底）。**每次发送无论成败都会写入 `MailLog`**（收件人 / 类型 / 状态 / 失败原因），可用于排查「同学为什么没收到验证码」——见 [生产部署](#生产部署)。
 
 ## 常用命令
 
@@ -207,7 +207,7 @@ docker compose exec api npx prisma migrate deploy
 - 内存预算（2C2G）：PG `shared_buffers=256MB`（`deploy/pg.conf`）、API 限 320M、Redis 48M、nginx 64M
 - `WEB_ORIGIN`：后端 CORS 白名单，必须设为真实对外域名（如 `https://teamup.example.edu.cn`），否则线上恒回退 `localhost` 导致跨域请求被拒
 - HTTPS：nginx 当前仅监听 80；启用 TLS 请取消 `deploy/nginx.conf` 中 443 server 块的注释、填入证书路径，并**同时**把 `.env` 的 `COOKIE_SECURE` 设为 `true`（保持 `false` 会让浏览器拒收 Secure cookie，登录直接失效）。国内服务器 + 域名需 **ICP 备案**
-- 邮件发信：**生产必须配置 `MAIL_PROVIDER=qq` + QQ 邮箱 16 位 SMTP 授权码**（个人邮箱有每日发信限额，上线前实测送达率）；`NODE_ENV=production` 时后端拒绝以 console provider 启动（验证码仅进日志等同账号登录凭据，安全收敛见 `docs/UESTC-TeamUp_main_issues.md` A2）
+- 邮件发信：**生产必须配置 `MAIL_PROVIDER=qq` + QQ 邮箱 16 位 SMTP 授权码**（个人邮箱有每日发信限额，上线前实测送达率）；`NODE_ENV=production` 时后端拒绝以 console provider 启动，且 `qq` 模式缺凭据同样拒绝启动（安全收敛见 `docs/UESTC-TeamUp_main_issues.md` A2）。可选环境变量：`MAIL_FROM_NAME`（发件人显示名）、`MAIL_GLOBAL_DAILY_LIMIT`（全局每日上限，默认 200）；发信记录见 `MailLog` 表
 
 ## 文档索引
 
@@ -236,8 +236,8 @@ docker compose exec api npx prisma migrate deploy
 - ✅ **P1 平台地基**：注册登录（验证码 / 密码）、竞赛雷达、组队状态机、管理后台、DDL 提醒
 - ✅ **P2 自动采集**：crawler 子系统合入 main——竞赛官网预设、多源优先级防覆盖、externalId 去重
 - ✅ **2026-09-27 产品迭代**（[ISSUES_PRODUCT_FIXES.md](./docs/ISSUES_PRODUCT_FIXES.md)）：组队意愿（意愿解锁联系方式 + 聚合通知）、公开可见性收敛（仅「招募中」）、竞赛届次 `year`、CONTRIBUTOR 共建 + 自定义字段、反馈双入口 + 单日导出、移除接口级限流；同步落定隐私口径（学号仅登录可见）与生产邮件安全守卫（[问题清单](./docs/UESTC-TeamUp_main_issues.md) A1/A2/A3/B1-B5）
-- 🔜 **真实邮件发送**：本地开发仍走 console provider（验证码进日志便于联调）；**生产环境已禁止 console provider 启动**，部署必须配置 `MAIL_PROVIDER=qq` 及 SMTP 授权码
-- 🔜 **人机验证替代限流**：2026-09-27 已按产品决策移除全部接口级 / 业务级限流（见 `docs/ISSUES_PRODUCT_FIXES.md` Issue 3），后续如出现滥用需补图形验证码 / 人机验证
+- ✅ **真实邮件发送**（2026-10-11）：`QqSmtpProvider` 实装（nodemailer + `smtp.qq.com:465` SSL、超时保护、启动自检）；每次发送落 `MailLog`；发码恢复最小配额（冷却 / 同邮箱 / 同 IP / 全局分钟 / 全局每日）作为去限流的替代防护；生产启动强制校验 SMTP 凭据。**剩余待办：真实送达率实测（5–10 位同学收信 / 垃圾箱）**
+- 🔜 **人机验证替代限流**：2026-09-27 按产品决策移除了其余接口级 / 业务级限流（见 `docs/ISSUES_PRODUCT_FIXES.md` Issue 3）；**发码配额已于 2026-10-11 随真实 SMTP 恢复**，其余入口如出现滥用再补图形验证码 / 人机验证
 - 💤 **智能匹配**：冷启动期数据密度不足，P3 再评估
 
 ## 数据与素材说明

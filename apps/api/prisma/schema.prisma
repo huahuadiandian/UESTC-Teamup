@@ -615,7 +615,8 @@ model Report {
   @@index([handled, createdAt])
 }
 
-// 发信日志（邮件留空，暂不写入）
+// 发信日志：MailService 每次发送（成功/失败）都落一条，用于排查「某邮箱为什么没收到验证码」
+// kind 取值见 auth 流程（LOGIN_CODE / RESET_CODE，后续 DDL 提醒可扩展）；status 为 SENT / FAILED
 model MailLog {
   id     String  @id @default(cuid())
   to     String
@@ -623,6 +624,8 @@ model MailLog {
   status String
   error  String?
   sentAt DateTime @default(now())
+
+  @@index([to, sentAt])
 }
 
 // 封禁记录（管理后台用）

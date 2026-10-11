@@ -12,19 +12,19 @@ importers:
     dependencies:
       '@nestjs/common':
         specifier: ^10.4.15
-        version: 10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)
+        version: 10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@8.1.1)
       '@nestjs/config':
         specifier: ^3.3.0
-        version: 3.3.0(@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2))(rxjs@7.8.2)
+        version: 3.3.0(@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@8.1.1))(rxjs@7.8.2)
       '@nestjs/core':
         specifier: ^10.4.15
-        version: 10.4.22(@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/platform-express@10.4.22)(reflect-metadata@0.2.2)(rxjs@7.8.2)
+        version: 10.4.22(@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@8.1.1))(@nestjs/platform-express@10.4.22)(reflect-metadata@0.2.2)(rxjs@7.8.2)
       '@nestjs/platform-express':
         specifier: ^10.4.15
-        version: 10.4.22(@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@10.4.22)
+        version: 10.4.22(@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@8.1.1))(@nestjs/core@10.4.22)(supports-color@8.1.1)
       '@nestjs/schedule':
         specifier: ^4.1.2
-        version: 4.1.2(@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@10.4.22)
+        version: 4.1.2(@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@8.1.1))(@nestjs/core@10.4.22)
       '@prisma/client':
         specifier: ^5.22.0
         version: 5.22.0(prisma@5.22.0)
@@ -42,7 +42,10 @@ importers:
         version: 1.4.7
       ioredis:
         specifier: ^5.4.2
-        version: 5.11.1
+        version: 5.11.1(supports-color@8.1.1)
+      nodemailer:
+        specifier: ^10.1.0
+        version: 10.1.0
       prisma:
         specifier: ^5.22.0
         version: 5.22.0
@@ -55,7 +58,7 @@ importers:
     devDependencies:
       '@nestjs/cli':
         specifier: ^10.4.9
-        version: 10.4.9
+        version: 10.4.9(esbuild@0.28.2)(postcss@8.5.28)
       '@types/cookie-parser':
         specifier: ^1.4.8
         version: 1.4.10(@types/express@5.0.6)
@@ -65,6 +68,9 @@ importers:
       '@types/node':
         specifier: ^22.10.2
         version: 22.20.3
+      '@types/nodemailer':
+        specifier: ^8.0.2
+        version: 8.0.2
       tsx:
         specifier: ^4.19.2
         version: 4.23.13
@@ -125,13 +131,13 @@ importers:
         version: 5.6.3
       unocss:
         specifier: ^0.65.3
-        version: 0.65.4(postcss@8.5.28)(rollup@4.63.3)(vite@5.4.21(@types/node@22.20.3)(terser@5.51.2))(vue@3.5.43(typescript@5.6.3))
+        version: 0.65.4(postcss@8.5.28)(rollup@4.63.3)(supports-color@8.1.1)(vite@5.4.21(@types/node@22.20.3)(terser@5.51.2))(vue@3.5.43(typescript@5.6.3))
       unplugin-auto-import:
         specifier: ^0.19.0
         version: 0.19.0(@vueuse/core@14.4.0(vue@3.5.43(typescript@5.6.3)))(rollup@4.63.3)
       unplugin-vue-components:
         specifier: ^0.28.0
-        version: 0.28.0(@babel/parser@7.29.8)(rollup@4.63.3)(vue@3.5.43(typescript@5.6.3))
+        version: 0.28.0(@babel/parser@7.29.8)(rollup@4.63.3)(supports-color@8.1.1)(vue@3.5.43(typescript@5.6.3))
       vite:
         specifier: ^5.4.11
         version: 5.4.21(@types/node@22.20.3)(terser@5.51.2)
@@ -1072,6 +1078,9 @@ packages:
   '@types/node@22.20.3':
     resolution: {integrity: sha512-DZmzkmwHzXrLPAXPyKNDzlIwMMUZCVacoD25ywdy5YTKGbOx/2ld+Q38Im2zJ0vBuZP5Prd3VZutKZyXwkOS8A==}
 
+  '@types/nodemailer@8.0.2':
+    resolution: {integrity: sha512-c7M5ox8p0nEOfbJ2E9Qcmt8/QCu/VzsiAhzBiZbvky2PhKZDHpKB3sQHBM5MEZNkCfBOaS6S9//AGPRTNB7IaA==}
+
   '@types/qs@6.15.1':
     resolution: {integrity: sha512-GZHUBZR9hckSUhrxmp1nG6NwdpM9fCunJwyThLW1X3AyHgd9IlHb6VANpQQqDr2o/qQp6McZ3y/IA2rVzKzSbw==}
 
@@ -1185,6 +1194,11 @@ packages:
 
   '@volar/typescript@2.4.15':
     resolution: {integrity: sha512-2aZ8i0cqPGjXb4BhkMsPYDkkuc2ZQ6yOpqwAuNwUoncELqoy5fRgOQtLR9gB0g902iS0NAkvpIzs27geVyVdPg==}
+    peerDependencies:
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   '@vue/compiler-core@3.5.43':
     resolution: {integrity: sha512-zdiLhnbe1QQqgDT8xZMpNmyqZ3qlI+/Q/FHQco57Kwl/b05HhCzN6eVGN9QU9rbga4CrS0H5SYY8VGHZCt/1Hg==}
@@ -1302,19 +1316,9 @@ packages:
 
   ajv-formats@2.1.1:
     resolution: {integrity: sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==}
-    peerDependencies:
-      ajv: ^8.0.0
-    peerDependenciesMeta:
-      ajv:
-        optional: true
 
   ajv-formats@3.0.1:
     resolution: {integrity: sha512-8iUql50EUR+uUcdRQ3HDqa6EVyo3docL8g5WJ3FNcWmu62IbkGUue/pEyLBW8VGKKucTPgqeks4fIU1DA4yowQ==}
-    peerDependencies:
-      ajv: ^8.0.0
-    peerDependenciesMeta:
-      ajv:
-        optional: true
 
   ajv-keywords@3.5.2:
     resolution: {integrity: sha512-5p6WTN0DdTGVQk6VjcEju19IgaHudalcfabD7yhDGeA6bcQnmL+CpveLJq/3hvfwd1aof6L386Ougkx6RfyMIQ==}
@@ -2265,6 +2269,10 @@ packages:
     resolution: {integrity: sha512-x0InOIyzgdk+eyaWaRJFH5snEtiImgBgblZ2CyPrLmqqcuMQkEvcDPHbzqbD8eDsSeJbVOjn+crzyzHaM4D+/A==}
     engines: {node: '>=18'}
 
+  nodemailer@10.1.0:
+    resolution: {integrity: sha512-fXW8AulB25aOTuwfRYV6lqHyfz2VM4rr4SGXH03mE7x5znEUpzL5mu6anARUpZN7744Ziwkmr4AxSLPJsBQspg==}
+    engines: {node: '>=20.0.0'}
+
   normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
@@ -3001,7 +3009,7 @@ snapshots:
   '@angular-devkit/core@17.3.11(chokidar@3.6.0)':
     dependencies:
       ajv: 8.12.0
-      ajv-formats: 2.1.1(ajv@8.12.0)
+      ajv-formats: 2.1.1
       jsonc-parser: 3.2.1
       picomatch: 4.0.1
       rxjs: 7.8.1
@@ -3332,12 +3340,12 @@ snapshots:
 
   '@iconify/types@2.0.0': {}
 
-  '@iconify/utils@2.3.0':
+  '@iconify/utils@2.3.0(supports-color@8.1.1)':
     dependencies:
       '@antfu/install-pkg': 1.1.0
       '@antfu/utils': 8.1.1
       '@iconify/types': 2.0.0
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@8.1.1)
       globals: 15.15.0
       kolorist: 1.8.0
       local-pkg: 1.2.1
@@ -3389,7 +3397,7 @@ snapshots:
   '@napi-rs/lzma-linux-x64-gnu@1.5.1':
     optional: true
 
-  '@nestjs/cli@10.4.9':
+  '@nestjs/cli@10.4.9(esbuild@0.28.2)(postcss@8.5.28)':
     dependencies:
       '@angular-devkit/core': 17.3.11(chokidar@3.6.0)
       '@angular-devkit/schematics': 17.3.11(chokidar@3.6.0)
@@ -3399,7 +3407,7 @@ snapshots:
       chokidar: 3.6.0
       cli-table3: 0.6.5
       commander: 4.1.1
-      fork-ts-checker-webpack-plugin: 9.0.2(typescript@5.7.2)(webpack@5.97.1)
+      fork-ts-checker-webpack-plugin: 9.0.2(typescript@5.7.2)(webpack@5.97.1(esbuild@0.28.2)(postcss@8.5.28))
       glob: 10.4.5
       inquirer: 8.2.6
       node-emoji: 1.11.0
@@ -3408,7 +3416,7 @@ snapshots:
       tsconfig-paths: 4.2.0
       tsconfig-paths-webpack-plugin: 4.2.0
       typescript: 5.7.2
-      webpack: 5.97.1
+      webpack: 5.97.1(esbuild@0.28.2)(postcss@8.5.28)
       webpack-node-externals: 3.0.0
     transitivePeerDependencies:
       - '@minify-html/node'
@@ -3424,9 +3432,9 @@ snapshots:
       - uglify-js
       - webpack-cli
 
-  '@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)':
+  '@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@8.1.1)':
     dependencies:
-      file-type: 20.4.1
+      file-type: 20.4.1(supports-color@8.1.1)
       iterare: 1.2.1
       reflect-metadata: 0.2.2
       rxjs: 7.8.2
@@ -3438,17 +3446,17 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@nestjs/config@3.3.0(@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2))(rxjs@7.8.2)':
+  '@nestjs/config@3.3.0(@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@8.1.1))(rxjs@7.8.2)':
     dependencies:
-      '@nestjs/common': 10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)
+      '@nestjs/common': 10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@8.1.1)
       dotenv: 16.4.5
       dotenv-expand: 10.0.0
       lodash: 4.17.21
       rxjs: 7.8.2
 
-  '@nestjs/core@10.4.22(@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/platform-express@10.4.22)(reflect-metadata@0.2.2)(rxjs@7.8.2)':
+  '@nestjs/core@10.4.22(@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@8.1.1))(@nestjs/platform-express@10.4.22)(reflect-metadata@0.2.2)(rxjs@7.8.2)':
     dependencies:
-      '@nestjs/common': 10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)
+      '@nestjs/common': 10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@8.1.1)
       '@nuxtjs/opencollective': 0.3.2
       fast-safe-stringify: 2.1.1
       iterare: 1.2.1
@@ -3458,26 +3466,26 @@ snapshots:
       tslib: 2.8.1
       uid: 2.0.2
     optionalDependencies:
-      '@nestjs/platform-express': 10.4.22(@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@10.4.22)
+      '@nestjs/platform-express': 10.4.22(@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@8.1.1))(@nestjs/core@10.4.22)(supports-color@8.1.1)
     transitivePeerDependencies:
       - encoding
 
-  '@nestjs/platform-express@10.4.22(@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@10.4.22)':
+  '@nestjs/platform-express@10.4.22(@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@8.1.1))(@nestjs/core@10.4.22)(supports-color@8.1.1)':
     dependencies:
-      '@nestjs/common': 10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)
-      '@nestjs/core': 10.4.22(@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/platform-express@10.4.22)(reflect-metadata@0.2.2)(rxjs@7.8.2)
-      body-parser: 1.20.4
+      '@nestjs/common': 10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@8.1.1)
+      '@nestjs/core': 10.4.22(@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@8.1.1))(@nestjs/platform-express@10.4.22)(reflect-metadata@0.2.2)(rxjs@7.8.2)
+      body-parser: 1.20.4(supports-color@8.1.1)
       cors: 2.8.5
-      express: 4.22.1
+      express: 4.22.1(supports-color@8.1.1)
       multer: 2.0.2
       tslib: 2.8.1
     transitivePeerDependencies:
       - supports-color
 
-  '@nestjs/schedule@4.1.2(@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@10.4.22)':
+  '@nestjs/schedule@4.1.2(@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@8.1.1))(@nestjs/core@10.4.22)':
     dependencies:
-      '@nestjs/common': 10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)
-      '@nestjs/core': 10.4.22(@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/platform-express@10.4.22)(reflect-metadata@0.2.2)(rxjs@7.8.2)
+      '@nestjs/common': 10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@8.1.1)
+      '@nestjs/core': 10.4.22(@nestjs/common@10.4.22(class-transformer@0.5.1)(class-validator@0.14.4)(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@8.1.1))(@nestjs/platform-express@10.4.22)(reflect-metadata@0.2.2)(rxjs@7.8.2)
       cron: 3.2.1
       uuid: 11.0.3
 
@@ -3627,9 +3635,9 @@ snapshots:
 
   '@sxzz/popperjs-es@2.11.8': {}
 
-  '@tokenizer/inflate@0.2.7':
+  '@tokenizer/inflate@0.2.7(supports-color@8.1.1)':
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@8.1.1)
       fflate: 0.8.3
       token-types: 6.1.2
     transitivePeerDependencies:
@@ -3700,6 +3708,10 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
+  '@types/nodemailer@8.0.2':
+    dependencies:
+      '@types/node': 22.20.3
+
   '@types/qs@6.15.1': {}
 
   '@types/range-parser@1.2.7': {}
@@ -3717,11 +3729,11 @@ snapshots:
 
   '@types/web-bluetooth@0.0.21': {}
 
-  '@unocss/astro@0.65.4(rollup@4.63.3)(vite@5.4.21(@types/node@22.20.3)(terser@5.51.2))(vue@3.5.43(typescript@5.6.3))':
+  '@unocss/astro@0.65.4(rollup@4.63.3)(supports-color@8.1.1)(vite@5.4.21(@types/node@22.20.3)(terser@5.51.2))(vue@3.5.43(typescript@5.6.3))':
     dependencies:
       '@unocss/core': 0.65.4
       '@unocss/reset': 0.65.4
-      '@unocss/vite': 0.65.4(rollup@4.63.3)(vite@5.4.21(@types/node@22.20.3)(terser@5.51.2))(vue@3.5.43(typescript@5.6.3))
+      '@unocss/vite': 0.65.4(rollup@4.63.3)(supports-color@8.1.1)(vite@5.4.21(@types/node@22.20.3)(terser@5.51.2))(vue@3.5.43(typescript@5.6.3))
     optionalDependencies:
       vite: 5.4.21(@types/node@22.20.3)(terser@5.51.2)
     transitivePeerDependencies:
@@ -3729,11 +3741,11 @@ snapshots:
       - supports-color
       - vue
 
-  '@unocss/cli@0.65.4(rollup@4.63.3)':
+  '@unocss/cli@0.65.4(rollup@4.63.3)(supports-color@8.1.1)':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@rollup/pluginutils': 5.4.0(rollup@4.63.3)
-      '@unocss/config': 0.65.4
+      '@unocss/config': 0.65.4(supports-color@8.1.1)
       '@unocss/core': 0.65.4
       '@unocss/preset-uno': 0.65.4
       cac: 6.7.14
@@ -3748,10 +3760,10 @@ snapshots:
       - rollup
       - supports-color
 
-  '@unocss/config@0.65.4':
+  '@unocss/config@0.65.4(supports-color@8.1.1)':
     dependencies:
       '@unocss/core': 0.65.4
-      unconfig: 0.6.1
+      unconfig: 0.6.1(supports-color@8.1.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -3772,9 +3784,9 @@ snapshots:
     transitivePeerDependencies:
       - vue
 
-  '@unocss/postcss@0.65.4(postcss@8.5.28)':
+  '@unocss/postcss@0.65.4(postcss@8.5.28)(supports-color@8.1.1)':
     dependencies:
-      '@unocss/config': 0.65.4
+      '@unocss/config': 0.65.4(supports-color@8.1.1)
       '@unocss/core': 0.65.4
       '@unocss/rule-utils': 0.65.4
       css-tree: 3.2.1
@@ -3787,9 +3799,9 @@ snapshots:
     dependencies:
       '@unocss/core': 0.65.4
 
-  '@unocss/preset-icons@0.65.4':
+  '@unocss/preset-icons@0.65.4(supports-color@8.1.1)':
     dependencies:
-      '@iconify/utils': 2.3.0
+      '@iconify/utils': 2.3.0(supports-color@8.1.1)
       '@unocss/core': 0.65.4
       ofetch: 1.5.1
     transitivePeerDependencies:
@@ -3853,11 +3865,11 @@ snapshots:
     dependencies:
       '@unocss/core': 0.65.4
 
-  '@unocss/vite@0.65.4(rollup@4.63.3)(vite@5.4.21(@types/node@22.20.3)(terser@5.51.2))(vue@3.5.43(typescript@5.6.3))':
+  '@unocss/vite@0.65.4(rollup@4.63.3)(supports-color@8.1.1)(vite@5.4.21(@types/node@22.20.3)(terser@5.51.2))(vue@3.5.43(typescript@5.6.3))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@rollup/pluginutils': 5.4.0(rollup@4.63.3)
-      '@unocss/config': 0.65.4
+      '@unocss/config': 0.65.4(supports-color@8.1.1)
       '@unocss/core': 0.65.4
       '@unocss/inspector': 0.65.4(vue@3.5.43(typescript@5.6.3))
       chokidar: 3.6.0
@@ -3880,11 +3892,13 @@ snapshots:
 
   '@volar/source-map@2.4.15': {}
 
-  '@volar/typescript@2.4.15':
+  '@volar/typescript@2.4.15(typescript@5.6.3)':
     dependencies:
       '@volar/language-core': 2.4.15
       path-browserify: 1.0.1
       vscode-uri: 3.2.0
+    optionalDependencies:
+      typescript: 5.6.3
 
   '@vue/compiler-core@3.5.43':
     dependencies:
@@ -4060,12 +4074,12 @@ snapshots:
 
   acorn@8.18.0: {}
 
-  ajv-formats@2.1.1(ajv@8.12.0):
-    optionalDependencies:
+  ajv-formats@2.1.1:
+    dependencies:
       ajv: 8.12.0
 
-  ajv-formats@3.0.1(ajv@8.20.0):
-    optionalDependencies:
+  ajv-formats@3.0.1:
+    dependencies:
       ajv: 8.20.0
 
   ajv-keywords@3.5.2(ajv@6.15.0):
@@ -4147,11 +4161,11 @@ snapshots:
       inherits: 2.0.4
       readable-stream: 3.6.2
 
-  body-parser@1.20.4:
+  body-parser@1.20.4(supports-color@8.1.1):
     dependencies:
       bytes: 3.1.2
       content-type: 1.0.5
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@8.1.1)
       depd: 2.0.0
       destroy: 1.2.0
       http-errors: 2.0.1
@@ -4369,13 +4383,17 @@ snapshots:
 
   de-indent@1.0.2: {}
 
-  debug@2.6.9:
+  debug@2.6.9(supports-color@8.1.1):
     dependencies:
       ms: 2.0.0
+    optionalDependencies:
+      supports-color: 8.1.1
 
-  debug@4.4.3:
+  debug@4.4.3(supports-color@8.1.1):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 8.1.1
 
   deepmerge@4.3.1: {}
 
@@ -4582,21 +4600,21 @@ snapshots:
 
   events@3.3.0: {}
 
-  express@4.22.1:
+  express@4.22.1(supports-color@8.1.1):
     dependencies:
       accepts: 1.3.8
       array-flatten: 1.1.1
-      body-parser: 1.20.4
+      body-parser: 1.20.4(supports-color@8.1.1)
       content-disposition: 0.5.4
       content-type: 1.0.5
       cookie: 0.7.2
       cookie-signature: 1.0.7
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@8.1.1)
       depd: 2.0.0
       encodeurl: 2.0.0
       escape-html: 1.0.3
       etag: 1.8.1
-      finalhandler: 1.3.2
+      finalhandler: 1.3.2(supports-color@8.1.1)
       fresh: 0.5.2
       http-errors: 2.0.1
       merge-descriptors: 1.0.3
@@ -4608,8 +4626,8 @@ snapshots:
       qs: 6.14.2
       range-parser: 1.2.1
       safe-buffer: 5.2.1
-      send: 0.19.2
-      serve-static: 1.16.3
+      send: 0.19.2(supports-color@8.1.1)
+      serve-static: 1.16.3(supports-color@8.1.1)
       setprototypeof: 1.2.0
       statuses: 2.0.2
       type-is: 1.6.18
@@ -4656,9 +4674,9 @@ snapshots:
     dependencies:
       escape-string-regexp: 1.0.5
 
-  file-type@20.4.1:
+  file-type@20.4.1(supports-color@8.1.1):
     dependencies:
-      '@tokenizer/inflate': 0.2.7
+      '@tokenizer/inflate': 0.2.7(supports-color@8.1.1)
       strtok3: 10.3.5
       token-types: 6.1.2
       uint8array-extras: 1.5.0
@@ -4669,9 +4687,9 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  finalhandler@1.3.2:
+  finalhandler@1.3.2(supports-color@8.1.1):
     dependencies:
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@8.1.1)
       encodeurl: 2.0.0
       escape-html: 1.0.3
       on-finished: 2.4.1
@@ -4686,7 +4704,7 @@ snapshots:
       cross-spawn: 7.0.6
       signal-exit: 4.1.0
 
-  fork-ts-checker-webpack-plugin@9.0.2(typescript@5.7.2)(webpack@5.97.1):
+  fork-ts-checker-webpack-plugin@9.0.2(typescript@5.7.2)(webpack@5.97.1(esbuild@0.28.2)(postcss@8.5.28)):
     dependencies:
       '@babel/code-frame': 7.29.7
       chalk: 4.1.2
@@ -4701,7 +4719,7 @@ snapshots:
       semver: 7.8.5
       tapable: 2.3.3
       typescript: 5.7.2
-      webpack: 5.97.1
+      webpack: 5.97.1(esbuild@0.28.2)(postcss@8.5.28)
 
   forwarded@0.2.0: {}
 
@@ -4798,10 +4816,10 @@ snapshots:
       parent-module: 1.0.1
       resolve-from: 4.0.0
 
-  importx@0.5.2:
+  importx@0.5.2(supports-color@8.1.1):
     dependencies:
       bundle-require: 5.1.0(esbuild@0.25.12)
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@8.1.1)
       esbuild: 0.25.12
       jiti: 2.7.0
       pathe: 2.0.3
@@ -4847,11 +4865,11 @@ snapshots:
       strip-ansi: 6.0.1
       wrap-ansi: 6.2.0
 
-  ioredis@5.11.1:
+  ioredis@5.11.1(supports-color@8.1.1):
     dependencies:
       '@ioredis/commands': 1.10.0
       cluster-key-slot: 1.1.1
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@8.1.1)
       denque: 2.1.0
       redis-errors: 1.2.0
       redis-parser: 3.0.0
@@ -5089,6 +5107,8 @@ snapshots:
       whatwg-url: 5.0.0
 
   node-releases@2.0.56: {}
+
+  nodemailer@10.1.0: {}
 
   normalize-path@3.0.0: {}
 
@@ -5329,16 +5349,16 @@ snapshots:
     dependencies:
       '@types/json-schema': 7.0.15
       ajv: 8.20.0
-      ajv-formats: 3.0.1(ajv@8.20.0)
+      ajv-formats: 3.0.1
       ajv-keywords: 5.1.0(ajv@8.20.0)
 
   scule@1.3.0: {}
 
   semver@7.8.5: {}
 
-  send@0.19.2:
+  send@0.19.2(supports-color@8.1.1):
     dependencies:
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@8.1.1)
       depd: 2.0.0
       destroy: 1.2.0
       encodeurl: 2.0.0
@@ -5354,12 +5374,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  serve-static@1.16.3:
+  serve-static@1.16.3(supports-color@8.1.1):
     dependencies:
       encodeurl: 2.0.0
       escape-html: 1.0.3
       parseurl: 1.3.3
-      send: 0.19.2
+      send: 0.19.2(supports-color@8.1.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -5481,13 +5501,16 @@ snapshots:
 
   tapable@2.3.3: {}
 
-  terser-webpack-plugin@5.6.1(webpack@5.97.1):
+  terser-webpack-plugin@5.6.1(esbuild@0.28.2)(postcss@8.5.28)(webpack@5.97.1(esbuild@0.28.2)(postcss@8.5.28)):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       jest-worker: 27.5.1
       schema-utils: 4.5.0
       terser: 5.51.2
-      webpack: 5.97.1
+      webpack: 5.97.1(esbuild@0.28.2)(postcss@8.5.28)
+    optionalDependencies:
+      esbuild: 0.28.2
+      postcss: 8.5.28
 
   terser@5.51.2:
     dependencies:
@@ -5573,11 +5596,11 @@ snapshots:
 
   uint8array-extras@1.5.0: {}
 
-  unconfig@0.6.1:
+  unconfig@0.6.1(supports-color@8.1.1):
     dependencies:
       '@antfu/utils': 8.1.1
       defu: 6.1.7
-      importx: 0.5.2
+      importx: 0.5.2(supports-color@8.1.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -5604,14 +5627,14 @@ snapshots:
 
   universalify@2.0.1: {}
 
-  unocss@0.65.4(postcss@8.5.28)(rollup@4.63.3)(vite@5.4.21(@types/node@22.20.3)(terser@5.51.2))(vue@3.5.43(typescript@5.6.3)):
+  unocss@0.65.4(postcss@8.5.28)(rollup@4.63.3)(supports-color@8.1.1)(vite@5.4.21(@types/node@22.20.3)(terser@5.51.2))(vue@3.5.43(typescript@5.6.3)):
     dependencies:
-      '@unocss/astro': 0.65.4(rollup@4.63.3)(vite@5.4.21(@types/node@22.20.3)(terser@5.51.2))(vue@3.5.43(typescript@5.6.3))
-      '@unocss/cli': 0.65.4(rollup@4.63.3)
+      '@unocss/astro': 0.65.4(rollup@4.63.3)(supports-color@8.1.1)(vite@5.4.21(@types/node@22.20.3)(terser@5.51.2))(vue@3.5.43(typescript@5.6.3))
+      '@unocss/cli': 0.65.4(rollup@4.63.3)(supports-color@8.1.1)
       '@unocss/core': 0.65.4
-      '@unocss/postcss': 0.65.4(postcss@8.5.28)
+      '@unocss/postcss': 0.65.4(postcss@8.5.28)(supports-color@8.1.1)
       '@unocss/preset-attributify': 0.65.4
-      '@unocss/preset-icons': 0.65.4
+      '@unocss/preset-icons': 0.65.4(supports-color@8.1.1)
       '@unocss/preset-mini': 0.65.4
       '@unocss/preset-tagify': 0.65.4
       '@unocss/preset-typography': 0.65.4
@@ -5622,7 +5645,7 @@ snapshots:
       '@unocss/transformer-compile-class': 0.65.4
       '@unocss/transformer-directives': 0.65.4
       '@unocss/transformer-variant-group': 0.65.4
-      '@unocss/vite': 0.65.4(rollup@4.63.3)(vite@5.4.21(@types/node@22.20.3)(terser@5.51.2))(vue@3.5.43(typescript@5.6.3))
+      '@unocss/vite': 0.65.4(rollup@4.63.3)(supports-color@8.1.1)(vite@5.4.21(@types/node@22.20.3)(terser@5.51.2))(vue@3.5.43(typescript@5.6.3))
     optionalDependencies:
       vite: 5.4.21(@types/node@22.20.3)(terser@5.51.2)
     transitivePeerDependencies:
@@ -5647,12 +5670,12 @@ snapshots:
     transitivePeerDependencies:
       - rollup
 
-  unplugin-vue-components@0.28.0(@babel/parser@7.29.8)(rollup@4.63.3)(vue@3.5.43(typescript@5.6.3)):
+  unplugin-vue-components@0.28.0(@babel/parser@7.29.8)(rollup@4.63.3)(supports-color@8.1.1)(vue@3.5.43(typescript@5.6.3)):
     dependencies:
       '@antfu/utils': 0.7.10
       '@rollup/pluginutils': 5.4.0(rollup@4.63.3)
       chokidar: 3.6.0
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@8.1.1)
       fast-glob: 3.3.3
       local-pkg: 0.5.1
       magic-string: 0.30.21
@@ -5727,7 +5750,7 @@ snapshots:
 
   vue-tsc@2.2.12(typescript@5.6.3):
     dependencies:
-      '@volar/typescript': 2.4.15
+      '@volar/typescript': 2.4.15(typescript@5.6.3)
       '@vue/language-core': 2.2.12(typescript@5.6.3)
       typescript: 5.6.3
 
@@ -5757,7 +5780,7 @@ snapshots:
 
   webpack-virtual-modules@0.6.2: {}
 
-  webpack@5.97.1:
+  webpack@5.97.1(esbuild@0.28.2)(postcss@8.5.28):
     dependencies:
       '@types/eslint-scope': 3.7.7
       '@types/estree': 1.0.9
@@ -5779,7 +5802,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 3.3.0
       tapable: 2.3.3
-      terser-webpack-plugin: 5.6.1(webpack@5.97.1)
+      terser-webpack-plugin: 5.6.1(esbuild@0.28.2)(postcss@8.5.28)(webpack@5.97.1(esbuild@0.28.2)(postcss@8.5.28))
       watchpack: 2.5.2
       webpack-sources: 3.5.1
     transitivePeerDependencies:

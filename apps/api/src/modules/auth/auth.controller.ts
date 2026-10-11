@@ -79,8 +79,8 @@ export class AuthController {
   @Public()
   @Post('send-code')
   @HttpCode(200)
-  async sendCode(@Body() dto: SendCodeDto) {
-    const { devCode } = await this.auth.sendCode(dto.email.toLowerCase());
+  async sendCode(@Body() dto: SendCodeDto, @Req() req: Request) {
+    const { devCode } = await this.auth.sendCode(dto.email.toLowerCase(), req.ip ?? 'unknown');
     // 无论是否已注册响应一致（防邮箱枚举）；DEV 下附 dev.devCode 供联调
     return devCode ? { dev: { devCode }, message: '验证码已发送' } : { message: '验证码已发送' };
   }
@@ -109,8 +109,8 @@ export class AuthController {
   @Public()
   @Post('forgot-password')
   @HttpCode(200)
-  async forgotPassword(@Body() dto: SendCodeDto) {
-    const { devCode } = await this.auth.sendResetCode(dto.email.toLowerCase());
+  async forgotPassword(@Body() dto: SendCodeDto, @Req() req: Request) {
+    const { devCode } = await this.auth.sendResetCode(dto.email.toLowerCase(), req.ip ?? 'unknown');
     return devCode ? { dev: { devCode }, message: '找回验证码已发送' } : { message: '若该邮箱已注册，找回验证码已发送' };
   }
 

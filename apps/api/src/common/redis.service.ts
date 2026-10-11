@@ -37,6 +37,11 @@ export class RedisService implements OnModuleDestroy {
     return n;
   }
 
+  /** 递减计数（发信失败时回滚已占用的配额） */
+  async decr(key: string): Promise<number> {
+    return this.client.decr(key);
+  }
+
   /** SET NX EX：分布式锁，返回 true 表示抢到 */
   async lock(key: string, ttlSeconds: number): Promise<boolean> {
     const ok = await this.client.set(key, '1', 'EX', ttlSeconds, 'NX');

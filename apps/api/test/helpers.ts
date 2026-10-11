@@ -56,6 +56,7 @@ export function makeService(prisma: PrismaService) {
 }
 
 const TRUNCATE_TABLES = [
+  'MailLog',
   'Notification',
   'CommentLike',
   'Comment',
@@ -147,5 +148,62 @@ export async function closePrisma() {
   if (prismaSingleton) {
     await prismaSingleton.$disconnect();
     prismaSingleton = null;
+  }
+}
+
+/**
+ * 内存版 Redis（测试用）：带过期语义，覆盖 AuthService 用到的全部方法。
+ * 用法：new FakeRedisService() as unknown as RedisService
+ */
+export class FakeRedisService {
+  private store = new Map<string, { value: string; expireAt: number | null }>();
+
+  private alive(key: string) {
+    const item = this.store.get(key);
+    if (!item) return null;
+    if (item.expireAt !== null && item.expireAt <= Date.now()) {
+      this.store.delete(key);
+      return null;
+    }
+    return item;
+  }
+
+  async get(key: string): Promise<string | null> {
+    return this.alive(key)?.value ?? null;
+  }
+
+  async set(key: string, value: string, ttlSeconds?: number): Promise<'OK'> {
+    this.store.set(key, { value, expireAt: ttlSeconds ? Date.now() + ttlSeconds * 1000 : null });
+    return 'OK';
+  }
+
+  async del(...keys: string[]): Promise<number> {
+    let n = 0;
+    for (const k of keys) if (this.store.delete(k)) n += 1;
+    return n;
+  }
+
+  async incrWithTtl(key: string, ttlSeconds: number): Promise<number> {
+    const cur = this.alive(key);
+    const next = (cur ? Number(cur.value) : 0) + 1;
+    this.store.set(key, { value: String(next), expireAt: cur?.expireAt ?? Date.now() + ttlSeconds * 1000 });
+    return next;
+  }
+
+  async decr(key: string): Promise<number> {
+    const cur = this.alive(key);
+    const next = (cur ? Number(cur.value) : 0) - 1;
+    this.store.set(key, { value: String(next), expireAt: cur?.expireAt ?? null });
+    return next;
+  }
+
+  async lock(key: string, ttlSeconds: number): Promise<boolean> {
+    if (this.alive(key)) return false;
+    this.store.set(key, { value: '1', expireAt: Date.now() + ttlSeconds * 1000 });
+    return true;
+  }
+
+  async unlock(key: string): Promise<void> {
+    this.store.delete(key);
   }
 }
