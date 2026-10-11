@@ -56,18 +56,18 @@ services:
       # S2b：仅当前置层已启用 HTTPS 时设为 true（后端已改为读取该变量控制 cookie Secure 标志；
       # nginx 当前仅监听 80，保持 false 否则浏览器会拒收 cookie 导致登录失效）
       COOKIE_SECURE: ${COOKIE_SECURE:-false}
-      # 【阶段措施】当前阶段不实装真实发信，故默认走 console：验证码只写入服务端日志
-      # （见 ConsoleDevProvider），管理员可从日志取码代发。后端不再因此拒绝启动。
-      # ⚠️ 此模式下日志访问权限等同账号登录权限：生产日志必须按凭据级别管控，勿接入第三方日志平台。
-      # 正式上线前请实装 SMTP 并改 MAIL_PROVIDER=qq（下方 QQ_SMTP_* 全部填写；
-      # 个人邮箱有每日发信限额，上线前实测送达率）。
-      MAIL_PROVIDER: ${MAIL_PROVIDER:-console}
+      # 生产必须使用真实邮件 provider（安全收敛 A2）：console 模式验证码只进日志，
+      # 后端会直接拒绝启动。请填写下方 QQ_SMTP_* （16 位授权码，非 QQ 密码）。
+      MAIL_PROVIDER: ${MAIL_PROVIDER:-qq}
       # QQ 邮箱 SMTP（读取自 apps/api/src/modules/mail/qq-smtp.provider.ts / mail.module.ts）
-      QQ_SMTP_HOST: ${QQ_SMTP_HOST:-}
+      QQ_SMTP_HOST: ${QQ_SMTP_HOST:-smtp.qq.com}
       QQ_SMTP_PORT: ${QQ_SMTP_PORT:-465}
       QQ_SMTP_USER: ${QQ_SMTP_USER:-}
       # 16 位 SMTP 授权码（非邮箱登录密码）
       QQ_SMTP_PASS: ${QQ_SMTP_PASS:-}
+      MAIL_FROM_NAME: ${MAIL_FROM_NAME:-UESTC TeamUp}
+      # 全局每日发信上限（保护 QQ 邮箱额度，按实际额度调整）
+      MAIL_GLOBAL_DAILY_LIMIT: ${MAIL_GLOBAL_DAILY_LIMIT:-200}
     # 2C2G 内存预算：API ~250MB
     deploy:
       resources:

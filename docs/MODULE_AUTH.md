@@ -2,6 +2,10 @@
 
 > 相关：[README.md](./README.md)（项目速览）、[DATA_MODEL.md](./DATA_MODEL.md) §3、[OPEN_QUESTIONS.md](./OPEN_QUESTIONS.md)
 
+> **实现状态（2026-10-11）**：本模块已全量落地。真实发信由 `QqSmtpProvider`（nodemailer + `smtp.qq.com:465` SSL）承担，
+> 每次发送写 `MailLog`，发码恢复配额矩阵（§6）。**唯一待办是 P0 真实送达率实测**：向 5–10 位不同学院同学发验证码，确认收件 / 垃圾箱 / 延迟，
+> 结果不通过则走 §8 兜底方案（MailProvider 抽象使切换成本极低）。
+
 ---
 
 ## 1. 为什么这个模块风险最高
@@ -24,16 +28,18 @@
    ├─ 正则：/^\d{13}@std\.uestc\.edu\.cn$/    ⚠️ 学号位数待确认
    └─ 拒绝：邮箱格式错误 / 非本校邮箱
         ↓
-③ 限流检查（Redis）
-   ├─ 同邮箱 60s 内只能发 1 次
+③ 限流检查（Redis，已实现）
+   ├─ 同邮箱 60s 内只能发 1 次（冷却期内静默返回，不重发不覆写）
    ├─ 同邮箱 每天 ≤ 5 次
-   ├─ 同 IP   每天 ≤ N 次
-   └─ 全局     每分钟 ≤ M 封   ← 保护 QQ 邮箱额度
+   ├─ 同 IP   每天 ≤ 20 次
+   ├─ 全局     每分钟 ≤ 10 封 · 每天 ≤ 200 封   ← 保护 QQ 邮箱额度
+   └─ 先占配额后校验，发信失败/超限全部回滚（避免把用户锁死在失败态）
         ↓
-④ 生成 6 位验证码，存 Redis：SET verify:{email} {code} EX 300
-   （同时存一份发送时间戳用于 60s 判断）
+④ 生成 6 位验证码，存 Redis：SET verify:code:{email} {code} EX 300
+   （同时存发送时间戳用于 60s 判断）
         ↓
-⑤ 投递到邮件队列，异步发送（⭐ 不阻塞请求）
+⑤ 同步投递 SMTP（⭐ 带 10–20s 超时；小站无队列基建，同步发信才能向用户如实报错，
+   失败时立即清码并回滚配额）
         ↓
 ⑥ 用户输入验证码
    ├─ 比对 Redis
@@ -122,34 +128,44 @@ QQ_SMTP_PASS=xxxxxxxxxxxxxxxx   # 16 位授权码，不是 QQ 密码
 4. 纯 HTML + 纯文本双版本（nodemailer 的 `text` 字段）
 5. **避免正文中出现大量短链接**
 
-### 发信日志
+### 发信日志（已实现）
 
-每次发送都写 `MailLog`（收件人、时间、状态、失败原因）。
+发送收口在 `MailService`：每次调用（成功 / 失败）都写一条 `MailLog`（收件人、类型 `LOGIN_CODE`/`RESET_CODE`、状态 `SENT`/`FAILED`、失败原因）。
+可选项：发件人显示名由 `MAIL_FROM_NAME` 控制（默认 `UESTC TeamUp`）。
+
 **用途**：同学说"我没收到验证码"时，能 10 秒内回答"是没发出去、发了被退、还是投递成功在垃圾箱"。
+排查查询：`SELECT * FROM "MailLog" WHERE "to" = '<email>' ORDER BY "sentAt" DESC;`。
+当日已发/待发邮件也可用 `verify:quota:global:day:{yyyymmdd}` 计数验证。
 
 ---
 
 ## 6. 验证码与限流参数
 
-| 项 | 值 | 理由 |
+| 项 | 值 | 配置项 |
 |---|---|---|
 | 验证码位数 | 6 位数字 | |
 | 有效期 | 5 分钟 | |
 | 重发间隔 | 60 秒 | |
 | 同邮箱每日上限 | 5 次 | |
-| 同 IP 每日上限 | N 次（建议 20） | |
-| 全局每分钟上限 | M 封（建议 10） | **保护 QQ 邮箱额度，这是最关键的限流** |
+| 同 IP 每日上限 | 20 次 | |
+| 全局每分钟上限 | 10 封 | **保护 QQ 邮箱额度，这是最关键的限流** |
+| 全局每日上限 | 200 封（默认） | `MAIL_GLOBAL_DAILY_LIMIT`，按 QQ 邮箱实际额度调整 |
 | 验证失败次数上限 | 5 次 | 超过作废，防爆破 |
 
-**Redis Key 设计**
+> 2026-09-27 产品迭代（Issue 3）曾移除全部限流；2026-10-11 真实 SMTP 上线时**恢复了发码入口的最小配额矩阵**作为替代防护，
+> 其余入口（密码登录 / 名片 / 评论 / 发帖）维持去限流状态。日与分钟口径按北京时间计算，与部署容器时区解耦。
+
+**Redis Key 设计（与实现一致）**
 
 ```
-verify:code:{email}      → 验证码，TTL 300s
-verify:cooldown:{email}  → 重发冷却标记，TTL 60s
-verify:fail:{email}      → 失败计数，TTL 300s
-verify:quota:{email}:{yyyymmdd}  → 当日发送次数，TTL 到当天 24 点
+verify:code:{email}              → 登录验证码，TTL 300s
+verify:cooldown:{email}          → 登录重发冷却，TTL 60s
+verify:fail:{email}              → 登录失败计数，TTL 300s
+verify:quota:email:{email}:{yyyymmdd}
 verify:quota:ip:{ip}:{yyyymmdd}
-verify:quota:global:{yyyymm}     → 全局月度计数，用于监控额度
+verify:quota:global:min:{yyyymmddHHmm}   → 全局每分钟
+verify:quota:global:day:{yyyymmdd}       → 全局每日（保护额度）
+pwdreset:*                       → 找回密码同名体系，与登录配额互相隔离（全局限额共享）
 ```
 
 ---
