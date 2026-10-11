@@ -403,8 +403,17 @@ def main():
                         "sequence": i + 1,
                         "bonusTier": BONUS_TIER.get(skind, "NONE"),
                         "track": key,
+                        **({"note": st["note"]} if st.get("note") else {}),
                     })
             stages = new_stages
+
+        # 赛程链缓存：主链 = 共享链（若有），否则第一条赛道链；多链赛事不再全量摊平
+        first_track = None if any(s["track"] is None for s in stages) else (stages[0]["track"] if stages else None)
+        chain_names = []
+        for st in stages:
+            if st["track"] == first_track and st["name"] not in chain_names:
+                chain_names.append(st["name"])
+        stage_chain = " → ".join(chain_names)
 
         levels = []
         for st in stages:
@@ -477,6 +486,7 @@ def main():
             "difficulty": difficulty,
             "effort": effort,
             "intro": intro,
+            "stageChain": stage_chain,
             "officialUrl": official_map.get(code)
                 or next((u for n, u in sites.items() if norm_name(n)[:10] == norm_name(name)[:10]), None),
             "sourceUrl": d.get("source") or None,

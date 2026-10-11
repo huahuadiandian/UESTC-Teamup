@@ -752,6 +752,19 @@ async function submitFeedback() {
   flex-wrap: wrap;
   gap: 8px;
 }
+/* 移动端：赛道多时横向滑动，避免换行堆叠占满半屏 */
+@media (max-width: 768px) {
+  .track-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .track-tabs .track-tab {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+}
 .track-tab {
   display: inline-flex;
   align-items: center;
@@ -793,6 +806,7 @@ async function submitFeedback() {
 .stage-card {
   position: relative;
   min-width: 230px;
+  max-width: 320px;
   flex: 1 1 0;
   padding: 14px;
   border-radius: 14px;

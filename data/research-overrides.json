@@ -95,71 +95,86 @@
     "MAIN": [
      {
       "name": "校级初赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "省级复赛",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "RED": [
      {
       "name": "校级初赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "省级复赛",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "VOCATION": [
      {
       "name": "校级初赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "省级复赛",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "INDUSTRY": [
      {
       "name": "校级初赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "省级复赛",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "SPROUT": [
      {
       "name": "校级初赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "省级复赛",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -186,43 +201,52 @@
     "ACADEMIC": [
      {
       "name": "校内遴选推荐",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
-      "name": "系统填报（中央高校直报/省教育厅汇总）",
-      "kind": "OTHER"
+      "name": "系统填报",
+      "kind": "OTHER",
+      "note": "系统填报（中央高校直报/省教育厅汇总）"
      },
      {
       "name": "年会展示交流",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "EXHIBIT": [
      {
       "name": "校内遴选推荐",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
-      "name": "系统填报（中央高校直报/省教育厅汇总）",
-      "kind": "OTHER"
+      "name": "系统填报",
+      "kind": "OTHER",
+      "note": "系统填报（中央高校直报/省教育厅汇总）"
      },
      {
       "name": "年会展示交流",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "STARTUP": [
      {
       "name": "校内遴选推荐",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
-      "name": "系统填报（中央高校直报/省教育厅汇总）",
-      "kind": "OTHER"
+      "name": "系统填报",
+      "kind": "OTHER",
+      "note": "系统填报（中央高校直报/省教育厅汇总）"
      },
      {
       "name": "年会展示交流",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -233,11 +257,13 @@
     "OPEN": [
      {
       "name": "分赛区选拔赛",
-      "kind": "REGIONAL"
+      "kind": "REGIONAL",
+      "note": null
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -264,55 +290,67 @@
     "SIM": [
      {
       "name": "校赛/校内选拔赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
-      "name": "省赛（省级选拔赛）",
-      "kind": "PROVINCIAL"
+      "name": "省赛",
+      "kind": "PROVINCIAL",
+      "note": "省赛（省级选拔赛）"
      },
      {
-      "name": "全国半决赛（线上）",
-      "kind": "QUALIFIER"
+      "name": "全国半决赛",
+      "kind": "QUALIFIER",
+      "note": "全国半决赛（线上）"
      },
      {
-      "name": "全国总决赛（现场）",
-      "kind": "FINAL"
+      "name": "全国总决赛",
+      "kind": "FINAL",
+      "note": "全国总决赛（现场）"
      }
     ],
     "MKT": [
      {
       "name": "校赛/校内选拔赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
-      "name": "省赛（省级选拔赛）",
-      "kind": "PROVINCIAL"
+      "name": "省赛",
+      "kind": "PROVINCIAL",
+      "note": "省赛（省级选拔赛）"
      },
      {
-      "name": "全国半决赛（线上）",
-      "kind": "QUALIFIER"
+      "name": "全国半决赛",
+      "kind": "QUALIFIER",
+      "note": "全国半决赛（线上）"
      },
      {
-      "name": "全国总决赛（现场）",
-      "kind": "FINAL"
+      "name": "全国总决赛",
+      "kind": "FINAL",
+      "note": "全国总决赛（现场）"
      }
     ],
     "FIN": [
      {
       "name": "校赛/校内选拔赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
-      "name": "省赛（省级选拔赛）",
-      "kind": "PROVINCIAL"
+      "name": "省赛",
+      "kind": "PROVINCIAL",
+      "note": "省赛（省级选拔赛）"
      },
      {
-      "name": "全国半决赛（线上）",
-      "kind": "QUALIFIER"
+      "name": "全国半决赛",
+      "kind": "QUALIFIER",
+      "note": "全国半决赛（线上）"
      },
      {
-      "name": "全国总决赛（现场）",
-      "kind": "FINAL"
+      "name": "全国总决赛",
+      "kind": "FINAL",
+      "note": "全国总决赛（现场）"
      }
     ]
    }
@@ -348,76 +386,92 @@
    "stagesByTrack": {
     "BRAND": [
      {
-      "name": "知识赛（个人网络机考）",
-      "kind": "QUALIFIER"
+      "name": "知识赛",
+      "kind": "QUALIFIER",
+      "note": "知识赛（个人网络机考）"
      },
      {
       "name": "校赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "省赛/全国预选赛",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      },
      {
       "name": "全球总决赛",
-      "kind": "INTERNATIONAL"
+      "kind": "INTERNATIONAL",
+      "note": null
      }
     ],
     "EXPO": [
      {
       "name": "校赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "省赛",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "TRADE": [
      {
       "name": "校赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "省赛",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "INNOV": [
      {
-      "name": "知识赛（个人网络机考，60分合格）",
-      "kind": "QUALIFIER"
+      "name": "知识赛",
+      "kind": "QUALIFIER",
+      "note": "知识赛（个人网络机考，60分合格）"
      },
      {
-      "name": "校赛（校内选拔赛）",
-      "kind": "CAMPUS"
+      "name": "校赛",
+      "kind": "CAMPUS",
+      "note": "校赛（校内选拔赛）"
      },
      {
-      "name": "省赛（省级总决赛）",
-      "kind": "PROVINCIAL"
+      "name": "省赛",
+      "kind": "PROVINCIAL",
+      "note": "省赛（省级总决赛）"
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "ELITE": [
      {
       "name": "全国精英赛",
-      "kind": "NATIONAL"
+      "kind": "NATIONAL",
+      "note": null
      }
     ]
    }
@@ -444,43 +498,52 @@
     "REGULAR": [
      {
       "name": "校赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
-      "name": "省赛（省级选拔赛）",
-      "kind": "PROVINCIAL"
+      "name": "省赛",
+      "kind": "PROVINCIAL",
+      "note": "省赛（省级选拔赛）"
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "PRACTICE": [
      {
       "name": "校赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
-      "name": "省赛（省级选拔赛）",
-      "kind": "PROVINCIAL"
+      "name": "省赛",
+      "kind": "PROVINCIAL",
+      "note": "省赛（省级选拔赛）"
      },
      {
-      "name": "全国总决赛（各实战赛道分散举行）",
-      "kind": "FINAL"
+      "name": "全国总决赛",
+      "kind": "FINAL",
+      "note": "全国总决赛（各实战赛道分散举行）"
      }
     ],
     "INTL": [
      {
       "name": "校赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
-      "name": "省赛（省级选拔赛）",
-      "kind": "PROVINCIAL"
+      "name": "省赛",
+      "kind": "PROVINCIAL",
+      "note": "省赛（省级选拔赛）"
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -512,53 +575,64 @@
     "A": [
      {
       "name": "报名与选题",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
       "name": "区域赛",
-      "kind": "REGIONAL"
+      "kind": "REGIONAL",
+      "note": null
      },
      {
       "name": "全国赛决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "B": [
      {
       "name": "报名与选题",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
       "name": "区域赛",
-      "kind": "REGIONAL"
+      "kind": "REGIONAL",
+      "note": null
      },
      {
       "name": "全国赛决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "C": [
      {
       "name": "报名",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
-      "name": "全国评审与决赛（不经区域赛）",
-      "kind": "FINAL"
+      "name": "全国评审与决赛",
+      "kind": "FINAL",
+      "note": "全国评审与决赛（不经区域赛）"
      }
     ],
     "D": [
      {
-      "name": "报名与选题（双平台注册）",
-      "kind": "OTHER"
+      "name": "报名与选题",
+      "kind": "OTHER",
+      "note": "报名与选题（双平台注册）"
      },
      {
       "name": "区域赛",
-      "kind": "REGIONAL"
+      "kind": "REGIONAL",
+      "note": null
      },
      {
       "name": "全国赛决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -594,12 +668,14 @@
    "stagesByTrack": {
     "shared": [
      {
-      "name": "初赛（以省、自治区、直辖市为赛区，军队院校为独立赛区，全国统一命题同一时间考试）",
-      "kind": "PROVINCIAL"
+      "name": "初赛",
+      "kind": "PROVINCIAL",
+      "note": "初赛（以省、自治区、直辖市为赛区，军队院校为独立赛区，全国统一命题同一时间考试）"
      },
      {
-      "name": "决赛（中国数学会青年工作与大学生数学竞赛委员会、大连理工大学组织）",
-      "kind": "FINAL"
+      "name": "决赛",
+      "kind": "FINAL",
+      "note": "决赛（中国数学会青年工作与大学生数学竞赛委员会、大连理工大学组织）"
      }
     ]
    }
@@ -621,19 +697,23 @@
     "shared": [
      {
       "name": "校赛/校内选拔",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
-      "name": "省级赛（部分省份，如福建2026-04-17~19集美大学、安徽、山东等）",
-      "kind": "PROVINCIAL"
+      "name": "省级赛",
+      "kind": "PROVINCIAL",
+      "note": "省级赛（部分省份，如福建2026-04-17~19集美大学、安徽、山东等）"
      },
      {
-      "name": "区域赛（东北、华北、华东、中南、西南、西北六赛区）",
-      "kind": "REGIONAL"
+      "name": "区域赛",
+      "kind": "REGIONAL",
+      "note": "区域赛（东北、华北、华东、中南、西南、西北六赛区）"
      },
      {
       "name": "全国赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -643,20 +723,24 @@
    "stagesByTrack": {
     "shared": [
      {
-      "name": "网络预选赛（PTA平台两场，成绩作为各区域赛入围重要参考）",
-      "kind": "QUALIFIER"
+      "name": "网络预选赛",
+      "kind": "QUALIFIER",
+      "note": "网络预选赛（PTA平台两场，成绩作为各区域赛入围重要参考）"
      },
      {
-      "name": "亚洲EC区域赛（西安、成都、武汉、南京、沈阳、上海、南昌、港澳8站）",
-      "kind": "REGIONAL"
+      "name": "亚洲EC区域赛",
+      "kind": "REGIONAL",
+      "note": "亚洲EC区域赛（西安、成都、武汉、南京、沈阳、上海、南昌、港澳8站）"
      },
      {
-      "name": "EC-Final（杭州）",
-      "kind": "FINAL"
+      "name": "EC-Final",
+      "kind": "FINAL",
+      "note": "EC-Final（杭州）"
      },
      {
       "name": "World Finals",
-      "kind": "INTERNATIONAL"
+      "kind": "INTERNATIONAL",
+      "note": null
      }
     ]
    }
@@ -666,16 +750,19 @@
    "stagesByTrack": {
     "shared": [
      {
-      "name": "报名（各校组织，经中国知网 cumcm.cnki.net 报名系统）",
-      "kind": "OTHER"
+      "name": "报名",
+      "kind": "OTHER",
+      "note": "报名（各校组织，经中国知网 cumcm.cnki.net 报名系统）"
      },
      {
-      "name": "竞赛（全国统一开卷、通讯赛制）",
-      "kind": "NATIONAL"
+      "name": "竞赛",
+      "kind": "NATIONAL",
+      "note": "竞赛（全国统一开卷、通讯赛制）"
      },
      {
-      "name": "评奖（赛区评审→全国评审→公示）",
-      "kind": "OTHER"
+      "name": "评奖",
+      "kind": "OTHER",
+      "note": "评奖（赛区评审→全国评审→公示）"
      }
     ]
    }
@@ -696,12 +783,14 @@
    "stagesByTrack": {
     "shared": [
      {
-      "name": "报名（COMAP官网注册，按队报名）",
-      "kind": "OTHER"
+      "name": "报名",
+      "kind": "OTHER",
+      "note": "报名（COMAP官网注册，按队报名）"
      },
      {
-      "name": "竞赛（全球统一网络赛，美东时间）",
-      "kind": "INTERNATIONAL"
+      "name": "竞赛",
+      "kind": "INTERNATIONAL",
+      "note": "竞赛（全球统一网络赛，美东时间）"
      }
     ]
    }
@@ -711,12 +800,14 @@
    "stagesByTrack": {
     "shared": [
      {
-      "name": "个人赛（全国统一笔试，各省设考点）",
-      "kind": "NATIONAL"
+      "name": "个人赛",
+      "kind": "NATIONAL",
+      "note": "个人赛（全国统一笔试，各省设考点）"
      },
      {
-      "name": "团体赛（『理论设计与操作』『基础力学实验』『空间轨道设计』，承办高校举行）",
-      "kind": "FINAL"
+      "name": "团体赛",
+      "kind": "FINAL",
+      "note": "团体赛（『理论设计与操作』『基础力学实验』『空间轨道设计』，承办高校举行）"
      }
     ]
    }
@@ -747,20 +838,24 @@
    "stagesByTrack": {
     "shared": [
      {
-      "name": "校内选拔（各校自定，如中科大3-06~3-31、哈工大4-30截止）",
-      "kind": "CAMPUS"
+      "name": "校内选拔",
+      "kind": "CAMPUS",
+      "note": "校内选拔（各校自定，如中科大3-06~3-31、哈工大4-30截止）"
      },
      {
-      "name": "区域/省级选拔（部分地区：第三届西南地区选拔赛决赛2026-07-22~25云南大学；西北地区竞赛2026年8月；省级选拔优秀作品可获决赛直通车）",
-      "kind": "REGIONAL"
+      "name": "区域/省级选拔",
+      "kind": "REGIONAL",
+      "note": "区域/省级选拔（部分地区：第三届西南地区选拔赛决赛2026-07-22~25云南大学；西北地区竞赛2026年8月；省级选拔优秀作品可获决赛直通车）"
      },
      {
-      "name": "预赛（作品网络初评/远程评审）",
-      "kind": "QUALIFIER"
+      "name": "预赛",
+      "kind": "QUALIFIER",
+      "note": "预赛（作品网络初评/远程评审）"
      },
      {
-      "name": "全国决赛（现场赛，日期待第二轮通知）",
-      "kind": "FINAL"
+      "name": "全国决赛",
+      "kind": "FINAL",
+      "note": "全国决赛（现场赛，日期待第二轮通知）"
      }
     ]
    }
@@ -770,16 +865,19 @@
    "stagesByTrack": {
     "shared": [
      {
-      "name": "注册与组队（赛季分阶段开放报名，Team Roster Freeze为最终名单截止）",
-      "kind": "QUALIFIER"
+      "name": "注册与组队",
+      "kind": "QUALIFIER",
+      "note": "注册与组队（赛季分阶段开放报名，Team Roster Freeze为最终名单截止）"
      },
      {
-      "name": "交付物提交与评审（Wiki、演示视频、评审表、Registry贡献等）",
-      "kind": "OTHER"
+      "name": "交付物提交与评审",
+      "kind": "OTHER",
+      "note": "交付物提交与评审（Wiki、演示视频、评审表、Registry贡献等）"
      },
      {
-      "name": "Grand Jamboree（巴黎，含Expo、评审、Finalist角逐与结果发布）",
-      "kind": "FINAL"
+      "name": "Grand Jamboree",
+      "kind": "FINAL",
+      "note": "Grand Jamboree（巴黎，含Expo、评审、Finalist角逐与结果发布）"
      }
     ]
    }
@@ -806,39 +904,47 @@
     "EMAI": [
      {
       "name": "校内选拔/报名",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
-      "name": "初赛（选拔+邀请）",
-      "kind": "QUALIFIER"
+      "name": "初赛",
+      "kind": "QUALIFIER",
+      "note": "初赛（选拔+邀请）"
      },
      {
-      "name": "决赛（上海交通大学）",
-      "kind": "FINAL"
+      "name": "决赛",
+      "kind": "FINAL",
+      "note": "决赛（上海交通大学）"
      }
     ],
     "TISIM": [
      {
       "name": "报名与赛区确认",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
-      "name": "初赛（与省级赛合并，半封闭四天三夜）",
-      "kind": "REGIONAL"
+      "name": "初赛",
+      "kind": "REGIONAL",
+      "note": "初赛（与省级赛合并，半封闭四天三夜）"
      },
      {
-      "name": "决赛（武汉大学，全封闭）",
-      "kind": "FINAL"
+      "name": "决赛",
+      "kind": "FINAL",
+      "note": "决赛（武汉大学，全封闭）"
      }
     ],
     "RENESAS": [
      {
       "name": "初赛",
-      "kind": "QUALIFIER"
+      "kind": "QUALIFIER",
+      "note": null
      },
      {
       "name": "决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -864,56 +970,68 @@
    "stagesByTrack": {
     "APP": [
      {
-      "name": "报名（含校赛选拔）",
-      "kind": "CAMPUS"
+      "name": "报名",
+      "kind": "CAMPUS",
+      "note": "报名（含校赛选拔）"
      },
      {
       "name": "分赛区初赛/网评",
-      "kind": "REGIONAL"
+      "kind": "REGIONAL",
+      "note": null
      },
      {
       "name": "分赛区复赛",
-      "kind": "REGIONAL"
+      "kind": "REGIONAL",
+      "note": null
      },
      {
-      "name": "全国总决赛（南京江北新区）",
-      "kind": "FINAL"
+      "name": "全国总决赛",
+      "kind": "FINAL",
+      "note": "全国总决赛（南京江北新区）"
      }
     ],
     "DESIGN": [
      {
       "name": "报名",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
       "name": "初赛",
-      "kind": "QUALIFIER"
+      "kind": "QUALIFIER",
+      "note": null
      },
      {
-      "name": "复赛（答辩）",
-      "kind": "QUALIFIER"
+      "name": "复赛",
+      "kind": "QUALIFIER",
+      "note": "复赛（答辩）"
      },
      {
       "name": "总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "FPGA": [
      {
       "name": "报名",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
       "name": "作品设计",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
       "name": "作品提交",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
-      "name": "决赛（南京江北新区）",
-      "kind": "FINAL"
+      "name": "决赛",
+      "kind": "FINAL",
+      "note": "决赛（南京江北新区）"
      }
     ]
    }
@@ -940,29 +1058,35 @@
     "shared": [
      {
       "name": "报名",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
-      "name": "初赛（作品提交与评审）",
-      "kind": "QUALIFIER"
+      "name": "初赛",
+      "kind": "QUALIFIER",
+      "note": "初赛（作品提交与评审）"
      },
      {
       "name": "分赛区决赛",
-      "kind": "REGIONAL"
+      "kind": "REGIONAL",
+      "note": null
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "VOC": [
      {
       "name": "团队报名",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
-      "name": "初赛（作品提交与评审）",
-      "kind": "QUALIFIER"
+      "name": "初赛",
+      "kind": "QUALIFIER",
+      "note": "初赛（作品提交与评审）"
      }
     ]
    }
@@ -983,26 +1107,31 @@
    "stagesByTrack": {
     "CREATIVE": [
      {
-      "name": "报名（各校/赛区组织）",
-      "kind": "OTHER"
+      "name": "报名",
+      "kind": "OTHER",
+      "note": "报名（各校/赛区组织）"
      },
      {
-      "name": "区赛决赛（如东南区6月5-6日福建江夏学院）",
-      "kind": "REGIONAL"
+      "name": "区赛决赛",
+      "kind": "REGIONAL",
+      "note": "区赛决赛（如东南区6月5-6日福建江夏学院）"
      },
      {
-      "name": "全国决赛（长春理工大学）",
-      "kind": "FINAL"
+      "name": "全国决赛",
+      "kind": "FINAL",
+      "note": "全国决赛（长春理工大学）"
      }
     ],
     "OPTICS": [
      {
       "name": "报名与初评",
-      "kind": "QUALIFIER"
+      "kind": "QUALIFIER",
+      "note": null
      },
      {
-      "name": "全国决赛（长春理工大学）",
-      "kind": "FINAL"
+      "name": "全国决赛",
+      "kind": "FINAL",
+      "note": "全国决赛（长春理工大学）"
      }
     ]
    }
@@ -1039,71 +1168,86 @@
     "CPU": [
      {
       "name": "报名",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
-      "name": "初赛（线上评测）",
-      "kind": "QUALIFIER"
+      "name": "初赛",
+      "kind": "QUALIFIER",
+      "note": "初赛（线上评测）"
      },
      {
-      "name": "全国总决赛（西北工业大学）",
-      "kind": "FINAL"
+      "name": "全国总决赛",
+      "kind": "FINAL",
+      "note": "全国总决赛（西北工业大学）"
      }
     ],
     "OS": [
      {
       "name": "报名",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
-      "name": "区域赛（独立于全国赛）",
-      "kind": "REGIONAL"
+      "name": "区域赛",
+      "kind": "REGIONAL",
+      "note": "区域赛（独立于全国赛）"
      },
      {
-      "name": "初赛（全国赛线上）",
-      "kind": "QUALIFIER"
+      "name": "初赛",
+      "kind": "QUALIFIER",
+      "note": "初赛（全国赛线上）"
      },
      {
-      "name": "全国总决赛（南开大学）",
-      "kind": "FINAL"
+      "name": "全国总决赛",
+      "kind": "FINAL",
+      "note": "全国总决赛（南开大学）"
      }
     ],
     "COMPILER": [
      {
       "name": "报名",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
       "name": "初赛",
-      "kind": "QUALIFIER"
+      "kind": "QUALIFIER",
+      "note": null
      },
      {
-      "name": "全国总决赛（南开大学）",
-      "kind": "FINAL"
+      "name": "全国总决赛",
+      "kind": "FINAL",
+      "note": "全国总决赛（南开大学）"
      }
     ],
     "AICOMP": [
      {
       "name": "报名",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
       "name": "初赛",
-      "kind": "QUALIFIER"
+      "kind": "QUALIFIER",
+      "note": null
      },
      {
       "name": "决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "AISIS": [
      {
       "name": "报名",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
       "name": "初赛",
-      "kind": "QUALIFIER"
+      "kind": "QUALIFIER",
+      "note": null
      }
     ]
    }
@@ -1130,43 +1274,52 @@
     "ENG": [
      {
       "name": "校赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "省赛",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "EDU": [
      {
       "name": "校内选拔与方案提交",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "省级评审",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "ICT": [
      {
       "name": "校赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "省赛",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -1176,24 +1329,29 @@
    "stagesByTrack": {
     "shared": [
      {
-      "name": "报名（4月1日系统开放）",
-      "kind": "OTHER"
+      "name": "报名",
+      "kind": "OTHER",
+      "note": "报名（4月1日系统开放）"
      },
      {
       "name": "作品文档及实物演示视频提交",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
-      "name": "分赛区网上评审（8月10日前）",
-      "kind": "REGIONAL"
+      "name": "分赛区网上评审",
+      "kind": "REGIONAL",
+      "note": "分赛区网上评审（8月10日前）"
      },
      {
-      "name": "分赛区决赛（8月20日前）",
-      "kind": "REGIONAL"
+      "name": "分赛区决赛",
+      "kind": "REGIONAL",
+      "note": "分赛区决赛（8月20日前）"
      },
      {
-      "name": "全国总决赛（贵州大学）",
-      "kind": "FINAL"
+      "name": "全国总决赛",
+      "kind": "FINAL",
+      "note": "全国总决赛（贵州大学）"
      }
     ]
    }
@@ -1230,83 +1388,101 @@
     "GPLT": [
      {
       "name": "报名",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
-      "name": "普及赛（个人赛，3月14日）",
-      "kind": "NATIONAL"
+      "name": "普及赛",
+      "kind": "NATIONAL",
+      "note": "普及赛（个人赛，3月14日）"
      },
      {
-      "name": "团体赛全国总决赛（4月18日单场）",
-      "kind": "FINAL"
+      "name": "团体赛全国总决赛",
+      "kind": "FINAL",
+      "note": "团体赛全国总决赛（4月18日单场）"
      }
     ],
     "BIGDATA": [
      {
       "name": "报名",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
-      "name": "线上赛（初赛）",
-      "kind": "QUALIFIER"
+      "name": "线上赛",
+      "kind": "QUALIFIER",
+      "note": "线上赛（初赛）"
      },
      {
-      "name": "全国总决赛（清华大学）",
-      "kind": "FINAL"
+      "name": "全国总决赛",
+      "kind": "FINAL",
+      "note": "全国总决赛（清华大学）"
      }
     ],
     "APP": [
      {
       "name": "报名与初赛作品提交",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
       "name": "初赛",
-      "kind": "QUALIFIER"
+      "kind": "QUALIFIER",
+      "note": null
      },
      {
       "name": "复赛",
-      "kind": "QUALIFIER"
+      "kind": "QUALIFIER",
+      "note": null
      },
      {
-      "name": "决赛（全国总决赛）",
-      "kind": "FINAL"
+      "name": "决赛",
+      "kind": "FINAL",
+      "note": "决赛（全国总决赛）"
      }
     ],
     "NET": [
      {
       "name": "报名",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
       "name": "资格赛",
-      "kind": "QUALIFIER"
+      "kind": "QUALIFIER",
+      "note": null
      },
      {
-      "name": "选拔赛（分赛区）",
-      "kind": "REGIONAL"
+      "name": "选拔赛",
+      "kind": "REGIONAL",
+      "note": "选拔赛（分赛区）"
      },
      {
-      "name": "挑战赛（全国决赛）",
-      "kind": "FINAL"
+      "name": "挑战赛",
+      "kind": "FINAL",
+      "note": "挑战赛（全国决赛）"
      }
     ],
     "AIC": [
      {
       "name": "报名及初赛作品提交",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
       "name": "初赛",
-      "kind": "QUALIFIER"
+      "kind": "QUALIFIER",
+      "note": null
      },
      {
-      "name": "复赛（线上评审）",
-      "kind": "QUALIFIER"
+      "name": "复赛",
+      "kind": "QUALIFIER",
+      "note": "复赛（线上评审）"
      },
      {
-      "name": "全国总决赛（现场答辩）",
-      "kind": "FINAL"
+      "name": "全国总决赛",
+      "kind": "FINAL",
+      "note": "全国总决赛（现场答辩）"
      }
     ]
    }
@@ -1332,36 +1508,43 @@
    "stagesByTrack": {
     "SPEED": [
      {
-      "name": "分（省）赛区赛",
-      "kind": "REGIONAL"
+      "name": "分",
+      "kind": "REGIONAL",
+      "note": "分（省）赛区赛"
      },
      {
-      "name": "全国总决赛（室内）",
-      "kind": "FINAL"
+      "name": "全国总决赛",
+      "kind": "FINAL",
+      "note": "全国总决赛（室内）"
      }
     ],
     "CREATIVE": [
      {
-      "name": "分（省）赛区赛",
-      "kind": "REGIONAL"
+      "name": "分",
+      "kind": "REGIONAL",
+      "note": "分（省）赛区赛"
      },
      {
-      "name": "全国总决赛（室内）",
-      "kind": "FINAL"
+      "name": "全国总决赛",
+      "kind": "FINAL",
+      "note": "全国总决赛（室内）"
      }
     ],
     "OUTDOOR": [
      {
       "name": "校内选拔赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "区域赛",
-      "kind": "REGIONAL"
+      "kind": "REGIONAL",
+      "note": null
      },
      {
-      "name": "全国总决赛（室外）",
-      "kind": "FINAL"
+      "name": "全国总决赛",
+      "kind": "FINAL",
+      "note": "全国总决赛（室外）"
      }
     ]
    }
@@ -1387,36 +1570,43 @@
    "stagesByTrack": {
     "ROBOCON": [
      {
-      "name": "校内选拔/中期检查（2026-04-20前提交材料）",
-      "kind": "CAMPUS"
+      "name": "校内选拔/中期检查",
+      "kind": "CAMPUS",
+      "note": "校内选拔/中期检查（2026-04-20前提交材料）"
      },
      {
       "name": "全国赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "ROBOTAC": [
      {
-      "name": "校内选拔/中期检查（2026-03~04）",
-      "kind": "CAMPUS"
+      "name": "校内选拔/中期检查",
+      "kind": "CAMPUS",
+      "note": "校内选拔/中期检查（2026-03~04）"
      },
      {
-      "name": "全国赛（分赛项，北京等）",
-      "kind": "FINAL"
+      "name": "全国赛",
+      "kind": "FINAL",
+      "note": "全国赛（分赛项，北京等）"
      }
     ],
     "ROBOMASTER": [
      {
-      "name": "区域赛（南部长沙/东部济南/北部沈阳，2026-05~06）",
-      "kind": "REGIONAL"
+      "name": "区域赛",
+      "kind": "REGIONAL",
+      "note": "区域赛（南部长沙/东部济南/北部沈阳，2026-05~06）"
      },
      {
-      "name": "复活赛（2026-07~08）",
-      "kind": "QUALIFIER"
+      "name": "复活赛",
+      "kind": "QUALIFIER",
+      "note": "复活赛（2026-07~08）"
      },
      {
-      "name": "全国总决赛（深圳）",
-      "kind": "FINAL"
+      "name": "全国总决赛",
+      "kind": "FINAL",
+      "note": "全国总决赛（深圳）"
      }
     ]
    }
@@ -1437,16 +1627,19 @@
    "stagesByTrack": {
     "shared": [
      {
-      "name": "校赛（各校选拔并晋级推荐）",
-      "kind": "CAMPUS"
+      "name": "校赛",
+      "kind": "CAMPUS",
+      "note": "校赛（各校选拔并晋级推荐）"
      },
      {
-      "name": "区域赛/专项赛（部分赛项）",
-      "kind": "REGIONAL"
+      "name": "区域赛/专项赛",
+      "kind": "REGIONAL",
+      "note": "区域赛/专项赛（部分赛项）"
      },
      {
-      "name": "总决赛（RoboCup赛区5月北京；中国机器人大赛赛区10月杭州）",
-      "kind": "FINAL"
+      "name": "总决赛",
+      "kind": "FINAL",
+      "note": "总决赛（RoboCup赛区5月北京；中国机器人大赛赛区10月杭州）"
      }
     ]
    }
@@ -1477,16 +1670,19 @@
    "stagesByTrack": {
     "shared": [
      {
-      "name": "校赛（各校选拔，比例各校自定）",
-      "kind": "CAMPUS"
+      "name": "校赛",
+      "kind": "CAMPUS",
+      "note": "校赛（各校选拔，比例各校自定）"
      },
      {
-      "name": "省级选拔赛（各省赛区，2026-06-08通知）",
-      "kind": "PROVINCIAL"
+      "name": "省级选拔赛",
+      "kind": "PROVINCIAL",
+      "note": "省级选拔赛（各省赛区，2026-06-08通知）"
      },
      {
-      "name": "全国决赛（哈尔滨站/合肥站/线上三站+人形专项赛北京）",
-      "kind": "FINAL"
+      "name": "全国决赛",
+      "kind": "FINAL",
+      "note": "全国决赛（哈尔滨站/合肥站/线上三站+人形专项赛北京）"
      }
     ]
    }
@@ -1518,11 +1714,13 @@
     "shared": [
      {
       "name": "校赛/省赛/区域选拔赛",
-      "kind": "REGIONAL"
+      "kind": "REGIONAL",
+      "note": null
      },
      {
-      "name": "全国总决赛（按赛项分四阶段：7月杭州/8月线上线下/9月杭州/10月武汉泰安广西）",
-      "kind": "FINAL"
+      "name": "全国总决赛",
+      "kind": "FINAL",
+      "note": "全国总决赛（按赛项分四阶段：7月杭州/8月线上线下/9月杭州/10月武汉泰安广西）"
      }
     ]
    }
@@ -1548,20 +1746,24 @@
    "stagesByTrack": {
     "shared": [
      {
-      "name": "校赛（以学校为单位报名）",
-      "kind": "CAMPUS"
+      "name": "校赛",
+      "kind": "CAMPUS",
+      "note": "校赛（以学校为单位报名）"
      },
      {
-      "name": "区域赛（2026-06-10前完成选拔）",
-      "kind": "REGIONAL"
+      "name": "区域赛",
+      "kind": "REGIONAL",
+      "note": "区域赛（2026-06-10前完成选拔）"
      },
      {
-      "name": "全国赛（2026-07-12~13，产教融合赛时间另定）",
-      "kind": "NATIONAL"
+      "name": "全国赛",
+      "kind": "NATIONAL",
+      "note": "全国赛（2026-07-12~13，产教融合赛时间另定）"
      },
      {
-      "name": "全国总决赛（2026-08-17~20宁波/余姚）",
-      "kind": "FINAL"
+      "name": "全国总决赛",
+      "kind": "FINAL",
+      "note": "全国总决赛（2026-08-17~20宁波/余姚）"
      }
     ]
    }
@@ -1587,16 +1789,19 @@
    "stagesByTrack": {
     "shared": [
      {
-      "name": "校内选拔（各校自行组织）",
-      "kind": "CAMPUS"
+      "name": "校内选拔",
+      "kind": "CAMPUS",
+      "note": "校内选拔（各校自行组织）"
      },
      {
-      "name": "省级或区域选拔赛（智能制造赛设分赛区；两级赛制）",
-      "kind": "PROVINCIAL"
+      "name": "省级或区域选拔赛",
+      "kind": "PROVINCIAL",
+      "note": "省级或区域选拔赛（智能制造赛设分赛区；两级赛制）"
      },
      {
-      "name": "全国总决赛（各赛项时间地点各异）",
-      "kind": "FINAL"
+      "name": "全国总决赛",
+      "kind": "FINAL",
+      "note": "全国总决赛（各赛项时间地点各异）"
      }
     ]
    }
@@ -1623,35 +1828,42 @@
     "SKILL": [
      {
       "name": "校内初赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
-      "name": "分赛区复赛（2026-06各赛区陆续举行）",
-      "kind": "REGIONAL"
+      "name": "分赛区复赛",
+      "kind": "REGIONAL",
+      "note": "分赛区复赛（2026-06各赛区陆续举行）"
      },
      {
       "name": "全国决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "ANALYSIS": [
      {
       "name": "选拔/复赛",
-      "kind": "REGIONAL"
+      "kind": "REGIONAL",
+      "note": null
      },
      {
-      "name": "全国决赛（金相大会）",
-      "kind": "FINAL"
+      "name": "全国决赛",
+      "kind": "FINAL",
+      "note": "全国决赛（金相大会）"
      }
     ],
     "INNOVATION": [
      {
       "name": "选拔/复赛",
-      "kind": "REGIONAL"
+      "kind": "REGIONAL",
+      "note": null
      },
      {
-      "name": "全国决赛（材料分析大赛）",
-      "kind": "FINAL"
+      "name": "全国决赛",
+      "kind": "FINAL",
+      "note": "全国决赛（材料分析大赛）"
      }
     ]
    }
@@ -1672,26 +1884,31 @@
    "stagesByTrack": {
     "WORKS": [
      {
-      "name": "全国初评（线上）",
-      "kind": "QUALIFIER"
+      "name": "全国初评",
+      "kind": "QUALIFIER",
+      "note": "全国初评（线上）"
      },
      {
       "name": "全国决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "CPRACTICE": [
      {
-      "name": "初赛（线上）",
-      "kind": "QUALIFIER"
+      "name": "初赛",
+      "kind": "QUALIFIER",
+      "note": "初赛（线上）"
      },
      {
       "name": "分区半决赛",
-      "kind": "REGIONAL"
+      "kind": "REGIONAL",
+      "note": null
      },
      {
       "name": "总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -1708,15 +1925,18 @@
     "shared": [
      {
       "name": "报名与辅导",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
       "name": "全国初赛评审",
-      "kind": "QUALIFIER"
+      "kind": "QUALIFIER",
+      "note": null
      },
      {
-      "name": "全国总决赛（线上答辩）",
-      "kind": "FINAL"
+      "name": "全国总决赛",
+      "kind": "FINAL",
+      "note": "全国总决赛（线上答辩）"
      }
     ]
    }
@@ -1783,15 +2003,18 @@
     "shared": [
      {
       "name": "校级选拔",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "省级赛",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
-      "name": "国赛决赛（6个决赛区）",
-      "kind": "FINAL"
+      "name": "国赛决赛",
+      "kind": "FINAL",
+      "note": "国赛决赛（6个决赛区）"
      }
     ]
    }
@@ -1822,16 +2045,19 @@
    "stagesByTrack": {
     "shared": [
      {
-      "name": "校赛（院系统一报名）",
-      "kind": "CAMPUS"
+      "name": "校赛",
+      "kind": "CAMPUS",
+      "note": "校赛（院系统一报名）"
      },
      {
       "name": "省赛",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "国赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -1858,15 +2084,18 @@
     "shared": [
      {
       "name": "校级赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
-      "name": "省级赛（29个分赛区）",
-      "kind": "PROVINCIAL"
+      "name": "省级赛",
+      "kind": "PROVINCIAL",
+      "note": "省级赛（29个分赛区）"
      },
      {
       "name": "全国赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -1902,16 +2131,19 @@
    "stagesByTrack": {
     "shared": [
      {
-      "name": "初赛（校赛）",
-      "kind": "CAMPUS"
+      "name": "初赛",
+      "kind": "CAMPUS",
+      "note": "初赛（校赛）"
      },
      {
       "name": "复赛/省赛",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
-      "name": "国赛（全国总决赛）",
-      "kind": "FINAL"
+      "name": "国赛",
+      "kind": "FINAL",
+      "note": "国赛（全国总决赛）"
      }
     ]
    }
@@ -1963,15 +2195,18 @@
     "shared": [
      {
       "name": "校级选拔",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "分赛区评审",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "全国总评审",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -1993,21 +2228,25 @@
     "CREATIVE": [
      {
       "name": "校赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
-      "name": "赛区赛（34个赛区）",
-      "kind": "REGIONAL"
+      "name": "赛区赛",
+      "kind": "REGIONAL",
+      "note": "赛区赛（34个赛区）"
      },
      {
-      "name": "总决赛（网络评审+现场评审）",
-      "kind": "FINAL"
+      "name": "总决赛",
+      "kind": "FINAL",
+      "note": "总决赛（网络评审+现场评审）"
      }
     ],
     "THEMED": [
      {
       "name": "总决赛评审",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -2029,19 +2268,23 @@
     "shared": [
      {
       "name": "校赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "全国网络函评",
-      "kind": "QUALIFIER"
+      "kind": "QUALIFIER",
+      "note": null
      },
      {
       "name": "全国专家会评",
-      "kind": "QUALIFIER"
+      "kind": "QUALIFIER",
+      "note": null
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -2088,15 +2331,18 @@
     "shared": [
      {
       "name": "校赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
-      "name": "省赛（赛区选拔）",
-      "kind": "PROVINCIAL"
+      "name": "省赛",
+      "kind": "PROVINCIAL",
+      "note": "省赛（赛区选拔）"
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -2122,12 +2368,14 @@
    "stagesByTrack": {
     "shared": [
      {
-      "name": "全国分赛区初赛（线上）",
-      "kind": "REGIONAL"
+      "name": "全国分赛区初赛",
+      "kind": "REGIONAL",
+      "note": "全国分赛区初赛（线上）"
      },
      {
-      "name": "全国总决赛（线下）",
-      "kind": "FINAL"
+      "name": "全国总决赛",
+      "kind": "FINAL",
+      "note": "全国总决赛（线下）"
      }
     ]
    }
@@ -2168,16 +2416,19 @@
    "stagesByTrack": {
     "shared": [
      {
-      "name": "校赛（校内初赛）",
-      "kind": "CAMPUS"
+      "name": "校赛",
+      "kind": "CAMPUS",
+      "note": "校赛（校内初赛）"
      },
      {
       "name": "省赛",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -2187,12 +2438,14 @@
    "stagesByTrack": {
     "shared": [
      {
-      "name": "分区赛（各省、自治区、直辖市）",
-      "kind": "REGIONAL"
+      "name": "分区赛",
+      "kind": "REGIONAL",
+      "note": "分区赛（各省、自治区、直辖市）"
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -2219,15 +2472,18 @@
     "shared": [
      {
       "name": "校赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "省级赛区预赛",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "全国决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -2263,16 +2519,19 @@
    "stagesByTrack": {
     "shared": [
      {
-      "name": "校赛（校内选拔）",
-      "kind": "CAMPUS"
+      "name": "校赛",
+      "kind": "CAMPUS",
+      "note": "校赛（校内选拔）"
      },
      {
-      "name": "分区赛（预选赛）",
-      "kind": "REGIONAL"
+      "name": "分区赛",
+      "kind": "REGIONAL",
+      "note": "分区赛（预选赛）"
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -2318,16 +2577,19 @@
    "stagesByTrack": {
     "shared": [
      {
-      "name": "校赛（校内选拔）",
-      "kind": "CAMPUS"
+      "name": "校赛",
+      "kind": "CAMPUS",
+      "note": "校赛（校内选拔）"
      },
      {
-      "name": "复赛（北部/东部/西部/中南部赛区）",
-      "kind": "REGIONAL"
+      "name": "复赛",
+      "kind": "REGIONAL",
+      "note": "复赛（北部/东部/西部/中南部赛区）"
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -2374,15 +2636,18 @@
     "shared": [
      {
       "name": "校赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "省赛",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "全国决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -2414,19 +2679,23 @@
     "shared": [
      {
       "name": "校赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
-      "name": "省赛（复赛+决赛）",
-      "kind": "PROVINCIAL"
+      "name": "省赛",
+      "kind": "PROVINCIAL",
+      "note": "省赛（复赛+决赛）"
      },
      {
-      "name": "全国决赛（案例文本评审+现场赛）",
-      "kind": "NATIONAL"
+      "name": "全国决赛",
+      "kind": "NATIONAL",
+      "note": "全国决赛（案例文本评审+现场赛）"
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -2448,15 +2717,18 @@
     "shared": [
      {
       "name": "校园选拔/地区初赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "地区半决赛/决赛",
-      "kind": "REGIONAL"
+      "kind": "REGIONAL",
+      "note": null
      },
      {
       "name": "全国半决赛/总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -2487,90 +2759,110 @@
    "stagesByTrack": {
     "ZHKS": [
      {
-      "name": "知识赛（个人网考）",
-      "kind": "QUALIFIER"
+      "name": "知识赛",
+      "kind": "QUALIFIER",
+      "note": "知识赛（个人网考）"
      },
      {
       "name": "校赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "企业命题赛",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
       "name": "省赛",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
-      "name": "全国赛初赛（报告+PPT评审）",
-      "kind": "NATIONAL"
+      "name": "全国赛初赛",
+      "kind": "NATIONAL",
+      "note": "全国赛初赛（报告+PPT评审）"
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "BENKE": [
      {
-      "name": "知识赛（个人网考）",
-      "kind": "QUALIFIER"
+      "name": "知识赛",
+      "kind": "QUALIFIER",
+      "note": "知识赛（个人网考）"
      },
      {
       "name": "校赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "企业命题赛",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
       "name": "省赛",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
-      "name": "全国赛初赛（报告+PPT评审）",
-      "kind": "NATIONAL"
+      "name": "全国赛初赛",
+      "kind": "NATIONAL",
+      "note": "全国赛初赛（报告+PPT评审）"
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "YJS": [
      {
       "name": "校赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "企业命题赛",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
       "name": "省赛",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
-      "name": "全国赛初赛（报告+PPT评审）",
-      "kind": "NATIONAL"
+      "name": "全国赛初赛",
+      "kind": "NATIONAL",
+      "note": "全国赛初赛（报告+PPT评审）"
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "LSX": [
      {
       "name": "校赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "全国赛初赛",
-      "kind": "NATIONAL"
+      "kind": "NATIONAL",
+      "note": null
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -2597,15 +2889,18 @@
     "shared": [
      {
       "name": "省赛评审",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "国赛评审",
-      "kind": "NATIONAL"
+      "kind": "NATIONAL",
+      "note": null
      },
      {
       "name": "米兰展出/颁奖典礼",
-      "kind": "INTERNATIONAL"
+      "kind": "INTERNATIONAL",
+      "note": null
      }
     ]
    }
@@ -2626,16 +2921,19 @@
    "stagesByTrack": {
     "shared": [
      {
-      "name": "网评（网络评审）",
-      "kind": "QUALIFIER"
+      "name": "网评",
+      "kind": "QUALIFIER",
+      "note": "网评（网络评审）"
      },
      {
       "name": "省赛",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "全国决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -2667,11 +2965,13 @@
     "shared": [
      {
       "name": "初赛",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -2723,15 +3023,18 @@
     "shared": [
      {
       "name": "校级展演",
-      "kind": "CAMPUS"
+      "kind": "CAMPUS",
+      "note": null
      },
      {
       "name": "省级展演",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "全国汇演",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -2753,11 +3056,13 @@
     "shared": [
      {
       "name": "报名",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
-      "name": "参演/合唱评测（北京）",
-      "kind": "FINAL"
+      "name": "参演/合唱评测",
+      "kind": "FINAL",
+      "note": "参演/合唱评测（北京）"
      }
     ]
    }
@@ -2768,11 +3073,13 @@
     "shared": [
      {
       "name": "赛区选拔赛",
-      "kind": "REGIONAL"
+      "kind": "REGIONAL",
+      "note": null
      },
      {
       "name": "全球总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -2783,11 +3090,13 @@
     "shared": [
      {
       "name": "赛区选拔赛",
-      "kind": "REGIONAL"
+      "kind": "REGIONAL",
+      "note": null
      },
      {
       "name": "总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -2798,7 +3107,8 @@
     "shared": [
      {
       "name": "小组赛/淘汰赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -2809,11 +3119,13 @@
     "shared": [
      {
       "name": "赛区赛",
-      "kind": "REGIONAL"
+      "kind": "REGIONAL",
+      "note": null
      },
      {
       "name": "总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -2835,21 +3147,25 @@
     "LITERACY": [
      {
       "name": "省级选拔/网络风采展示",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ],
     "MICRO": [
      {
       "name": "省级选拔推荐",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "全国总决赛",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -2896,11 +3212,13 @@
     "shared": [
      {
       "name": "作品征集/省级推选",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "全国遴选",
-      "kind": "FINAL"
+      "kind": "FINAL",
+      "note": null
      }
     ]
    }
@@ -2911,11 +3229,13 @@
     "shared": [
      {
       "name": "初赛/复赛",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      },
      {
-      "name": "决赛（全省集中比赛）",
-      "kind": "FINAL"
+      "name": "决赛",
+      "kind": "FINAL",
+      "note": "决赛（全省集中比赛）"
      }
     ]
    }
@@ -2961,84 +3281,101 @@
    "stagesByTrack": {
     "PRACTICE": [
      {
-      "name": "省资格赛（线上：实验环节2026-09-18~11-08，理论环节2026-11-14~15）",
-      "kind": "QUALIFIER"
+      "name": "省资格赛",
+      "kind": "QUALIFIER",
+      "note": "省资格赛（线上：实验环节2026-09-18~11-08，理论环节2026-11-14~15）"
      },
      {
       "name": "省赛",
-      "kind": "PROVINCIAL"
+      "kind": "PROVINCIAL",
+      "note": null
      },
      {
       "name": "全国总决赛",
-      "kind": "NATIONAL"
+      "kind": "NATIONAL",
+      "note": null
      },
      {
       "name": "全球总决赛",
-      "kind": "INTERNATIONAL"
+      "kind": "INTERNATIONAL",
+      "note": null
      }
     ],
     "CHALLENGE": [
      {
       "name": "初赛",
-      "kind": "QUALIFIER"
+      "kind": "QUALIFIER",
+      "note": null
      },
      {
       "name": "中国总决赛",
-      "kind": "NATIONAL"
+      "kind": "NATIONAL",
+      "note": null
      }
     ],
     "INNOV": [
      {
       "name": "初赛",
-      "kind": "QUALIFIER"
+      "kind": "QUALIFIER",
+      "note": null
      },
      {
       "name": "中国总决赛",
-      "kind": "NATIONAL"
+      "kind": "NATIONAL",
+      "note": null
      },
      {
       "name": "全球总决赛",
-      "kind": "INTERNATIONAL"
+      "kind": "INTERNATIONAL",
+      "note": null
      }
     ],
     "PROGRAM": [
      {
-      "name": "初赛（省资格赛线上完成）",
-      "kind": "QUALIFIER"
+      "name": "初赛",
+      "kind": "QUALIFIER",
+      "note": "初赛（省资格赛线上完成）"
      },
      {
       "name": "中国总决赛",
-      "kind": "NATIONAL"
+      "kind": "NATIONAL",
+      "note": null
      },
      {
       "name": "全球总决赛",
-      "kind": "INTERNATIONAL"
+      "kind": "INTERNATIONAL",
+      "note": null
      }
     ],
     "OPERATOR": [
      {
-      "name": "资格赛（线上，需完成两项算子开发相关认证）",
-      "kind": "QUALIFIER"
+      "name": "资格赛",
+      "kind": "QUALIFIER",
+      "note": "资格赛（线上，需完成两项算子开发相关认证）"
      },
      {
-      "name": "决赛（算子赛题方式开展）",
-      "kind": "NATIONAL"
+      "name": "决赛",
+      "kind": "NATIONAL",
+      "note": "决赛（算子赛题方式开展）"
      },
      {
-      "name": "全球总决赛（聚焦算子性能调优+现场答辩）",
-      "kind": "INTERNATIONAL"
+      "name": "全球总决赛",
+      "kind": "INTERNATIONAL",
+      "note": "全球总决赛（聚焦算子性能调优+现场答辩）"
      }
     ],
     "TEACH": [
      {
-      "name": "报名后流程未公布（往届为初评+全国评审，本届细则以官网为准）",
-      "kind": "OTHER"
+      "name": "报名后流程未公布",
+      "kind": "OTHER",
+      "note": "报名后流程未公布（往届为初评+全国评审，本届细则以官网为准）"
      }
     ],
     "ELITE": [
      {
       "name": "邀请制，无公开报名与公开赛程",
-      "kind": "OTHER"
+      "kind": "OTHER",
+      "note": null
      }
     ]
    }
@@ -3064,44 +3401,53 @@
    "stagesByTrack": {
     "MAIN": [
      {
-      "name": "校级比赛（2025年3-4月，各校评审选拔）",
-      "kind": "CAMPUS"
+      "name": "校级比赛",
+      "kind": "CAMPUS",
+      "note": "校级比赛（2025年3-4月，各校评审选拔）"
      },
      {
-      "name": "省级比赛（2025年4-6月，各省组织）",
-      "kind": "PROVINCIAL"
+      "name": "省级比赛",
+      "kind": "PROVINCIAL",
+      "note": "省级比赛（2025年4-6月，各省组织）"
      },
      {
-      "name": "国赛申报（2025年6-8月）",
-      "kind": "NATIONAL"
+      "name": "国赛申报",
+      "kind": "NATIONAL",
+      "note": "国赛申报（2025年6-8月）"
      },
      {
-      "name": "国赛初审（2025年7-9月，全国初评）",
-      "kind": "NATIONAL"
+      "name": "国赛初审",
+      "kind": "NATIONAL",
+      "note": "国赛初审（2025年7-9月，全国初评）"
      },
      {
-      "name": "终审决赛（2025-10-31~11-03，南京大学）",
-      "kind": "FINAL"
+      "name": "终审决赛",
+      "kind": "FINAL",
+      "note": "终审决赛（2025-10-31~11-03，南京大学）"
      }
     ],
     "JBGS": [
      {
-      "name": "揭榜报名/打擂（企业发榜→团队揭榜→评审）",
-      "kind": "QUALIFIER"
+      "name": "揭榜报名/打擂",
+      "kind": "QUALIFIER",
+      "note": "揭榜报名/打擂（企业发榜→团队揭榜→评审）"
      },
      {
-      "name": "终审/授奖公示（由团中央统一组织评审）",
-      "kind": "FINAL"
+      "name": "终审/授奖公示",
+      "kind": "FINAL",
+      "note": "终审/授奖公示（由团中央统一组织评审）"
      }
     ],
     "AIPLUS": [
      {
-      "name": "省级/校级遴选（随主体赛或单独组织）",
-      "kind": "PROVINCIAL"
+      "name": "省级/校级遴选",
+      "kind": "PROVINCIAL",
+      "note": "省级/校级遴选（随主体赛或单独组织）"
      },
      {
-      "name": "专项赛终审决赛（2025-11-02，南京大学）",
-      "kind": "FINAL"
+      "name": "专项赛终审决赛",
+      "kind": "FINAL",
+      "note": "专项赛终审决赛（2025-11-02，南京大学）"
      }
     ]
    }
@@ -3152,114 +3498,138 @@
    "stagesByTrack": {
     "ADV-MFG": [
      {
-      "name": "校级初赛（2026年5月底前）",
-      "kind": "CAMPUS"
+      "name": "校级初赛",
+      "kind": "CAMPUS",
+      "note": "校级初赛（2026年5月底前）"
      },
      {
-      "name": "省级复赛（2026年6月底前完成推报）",
-      "kind": "PROVINCIAL"
+      "name": "省级复赛",
+      "kind": "PROVINCIAL",
+      "note": "省级复赛（2026年6月底前完成推报）"
      },
      {
-      "name": "全国终审决赛（2026年10月，大连理工大学，按专科组/本科组/研究生组评审）",
-      "kind": "FINAL"
+      "name": "全国终审决赛",
+      "kind": "FINAL",
+      "note": "全国终审决赛（2026年10月，大连理工大学，按专科组/本科组/研究生组评审）"
      }
     ],
     "IT": [
      {
-      "name": "校级初赛（2026年5月底前）",
-      "kind": "CAMPUS"
+      "name": "校级初赛",
+      "kind": "CAMPUS",
+      "note": "校级初赛（2026年5月底前）"
      },
      {
-      "name": "省级复赛（2026年6月底前）",
-      "kind": "PROVINCIAL"
+      "name": "省级复赛",
+      "kind": "PROVINCIAL",
+      "note": "省级复赛（2026年6月底前）"
      },
      {
-      "name": "全国终审决赛（2026年10月，大连理工大学）",
-      "kind": "FINAL"
+      "name": "全国终审决赛",
+      "kind": "FINAL",
+      "note": "全国终审决赛（2026年10月，大连理工大学）"
      }
     ],
     "BIO": [
      {
-      "name": "校级初赛（2026年5月底前）",
-      "kind": "CAMPUS"
+      "name": "校级初赛",
+      "kind": "CAMPUS",
+      "note": "校级初赛（2026年5月底前）"
      },
      {
-      "name": "省级复赛（2026年6月底前）",
-      "kind": "PROVINCIAL"
+      "name": "省级复赛",
+      "kind": "PROVINCIAL",
+      "note": "省级复赛（2026年6月底前）"
      },
      {
-      "name": "全国终审决赛（2026年10月，大连理工大学）",
-      "kind": "FINAL"
+      "name": "全国终审决赛",
+      "kind": "FINAL",
+      "note": "全国终审决赛（2026年10月，大连理工大学）"
      }
     ],
     "NE-MAT": [
      {
-      "name": "校级初赛（2026年5月底前）",
-      "kind": "CAMPUS"
+      "name": "校级初赛",
+      "kind": "CAMPUS",
+      "note": "校级初赛（2026年5月底前）"
      },
      {
-      "name": "省级复赛（2026年6月底前）",
-      "kind": "PROVINCIAL"
+      "name": "省级复赛",
+      "kind": "PROVINCIAL",
+      "note": "省级复赛（2026年6月底前）"
      },
      {
-      "name": "全国终审决赛（2026年10月，大连理工大学）",
-      "kind": "FINAL"
+      "name": "全国终审决赛",
+      "kind": "FINAL",
+      "note": "全国终审决赛（2026年10月，大连理工大学）"
      }
     ],
     "AGRI": [
      {
-      "name": "校级初赛（2026年5月底前）",
-      "kind": "CAMPUS"
+      "name": "校级初赛",
+      "kind": "CAMPUS",
+      "note": "校级初赛（2026年5月底前）"
      },
      {
-      "name": "省级复赛（2026年6月底前）",
-      "kind": "PROVINCIAL"
+      "name": "省级复赛",
+      "kind": "PROVINCIAL",
+      "note": "省级复赛（2026年6月底前）"
      },
      {
-      "name": "全国终审决赛（2026年10月，大连理工大学）",
-      "kind": "FINAL"
+      "name": "全国终审决赛",
+      "kind": "FINAL",
+      "note": "全国终审决赛（2026年10月，大连理工大学）"
      }
     ],
     "CONSUME": [
      {
-      "name": "校级初赛（2026年5月底前）",
-      "kind": "CAMPUS"
+      "name": "校级初赛",
+      "kind": "CAMPUS",
+      "note": "校级初赛（2026年5月底前）"
      },
      {
-      "name": "省级复赛（2026年6月底前）",
-      "kind": "PROVINCIAL"
+      "name": "省级复赛",
+      "kind": "PROVINCIAL",
+      "note": "省级复赛（2026年6月底前）"
      },
      {
-      "name": "全国终审决赛（2026年10月，大连理工大学）",
-      "kind": "FINAL"
+      "name": "全国终审决赛",
+      "kind": "FINAL",
+      "note": "全国终审决赛（2026年10月，大连理工大学）"
      }
     ],
     "SERVICE": [
      {
-      "name": "校级初赛（2026年5月底前）",
-      "kind": "CAMPUS"
+      "name": "校级初赛",
+      "kind": "CAMPUS",
+      "note": "校级初赛（2026年5月底前）"
      },
      {
-      "name": "省级复赛（2026年6月底前）",
-      "kind": "PROVINCIAL"
+      "name": "省级复赛",
+      "kind": "PROVINCIAL",
+      "note": "省级复赛（2026年6月底前）"
      },
      {
-      "name": "全国终审决赛（2026年10月，大连理工大学）",
-      "kind": "FINAL"
+      "name": "全国终审决赛",
+      "kind": "FINAL",
+      "note": "全国终审决赛（2026年10月，大连理工大学）"
      }
     ],
     "INTL": [
      {
-      "name": "校级初赛（2026年5月底前）",
-      "kind": "CAMPUS"
+      "name": "校级初赛",
+      "kind": "CAMPUS",
+      "note": "校级初赛（2026年5月底前）"
      },
      {
-      "name": "省级复赛（2026年6月底前）",
-      "kind": "PROVINCIAL"
+      "name": "省级复赛",
+      "kind": "PROVINCIAL",
+      "note": "省级复赛（2026年6月底前）"
      },
      {
-      "name": "全国终审决赛（2026年10月，大连理工大学）",
-      "kind": "FINAL"
+      "name": "全国终审决赛",
+      "kind": "FINAL",
+      "note": "全国终审决赛（2026年10月，大连理工大学）"
      }
     ]
    }
@@ -3397,7 +3767,7 @@
     "label": "报名开始（校级管理员申请后团队报名，无全国统一截止）"
    },
    {
-    "stage": "全国半决赛（线上）",
+    "stage": "全国半决赛",
     "track": "SIM",
     "nodeType": "CONTEST",
     "startAt": "2026-11-01",
@@ -3407,7 +3777,7 @@
   ],
   "CUBEC": [
    {
-    "stage": "知识赛（个人网络机考，60分合格）",
+    "stage": "知识赛",
     "track": "INNOV",
     "nodeType": "SIGNUP_END",
     "endAt": "2026-08-07",
@@ -3421,14 +3791,14 @@
     "label": "创业计划赛道校赛完成截止"
    },
    {
-    "stage": "省赛（省级总决赛）",
+    "stage": "省赛",
     "track": "INNOV",
     "nodeType": "CONTEST",
     "endAt": "2026-09-03",
     "label": "创业计划赛道省赛完成截止"
    },
    {
-    "stage": "省赛（省级总决赛）",
+    "stage": "全国总决赛",
     "track": "INNOV",
     "nodeType": "CONTEST",
     "startAt": "2026-10-17",
@@ -3468,7 +3838,7 @@
     "label": "校赛阶段（各校自行组织）"
    },
    {
-    "stage": "省赛（省级选拔赛）",
+    "stage": "省赛",
     "track": "REGULAR",
     "nodeType": "CONTEST",
     "startAt": "2026-04-20",
@@ -3555,21 +3925,21 @@
   ],
   "CMC": [
    {
-    "stage": "初赛（以省、自治区、直辖市为赛区，军队院校为独立赛区，全国统一命题同一时间考试）",
+    "stage": "初赛",
     "track": null,
     "nodeType": "SIGNUP_END",
     "startAt": "2026-10-19",
     "label": "报名截止（官方通知：2026年10月19日前按所在赛区要求报名；各赛区校内截止自定，如上海外国语9-18、山东理工10-14）"
    },
    {
-    "stage": "决赛（中国数学会青年工作与大学生数学竞赛委员会、大连理工大学组织）",
+    "stage": "决赛",
     "track": null,
     "nodeType": "OTHER",
     "startAt": "2026-10-30",
     "label": "各赛区向中国数学会汇款截止（用于决赛名额分配）"
    },
    {
-    "stage": "初赛（以省、自治区、直辖市为赛区，军队院校为独立赛区，全国统一命题同一时间考试）",
+    "stage": "初赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-11-14",
@@ -3605,14 +3975,14 @@
   ],
   "ICPC": [
    {
-    "stage": "网络预选赛（PTA平台两场，成绩作为各区域赛入围重要参考）",
+    "stage": "网络预选赛",
     "track": null,
     "nodeType": "SIGNUP_END",
     "startAt": "2026-08-26",
     "label": "网络预选赛第一场报名、缴费截止（23:59:59，PTA平台120元/队）"
    },
    {
-    "stage": "网络预选赛（PTA平台两场，成绩作为各区域赛入围重要参考）",
+    "stage": "网络预选赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-09-06",
@@ -3620,14 +3990,14 @@
     "label": "网络预选赛第一场 13:00-18:00"
    },
    {
-    "stage": "网络预选赛（PTA平台两场，成绩作为各区域赛入围重要参考）",
+    "stage": "网络预选赛",
     "track": null,
     "nodeType": "SIGNUP_END",
     "startAt": "2026-09-01",
     "label": "网络预选赛第二场报名、缴费截止（23:59:59）"
    },
    {
-    "stage": "网络预选赛（PTA平台两场，成绩作为各区域赛入围重要参考）",
+    "stage": "网络预选赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-09-12",
@@ -3635,14 +4005,14 @@
     "label": "网络预选赛第二场 13:00-18:00"
    },
    {
-    "stage": "网络预选赛（PTA平台两场，成绩作为各区域赛入围重要参考）",
+    "stage": "网络预选赛",
     "track": null,
     "nodeType": "SIGNUP_END",
     "startAt": "2026-09-30",
     "label": "西安站参赛费缴纳截止（24:00，以银行受理收据为准）"
    },
    {
-    "stage": "网络预选赛（PTA平台两场，成绩作为各区域赛入围重要参考）",
+    "stage": "亚洲EC区域赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-10-16",
@@ -3650,14 +4020,14 @@
     "label": "西安区域赛（西北工业大学长安校区：10-16~17签到，10-17开幕式+热身赛，正式赛10-18 09:00-14:00，10-18颁奖）"
    },
    {
-    "stage": "网络预选赛（PTA平台两场，成绩作为各区域赛入围重要参考）",
+    "stage": "网络预选赛",
     "track": null,
     "nodeType": "SIGNUP_END",
     "startAt": "2026-10-10",
     "label": "成都站队伍注册截止（23:59，icpc.global注册+中文报名系统uep.pintia.cn填报）"
    },
    {
-    "stage": "网络预选赛（PTA平台两场，成绩作为各区域赛入围重要参考）",
+    "stage": "亚洲EC区域赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-10-24",
@@ -3665,7 +4035,7 @@
     "label": "成都区域赛（电子科技大学：10-24报道/开幕式/热身赛，正式赛10-25 09:00-14:00）"
    },
    {
-    "stage": "网络预选赛（PTA平台两场，成绩作为各区域赛入围重要参考）",
+    "stage": "亚洲EC区域赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-10-31",
@@ -3673,7 +4043,7 @@
     "label": "武汉区域赛（据北京总部2026各区域赛汇总表）"
    },
    {
-    "stage": "网络预选赛（PTA平台两场，成绩作为各区域赛入围重要参考）",
+    "stage": "亚洲EC区域赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-11-07",
@@ -3681,7 +4051,7 @@
     "label": "南京区域赛（据北京总部2026各区域赛汇总表）"
    },
    {
-    "stage": "网络预选赛（PTA平台两场，成绩作为各区域赛入围重要参考）",
+    "stage": "亚洲EC区域赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-11-14",
@@ -3689,7 +4059,7 @@
     "label": "沈阳区域赛（据北京总部2026各区域赛汇总表）"
    },
    {
-    "stage": "网络预选赛（PTA平台两场，成绩作为各区域赛入围重要参考）",
+    "stage": "亚洲EC区域赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-12-05",
@@ -3697,7 +4067,7 @@
     "label": "上海区域赛（据北京总部2026各区域赛汇总表）"
    },
    {
-    "stage": "网络预选赛（PTA平台两场，成绩作为各区域赛入围重要参考）",
+    "stage": "亚洲EC区域赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-12-19",
@@ -3705,7 +4075,7 @@
     "label": "南昌区域赛（据北京总部2026各区域赛汇总表）"
    },
    {
-    "stage": "网络预选赛（PTA平台两场，成绩作为各区域赛入围重要参考）",
+    "stage": "亚洲EC区域赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2027-01-09",
@@ -3713,7 +4083,7 @@
     "label": "港澳区域赛（据北京总部2026各区域赛汇总表）"
    },
    {
-    "stage": "EC-Final（杭州）",
+    "stage": "EC-Final",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2027-01-26",
@@ -3721,7 +4091,7 @@
     "label": "EC-Final（杭州，The 2026 ICPC Asia East Continent Final）"
    },
    {
-    "stage": "网络预选赛（PTA平台两场，成绩作为各区域赛入围重要参考）",
+    "stage": "亚洲EC区域赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-11-15",
@@ -3731,7 +4101,7 @@
   ],
   "CUMCM": [
    {
-    "stage": "竞赛（全国统一开卷、通讯赛制）",
+    "stage": "竞赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-09-10",
@@ -3741,7 +4111,7 @@
   ],
   "MCM": [
    {
-    "stage": "竞赛（全球统一网络赛，美东时间）",
+    "stage": "竞赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2027-01-28",
@@ -3752,14 +4122,14 @@
   "ZPY": [],
   "WLSYCX": [
    {
-    "stage": "校内选拔（各校自定，如中科大3-06~3-31、哈工大4-30截止）",
+    "stage": "校内选拔",
     "track": null,
     "nodeType": "SIGNUP_END",
     "startAt": "2026-05-15",
     "label": "预赛报名截止：各参赛高校通过网络填报预赛报名表（约5月初发布报名表）"
    },
    {
-    "stage": "区域/省级选拔（部分地区：第三届西南地区选拔赛决赛2026-07-22~25云南大学；西北地区竞赛2026年8月；省级选拔优秀作品可获决赛直通车）",
+    "stage": "全国决赛",
     "track": null,
     "nodeType": "SIGNUP_END",
     "startAt": "2026-09-01",
@@ -3767,7 +4137,7 @@
     "label": "全国决赛正式报名窗口：晋级队伍提交正式报名、上传参赛资料并完成缴费（详细方案见第二轮通知）"
    },
    {
-    "stage": "区域/省级选拔（部分地区：第三届西南地区选拔赛决赛2026-07-22~25云南大学；西北地区竞赛2026年8月；省级选拔优秀作品可获决赛直通车）",
+    "stage": "全国决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-07-22",
@@ -3777,28 +4147,28 @@
   ],
   "IGEM": [
    {
-    "stage": "注册与组队（赛季分阶段开放报名，Team Roster Freeze为最终名单截止）",
+    "stage": "注册与组队",
     "track": null,
     "nodeType": "SIGNUP_END",
     "startAt": "2026-09-16",
     "label": "Team Roster Freeze（队伍名单冻结，15:00 UTC）"
    },
    {
-    "stage": "Grand Jamboree（巴黎，含Expo、评审、Finalist角逐与结果发布）",
+    "stage": "Grand Jamboree",
     "track": null,
     "nodeType": "SUBMISSION",
     "startAt": "2026-10-21",
     "label": "Wiki Freeze：项目Wiki及相关交付物冻结（15:00 UTC）"
    },
    {
-    "stage": "Grand Jamboree（巴黎，含Expo、评审、Finalist角逐与结果发布）",
+    "stage": "Grand Jamboree",
     "track": null,
     "nodeType": "SUBMISSION",
     "startAt": "2026-10-28",
     "label": "Presentation Video 提交截止"
    },
    {
-    "stage": "交付物提交与评审（Wiki、演示视频、评审表、Registry贡献等）",
+    "stage": "交付物提交与评审",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-11-13",
@@ -3806,7 +4176,7 @@
     "label": "Grand Jamboree（巴黎 Paris Convention Centre：11-13起Expo与评审，11-15公布Finalists）"
    },
    {
-    "stage": "Grand Jamboree（巴黎，含Expo、评审、Finalist角逐与结果发布）",
+    "stage": "Grand Jamboree",
     "track": null,
     "nodeType": "RESULT",
     "startAt": "2026-11-16",
@@ -3815,14 +4185,14 @@
   ],
   "NUEDC": [
    {
-    "stage": "决赛（上海交通大学）",
+    "stage": "决赛",
     "track": "EMAI",
     "nodeType": "OTHER",
     "startAt": "2025-12-04",
     "label": "《关于组织2026年全国大学生电子设计竞赛专题竞赛的通知》发布"
    },
    {
-    "stage": "决赛（上海交通大学）",
+    "stage": "决赛",
     "track": "EMAI",
     "nodeType": "OTHER",
     "startAt": "2026-04-30",
@@ -3836,7 +4206,7 @@
     "label": "信息科技前沿专题赛（瑞萨杯）初赛获奖名单公布"
    },
    {
-    "stage": "初赛（选拔+邀请）",
+    "stage": "初赛",
     "track": "EMAI",
     "nodeType": "CONTEST",
     "startAt": "2026-07-29",
@@ -3844,7 +4214,7 @@
     "label": "TI杯初赛（7月29日8:00-8月1日20:00，与省级赛合并；部分赛区测评8月2-5日）"
    },
    {
-    "stage": "决赛（上海交通大学）",
+    "stage": "决赛",
     "track": "EMAI",
     "nodeType": "CONTEST",
     "startAt": "2026-07-16",
@@ -3852,7 +4222,7 @@
     "label": "嵌入式AI专题赛决赛评审（7月16日报到并抽签，上海交通大学承办）"
    },
    {
-    "stage": "决赛（上海交通大学）",
+    "stage": "决赛",
     "track": "EMAI",
     "nodeType": "CONTEST",
     "startAt": "2026-08-23",
@@ -3862,14 +4232,14 @@
   ],
   "SOCCHINA": [
    {
-    "stage": "报名（含校赛选拔）",
+    "stage": "报名",
     "track": "APP",
     "nodeType": "SIGNUP_START",
     "startAt": "2026-02-10",
     "label": "芯片应用赛道报名启动（报名通知发布）"
    },
    {
-    "stage": "报名（含校赛选拔）",
+    "stage": "报名",
     "track": "APP",
     "nodeType": "SIGNUP_END",
     "endAt": "2026-04-20",
@@ -3884,42 +4254,42 @@
     "label": "芯片应用赛道分赛区复赛（东部7-19、中部7-21、南部7-22、西南7-23、西北/北部7-28）"
    },
    {
-    "stage": "全国总决赛（南京江北新区）",
+    "stage": "全国总决赛",
     "track": "APP",
     "nodeType": "CONTEST",
     "startAt": "2026-08-13",
     "label": "芯片应用赛道全国总决赛成绩公示（总决赛8月在南京江北新区收官）"
    },
    {
-    "stage": "全国总决赛（南京江北新区）",
+    "stage": "全国总决赛",
     "track": "APP",
     "nodeType": "RESULT",
     "startAt": "2026-08-24",
     "label": "芯片应用赛道全国总决赛获奖名单公布"
    },
    {
-    "stage": "报名（含校赛选拔）",
+    "stage": "报名",
     "track": "APP",
     "nodeType": "SIGNUP_START",
     "startAt": "2026-07-06",
     "label": "FPGA赛道竞赛通知发布并开始报名"
    },
    {
-    "stage": "报名（含校赛选拔）",
+    "stage": "报名",
     "track": "APP",
     "nodeType": "SIGNUP_END",
     "endAt": "2026-09-22",
     "label": "FPGA赛道报名截止（24:00）"
    },
    {
-    "stage": "全国总决赛（南京江北新区）",
+    "stage": "全国总决赛",
     "track": "APP",
     "nodeType": "SUBMISSION",
     "endAt": "2026-11-04",
     "label": "FPGA赛道作品提交截止（18:00）"
    },
    {
-    "stage": "全国总决赛（南京江北新区）",
+    "stage": "全国总决赛",
     "track": "APP",
     "nodeType": "CONTEST",
     "startAt": "2026-11-20",
@@ -3936,7 +4306,7 @@
     "label": "主赛项报名截止"
    },
    {
-    "stage": "初赛（作品提交与评审）",
+    "stage": "初赛",
     "track": null,
     "nodeType": "SUBMISSION",
     "endAt": "2026-05-07",
@@ -3987,7 +4357,7 @@
     "label": "芯片应用与芯创成果赛项总决赛获奖名单公示"
    },
    {
-    "stage": "初赛（作品提交与评审）",
+    "stage": "初赛",
     "track": "VOC",
     "nodeType": "SIGNUP_START",
     "startAt": "2026-05-15",
@@ -3997,7 +4367,7 @@
   ],
   "GDESIGN": [
    {
-    "stage": "区赛决赛（如东南区6月5-6日福建江夏学院）",
+    "stage": "区赛决赛",
     "track": "CREATIVE",
     "nodeType": "CONTEST",
     "startAt": "2026-06-05",
@@ -4005,7 +4375,7 @@
     "label": "东南区赛创意赛道决赛（福建江夏学院承办）"
    },
    {
-    "stage": "全国决赛（长春理工大学）",
+    "stage": "全国决赛",
     "track": "OPTICS",
     "nodeType": "CONTEST",
     "startAt": "2026-06-19",
@@ -4043,7 +4413,7 @@
     "label": "操作系统设计赛报名截止"
    },
    {
-    "stage": "全国总决赛（西北工业大学）",
+    "stage": "全国总决赛",
     "track": "CPU",
     "nodeType": "CONTEST",
     "startAt": "2026-05-27",
@@ -4067,7 +4437,7 @@
     "label": "智能系统创新设计赛初赛"
    },
    {
-    "stage": "全国总决赛（南开大学）",
+    "stage": "全国总决赛",
     "track": "OS",
     "nodeType": "CONTEST",
     "startAt": "2026-08-18",
@@ -4075,7 +4445,7 @@
     "label": "操作系统设计赛与编译系统设计赛（华为毕昇杯）全国总决赛（南开大学津南校区）"
    },
    {
-    "stage": "全国总决赛（西北工业大学）",
+    "stage": "全国总决赛",
     "track": "CPU",
     "nodeType": "CONTEST",
     "startAt": "2026-08-21",
@@ -4083,14 +4453,14 @@
     "label": "CPU设计赛（龙芯杯）全国总决赛（西北工业大学长安校区）"
    },
    {
-    "stage": "全国总决赛（西北工业大学）",
+    "stage": "全国总决赛",
     "track": "CPU",
     "nodeType": "AWARD",
     "startAt": "2026-08-21",
     "label": "大赛颁奖典礼（南开大学津南校区）"
    },
    {
-    "stage": "全国总决赛（西北工业大学）",
+    "stage": "全国总决赛",
     "track": "CPU",
     "nodeType": "RESULT",
     "startAt": "2026-09-02",
@@ -4138,14 +4508,14 @@
   ],
   "IOTSJTU": [
    {
-    "stage": "报名（4月1日系统开放）",
+    "stage": "报名",
     "track": null,
     "nodeType": "SIGNUP_START",
     "startAt": "2026-04-01",
     "label": "竞赛系统开放报名"
    },
    {
-    "stage": "报名（4月1日系统开放）",
+    "stage": "报名",
     "track": null,
     "nodeType": "SIGNUP_END",
     "endAt": "2026-06-15",
@@ -4160,7 +4530,7 @@
     "label": "作品文档及实物演示视频提交"
    },
    {
-    "stage": "分赛区网上评审（8月10日前）",
+    "stage": "分赛区网上评审",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-08-10",
@@ -4168,7 +4538,7 @@
     "label": "分赛区网上评审（8月10日前完成并公布晋级名单）、分赛区决赛（8月20日前完成，如华中及西南分赛区决赛在贵州大学举行，269队参赛）"
    },
    {
-    "stage": "分赛区决赛（8月20日前）",
+    "stage": "分赛区决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-08-22",
@@ -4178,14 +4548,14 @@
   ],
   "C4": [
    {
-    "stage": "普及赛（个人赛，3月14日）",
+    "stage": "普及赛",
     "track": "GPLT",
     "nodeType": "SIGNUP_END",
     "endAt": "2026-03-07",
     "label": "天梯赛普及赛（个人赛）报名截止"
    },
    {
-    "stage": "普及赛（个人赛，3月14日）",
+    "stage": "普及赛",
     "track": "GPLT",
     "nodeType": "CONTEST",
     "startAt": "2026-03-14",
@@ -4193,7 +4563,7 @@
     "label": "天梯赛普及赛（个人赛）线上比赛（13:30-15:30）"
    },
    {
-    "stage": "团体赛全国总决赛（4月18日单场）",
+    "stage": "团体赛全国总决赛",
     "track": "GPLT",
     "nodeType": "CONTEST",
     "startAt": "2026-04-18",
@@ -4208,7 +4578,7 @@
     "label": "大数据挑战赛报名系统开放（10:00，和鲸社区平台）"
    },
    {
-    "stage": "团体赛全国总决赛（4月18日单场）",
+    "stage": "团体赛全国总决赛",
     "track": "GPLT",
     "nodeType": "CONTEST",
     "startAt": "2026-08-29",
@@ -4251,7 +4621,7 @@
     "label": "AI创意赛（鸿蒙/昇腾赛道）报名及初赛作品提交截止（24:00）"
    },
    {
-    "stage": "团体赛全国总决赛（4月18日单场）",
+    "stage": "团体赛全国总决赛",
     "track": "GPLT",
     "nodeType": "SUBMISSION",
     "endAt": "2026-09-30",
@@ -4260,7 +4630,7 @@
   ],
   "SMARTCAR": [
    {
-    "stage": "全国总决赛（室内）",
+    "stage": "全国总决赛",
     "track": "SPEED",
     "nodeType": "CONTEST",
     "startAt": "2026-08-21",
@@ -4268,7 +4638,7 @@
     "label": "室内全国总决赛（第二十一届，安徽大学，合肥）"
    },
    {
-    "stage": "分（省）赛区赛",
+    "stage": "分",
     "track": "SPEED",
     "nodeType": "SIGNUP_END",
     "endAt": "2026-10-10",
@@ -4277,7 +4647,7 @@
   ],
   "CURC": [
    {
-    "stage": "区域赛（南部长沙/东部济南/北部沈阳，2026-05~06）",
+    "stage": "区域赛",
     "track": "ROBOMASTER",
     "nodeType": "SIGNUP_START",
     "startAt": "2025-10-29",
@@ -4293,7 +4663,7 @@
     "label": "第二十五届ROBOCON全国赛（南京理工大学江阴校区，主题武林探秘，电子科技大学夺冠）"
    },
    {
-    "stage": "全国赛（分赛项，北京等）",
+    "stage": "全国赛",
     "track": "ROBOTAC",
     "nodeType": "CONTEST",
     "startAt": "2026-05-24",
@@ -4301,7 +4671,7 @@
     "label": "ROBOTAC人形功夫搏击赛（雄安会展中心，北京科技大学夺冠）"
    },
    {
-    "stage": "区域赛（南部长沙/东部济南/北部沈阳，2026-05~06）",
+    "stage": "区域赛",
     "track": "ROBOMASTER",
     "nodeType": "CONTEST",
     "startAt": "2026-05-13",
@@ -4309,7 +4679,7 @@
     "label": "RoboMaster 2026区域赛（南部长沙5-13~17、东部济南5-21~25、北部沈阳5-29起）"
    },
    {
-    "stage": "全国总决赛（深圳）",
+    "stage": "全国总决赛",
     "track": "ROBOMASTER",
     "nodeType": "CONTEST",
     "startAt": "2026-07-31",
@@ -4319,14 +4689,14 @@
   ],
   "CRC": [
    {
-    "stage": "总决赛（RoboCup赛区5月北京；中国机器人大赛赛区10月杭州）",
+    "stage": "总决赛",
     "track": null,
     "nodeType": "OTHER",
     "startAt": "2026-03-11",
     "label": "（RoboCup赛区）校赛组织与晋级推荐须知发布，校赛负责人申报启动（2026-03-12）"
    },
    {
-    "stage": "总决赛（RoboCup赛区5月北京；中国机器人大赛赛区10月杭州）",
+    "stage": "总决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-05-01",
@@ -4334,7 +4704,7 @@
     "label": "2026 RoboCup机器人世界杯中国赛（RoboCup赛区，北京首都国际会议中心，五一假期举办，报到5-01）"
    },
    {
-    "stage": "总决赛（RoboCup赛区5月北京；中国机器人大赛赛区10月杭州）",
+    "stage": "总决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-08-21",
@@ -4342,7 +4712,7 @@
     "label": "中国机器人大赛赛区专项赛（北方工业大学承办）"
    },
    {
-    "stage": "总决赛（RoboCup赛区5月北京；中国机器人大赛赛区10月杭州）",
+    "stage": "总决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-10-16",
@@ -4352,28 +4722,28 @@
   ],
   "CAAIROBOT": [
    {
-    "stage": "校赛（各校选拔，比例各校自定）",
+    "stage": "校赛",
     "track": null,
     "nodeType": "SIGNUP_START",
     "startAt": "2026-03-01",
     "label": "报名启动（沿用基线CSV；官方报名系统 craic.yuntop.com，精确开始日期未在官网公告页直接核到）"
    },
    {
-    "stage": "省级选拔赛（各省赛区，2026-06-08通知）",
+    "stage": "全国决赛",
     "track": null,
     "nodeType": "OTHER",
     "startAt": "2026-06-08",
     "label": "省级层次选拔赛通知发布（各省选拔赛时间自定，多在6月-7月初）"
    },
    {
-    "stage": "全国决赛（哈尔滨站/合肥站/线上三站+人形专项赛北京）",
+    "stage": "全国决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-07-25",
     "label": "全国决赛（哈尔滨站）开幕，哈尔滨石油学院承办，276所高校1357名选手；闭幕日期未查到确切日"
    },
    {
-    "stage": "全国决赛（哈尔滨站/合肥站/线上三站+人形专项赛北京）",
+    "stage": "全国决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-08-01",
@@ -4390,14 +4760,14 @@
     "label": "2026赛季报名窗口（官方平台赛程2026-03-20~11-30；各阶段赛项另有报名截止）"
    },
    {
-    "stage": "全国总决赛（按赛项分四阶段：7月杭州/8月线上线下/9月杭州/10月武汉泰安广西）",
+    "stage": "全国总决赛",
     "track": null,
     "nodeType": "SIGNUP_END",
     "endAt": "2026-07-07",
     "label": "总决赛第一阶段报名截止（7-07 17:00，作品提交截止7-10 17:00）"
    },
    {
-    "stage": "全国总决赛（按赛项分四阶段：7月杭州/8月线上线下/9月杭州/10月武汉泰安广西）",
+    "stage": "全国总决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-07-16",
@@ -4405,7 +4775,7 @@
     "label": "全国总决赛第一阶段（杭州电子科技大学钱塘校区，CAIA设计赛道与CAIP强脑赛道部分赛项；7-15报到）"
    },
    {
-    "stage": "全国总决赛（按赛项分四阶段：7月杭州/8月线上线下/9月杭州/10月武汉泰安广西）",
+    "stage": "全国总决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-09-24",
@@ -4413,7 +4783,7 @@
     "label": "全国总决赛第三阶段（杭州，智能视觉-空竹侦察9-25~27、机器人创新设计与AIGC应用9-26~27、人形机器人具身智能挑战9-27等；报名截止9-19）"
    },
    {
-    "stage": "全国总决赛（按赛项分四阶段：7月杭州/8月线上线下/9月杭州/10月武汉泰安广西）",
+    "stage": "全国总决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-10-23",
@@ -4423,7 +4793,7 @@
   ],
   "ROBOTCONTEST": [
    {
-    "stage": "校赛（以学校为单位报名）",
+    "stage": "校赛",
     "track": null,
     "nodeType": "SIGNUP_START",
     "startAt": "2026-03-01",
@@ -4431,21 +4801,21 @@
     "label": "报名窗口（1号通知：2026-03-01起报名，5-08截止；报名与作品提交网址 robotcontest.cn）"
    },
    {
-    "stage": "区域赛（2026-06-10前完成选拔）",
+    "stage": "区域赛",
     "track": null,
     "nodeType": "SUBMISSION",
     "endAt": "2026-06-10",
     "label": "区域赛选拔完成截止（各参赛作品应于6-10前完成区域赛选拔）"
    },
    {
-    "stage": "全国总决赛（2026-08-17~20宁波/余姚）",
+    "stage": "全国总决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-05-24",
     "label": "软件系统安全赛（产教融合赛道）全国总决赛（中国科学技术大学合肥高新校区）"
    },
    {
-    "stage": "全国赛（2026-07-12~13，产教融合赛时间另定）",
+    "stage": "全国赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-07-12",
@@ -4453,7 +4823,7 @@
     "label": "全国赛（主体赛项评审/比赛，产教融合赛具体时间以官网通知为准）"
    },
    {
-    "stage": "全国总决赛（2026-08-17~20宁波/余姚）",
+    "stage": "全国总决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-08-17",
@@ -4463,7 +4833,7 @@
   ],
   "MEICC": [
    {
-    "stage": "全国总决赛（各赛项时间地点各异）",
+    "stage": "全国总决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-07-11",
@@ -4471,7 +4841,7 @@
     "label": "创新设计赛（机械产品数字化设计赛）全国总决赛（兰州理工大学承办）"
    },
    {
-    "stage": "全国总决赛（各赛项时间地点各异）",
+    "stage": "全国总决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-07-31",
@@ -4479,7 +4849,7 @@
     "label": "材料成型赛（铸造工艺设计赛）全国总决赛暨颁奖典礼（山西太原，169所高校）"
    },
    {
-    "stage": "全国总决赛（各赛项时间地点各异）",
+    "stage": "全国总决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-08-23",
@@ -4506,28 +4876,28 @@
   ],
   "CISCN": [
    {
-    "stage": "初赛（线上）",
+    "stage": "初赛",
     "track": "CPRACTICE",
     "nodeType": "SIGNUP_END",
     "startAt": "2025-12-21",
     "label": "创新实践能力赛报名截止"
    },
    {
-    "stage": "初赛（线上）",
+    "stage": "初赛",
     "track": "CPRACTICE",
     "nodeType": "CONTEST",
     "startAt": "2025-12-28",
     "label": "创新实践能力赛初赛（线上CTF）"
    },
    {
-    "stage": "全国初评（线上）",
+    "stage": "全国初评",
     "track": "WORKS",
     "nodeType": "SIGNUP_START",
     "startAt": "2026-05-29",
     "label": "作品赛报名开始"
    },
    {
-    "stage": "全国初评（线上）",
+    "stage": "全国初评",
     "track": "WORKS",
     "nodeType": "SIGNUP_END",
     "startAt": "2026-07-05",
@@ -4566,14 +4936,14 @@
     "label": "报名及辅导阶段截止（作品提交同步截止）"
    },
    {
-    "stage": "全国总决赛（线上答辩）",
+    "stage": "全国总决赛",
     "track": null,
     "nodeType": "RESULT",
     "startAt": "2026-08-22",
     "label": "晋级总决赛团队名单公布"
    },
    {
-    "stage": "全国总决赛（线上答辩）",
+    "stage": "全国总决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-08-23",
@@ -4590,7 +4960,7 @@
     "label": "报名系统开放、省赛报名启动（各省3-4月自定）"
    },
    {
-    "stage": "国赛决赛（6个决赛区）",
+    "stage": "国赛决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-07-17",
@@ -4598,7 +4968,7 @@
     "label": "上海决赛区（大数据应用/AI+数媒静态设计，东华大学承办实施）"
    },
    {
-    "stage": "国赛决赛（6个决赛区）",
+    "stage": "国赛决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-07-22",
@@ -4606,7 +4976,7 @@
     "label": "杭州决赛区（物联网/计算机音乐创作/国际生汉学，浙江音乐学院）"
    },
    {
-    "stage": "国赛决赛（6个决赛区）",
+    "stage": "国赛决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-07-27",
@@ -4614,7 +4984,7 @@
     "label": "南京南决赛区（微课与AI辅助教学，安徽大学承办实施，地点合肥）"
    },
    {
-    "stage": "国赛决赛（6个决赛区）",
+    "stage": "国赛决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-08-06",
@@ -4622,7 +4992,7 @@
     "label": "南京东2决赛区（信息可视化/数媒动漫与短片，东北师范大学，地点长春）"
    },
    {
-    "stage": "国赛决赛（6个决赛区）",
+    "stage": "国赛决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-08-11",
@@ -4630,7 +5000,7 @@
     "label": "济南决赛区（软件应用与开发，青岛农业大学，地点青岛）"
    },
    {
-    "stage": "国赛决赛（6个决赛区）",
+    "stage": "国赛决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-08-16",
@@ -4638,7 +5008,7 @@
     "label": "南京东1决赛区（人工智能应用/数媒游戏与交互设计，江南大学，地点无锡）"
    },
    {
-    "stage": "国赛决赛（6个决赛区）",
+    "stage": "国赛决赛",
     "track": null,
     "nodeType": "RESULT",
     "startAt": "2026-09-01",
@@ -4648,14 +5018,14 @@
   ],
   "NCDA": [
    {
-    "stage": "校赛（院系统一报名）",
+    "stage": "校赛",
     "track": null,
     "nodeType": "SIGNUP_START",
     "startAt": "2025-10-31",
     "label": "作品征集/报名启动"
    },
    {
-    "stage": "校赛（院系统一报名）",
+    "stage": "校赛",
     "track": null,
     "nodeType": "SUBMISSION",
     "startAt": "2026-06-20",
@@ -4701,7 +5071,7 @@
     "label": "报名及作品提交截止（17:00）"
    },
    {
-    "stage": "省级赛（29个分赛区）",
+    "stage": "省级赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-07-08",
@@ -4709,7 +5079,7 @@
     "label": "省赛评审（07-20 17:00系统关闭）"
    },
    {
-    "stage": "省级赛（29个分赛区）",
+    "stage": "省级赛",
     "track": null,
     "nodeType": "RESULT",
     "startAt": "2026-07-30",
@@ -4733,21 +5103,21 @@
   ],
   "3DDS": [
    {
-    "stage": "初赛（校赛）",
+    "stage": "初赛",
     "track": null,
     "nodeType": "SIGNUP_START",
     "startAt": "2026-04-03",
     "label": "初赛报名开始"
    },
    {
-    "stage": "初赛（校赛）",
+    "stage": "初赛",
     "track": null,
     "nodeType": "SIGNUP_END",
     "startAt": "2026-06-30",
     "label": "初赛报名截止"
    },
    {
-    "stage": "初赛（校赛）",
+    "stage": "初赛",
     "track": null,
     "nodeType": "SUBMISSION",
     "startAt": "2026-07-20",
@@ -4762,7 +5132,7 @@
     "label": "复赛/省赛选拔与评审（8~10月）"
    },
    {
-    "stage": "国赛（全国总决赛）",
+    "stage": "国赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-11-01",
@@ -4824,7 +5194,7 @@
     "label": "创意赛道校赛截止（17:00）"
    },
    {
-    "stage": "赛区赛（34个赛区）",
+    "stage": "赛区赛",
     "track": "CREATIVE",
     "nodeType": "SIGNUP_END",
     "startAt": "2027-01-29",
@@ -4838,7 +5208,7 @@
     "label": "定向主题赛道作品征集截止（17:00）"
    },
    {
-    "stage": "总决赛（网络评审+现场评审）",
+    "stage": "总决赛",
     "track": "CREATIVE",
     "nodeType": "CONTEST",
     "startAt": "2027-03-01",
@@ -4846,7 +5216,7 @@
     "label": "总决赛（2027年3-4月，网络评审+现场评审两阶段）"
    },
    {
-    "stage": "总决赛（网络评审+现场评审）",
+    "stage": "总决赛",
     "track": "CREATIVE",
     "nodeType": "AWARD",
     "startAt": "2027-05-01",
@@ -4935,21 +5305,21 @@
   ],
   "CIMC": [
    {
-    "stage": "全国分赛区初赛（线上）",
+    "stage": "全国分赛区初赛",
     "track": null,
     "nodeType": "SIGNUP_START",
     "startAt": "2026-03-01",
     "label": "全国报名开始（第二十届通知2026-02-25发布）"
    },
    {
-    "stage": "全国分赛区初赛（线上）",
+    "stage": "全国分赛区初赛",
     "track": null,
     "nodeType": "SIGNUP_END",
     "endAt": "2026-05-31",
     "label": "全国报名截止"
    },
    {
-    "stage": "全国分赛区初赛（线上）",
+    "stage": "全国分赛区初赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-07-20",
@@ -4957,7 +5327,7 @@
     "label": "全国分赛区初赛（各赛区7月上中旬时间不一，例：华北二赛区现场赛）"
    },
    {
-    "stage": "全国总决赛（线下）",
+    "stage": "全国总决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-08-14",
@@ -4965,7 +5335,7 @@
     "label": "全国总决赛（北京化工大学昌平校区）"
    },
    {
-    "stage": "全国总决赛（线下）",
+    "stage": "全国总决赛",
     "track": null,
     "nodeType": "RESULT",
     "startAt": "2026-08-25",
@@ -4974,7 +5344,7 @@
   ],
   "CHENGTU": [
    {
-    "stage": "校赛（校内初赛）",
+    "stage": "校赛",
     "track": null,
     "nodeType": "SIGNUP_END",
     "endAt": "2026-04-12",
@@ -5040,7 +5410,7 @@
   "MEDU": [],
   "JCYXDS": [
    {
-    "stage": "校赛（校内选拔）",
+    "stage": "校赛",
     "track": null,
     "nodeType": "SIGNUP_END",
     "endAt": "2026-04-15",
@@ -5055,7 +5425,7 @@
     "label": "校内选拔赛（例：包头医学院04-20启动；官网要求04-30前完成校赛）"
    },
    {
-    "stage": "复赛（北部/东部/西部/中南部赛区）",
+    "stage": "复赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-05-01",
@@ -5159,21 +5529,21 @@
     "label": "短视频大赛（2026年5—9月）"
    },
    {
-    "stage": "省赛（复赛+决赛）",
+    "stage": "省赛",
     "track": null,
     "nodeType": "CONTEST",
     "endAt": "2026-11-15",
     "label": "省赛（各省赛区自行安排，黑龙江等部分省5月举行，须于11月15日前完成并提交晋级名单）"
    },
    {
-    "stage": "省赛（复赛+决赛）",
+    "stage": "全国决赛",
     "track": null,
     "nodeType": "SUBMISSION",
     "endAt": "2026-11-15",
     "label": "全国决赛案例文本提交截止（中国学生组晋级团队均须提交）"
    },
    {
-    "stage": "省赛（复赛+决赛）",
+    "stage": "全国决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-12-03",
@@ -5222,21 +5592,21 @@
   ],
   "CSSC": [
    {
-    "stage": "知识赛（个人网考）",
+    "stage": "知识赛",
     "track": "ZHKS",
     "nodeType": "SIGNUP_START",
     "startAt": "2026-09-21",
     "label": "参赛报名开始（大赛2026年9月正式启动，报名入口9月下旬开放；前期核实为9月21日前后）"
    },
    {
-    "stage": "知识赛（个人网考）",
+    "stage": "知识赛",
     "track": "ZHKS",
     "nodeType": "SIGNUP_END",
     "endAt": "2026-10-31",
     "label": "参赛报名截止（全部组别统一；院校报名与学生报名均须在10月31日前完成）"
    },
    {
-    "stage": "知识赛（个人网考）",
+    "stage": "知识赛",
     "track": "ZHKS",
     "nodeType": "CONTEST",
     "startAt": "2026-11-01",
@@ -5273,7 +5643,7 @@
     "label": "省赛（专科组2027-04-12前、研究生组2027-04-20前、本科组2027-04-30前完成）"
    },
    {
-    "stage": "全国赛初赛（报告+PPT评审）",
+    "stage": "全国赛初赛",
     "track": "ZHKS",
     "nodeType": "CONTEST",
     "endAt": "2027-05-14",
@@ -5315,14 +5685,14 @@
   ],
   "CULSC": [
    {
-    "stage": "网评（网络评审）",
+    "stage": "网评",
     "track": null,
     "nodeType": "SIGNUP_START",
     "startAt": "2026-08-01",
     "label": "第十二届科学探究类通知发布并开启网络报名（2026年8月，四川大学通知显示8月1日启动）"
    },
    {
-    "stage": "网评（网络评审）",
+    "stage": "网评",
     "track": null,
     "nodeType": "SIGNUP_END",
     "endAt": "2027-01-15",
@@ -5445,7 +5815,7 @@
     "label": "团组评测活动报名截止（活动通知：即日起至2026年4月19日截止）"
    },
    {
-    "stage": "参演/合唱评测（北京）",
+    "stage": "参演/合唱评测",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2026-07-13",
@@ -5453,7 +5823,7 @@
     "label": "第十八届中国国际合唱节（北京，国家大剧院开幕；31个国家和地区306支合唱团、约15000人参演，七大板块200余场活动）"
    },
    {
-    "stage": "参演/合唱评测（北京）",
+    "stage": "参演/合唱评测",
     "track": null,
     "nodeType": "RESULT",
     "startAt": "2026-07-20",
@@ -5536,7 +5906,7 @@
   ],
   "SCXIJU": [
    {
-    "stage": "决赛（全省集中比赛）",
+    "stage": "决赛",
     "track": null,
     "nodeType": "CONTEST",
     "startAt": "2025-06-16",
@@ -5544,7 +5914,7 @@
     "label": "决赛（达州通川巴山大剧院，70个作品入围，为期5天；中国网载6-17拉开帷幕）"
    },
    {
-    "stage": "决赛（全省集中比赛）",
+    "stage": "决赛",
     "track": null,
     "nodeType": "RESULT",
     "startAt": "2025-07-25",
@@ -5553,14 +5923,14 @@
   ],
   "HUAWEI-ICT": [
    {
-    "stage": "省资格赛（线上：实验环节2026-09-18~11-08，理论环节2026-11-14~15）",
+    "stage": "省资格赛",
     "track": "PRACTICE",
     "nodeType": "SIGNUP_START",
     "startAt": "2026-08-31",
     "label": "第十一届华为ICT大赛中国赛区报名开始"
    },
    {
-    "stage": "省资格赛（线上：实验环节2026-09-18~11-08，理论环节2026-11-14~15）",
+    "stage": "省资格赛",
     "track": "PRACTICE",
     "nodeType": "CONTEST",
     "startAt": "2026-09-18",
@@ -5568,21 +5938,21 @@
     "label": "实践赛省资格赛线上实验环节"
    },
    {
-    "stage": "省资格赛（线上：实验环节2026-09-18~11-08，理论环节2026-11-14~15）",
+    "stage": "省资格赛",
     "track": "PRACTICE",
     "nodeType": "SIGNUP_END",
     "endAt": "2026-10-26",
     "label": "算子赛报名截止（资格赛需在华为人才在线完成两项算子开发相关认证）"
    },
    {
-    "stage": "省资格赛（线上：实验环节2026-09-18~11-08，理论环节2026-11-14~15）",
+    "stage": "省资格赛",
     "track": "PRACTICE",
     "nodeType": "SIGNUP_END",
     "endAt": "2026-10-31",
     "label": "实践赛、挑战赛报名截止"
    },
    {
-    "stage": "省资格赛（线上：实验环节2026-09-18~11-08，理论环节2026-11-14~15）",
+    "stage": "省资格赛",
     "track": "PRACTICE",
     "nodeType": "CONTEST",
     "startAt": "2026-11-14",
@@ -5623,14 +5993,14 @@
   ],
   "TZB-ACADEMIC": [
    {
-    "stage": "校级比赛（2025年3-4月，各校评审选拔）",
+    "stage": "校级比赛",
     "track": "MAIN",
     "nodeType": "SIGNUP_START",
     "startAt": "2025-02-01",
     "label": "第十九届竞赛启动（官方流程图：2月启动）"
    },
    {
-    "stage": "校级比赛（2025年3-4月，各校评审选拔）",
+    "stage": "校级比赛",
     "track": "MAIN",
     "nodeType": "CONTEST",
     "startAt": "2025-03-01",
@@ -5638,7 +6008,7 @@
     "label": "校级比赛（各校集中在2025年3-4月）"
    },
    {
-    "stage": "校级比赛（2025年3-4月，各校评审选拔）",
+    "stage": "校级比赛",
     "track": "MAIN",
     "nodeType": "CONTEST",
     "startAt": "2025-04-01",
@@ -5646,7 +6016,7 @@
     "label": "省级比赛（各省4-6月，如江苏省赛2025年4-5月）"
    },
    {
-    "stage": "国赛申报（2025年6-8月）",
+    "stage": "国赛申报",
     "track": "MAIN",
     "nodeType": "SIGNUP_END",
     "startAt": "2025-06-01",
@@ -5654,7 +6024,7 @@
     "label": "国赛申报（2025年6-8月）"
    },
    {
-    "stage": "国赛初审（2025年7-9月，全国初评）",
+    "stage": "国赛初审",
     "track": "MAIN",
     "nodeType": "OTHER",
     "startAt": "2025-07-01",
@@ -5662,7 +6032,7 @@
     "label": "国赛初审（2025年7-9月）"
    },
    {
-    "stage": "终审决赛（2025-10-31~11-03，南京大学）",
+    "stage": "终审决赛",
     "track": "MAIN",
     "nodeType": "CONTEST",
     "startAt": "2025-10-31",
@@ -5670,28 +6040,28 @@
     "label": "终审决赛（南京大学，主体赛DAY1于11-02开赛）"
    },
    {
-    "stage": "专项赛终审决赛（2025-11-02，南京大学）",
+    "stage": "专项赛终审决赛",
     "track": "AIPLUS",
     "nodeType": "CONTEST",
     "startAt": "2025-11-02",
     "label": "「人工智能+」专项赛终审决赛开赛"
    },
    {
-    "stage": "终审决赛（2025-10-31~11-03，南京大学）",
+    "stage": "终审决赛",
     "track": "MAIN",
     "nodeType": "AWARD",
     "startAt": "2025-11-04",
     "label": "结果揭晓：清华大学捧杯、56所高校获优胜杯，主体赛特等奖96个/一等奖187个/二等奖369个/三等奖993个"
    },
    {
-    "stage": "终审决赛（2025-10-31~11-03，南京大学）",
+    "stage": "终审决赛",
     "track": "MAIN",
     "nodeType": "OTHER",
     "startAt": "2025-11-14",
     "label": "第二十届联合发起高校名单发布（第二十届筹备启动，赛事定于2027年）"
    },
    {
-    "stage": "揭榜报名/打擂（企业发榜→团队揭榜→评审）",
+    "stage": "揭榜报名/打擂",
     "track": "JBGS",
     "nodeType": "SIGNUP_END",
     "startAt": "2026-05-30",
@@ -5701,21 +6071,21 @@
   ],
   "TZB-BUSINESS": [
    {
-    "stage": "校级初赛（2026年5月底前）",
+    "stage": "校级初赛",
     "track": "ADV-MFG",
     "nodeType": "SIGNUP_START",
     "startAt": "2026-03-01",
     "label": "大赛启动（本届自3月启动，累计征集项目5万余个、近35万名大学生参与）"
    },
    {
-    "stage": "校级初赛（2026年5月底前）",
+    "stage": "校级初赛",
     "track": "ADV-MFG",
     "nodeType": "SIGNUP_END",
     "endAt": "2026-05-31",
     "label": "校级初赛完成（5月底前）"
    },
    {
-    "stage": "校级初赛（2026年5月底前）",
+    "stage": "校级初赛",
     "track": "ADV-MFG",
     "nodeType": "SIGNUP_END",
     "startAt": "2026-05-30",
@@ -5723,14 +6093,14 @@
     "label": "2026年度「揭榜挂帅」擂台赛第二批榜题揭榜报名（第一批此前已发榜，启幕新闻2026-05-21）"
    },
    {
-    "stage": "省级复赛（2026年6月底前完成推报）",
+    "stage": "省级复赛",
     "track": "ADV-MFG",
     "nodeType": "SIGNUP_END",
     "endAt": "2026-06-30",
     "label": "省级复赛完成并向全国推报（6月底前，各省终审决赛集中于2026年6-7月，如新疆07-02、重庆07-08落幕）"
    },
    {
-    "stage": "全国终审决赛（2026年10月，大连理工大学，按专科组/本科组/研究生组评审）",
+    "stage": "全国终审决赛",
     "track": "ADV-MFG",
     "nodeType": "CONTEST",
     "startAt": "2026-10-01",

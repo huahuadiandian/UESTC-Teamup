@@ -33,6 +33,20 @@ def fix_node_type(v):
     return "OTHER"
 
 
+def split_stage_name(name):
+    """阶段名只留短名：首个括号（全/半角）前的核心名；括号内容整体转入 note。
+    例：「省资格赛（线上：实验环节…）」→ name=「省资格赛」，note=原全名。"""
+    if not name:
+        return name, None
+    for opener in ("（", "("):
+        idx = name.find(opener)
+        if idx > 0:
+            core = name[:idx].strip()
+            if core:
+                return core, name
+    return name, None
+
+
 def norm_date(v):
     if not v:
         return None
@@ -41,11 +55,15 @@ def norm_date(v):
 
 
 def build_chains(item, base_by_code):
-    """结构链：研究覆盖优先，缺失的竞赛回落基线。返回 {trackCode或'shared': [stage,...]}。"""
+    """结构链：研究覆盖优先，缺失的竞赛回落基线。返回 {trackCode或'shared': [stage,...]}。
+    覆盖链与基线链统一做阶段名拆分（短名 + note），保证事件解析与结构一致。"""
     st = item.get("structure") or {}
     chains = st.get("stagesByTrack") or {}
     if chains:
-        return chains
+        return {
+            k: [dict(v, **dict(zip(("name", "note"), split_stage_name(v.get("name"))))) for v in chain]
+            for k, chain in chains.items()
+        }
     code = item.get("code")
     base = base_by_code.get(code)
     if not base:
@@ -53,7 +71,8 @@ def build_chains(item, base_by_code):
     out = {}
     for s in base.get("stages", []):
         key = s.get("track") or "shared"
-        out.setdefault(key, []).append({"name": s.get("name"), "kind": s.get("kind")})
+        name, note = split_stage_name(s.get("name"))
+        out.setdefault(key, []).append({"name": name, "kind": s.get("kind"), "note": note})
     return out
 
 
@@ -143,6 +162,11 @@ def main():
             st = it.get("structure") or {}
             tracks = st.get("tracks") or []
             chains_raw = st.get("stagesByTrack") or {}
+            if chains_raw:
+                chains_raw = {
+                    k: [dict(vv, **dict(zip(("name", "note"), split_stage_name(vv.get("name"))))) for vv in v]
+                    for k, v in chains_raw.items()
+                }
             if tracks or chains_raw:
                 structures[code] = {"tracks": tracks, "stagesByTrack": chains_raw}
             chains = build_chains(it, base_by_code)

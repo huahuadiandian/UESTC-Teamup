@@ -50,6 +50,7 @@
       "difficulty": 4,
       "effort": 5,
       "intro": "原“互联网+”大学生创新创业大赛，国内规格最高的双创赛事，高教主赛道强调科技创新与产业化落地。",
+      "stageChain": "校级初赛 → 省级复赛 → 全国总决赛",
       "officialUrl": "https://cy.ncss.cn",
       "sourceUrl": "https://cy.ncss.cn/",
       "bonusCategory": "学科竞赛",
@@ -288,6 +289,7 @@
       "difficulty": 4,
       "effort": 4,
       "intro": "与创新大赛并称“两大挑”，奇数年办“大挑”，涵盖学术论文、社会调查与科技发明三类作品。",
+      "stageChain": "校级比赛 → 省级比赛 → 国赛申报 → 国赛初审 → 终审决赛",
       "officialUrl": "https://2025.tiaozhanbei.net/",
       "sourceUrl": "https://www.tiaozhanbei.net/",
       "bonusCategory": "学科竞赛",
@@ -315,75 +317,84 @@
       "stages": [
         {
           "code": "CAMPUS",
-          "name": "校级比赛（2025年3-4月，各校评审选拔）",
+          "name": "校级比赛",
           "stageKind": "CAMPUS",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "MAIN"
+          "track": "MAIN",
+          "note": "校级比赛（2025年3-4月，各校评审选拔）"
         },
         {
           "code": "PROVINCIAL",
-          "name": "省级比赛（2025年4-6月，各省组织）",
+          "name": "省级比赛",
           "stageKind": "PROVINCIAL",
           "sequence": 2,
           "bonusTier": "PROVINCIAL",
-          "track": "MAIN"
+          "track": "MAIN",
+          "note": "省级比赛（2025年4-6月，各省组织）"
         },
         {
           "code": "NATIONAL",
-          "name": "国赛申报（2025年6-8月）",
+          "name": "国赛申报",
           "stageKind": "NATIONAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": "MAIN"
+          "track": "MAIN",
+          "note": "国赛申报（2025年6-8月）"
         },
         {
           "code": "NATIONAL-2",
-          "name": "国赛初审（2025年7-9月，全国初评）",
+          "name": "国赛初审",
           "stageKind": "NATIONAL",
           "sequence": 4,
           "bonusTier": "NATIONAL",
-          "track": "MAIN"
+          "track": "MAIN",
+          "note": "国赛初审（2025年7-9月，全国初评）"
         },
         {
           "code": "FINAL",
-          "name": "终审决赛（2025-10-31~11-03，南京大学）",
+          "name": "终审决赛",
           "stageKind": "FINAL",
           "sequence": 5,
           "bonusTier": "NATIONAL",
-          "track": "MAIN"
+          "track": "MAIN",
+          "note": "终审决赛（2025-10-31~11-03，南京大学）"
         },
         {
           "code": "QUALIFIER",
-          "name": "揭榜报名/打擂（企业发榜→团队揭榜→评审）",
+          "name": "揭榜报名/打擂",
           "stageKind": "QUALIFIER",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "JBGS"
+          "track": "JBGS",
+          "note": "揭榜报名/打擂（企业发榜→团队揭榜→评审）"
         },
         {
           "code": "FINAL",
-          "name": "终审/授奖公示（由团中央统一组织评审）",
+          "name": "终审/授奖公示",
           "stageKind": "FINAL",
           "sequence": 2,
           "bonusTier": "NATIONAL",
-          "track": "JBGS"
+          "track": "JBGS",
+          "note": "终审/授奖公示（由团中央统一组织评审）"
         },
         {
           "code": "PROVINCIAL",
-          "name": "省级/校级遴选（随主体赛或单独组织）",
+          "name": "省级/校级遴选",
           "stageKind": "PROVINCIAL",
           "sequence": 1,
           "bonusTier": "PROVINCIAL",
-          "track": "AIPLUS"
+          "track": "AIPLUS",
+          "note": "省级/校级遴选（随主体赛或单独组织）"
         },
         {
           "code": "FINAL",
-          "name": "专项赛终审决赛（2025-11-02，南京大学）",
+          "name": "专项赛终审决赛",
           "stageKind": "FINAL",
           "sequence": 2,
           "bonusTier": "NATIONAL",
-          "track": "AIPLUS"
+          "track": "AIPLUS",
+          "note": "专项赛终审决赛（2025-11-02，南京大学）"
         }
       ],
       "events": [
@@ -484,6 +495,7 @@
       "difficulty": 4,
       "effort": 4,
       "intro": "“小挑”，偶数年举办，以商业计划书为核心的大学生创业赛事。",
+      "stageChain": "校级初赛 → 省级复赛 → 全国终审决赛",
       "officialUrl": "https://www.tiaozhanbei.net/article/15842/",
       "sourceUrl": "http://2026.tiaozhanbei.net/",
       "bonusCategory": "学科竞赛",
@@ -541,195 +553,219 @@
       "stages": [
         {
           "code": "CAMPUS",
-          "name": "校级初赛（2026年5月底前）",
+          "name": "校级初赛",
           "stageKind": "CAMPUS",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "ADV-MFG"
+          "track": "ADV-MFG",
+          "note": "校级初赛（2026年5月底前）"
         },
         {
           "code": "PROVINCIAL",
-          "name": "省级复赛（2026年6月底前完成推报）",
+          "name": "省级复赛",
           "stageKind": "PROVINCIAL",
           "sequence": 2,
           "bonusTier": "PROVINCIAL",
-          "track": "ADV-MFG"
+          "track": "ADV-MFG",
+          "note": "省级复赛（2026年6月底前完成推报）"
         },
         {
           "code": "FINAL",
-          "name": "全国终审决赛（2026年10月，大连理工大学，按专科组/本科组/研究生组评审）",
+          "name": "全国终审决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": "ADV-MFG"
+          "track": "ADV-MFG",
+          "note": "全国终审决赛（2026年10月，大连理工大学，按专科组/本科组/研究生组评审）"
         },
         {
           "code": "CAMPUS",
-          "name": "校级初赛（2026年5月底前）",
+          "name": "校级初赛",
           "stageKind": "CAMPUS",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "IT"
+          "track": "IT",
+          "note": "校级初赛（2026年5月底前）"
         },
         {
           "code": "PROVINCIAL",
-          "name": "省级复赛（2026年6月底前）",
+          "name": "省级复赛",
           "stageKind": "PROVINCIAL",
           "sequence": 2,
           "bonusTier": "PROVINCIAL",
-          "track": "IT"
+          "track": "IT",
+          "note": "省级复赛（2026年6月底前）"
         },
         {
           "code": "FINAL",
-          "name": "全国终审决赛（2026年10月，大连理工大学）",
+          "name": "全国终审决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": "IT"
+          "track": "IT",
+          "note": "全国终审决赛（2026年10月，大连理工大学）"
         },
         {
           "code": "CAMPUS",
-          "name": "校级初赛（2026年5月底前）",
+          "name": "校级初赛",
           "stageKind": "CAMPUS",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "BIO"
+          "track": "BIO",
+          "note": "校级初赛（2026年5月底前）"
         },
         {
           "code": "PROVINCIAL",
-          "name": "省级复赛（2026年6月底前）",
+          "name": "省级复赛",
           "stageKind": "PROVINCIAL",
           "sequence": 2,
           "bonusTier": "PROVINCIAL",
-          "track": "BIO"
+          "track": "BIO",
+          "note": "省级复赛（2026年6月底前）"
         },
         {
           "code": "FINAL",
-          "name": "全国终审决赛（2026年10月，大连理工大学）",
+          "name": "全国终审决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": "BIO"
+          "track": "BIO",
+          "note": "全国终审决赛（2026年10月，大连理工大学）"
         },
         {
           "code": "CAMPUS",
-          "name": "校级初赛（2026年5月底前）",
+          "name": "校级初赛",
           "stageKind": "CAMPUS",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "NE-MAT"
+          "track": "NE-MAT",
+          "note": "校级初赛（2026年5月底前）"
         },
         {
           "code": "PROVINCIAL",
-          "name": "省级复赛（2026年6月底前）",
+          "name": "省级复赛",
           "stageKind": "PROVINCIAL",
           "sequence": 2,
           "bonusTier": "PROVINCIAL",
-          "track": "NE-MAT"
+          "track": "NE-MAT",
+          "note": "省级复赛（2026年6月底前）"
         },
         {
           "code": "FINAL",
-          "name": "全国终审决赛（2026年10月，大连理工大学）",
+          "name": "全国终审决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": "NE-MAT"
+          "track": "NE-MAT",
+          "note": "全国终审决赛（2026年10月，大连理工大学）"
         },
         {
           "code": "CAMPUS",
-          "name": "校级初赛（2026年5月底前）",
+          "name": "校级初赛",
           "stageKind": "CAMPUS",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "AGRI"
+          "track": "AGRI",
+          "note": "校级初赛（2026年5月底前）"
         },
         {
           "code": "PROVINCIAL",
-          "name": "省级复赛（2026年6月底前）",
+          "name": "省级复赛",
           "stageKind": "PROVINCIAL",
           "sequence": 2,
           "bonusTier": "PROVINCIAL",
-          "track": "AGRI"
+          "track": "AGRI",
+          "note": "省级复赛（2026年6月底前）"
         },
         {
           "code": "FINAL",
-          "name": "全国终审决赛（2026年10月，大连理工大学）",
+          "name": "全国终审决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": "AGRI"
+          "track": "AGRI",
+          "note": "全国终审决赛（2026年10月，大连理工大学）"
         },
         {
           "code": "CAMPUS",
-          "name": "校级初赛（2026年5月底前）",
+          "name": "校级初赛",
           "stageKind": "CAMPUS",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "CONSUME"
+          "track": "CONSUME",
+          "note": "校级初赛（2026年5月底前）"
         },
         {
           "code": "PROVINCIAL",
-          "name": "省级复赛（2026年6月底前）",
+          "name": "省级复赛",
           "stageKind": "PROVINCIAL",
           "sequence": 2,
           "bonusTier": "PROVINCIAL",
-          "track": "CONSUME"
+          "track": "CONSUME",
+          "note": "省级复赛（2026年6月底前）"
         },
         {
           "code": "FINAL",
-          "name": "全国终审决赛（2026年10月，大连理工大学）",
+          "name": "全国终审决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": "CONSUME"
+          "track": "CONSUME",
+          "note": "全国终审决赛（2026年10月，大连理工大学）"
         },
         {
           "code": "CAMPUS",
-          "name": "校级初赛（2026年5月底前）",
+          "name": "校级初赛",
           "stageKind": "CAMPUS",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "SERVICE"
+          "track": "SERVICE",
+          "note": "校级初赛（2026年5月底前）"
         },
         {
           "code": "PROVINCIAL",
-          "name": "省级复赛（2026年6月底前）",
+          "name": "省级复赛",
           "stageKind": "PROVINCIAL",
           "sequence": 2,
           "bonusTier": "PROVINCIAL",
-          "track": "SERVICE"
+          "track": "SERVICE",
+          "note": "省级复赛（2026年6月底前）"
         },
         {
           "code": "FINAL",
-          "name": "全国终审决赛（2026年10月，大连理工大学）",
+          "name": "全国终审决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": "SERVICE"
+          "track": "SERVICE",
+          "note": "全国终审决赛（2026年10月，大连理工大学）"
         },
         {
           "code": "CAMPUS",
-          "name": "校级初赛（2026年5月底前）",
+          "name": "校级初赛",
           "stageKind": "CAMPUS",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "INTL"
+          "track": "INTL",
+          "note": "校级初赛（2026年5月底前）"
         },
         {
           "code": "PROVINCIAL",
-          "name": "省级复赛（2026年6月底前）",
+          "name": "省级复赛",
           "stageKind": "PROVINCIAL",
           "sequence": 2,
           "bonusTier": "PROVINCIAL",
-          "track": "INTL"
+          "track": "INTL",
+          "note": "省级复赛（2026年6月底前）"
         },
         {
           "code": "FINAL",
-          "name": "全国终审决赛（2026年10月，大连理工大学）",
+          "name": "全国终审决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": "INTL"
+          "track": "INTL",
+          "note": "全国终审决赛（2026年10月，大连理工大学）"
         }
       ],
       "events": [
@@ -790,6 +826,7 @@
       "difficulty": 3,
       "effort": 3,
       "intro": "中国数学会主办，分数学类与非数学类，初赛即各赛区预赛，优胜者进入全国决赛。",
+      "stageChain": "初赛 → 决赛",
       "officialUrl": "https://www.cms.org.cn/Home/comp/comp/cid/16.html",
       "sourceUrl": "https://www.cmathc.org.cn/tzgg/545.html",
       "bonusCategory": "学科竞赛",
@@ -829,19 +866,21 @@
       "stages": [
         {
           "code": "PROVINCIAL",
-          "name": "初赛（以省、自治区、直辖市为赛区，军队院校为独立赛区，全国统一命题同一时间考试）",
+          "name": "初赛",
           "stageKind": "PROVINCIAL",
           "sequence": 1,
           "bonusTier": "PROVINCIAL",
-          "track": null
+          "track": null,
+          "note": "初赛（以省、自治区、直辖市为赛区，军队院校为独立赛区，全国统一命题同一时间考试）"
         },
         {
           "code": "FINAL",
-          "name": "决赛（中国数学会青年工作与大学生数学竞赛委员会、大连理工大学组织）",
+          "name": "决赛",
           "stageKind": "FINAL",
           "sequence": 2,
           "bonusTier": "NATIONAL",
-          "track": null
+          "track": null,
+          "note": "决赛（中国数学会青年工作与大学生数学竞赛委员会、大连理工大学组织）"
         }
       ],
       "events": [
@@ -888,6 +927,7 @@
       "difficulty": 4,
       "effort": 4,
       "intro": "以国际青年物理学家锦标赛（IYPT）模式进行的物理对抗赛，重实验与辩论表达。",
+      "stageChain": "校赛/校内选拔 → 省级赛 → 区域赛 → 全国赛",
       "officialUrl": "https://pt.nankai.edu.cn",
       "sourceUrl": "https://pt.nankai.edu.cn/",
       "bonusCategory": "学科竞赛",
@@ -917,19 +957,21 @@
         },
         {
           "code": "PROVINCIAL",
-          "name": "省级赛（部分省份，如福建2026-04-17~19集美大学、安徽、山东等）",
+          "name": "省级赛",
           "stageKind": "PROVINCIAL",
           "sequence": 2,
           "bonusTier": "PROVINCIAL",
-          "track": null
+          "track": null,
+          "note": "省级赛（部分省份，如福建2026-04-17~19集美大学、安徽、山东等）"
         },
         {
           "code": "REGIONAL",
-          "name": "区域赛（东北、华北、华东、中南、西南、西北六赛区）",
+          "name": "区域赛",
           "stageKind": "REGIONAL",
           "sequence": 3,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "区域赛（东北、华北、华东、中南、西南、西北六赛区）"
         },
         {
           "code": "FINAL",
@@ -985,6 +1027,7 @@
       "difficulty": 5,
       "effort": 5,
       "intro": "三人一队共用一台电脑，5 小时解 10+ 道算法题，成电常年晋级 EC-Final。",
+      "stageChain": "网络预选赛 → 亚洲EC区域赛 → EC-Final → World Finals",
       "officialUrl": "https://icpc.global/",
       "sourceUrl": "https://icpc.global/",
       "bonusCategory": "学科竞赛",
@@ -993,27 +1036,30 @@
       "stages": [
         {
           "code": "QUALIFIER",
-          "name": "网络预选赛（PTA平台两场，成绩作为各区域赛入围重要参考）",
+          "name": "网络预选赛",
           "stageKind": "QUALIFIER",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "网络预选赛（PTA平台两场，成绩作为各区域赛入围重要参考）"
         },
         {
           "code": "REGIONAL",
-          "name": "亚洲EC区域赛（西安、成都、武汉、南京、沈阳、上海、南昌、港澳8站）",
+          "name": "亚洲EC区域赛",
           "stageKind": "REGIONAL",
           "sequence": 2,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "亚洲EC区域赛（西安、成都、武汉、南京、沈阳、上海、南昌、港澳8站）"
         },
         {
           "code": "FINAL",
-          "name": "EC-Final（杭州）",
+          "name": "EC-Final",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": null
+          "track": null,
+          "note": "EC-Final（杭州）"
         },
         {
           "code": "INTERNATIONAL",
@@ -1063,7 +1109,7 @@
           "label": "西安站参赛费缴纳截止（24:00，以银行受理收据为准）"
         },
         {
-          "stage": "QUALIFIER",
+          "stage": "REGIONAL",
           "track": null,
           "nodeType": "CONTEST",
           "startAt": "2026-10-16",
@@ -1078,7 +1124,7 @@
           "label": "成都站队伍注册截止（23:59，icpc.global注册+中文报名系统uep.pintia.cn填报）"
         },
         {
-          "stage": "QUALIFIER",
+          "stage": "REGIONAL",
           "track": null,
           "nodeType": "CONTEST",
           "startAt": "2026-10-24",
@@ -1086,7 +1132,7 @@
           "label": "成都区域赛（电子科技大学：10-24报道/开幕式/热身赛，正式赛10-25 09:00-14:00）"
         },
         {
-          "stage": "QUALIFIER",
+          "stage": "REGIONAL",
           "track": null,
           "nodeType": "CONTEST",
           "startAt": "2026-10-31",
@@ -1094,7 +1140,7 @@
           "label": "武汉区域赛（据北京总部2026各区域赛汇总表）"
         },
         {
-          "stage": "QUALIFIER",
+          "stage": "REGIONAL",
           "track": null,
           "nodeType": "CONTEST",
           "startAt": "2026-11-07",
@@ -1102,7 +1148,7 @@
           "label": "南京区域赛（据北京总部2026各区域赛汇总表）"
         },
         {
-          "stage": "QUALIFIER",
+          "stage": "REGIONAL",
           "track": null,
           "nodeType": "CONTEST",
           "startAt": "2026-11-14",
@@ -1110,7 +1156,7 @@
           "label": "沈阳区域赛（据北京总部2026各区域赛汇总表）"
         },
         {
-          "stage": "QUALIFIER",
+          "stage": "REGIONAL",
           "track": null,
           "nodeType": "CONTEST",
           "startAt": "2026-12-05",
@@ -1118,7 +1164,7 @@
           "label": "上海区域赛（据北京总部2026各区域赛汇总表）"
         },
         {
-          "stage": "QUALIFIER",
+          "stage": "REGIONAL",
           "track": null,
           "nodeType": "CONTEST",
           "startAt": "2026-12-19",
@@ -1126,7 +1172,7 @@
           "label": "南昌区域赛（据北京总部2026各区域赛汇总表）"
         },
         {
-          "stage": "QUALIFIER",
+          "stage": "REGIONAL",
           "track": null,
           "nodeType": "CONTEST",
           "startAt": "2027-01-09",
@@ -1142,7 +1188,7 @@
           "label": "EC-Final（杭州，The 2026 ICPC Asia East Continent Final）"
         },
         {
-          "stage": "QUALIFIER",
+          "stage": "REGIONAL",
           "track": null,
           "nodeType": "CONTEST",
           "startAt": "2026-11-15",
@@ -1168,6 +1214,7 @@
       "difficulty": 4,
       "effort": 3,
       "intro": "三人一队 72 小时完成一道开放性工程问题的建模、求解与论文，推免加分常见起点。",
+      "stageChain": "报名 → 竞赛 → 评奖",
       "officialUrl": "https://www.mcm.edu.cn",
       "sourceUrl": "http://www.mcm.edu.cn/",
       "bonusCategory": "学科竞赛",
@@ -1176,27 +1223,30 @@
       "stages": [
         {
           "code": "OTHER",
-          "name": "报名（各校组织，经中国知网 cumcm.cnki.net 报名系统）",
+          "name": "报名",
           "stageKind": "OTHER",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "报名（各校组织，经中国知网 cumcm.cnki.net 报名系统）"
         },
         {
           "code": "NATIONAL",
-          "name": "竞赛（全国统一开卷、通讯赛制）",
+          "name": "竞赛",
           "stageKind": "NATIONAL",
           "sequence": 2,
           "bonusTier": "NATIONAL",
-          "track": null
+          "track": null,
+          "note": "竞赛（全国统一开卷、通讯赛制）"
         },
         {
           "code": "OTHER-2",
-          "name": "评奖（赛区评审→全国评审→公示）",
+          "name": "评奖",
           "stageKind": "OTHER",
           "sequence": 3,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "评奖（赛区评审→全国评审→公示）"
         }
       ],
       "events": [
@@ -1229,6 +1279,7 @@
       "difficulty": 5,
       "effort": 5,
       "intro": "两年一届的电子类顶级赛事（单数年国赛），四天三夜完成一个完整电子系统。",
+      "stageChain": "校内选拔/报名 → 初赛 → 决赛",
       "officialUrl": "http://nuedc.xjtu.edu.cn",
       "sourceUrl": "http://nuedc.xjtu.edu.cn/",
       "bonusCategory": "学科竞赛",
@@ -1264,19 +1315,21 @@
         },
         {
           "code": "QUALIFIER",
-          "name": "初赛（选拔+邀请）",
+          "name": "初赛",
           "stageKind": "QUALIFIER",
           "sequence": 2,
           "bonusTier": "NONE",
-          "track": "EMAI"
+          "track": "EMAI",
+          "note": "初赛（选拔+邀请）"
         },
         {
           "code": "FINAL",
-          "name": "决赛（上海交通大学）",
+          "name": "决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": "EMAI"
+          "track": "EMAI",
+          "note": "决赛（上海交通大学）"
         },
         {
           "code": "OTHER",
@@ -1288,19 +1341,21 @@
         },
         {
           "code": "REGIONAL",
-          "name": "初赛（与省级赛合并，半封闭四天三夜）",
+          "name": "初赛",
           "stageKind": "REGIONAL",
           "sequence": 2,
           "bonusTier": "NONE",
-          "track": "TISIM"
+          "track": "TISIM",
+          "note": "初赛（与省级赛合并，半封闭四天三夜）"
         },
         {
           "code": "FINAL",
-          "name": "决赛（武汉大学，全封闭）",
+          "name": "决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": "TISIM"
+          "track": "TISIM",
+          "note": "决赛（武汉大学，全封闭）"
         },
         {
           "code": "QUALIFIER",
@@ -1386,6 +1441,7 @@
       "difficulty": 3,
       "effort": 4,
       "intro": "以机械创新设计为主题，两年一届，含常规赛与数字孪生设计挑战赛。",
+      "stageChain": "校赛 → 省级赛区预赛 → 全国决赛",
       "officialUrl": "https://12umic.hit.edu.cn",
       "sourceUrl": "https://umic.moocollege.com/",
       "bonusCategory": "学科竞赛",
@@ -1493,6 +1549,7 @@
       "difficulty": 4,
       "effort": 5,
       "intro": "以智能车为载体，覆盖竞速、创意与室外多组别，室内外决赛分开举行。",
+      "stageChain": "分 → 全国总决赛",
       "officialUrl": "https://www.smartcar.zone",
       "sourceUrl": "https://www.smartcar.zone/",
       "bonusCategory": "学科竞赛",
@@ -1520,35 +1577,39 @@
       "stages": [
         {
           "code": "REGIONAL",
-          "name": "分（省）赛区赛",
+          "name": "分",
           "stageKind": "REGIONAL",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "SPEED"
+          "track": "SPEED",
+          "note": "分（省）赛区赛"
         },
         {
           "code": "FINAL",
-          "name": "全国总决赛（室内）",
+          "name": "全国总决赛",
           "stageKind": "FINAL",
           "sequence": 2,
           "bonusTier": "NATIONAL",
-          "track": "SPEED"
+          "track": "SPEED",
+          "note": "全国总决赛（室内）"
         },
         {
           "code": "REGIONAL",
-          "name": "分（省）赛区赛",
+          "name": "分",
           "stageKind": "REGIONAL",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "CREATIVE"
+          "track": "CREATIVE",
+          "note": "分（省）赛区赛"
         },
         {
           "code": "FINAL",
-          "name": "全国总决赛（室内）",
+          "name": "全国总决赛",
           "stageKind": "FINAL",
           "sequence": 2,
           "bonusTier": "NATIONAL",
-          "track": "CREATIVE"
+          "track": "CREATIVE",
+          "note": "全国总决赛（室内）"
         },
         {
           "code": "CAMPUS",
@@ -1568,11 +1629,12 @@
         },
         {
           "code": "FINAL",
-          "name": "全国总决赛（室外）",
+          "name": "全国总决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": "OUTDOOR"
+          "track": "OUTDOOR",
+          "note": "全国总决赛（室外）"
         }
       ],
       "events": [
@@ -1611,6 +1673,7 @@
       "difficulty": 5,
       "effort": 5,
       "intro": "国内规模最大的大学生机器人赛事，含 ROBOCON、ROBOTAC、RoboMaster 三赛项。",
+      "stageChain": "校内选拔/中期检查 → 全国赛",
       "officialUrl": "https://www.curc.cn",
       "sourceUrl": "https://www.curc.cn/",
       "bonusCategory": "学科竞赛",
@@ -1638,11 +1701,12 @@
       "stages": [
         {
           "code": "CAMPUS",
-          "name": "校内选拔/中期检查（2026-04-20前提交材料）",
+          "name": "校内选拔/中期检查",
           "stageKind": "CAMPUS",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "ROBOCON"
+          "track": "ROBOCON",
+          "note": "校内选拔/中期检查（2026-04-20前提交材料）"
         },
         {
           "code": "FINAL",
@@ -1654,43 +1718,48 @@
         },
         {
           "code": "CAMPUS",
-          "name": "校内选拔/中期检查（2026-03~04）",
+          "name": "校内选拔/中期检查",
           "stageKind": "CAMPUS",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "ROBOTAC"
+          "track": "ROBOTAC",
+          "note": "校内选拔/中期检查（2026-03~04）"
         },
         {
           "code": "FINAL",
-          "name": "全国赛（分赛项，北京等）",
+          "name": "全国赛",
           "stageKind": "FINAL",
           "sequence": 2,
           "bonusTier": "NATIONAL",
-          "track": "ROBOTAC"
+          "track": "ROBOTAC",
+          "note": "全国赛（分赛项，北京等）"
         },
         {
           "code": "REGIONAL",
-          "name": "区域赛（南部长沙/东部济南/北部沈阳，2026-05~06）",
+          "name": "区域赛",
           "stageKind": "REGIONAL",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "ROBOMASTER"
+          "track": "ROBOMASTER",
+          "note": "区域赛（南部长沙/东部济南/北部沈阳，2026-05~06）"
         },
         {
           "code": "QUALIFIER",
-          "name": "复活赛（2026-07~08）",
+          "name": "复活赛",
           "stageKind": "QUALIFIER",
           "sequence": 2,
           "bonusTier": "NONE",
-          "track": "ROBOMASTER"
+          "track": "ROBOMASTER",
+          "note": "复活赛（2026-07~08）"
         },
         {
           "code": "FINAL",
-          "name": "全国总决赛（深圳）",
+          "name": "全国总决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": "ROBOMASTER"
+          "track": "ROBOMASTER",
+          "note": "全国总决赛（深圳）"
         }
       ],
       "events": [
@@ -1753,6 +1822,7 @@
       "difficulty": 4,
       "effort": 4,
       "intro": "中国光学学会主办，采用“区赛晋级国赛”制，围绕光电技术创新设计。",
+      "stageChain": "报名 → 区赛决赛 → 全国决赛",
       "officialUrl": "https://gd.moocollege.com",
       "sourceUrl": "https://gd.moocollege.com/",
       "bonusCategory": "学科竞赛",
@@ -1774,27 +1844,30 @@
       "stages": [
         {
           "code": "OTHER",
-          "name": "报名（各校/赛区组织）",
+          "name": "报名",
           "stageKind": "OTHER",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "CREATIVE"
+          "track": "CREATIVE",
+          "note": "报名（各校/赛区组织）"
         },
         {
           "code": "REGIONAL",
-          "name": "区赛决赛（如东南区6月5-6日福建江夏学院）",
+          "name": "区赛决赛",
           "stageKind": "REGIONAL",
           "sequence": 2,
           "bonusTier": "NONE",
-          "track": "CREATIVE"
+          "track": "CREATIVE",
+          "note": "区赛决赛（如东南区6月5-6日福建江夏学院）"
         },
         {
           "code": "FINAL",
-          "name": "全国决赛（长春理工大学）",
+          "name": "全国决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": "CREATIVE"
+          "track": "CREATIVE",
+          "note": "全国决赛（长春理工大学）"
         },
         {
           "code": "QUALIFIER",
@@ -1806,11 +1879,12 @@
         },
         {
           "code": "FINAL",
-          "name": "全国决赛（长春理工大学）",
+          "name": "全国决赛",
           "stageKind": "FINAL",
           "sequence": 2,
           "bonusTier": "NATIONAL",
-          "track": "OPTICS"
+          "track": "OPTICS",
+          "note": "全国决赛（长春理工大学）"
         }
       ],
       "events": [
@@ -1849,6 +1923,7 @@
       "difficulty": 4,
       "effort": 4,
       "intro": "网安领域顶级赛事，分作品赛与创新实践能力赛两个赛道。",
+      "stageChain": "全国初评 → 全国决赛",
       "officialUrl": "http://www.ciscn.cn",
       "sourceUrl": "http://www.ciscn.cn/",
       "bonusCategory": "学科竞赛",
@@ -1870,11 +1945,12 @@
       "stages": [
         {
           "code": "QUALIFIER",
-          "name": "全国初评（线上）",
+          "name": "全国初评",
           "stageKind": "QUALIFIER",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "WORKS"
+          "track": "WORKS",
+          "note": "全国初评（线上）"
         },
         {
           "code": "FINAL",
@@ -1886,11 +1962,12 @@
         },
         {
           "code": "QUALIFIER",
-          "name": "初赛（线上）",
+          "name": "初赛",
           "stageKind": "QUALIFIER",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "CPRACTICE"
+          "track": "CPRACTICE",
+          "note": "初赛（线上）"
         },
         {
           "code": "REGIONAL",
@@ -1975,6 +2052,7 @@
       "difficulty": 3,
       "effort": 3,
       "intro": "外研社主办的多语种多赛项外语能力大赛，含演讲、辩论、写作、阅读、综合能力五大赛项。",
+      "stageChain": "校赛 → 省赛 → 全国决赛",
       "officialUrl": "https://ucc.fltrp.com/",
       "sourceUrl": "https://ucc.fltrp.com/",
       "bonusCategory": "学科竞赛",
@@ -2139,6 +2217,7 @@
       "difficulty": 3,
       "effort": 3,
       "intro": "教育部电子商务类专业教指委主办，分常规赛与实战赛，侧重电商创新与创业实践。",
+      "stageChain": "校赛 → 省赛 → 全国总决赛",
       "officialUrl": "https://www.3chuang.net/",
       "sourceUrl": "https://www.3chuang.net/",
       "bonusCategory": "学科竞赛",
@@ -2174,11 +2253,12 @@
         },
         {
           "code": "PROVINCIAL",
-          "name": "省赛（省级选拔赛）",
+          "name": "省赛",
           "stageKind": "PROVINCIAL",
           "sequence": 2,
           "bonusTier": "PROVINCIAL",
-          "track": "REGULAR"
+          "track": "REGULAR",
+          "note": "省赛（省级选拔赛）"
         },
         {
           "code": "FINAL",
@@ -2198,19 +2278,21 @@
         },
         {
           "code": "PROVINCIAL",
-          "name": "省赛（省级选拔赛）",
+          "name": "省赛",
           "stageKind": "PROVINCIAL",
           "sequence": 2,
           "bonusTier": "PROVINCIAL",
-          "track": "PRACTICE"
+          "track": "PRACTICE",
+          "note": "省赛（省级选拔赛）"
         },
         {
           "code": "FINAL",
-          "name": "全国总决赛（各实战赛道分散举行）",
+          "name": "全国总决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": "PRACTICE"
+          "track": "PRACTICE",
+          "note": "全国总决赛（各实战赛道分散举行）"
         },
         {
           "code": "CAMPUS",
@@ -2222,11 +2304,12 @@
         },
         {
           "code": "PROVINCIAL",
-          "name": "省赛（省级选拔赛）",
+          "name": "省赛",
           "stageKind": "PROVINCIAL",
           "sequence": 2,
           "bonusTier": "PROVINCIAL",
-          "track": "INTL"
+          "track": "INTL",
+          "note": "省赛（省级选拔赛）"
         },
         {
           "code": "FINAL",
@@ -2312,6 +2395,7 @@
       "difficulty": 3,
       "effort": 4,
       "intro": "以节能减排为主题，分社会实践与科技作品两类，高校轮流承办。",
+      "stageChain": "校赛 → 全国网络函评 → 全国专家会评 → 全国总决赛",
       "officialUrl": "http://www.jienengjianpai.org",
       "sourceUrl": "http://www.jienengjianpai.org/",
       "bonusCategory": "学科竞赛",
@@ -2439,6 +2523,7 @@
       "difficulty": 4,
       "effort": 4,
       "intro": "原名工程训练综合能力竞赛，两年一届，考查工程实践与创新综合能力。",
+      "stageChain": "校赛 → 省赛 → 全国总决赛",
       "officialUrl": "http://www.gcxl.edu.cn",
       "sourceUrl": "http://www.gcxl.edu.cn/",
       "bonusCategory": "学科竞赛",
@@ -2498,11 +2583,12 @@
         },
         {
           "code": "PROVINCIAL",
-          "name": "省赛（赛区选拔）",
+          "name": "省赛",
           "stageKind": "PROVINCIAL",
           "sequence": 2,
           "bonusTier": "PROVINCIAL",
-          "track": null
+          "track": null,
+          "note": "省赛（赛区选拔）"
         },
         {
           "code": "FINAL",
@@ -2556,6 +2642,7 @@
       "difficulty": 3,
       "effort": 2,
       "intro": "国家级大创计划的年度成果交流与展示平台，入选与获奖均可作为推免加分依据。",
+      "stageChain": "校内遴选推荐 → 系统填报 → 年会展示交流",
       "officialUrl": "http://gjcxcy.bjtu.edu.cn",
       "sourceUrl": "http://gjcxcy.bjtu.edu.cn/",
       "bonusCategory": "学科竞赛",
@@ -2591,11 +2678,12 @@
         },
         {
           "code": "OTHER",
-          "name": "系统填报（中央高校直报/省教育厅汇总）",
+          "name": "系统填报",
           "stageKind": "OTHER",
           "sequence": 2,
           "bonusTier": "NONE",
-          "track": "ACADEMIC"
+          "track": "ACADEMIC",
+          "note": "系统填报（中央高校直报/省教育厅汇总）"
         },
         {
           "code": "FINAL",
@@ -2615,11 +2703,12 @@
         },
         {
           "code": "OTHER",
-          "name": "系统填报（中央高校直报/省教育厅汇总）",
+          "name": "系统填报",
           "stageKind": "OTHER",
           "sequence": 2,
           "bonusTier": "NONE",
-          "track": "EXHIBIT"
+          "track": "EXHIBIT",
+          "note": "系统填报（中央高校直报/省教育厅汇总）"
         },
         {
           "code": "FINAL",
@@ -2639,11 +2728,12 @@
         },
         {
           "code": "OTHER",
-          "name": "系统填报（中央高校直报/省教育厅汇总）",
+          "name": "系统填报",
           "stageKind": "OTHER",
           "sequence": 2,
           "bonusTier": "NONE",
-          "track": "STARTUP"
+          "track": "STARTUP",
+          "note": "系统填报（中央高校直报/省教育厅汇总）"
         },
         {
           "code": "FINAL",
@@ -2710,6 +2800,7 @@
       "difficulty": 4,
       "effort": 4,
       "intro": "中国仿真学会与西门子联合主办，面向智能制造与工业自动化的工程类赛事。",
+      "stageChain": "全国分赛区初赛 → 全国总决赛",
       "officialUrl": "http://www.siemenscup-cimc.org.cn",
       "sourceUrl": "http://www.siemenscup-cimc.org.cn/",
       "bonusCategory": "学科竞赛",
@@ -2737,19 +2828,21 @@
       "stages": [
         {
           "code": "REGIONAL",
-          "name": "全国分赛区初赛（线上）",
+          "name": "全国分赛区初赛",
           "stageKind": "REGIONAL",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "全国分赛区初赛（线上）"
         },
         {
           "code": "FINAL",
-          "name": "全国总决赛（线下）",
+          "name": "全国总决赛",
           "stageKind": "FINAL",
           "sequence": 2,
           "bonusTier": "NATIONAL",
-          "track": null
+          "track": null,
+          "note": "全国总决赛（线下）"
         }
       ],
       "events": [
@@ -2811,6 +2904,7 @@
       "difficulty": 3,
       "effort": 4,
       "intro": "即“高教杯”，以工程图学与产品信息建模为核心，按专业分多个赛道。",
+      "stageChain": "校赛 → 省赛 → 全国总决赛",
       "officialUrl": "http://www.chengtudasai.com",
       "sourceUrl": "http://www.chengtudasai.com/",
       "bonusCategory": "学科竞赛",
@@ -2856,11 +2950,12 @@
       "stages": [
         {
           "code": "CAMPUS",
-          "name": "校赛（校内初赛）",
+          "name": "校赛",
           "stageKind": "CAMPUS",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "校赛（校内初赛）"
         },
         {
           "code": "PROVINCIAL",
@@ -2916,6 +3011,7 @@
       "difficulty": 3,
       "effort": 3,
       "intro": "面向计算机应用与设计的多类别赛事，国赛分设多个决赛区。",
+      "stageChain": "校级选拔 → 省级赛 → 国赛决赛",
       "officialUrl": "https://jsjds.blcu.edu.cn",
       "sourceUrl": "https://jsjds.blcu.edu.cn/",
       "bonusCategory": "学科竞赛",
@@ -3007,11 +3103,12 @@
         },
         {
           "code": "FINAL",
-          "name": "国赛决赛（6个决赛区）",
+          "name": "国赛决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": null
+          "track": null,
+          "note": "国赛决赛（6个决赛区）"
         }
       ],
       "events": [
@@ -3099,6 +3196,7 @@
       "difficulty": 3,
       "effort": 3,
       "intro": "中国商业统计学会主办，以市场调查与数据分析报告为参赛作品。",
+      "stageChain": "知识赛 → 校赛 → 企业命题赛 → 省赛 → 全国赛初赛 → 全国总决赛",
       "officialUrl": "http://www.china-cssc.org/",
       "sourceUrl": "http://www.china-cssc.org/",
       "bonusCategory": "学科竞赛",
@@ -3132,11 +3230,12 @@
       "stages": [
         {
           "code": "QUALIFIER",
-          "name": "知识赛（个人网考）",
+          "name": "知识赛",
           "stageKind": "QUALIFIER",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "ZHKS"
+          "track": "ZHKS",
+          "note": "知识赛（个人网考）"
         },
         {
           "code": "CAMPUS",
@@ -3164,11 +3263,12 @@
         },
         {
           "code": "NATIONAL",
-          "name": "全国赛初赛（报告+PPT评审）",
+          "name": "全国赛初赛",
           "stageKind": "NATIONAL",
           "sequence": 5,
           "bonusTier": "NATIONAL",
-          "track": "ZHKS"
+          "track": "ZHKS",
+          "note": "全国赛初赛（报告+PPT评审）"
         },
         {
           "code": "FINAL",
@@ -3180,11 +3280,12 @@
         },
         {
           "code": "QUALIFIER",
-          "name": "知识赛（个人网考）",
+          "name": "知识赛",
           "stageKind": "QUALIFIER",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "BENKE"
+          "track": "BENKE",
+          "note": "知识赛（个人网考）"
         },
         {
           "code": "CAMPUS",
@@ -3212,11 +3313,12 @@
         },
         {
           "code": "NATIONAL",
-          "name": "全国赛初赛（报告+PPT评审）",
+          "name": "全国赛初赛",
           "stageKind": "NATIONAL",
           "sequence": 5,
           "bonusTier": "NATIONAL",
-          "track": "BENKE"
+          "track": "BENKE",
+          "note": "全国赛初赛（报告+PPT评审）"
         },
         {
           "code": "FINAL",
@@ -3252,11 +3354,12 @@
         },
         {
           "code": "NATIONAL",
-          "name": "全国赛初赛（报告+PPT评审）",
+          "name": "全国赛初赛",
           "stageKind": "NATIONAL",
           "sequence": 4,
           "bonusTier": "NATIONAL",
-          "track": "YJS"
+          "track": "YJS",
+          "note": "全国赛初赛（报告+PPT评审）"
         },
         {
           "code": "FINAL",
@@ -3393,6 +3496,7 @@
       "difficulty": 3,
       "effort": 4,
       "intro": "教育部与商务部等主办，面向服务外包与软件创新创业，企业命题参赛。",
+      "stageChain": "报名与选题 → 区域赛 → 全国赛决赛",
       "officialUrl": "https://fwwb.org.cn",
       "sourceUrl": "https://fwwb.org.cn/",
       "bonusCategory": "学科竞赛",
@@ -3482,19 +3586,21 @@
         },
         {
           "code": "FINAL",
-          "name": "全国评审与决赛（不经区域赛）",
+          "name": "全国评审与决赛",
           "stageKind": "FINAL",
           "sequence": 2,
           "bonusTier": "NATIONAL",
-          "track": "C"
+          "track": "C",
+          "note": "全国评审与决赛（不经区域赛）"
         },
         {
           "code": "OTHER",
-          "name": "报名与选题（双平台注册）",
+          "name": "报名与选题",
           "stageKind": "OTHER",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "D"
+          "track": "D",
+          "note": "报名与选题（双平台注册）"
         },
         {
           "code": "REGIONAL",
@@ -3584,6 +3690,7 @@
       "difficulty": 4,
       "effort": 4,
       "intro": "含大数据挑战赛、天梯赛、移动应用创新赛、网络技术挑战赛、人工智能创意赛五大子赛。",
+      "stageChain": "报名 → 普及赛 → 团体赛全国总决赛",
       "officialUrl": "https://www.c4best.cn",
       "sourceUrl": "http://www.c4best.cn/",
       "bonusCategory": "学科竞赛",
@@ -3631,19 +3738,21 @@
         },
         {
           "code": "NATIONAL",
-          "name": "普及赛（个人赛，3月14日）",
+          "name": "普及赛",
           "stageKind": "NATIONAL",
           "sequence": 2,
           "bonusTier": "NATIONAL",
-          "track": "GPLT"
+          "track": "GPLT",
+          "note": "普及赛（个人赛，3月14日）"
         },
         {
           "code": "FINAL",
-          "name": "团体赛全国总决赛（4月18日单场）",
+          "name": "团体赛全国总决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": "GPLT"
+          "track": "GPLT",
+          "note": "团体赛全国总决赛（4月18日单场）"
         },
         {
           "code": "OTHER",
@@ -3655,19 +3764,21 @@
         },
         {
           "code": "QUALIFIER",
-          "name": "线上赛（初赛）",
+          "name": "线上赛",
           "stageKind": "QUALIFIER",
           "sequence": 2,
           "bonusTier": "NONE",
-          "track": "BIGDATA"
+          "track": "BIGDATA",
+          "note": "线上赛（初赛）"
         },
         {
           "code": "FINAL",
-          "name": "全国总决赛（清华大学）",
+          "name": "全国总决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": "BIGDATA"
+          "track": "BIGDATA",
+          "note": "全国总决赛（清华大学）"
         },
         {
           "code": "OTHER",
@@ -3695,11 +3806,12 @@
         },
         {
           "code": "FINAL",
-          "name": "决赛（全国总决赛）",
+          "name": "决赛",
           "stageKind": "FINAL",
           "sequence": 4,
           "bonusTier": "NATIONAL",
-          "track": "APP"
+          "track": "APP",
+          "note": "决赛（全国总决赛）"
         },
         {
           "code": "OTHER",
@@ -3719,19 +3831,21 @@
         },
         {
           "code": "REGIONAL",
-          "name": "选拔赛（分赛区）",
+          "name": "选拔赛",
           "stageKind": "REGIONAL",
           "sequence": 3,
           "bonusTier": "NONE",
-          "track": "NET"
+          "track": "NET",
+          "note": "选拔赛（分赛区）"
         },
         {
           "code": "FINAL",
-          "name": "挑战赛（全国决赛）",
+          "name": "挑战赛",
           "stageKind": "FINAL",
           "sequence": 4,
           "bonusTier": "NATIONAL",
-          "track": "NET"
+          "track": "NET",
+          "note": "挑战赛（全国决赛）"
         },
         {
           "code": "OTHER",
@@ -3751,19 +3865,21 @@
         },
         {
           "code": "QUALIFIER-2",
-          "name": "复赛（线上评审）",
+          "name": "复赛",
           "stageKind": "QUALIFIER",
           "sequence": 3,
           "bonusTier": "NONE",
-          "track": "AIC"
+          "track": "AIC",
+          "note": "复赛（线上评审）"
         },
         {
           "code": "FINAL",
-          "name": "全国总决赛（现场答辩）",
+          "name": "全国总决赛",
           "stageKind": "FINAL",
           "sequence": 4,
           "bonusTier": "NATIONAL",
-          "track": "AIC"
+          "track": "AIC",
+          "note": "全国总决赛（现场答辩）"
         }
       ],
       "events": [
@@ -3867,6 +3983,7 @@
       "difficulty": 4,
       "effort": 5,
       "intro": "中国自动化学会主办，含中国机器人大赛与 RoboCup 中国赛两大板块。",
+      "stageChain": "校赛 → 区域赛/专项赛 → 总决赛",
       "officialUrl": "https://rcccaa.drct-caa.org.cn",
       "sourceUrl": "https://www.caa.org.cn/",
       "bonusCategory": "学科竞赛",
@@ -3888,27 +4005,30 @@
       "stages": [
         {
           "code": "CAMPUS",
-          "name": "校赛（各校选拔并晋级推荐）",
+          "name": "校赛",
           "stageKind": "CAMPUS",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "校赛（各校选拔并晋级推荐）"
         },
         {
           "code": "REGIONAL",
-          "name": "区域赛/专项赛（部分赛项）",
+          "name": "区域赛/专项赛",
           "stageKind": "REGIONAL",
           "sequence": 2,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "区域赛/专项赛（部分赛项）"
         },
         {
           "code": "FINAL",
-          "name": "总决赛（RoboCup赛区5月北京；中国机器人大赛赛区10月杭州）",
+          "name": "总决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": null
+          "track": null,
+          "note": "总决赛（RoboCup赛区5月北京；中国机器人大赛赛区10月杭州）"
         }
       ],
       "events": [
@@ -3962,6 +4082,7 @@
       "difficulty": 4,
       "effort": 4,
       "intro": "中国力学学会与周培源基金会主办，两年一届，考查力学理论基础与综合应用。",
+      "stageChain": "个人赛 → 团体赛",
       "officialUrl": "http://zpy.cstam.org.cn",
       "sourceUrl": "http://zpy.cstam.org.cn/",
       "bonusCategory": "学科竞赛",
@@ -3970,19 +4091,21 @@
       "stages": [
         {
           "code": "NATIONAL",
-          "name": "个人赛（全国统一笔试，各省设考点）",
+          "name": "个人赛",
           "stageKind": "NATIONAL",
           "sequence": 1,
           "bonusTier": "NATIONAL",
-          "track": null
+          "track": null,
+          "note": "个人赛（全国统一笔试，各省设考点）"
         },
         {
           "code": "FINAL",
-          "name": "团体赛（『理论设计与操作』『基础力学实验』『空间轨道设计』，承办高校举行）",
+          "name": "团体赛",
           "stageKind": "FINAL",
           "sequence": 2,
           "bonusTier": "NATIONAL",
-          "track": null
+          "track": null,
+          "note": "团体赛（『理论设计与操作』『基础力学实验』『空间轨道设计』，承办高校举行）"
         }
       ],
       "events": []
@@ -4004,6 +4127,7 @@
       "difficulty": 3,
       "effort": 4,
       "intro": "工信部与教育部等主办，以企业命题形式考查软件设计与工程实现能力。",
+      "stageChain": "报名与辅导 → 全国初赛评审 → 全国总决赛",
       "officialUrl": "https://www.cnsoftbei.com/",
       "sourceUrl": "https://www.cnsoftbei.com/",
       "bonusCategory": "学科竞赛",
@@ -4035,11 +4159,12 @@
         },
         {
           "code": "FINAL",
-          "name": "全国总决赛（线上答辩）",
+          "name": "全国总决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": null
+          "track": null,
+          "note": "全国总决赛（线上答辩）"
         }
       ],
       "events": [
@@ -4093,6 +4218,7 @@
       "difficulty": 3,
       "effort": 3,
       "intro": "工信部人才交流中心主办，面向数字艺术设计，分省赛与国赛两级。",
+      "stageChain": "校赛 → 省赛 → 国赛",
       "officialUrl": "https://www.ncda.org.cn",
       "sourceUrl": "https://www.ncda.org.cn/",
       "bonusCategory": "学科竞赛",
@@ -4126,11 +4252,12 @@
       "stages": [
         {
           "code": "CAMPUS",
-          "name": "校赛（院系统一报名）",
+          "name": "校赛",
           "stageKind": "CAMPUS",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "校赛（院系统一报名）"
         },
         {
           "code": "PROVINCIAL",
@@ -4206,6 +4333,7 @@
       "difficulty": 3,
       "effort": 4,
       "intro": "教育部主办的中美青年创客交流赛事，分赛区选拔后进入全国总决赛。",
+      "stageChain": "分赛区选拔赛 → 全国总决赛",
       "officialUrl": "https://chinaus-maker.cscse.edu.cn",
       "sourceUrl": "https://chinaus-maker.cscse.edu.cn/",
       "bonusCategory": "学科竞赛",
@@ -4271,6 +4399,7 @@
       "difficulty": 4,
       "effort": 5,
       "intro": "工信部人才交流中心主办，分芯片设计、芯片应用、FPGA 三个赛道。",
+      "stageChain": "报名 → 初赛 → 分赛区决赛 → 全国总决赛",
       "officialUrl": "https://univ.ciciec.com",
       "sourceUrl": "http://univ.ciciec.com/",
       "bonusCategory": "学科竞赛",
@@ -4306,11 +4435,12 @@
         },
         {
           "code": "QUALIFIER",
-          "name": "初赛（作品提交与评审）",
+          "name": "初赛",
           "stageKind": "QUALIFIER",
           "sequence": 2,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "初赛（作品提交与评审）"
         },
         {
           "code": "REGIONAL",
@@ -4338,11 +4468,12 @@
         },
         {
           "code": "QUALIFIER",
-          "name": "初赛（作品提交与评审）",
+          "name": "初赛",
           "stageKind": "QUALIFIER",
           "sequence": 2,
           "bonusTier": "NONE",
-          "track": "VOC"
+          "track": "VOC",
+          "note": "初赛（作品提交与评审）"
         }
       ],
       "events": [
@@ -4433,6 +4564,7 @@
       "difficulty": 3,
       "effort": 3,
       "intro": "即“大广赛”，教育部高教司指导，按命题创作，分平面、视频、动画、策划案等多类别。",
+      "stageChain": "校级选拔 → 分赛区评审 → 全国总评审",
       "officialUrl": "https://www.sun-ada.net",
       "sourceUrl": "https://www.sun-ada.net/",
       "bonusCategory": "学科竞赛",
@@ -4563,6 +4695,7 @@
       "difficulty": 4,
       "effort": 5,
       "intro": "教育部主办的医学类技能竞赛，按专业分赛道，考查临床与操作技能。",
+      "stageChain": "校赛 → 分区赛 → 全国总决赛",
       "officialUrl": "https://medu.bjmu.edu.cn",
       "sourceUrl": "https://medu.bjmu.edu.cn/",
       "bonusCategory": "学科竞赛",
@@ -4602,19 +4735,21 @@
       "stages": [
         {
           "code": "CAMPUS",
-          "name": "校赛（校内选拔）",
+          "name": "校赛",
           "stageKind": "CAMPUS",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "校赛（校内选拔）"
         },
         {
           "code": "REGIONAL",
-          "name": "分区赛（预选赛）",
+          "name": "分区赛",
           "stageKind": "REGIONAL",
           "sequence": 2,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "分区赛（预选赛）"
         },
         {
           "code": "FINAL",
@@ -4646,6 +4781,7 @@
       "difficulty": 4,
       "effort": 4,
       "intro": "中国机械工程学会主办，含 3 大赛道、19 个赛项，赛道下再分赛项。",
+      "stageChain": "校内选拔 → 省级或区域选拔赛 → 全国总决赛",
       "officialUrl": "https://meicc.cmes.org",
       "sourceUrl": "https://meicc.cmes.org/",
       "bonusCategory": "学科竞赛",
@@ -4673,27 +4809,30 @@
       "stages": [
         {
           "code": "CAMPUS",
-          "name": "校内选拔（各校自行组织）",
+          "name": "校内选拔",
           "stageKind": "CAMPUS",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "校内选拔（各校自行组织）"
         },
         {
           "code": "PROVINCIAL",
-          "name": "省级或区域选拔赛（智能制造赛设分赛区；两级赛制）",
+          "name": "省级或区域选拔赛",
           "stageKind": "PROVINCIAL",
           "sequence": 2,
           "bonusTier": "PROVINCIAL",
-          "track": null
+          "track": null,
+          "note": "省级或区域选拔赛（智能制造赛设分赛区；两级赛制）"
         },
         {
           "code": "FINAL",
-          "name": "全国总决赛（各赛项时间地点各异）",
+          "name": "全国总决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": null
+          "track": null,
+          "note": "全国总决赛（各赛项时间地点各异）"
         }
       ],
       "events": [
@@ -4741,6 +4880,7 @@
       "difficulty": 3,
       "effort": 3,
       "intro": "材料类专业教学指导委员会主办，考查金相试样制备与显微组织分析技能。",
+      "stageChain": "校内初赛 → 分赛区复赛 → 全国决赛",
       "officialUrl": "https://www.jxds.tech",
       "sourceUrl": "http://www.jxds.tech/",
       "bonusCategory": "学科竞赛",
@@ -4776,11 +4916,12 @@
         },
         {
           "code": "REGIONAL",
-          "name": "分赛区复赛（2026-06各赛区陆续举行）",
+          "name": "分赛区复赛",
           "stageKind": "REGIONAL",
           "sequence": 2,
           "bonusTier": "NONE",
-          "track": "SKILL"
+          "track": "SKILL",
+          "note": "分赛区复赛（2026-06各赛区陆续举行）"
         },
         {
           "code": "FINAL",
@@ -4800,11 +4941,12 @@
         },
         {
           "code": "FINAL",
-          "name": "全国决赛（金相大会）",
+          "name": "全国决赛",
           "stageKind": "FINAL",
           "sequence": 2,
           "bonusTier": "NATIONAL",
-          "track": "ANALYSIS"
+          "track": "ANALYSIS",
+          "note": "全国决赛（金相大会）"
         },
         {
           "code": "REGIONAL",
@@ -4816,11 +4958,12 @@
         },
         {
           "code": "FINAL",
-          "name": "全国决赛（材料分析大赛）",
+          "name": "全国决赛",
           "stageKind": "FINAL",
           "sequence": 2,
           "bonusTier": "NATIONAL",
-          "track": "INNOVATION"
+          "track": "INNOVATION",
+          "note": "全国决赛（材料分析大赛）"
         }
       ],
       "events": [
@@ -4859,6 +5002,7 @@
       "difficulty": 3,
       "effort": 3,
       "intro": "中国高等教育学会等主办的两岸设计交流赛事，分创意与定向主题赛道。",
+      "stageChain": "校赛 → 赛区赛 → 总决赛",
       "officialUrl": "http://www.huacanjiang.com",
       "sourceUrl": "http://www.huacanjiang.com/",
       "bonusCategory": "学科竞赛",
@@ -4888,19 +5032,21 @@
         },
         {
           "code": "REGIONAL",
-          "name": "赛区赛（34个赛区）",
+          "name": "赛区赛",
           "stageKind": "REGIONAL",
           "sequence": 2,
           "bonusTier": "NONE",
-          "track": "CREATIVE"
+          "track": "CREATIVE",
+          "note": "赛区赛（34个赛区）"
         },
         {
           "code": "FINAL",
-          "name": "总决赛（网络评审+现场评审）",
+          "name": "总决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": "CREATIVE"
+          "track": "CREATIVE",
+          "note": "总决赛（网络评审+现场评审）"
         },
         {
           "code": "FINAL",
@@ -4982,6 +5128,7 @@
       "difficulty": 4,
       "effort": 4,
       "intro": "土木工程领域顶级赛事，以模型制作与加载测试为核心，分分区赛与全国赛。",
+      "stageChain": "分区赛 → 全国总决赛",
       "officialUrl": "http://www.structurecontest.com",
       "sourceUrl": "https://www.structurecontest.com/",
       "bonusCategory": "学科竞赛",
@@ -4990,11 +5137,12 @@
       "stages": [
         {
           "code": "REGIONAL",
-          "name": "分区赛（各省、自治区、直辖市）",
+          "name": "分区赛",
           "stageKind": "REGIONAL",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "分区赛（各省、自治区、直辖市）"
         },
         {
           "code": "FINAL",
@@ -5035,6 +5183,7 @@
       "difficulty": 3,
       "effort": 3,
       "intro": "中国教育国际交流协会等主办，面向高校设计学科师生的作品展赛。",
+      "stageChain": "省赛评审 → 国赛评审 → 米兰展出/颁奖典礼",
       "officialUrl": "https://milan-aap.org.cn/",
       "sourceUrl": "http://www.milan-aap.org.cn/",
       "bonusCategory": "学科竞赛",
@@ -5112,6 +5261,7 @@
       "difficulty": 3,
       "effort": 3,
       "intro": "全球规模最大的数学建模赛事，99 小时英文论文，Outstanding Winner 按国家级最高奖计。",
+      "stageChain": "报名 → 竞赛",
       "officialUrl": "https://www.comap.com/contests/mcm-icm",
       "sourceUrl": "https://www.comap.com/",
       "bonusCategory": "学科竞赛",
@@ -5133,19 +5283,21 @@
       "stages": [
         {
           "code": "OTHER",
-          "name": "报名（COMAP官网注册，按队报名）",
+          "name": "报名",
           "stageKind": "OTHER",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "报名（COMAP官网注册，按队报名）"
         },
         {
           "code": "INTERNATIONAL",
-          "name": "竞赛（全球统一网络赛，美东时间）",
+          "name": "竞赛",
           "stageKind": "INTERNATIONAL",
           "sequence": 2,
           "bonusTier": "NATIONAL",
-          "track": null
+          "track": null,
+          "note": "竞赛（全球统一网络赛，美东时间）"
         }
       ],
       "events": [
@@ -5176,6 +5328,7 @@
       "difficulty": 5,
       "effort": 5,
       "intro": "合成生物学领域国际顶级赛事，以课题研究与展示答辩为核心。",
+      "stageChain": "注册与组队 → 交付物提交与评审 → Grand Jamboree",
       "officialUrl": "https://igem.org",
       "sourceUrl": "https://igem.org/",
       "bonusCategory": "学科竞赛",
@@ -5184,27 +5337,30 @@
       "stages": [
         {
           "code": "QUALIFIER",
-          "name": "注册与组队（赛季分阶段开放报名，Team Roster Freeze为最终名单截止）",
+          "name": "注册与组队",
           "stageKind": "QUALIFIER",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "注册与组队（赛季分阶段开放报名，Team Roster Freeze为最终名单截止）"
         },
         {
           "code": "OTHER",
-          "name": "交付物提交与评审（Wiki、演示视频、评审表、Registry贡献等）",
+          "name": "交付物提交与评审",
           "stageKind": "OTHER",
           "sequence": 2,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "交付物提交与评审（Wiki、演示视频、评审表、Registry贡献等）"
         },
         {
           "code": "FINAL",
-          "name": "Grand Jamboree（巴黎，含Expo、评审、Finalist角逐与结果发布）",
+          "name": "Grand Jamboree",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": null
+          "track": null,
+          "note": "Grand Jamboree（巴黎，含Expo、评审、Finalist角逐与结果发布）"
         }
       ],
       "events": [
@@ -5265,6 +5421,7 @@
       "difficulty": 4,
       "effort": 4,
       "intro": "中国人工智能学会主办，覆盖机器人、人工智能与创新应用多个赛项。",
+      "stageChain": "校赛 → 省级选拔赛 → 全国决赛",
       "officialUrl": "https://www.caairobot.com",
       "sourceUrl": "https://www.caairobot.com/",
       "bonusCategory": "学科竞赛",
@@ -5298,27 +5455,30 @@
       "stages": [
         {
           "code": "CAMPUS",
-          "name": "校赛（各校选拔，比例各校自定）",
+          "name": "校赛",
           "stageKind": "CAMPUS",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "校赛（各校选拔，比例各校自定）"
         },
         {
           "code": "PROVINCIAL",
-          "name": "省级选拔赛（各省赛区，2026-06-08通知）",
+          "name": "省级选拔赛",
           "stageKind": "PROVINCIAL",
           "sequence": 2,
           "bonusTier": "PROVINCIAL",
-          "track": null
+          "track": null,
+          "note": "省级选拔赛（各省赛区，2026-06-08通知）"
         },
         {
           "code": "FINAL",
-          "name": "全国决赛（哈尔滨站/合肥站/线上三站+人形专项赛北京）",
+          "name": "全国决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": null
+          "track": null,
+          "note": "全国决赛（哈尔滨站/合肥站/线上三站+人形专项赛北京）"
         }
       ],
       "events": [
@@ -5330,7 +5490,7 @@
           "label": "报名启动（沿用基线CSV；官方报名系统 craic.yuntop.com，精确开始日期未在官网公告页直接核到）"
         },
         {
-          "stage": "PROVINCIAL",
+          "stage": "FINAL",
           "track": null,
           "nodeType": "OTHER",
           "startAt": "2026-06-08",
@@ -5372,6 +5532,7 @@
       "difficulty": 3,
       "effort": 4,
       "intro": "中国贸促会商业行业委员会主办，含品牌策划、会展、国际贸易、创新创业等多个赛道。",
+      "stageChain": "知识赛 → 校赛 → 省赛/全国预选赛 → 全国总决赛 → 全球总决赛",
       "officialUrl": "https://cubec.org.cn/",
       "sourceUrl": "https://cubec.org.cn/",
       "bonusCategory": "学科竞赛",
@@ -5411,11 +5572,12 @@
       "stages": [
         {
           "code": "QUALIFIER",
-          "name": "知识赛（个人网络机考）",
+          "name": "知识赛",
           "stageKind": "QUALIFIER",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "BRAND"
+          "track": "BRAND",
+          "note": "知识赛（个人网络机考）"
         },
         {
           "code": "CAMPUS",
@@ -5499,27 +5661,30 @@
         },
         {
           "code": "QUALIFIER",
-          "name": "知识赛（个人网络机考，60分合格）",
+          "name": "知识赛",
           "stageKind": "QUALIFIER",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "INNOV"
+          "track": "INNOV",
+          "note": "知识赛（个人网络机考，60分合格）"
         },
         {
           "code": "CAMPUS",
-          "name": "校赛（校内选拔赛）",
+          "name": "校赛",
           "stageKind": "CAMPUS",
           "sequence": 2,
           "bonusTier": "NONE",
-          "track": "INNOV"
+          "track": "INNOV",
+          "note": "校赛（校内选拔赛）"
         },
         {
           "code": "PROVINCIAL",
-          "name": "省赛（省级总决赛）",
+          "name": "省赛",
           "stageKind": "PROVINCIAL",
           "sequence": 3,
           "bonusTier": "PROVINCIAL",
-          "track": "INNOV"
+          "track": "INNOV",
+          "note": "省赛（省级总决赛）"
         },
         {
           "code": "FINAL",
@@ -5561,7 +5726,7 @@
           "label": "创业计划赛道省赛完成截止"
         },
         {
-          "stage": "PROVINCIAL",
+          "stage": "FINAL",
           "track": "INNOV",
           "nodeType": "CONTEST",
           "startAt": "2026-10-17",
@@ -5597,6 +5762,7 @@
       "difficulty": 3,
       "effort": 3,
       "intro": "中国电子视像行业协会主办，面向数字艺术设计，另设多个专项赛。",
+      "stageChain": "校级赛 → 省级赛 → 全国赛",
       "officialUrl": "https://www.cdec.org.cn",
       "sourceUrl": "http://www.cdec.org.cn/",
       "bonusCategory": "学科竞赛",
@@ -5632,11 +5798,12 @@
         },
         {
           "code": "PROVINCIAL",
-          "name": "省级赛（29个分赛区）",
+          "name": "省级赛",
           "stageKind": "PROVINCIAL",
           "sequence": 2,
           "bonusTier": "PROVINCIAL",
-          "track": null
+          "track": null,
+          "note": "省级赛（29个分赛区）"
         },
         {
           "code": "FINAL",
@@ -5713,6 +5880,7 @@
       "difficulty": 3,
       "effort": 4,
       "intro": "国家制造业信息化培训中心等主办，三级赛制，聚焦三维数字化创新设计。",
+      "stageChain": "初赛 → 复赛/省赛 → 国赛",
       "officialUrl": "https://3dds.3ddl.net",
       "sourceUrl": "http://3dds.3ddl.net/",
       "bonusCategory": "学科竞赛",
@@ -5752,11 +5920,12 @@
       "stages": [
         {
           "code": "CAMPUS",
-          "name": "初赛（校赛）",
+          "name": "初赛",
           "stageKind": "CAMPUS",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "初赛（校赛）"
         },
         {
           "code": "PROVINCIAL",
@@ -5768,11 +5937,12 @@
         },
         {
           "code": "FINAL",
-          "name": "国赛（全国总决赛）",
+          "name": "国赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": null
+          "track": null,
+          "note": "国赛（全国总决赛）"
         }
       ],
       "events": [
@@ -5834,6 +6004,7 @@
       "difficulty": 2,
       "effort": 3,
       "intro": "以创业综合模拟软件为平台的经营对抗赛，考查创业决策与团队协作。",
+      "stageChain": "校赛/校内选拔赛 → 省赛 → 全国半决赛 → 全国总决赛",
       "officialUrl": "http://www.xcbds.com",
       "sourceUrl": "http://www.xcbds.com/",
       "bonusCategory": "学科竞赛",
@@ -5869,27 +6040,30 @@
         },
         {
           "code": "PROVINCIAL",
-          "name": "省赛（省级选拔赛）",
+          "name": "省赛",
           "stageKind": "PROVINCIAL",
           "sequence": 2,
           "bonusTier": "PROVINCIAL",
-          "track": "SIM"
+          "track": "SIM",
+          "note": "省赛（省级选拔赛）"
         },
         {
           "code": "QUALIFIER",
-          "name": "全国半决赛（线上）",
+          "name": "全国半决赛",
           "stageKind": "QUALIFIER",
           "sequence": 3,
           "bonusTier": "NONE",
-          "track": "SIM"
+          "track": "SIM",
+          "note": "全国半决赛（线上）"
         },
         {
           "code": "FINAL",
-          "name": "全国总决赛（现场）",
+          "name": "全国总决赛",
           "stageKind": "FINAL",
           "sequence": 4,
           "bonusTier": "NATIONAL",
-          "track": "SIM"
+          "track": "SIM",
+          "note": "全国总决赛（现场）"
         },
         {
           "code": "CAMPUS",
@@ -5901,27 +6075,30 @@
         },
         {
           "code": "PROVINCIAL",
-          "name": "省赛（省级选拔赛）",
+          "name": "省赛",
           "stageKind": "PROVINCIAL",
           "sequence": 2,
           "bonusTier": "PROVINCIAL",
-          "track": "MKT"
+          "track": "MKT",
+          "note": "省赛（省级选拔赛）"
         },
         {
           "code": "QUALIFIER",
-          "name": "全国半决赛（线上）",
+          "name": "全国半决赛",
           "stageKind": "QUALIFIER",
           "sequence": 3,
           "bonusTier": "NONE",
-          "track": "MKT"
+          "track": "MKT",
+          "note": "全国半决赛（线上）"
         },
         {
           "code": "FINAL",
-          "name": "全国总决赛（现场）",
+          "name": "全国总决赛",
           "stageKind": "FINAL",
           "sequence": 4,
           "bonusTier": "NATIONAL",
-          "track": "MKT"
+          "track": "MKT",
+          "note": "全国总决赛（现场）"
         },
         {
           "code": "CAMPUS",
@@ -5933,27 +6110,30 @@
         },
         {
           "code": "PROVINCIAL",
-          "name": "省赛（省级选拔赛）",
+          "name": "省赛",
           "stageKind": "PROVINCIAL",
           "sequence": 2,
           "bonusTier": "PROVINCIAL",
-          "track": "FIN"
+          "track": "FIN",
+          "note": "省赛（省级选拔赛）"
         },
         {
           "code": "QUALIFIER",
-          "name": "全国半决赛（线上）",
+          "name": "全国半决赛",
           "stageKind": "QUALIFIER",
           "sequence": 3,
           "bonusTier": "NONE",
-          "track": "FIN"
+          "track": "FIN",
+          "note": "全国半决赛（线上）"
         },
         {
           "code": "FINAL",
-          "name": "全国总决赛（现场）",
+          "name": "全国总决赛",
           "stageKind": "FINAL",
           "sequence": 4,
           "bonusTier": "NATIONAL",
-          "track": "FIN"
+          "track": "FIN",
+          "note": "全国总决赛（现场）"
         }
       ],
       "events": [
@@ -5993,6 +6173,7 @@
       "difficulty": 3,
       "effort": 4,
       "intro": "原名“大唐杯”，工信部人才交流中心等主办，分工程实践、产教融合、ICT 通识三赛道。",
+      "stageChain": "校赛 → 省赛 → 全国总决赛",
       "officialUrl": "https://www.ksup.cn",
       "sourceUrl": "https://www.ksup.cn/",
       "bonusCategory": "学科竞赛",
@@ -6149,6 +6330,7 @@
       "difficulty": 3,
       "effort": 4,
       "intro": "大学物理课程教学指导委员会主办，含命题、自选、讲课与国际四个赛道。",
+      "stageChain": "校内选拔 → 区域/省级选拔 → 预赛 → 全国决赛",
       "officialUrl": "https://wlsycx.moocollege.com",
       "sourceUrl": "https://wlsycx.moocollege.com/",
       "bonusCategory": "学科竞赛",
@@ -6182,35 +6364,39 @@
       "stages": [
         {
           "code": "CAMPUS",
-          "name": "校内选拔（各校自定，如中科大3-06~3-31、哈工大4-30截止）",
+          "name": "校内选拔",
           "stageKind": "CAMPUS",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "校内选拔（各校自定，如中科大3-06~3-31、哈工大4-30截止）"
         },
         {
           "code": "REGIONAL",
-          "name": "区域/省级选拔（部分地区：第三届西南地区选拔赛决赛2026-07-22~25云南大学；西北地区竞赛2026年8月；省级选拔优秀作品可获决赛直通车）",
+          "name": "区域/省级选拔",
           "stageKind": "REGIONAL",
           "sequence": 2,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "区域/省级选拔（部分地区：第三届西南地区选拔赛决赛2026-07-22~25云南大学；西北地区竞赛2026年8月；省级选拔优秀作品可获决赛直通车）"
         },
         {
           "code": "QUALIFIER",
-          "name": "预赛（作品网络初评/远程评审）",
+          "name": "预赛",
           "stageKind": "QUALIFIER",
           "sequence": 3,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "预赛（作品网络初评/远程评审）"
         },
         {
           "code": "FINAL",
-          "name": "全国决赛（现场赛，日期待第二轮通知）",
+          "name": "全国决赛",
           "stageKind": "FINAL",
           "sequence": 4,
           "bonusTier": "NATIONAL",
-          "track": null
+          "track": null,
+          "note": "全国决赛（现场赛，日期待第二轮通知）"
         }
       ],
       "events": [
@@ -6222,7 +6408,7 @@
           "label": "预赛报名截止：各参赛高校通过网络填报预赛报名表（约5月初发布报名表）"
         },
         {
-          "stage": "REGIONAL",
+          "stage": "FINAL",
           "track": null,
           "nodeType": "SIGNUP_END",
           "startAt": "2026-09-01",
@@ -6230,7 +6416,7 @@
           "label": "全国决赛正式报名窗口：晋级队伍提交正式报名、上传参赛资料并完成缴费（详细方案见第二轮通知）"
         },
         {
-          "stage": "REGIONAL",
+          "stage": "FINAL",
           "track": null,
           "nodeType": "CONTEST",
           "startAt": "2026-07-22",
@@ -6256,6 +6442,7 @@
       "difficulty": 4,
       "effort": 4,
       "intro": "工信部人才交流中心主办，面向机器人开发者，分多个赛道与赛区。",
+      "stageChain": "校赛/省赛/区域选拔赛 → 全国总决赛",
       "officialUrl": "https://www.raicom.com.cn",
       "sourceUrl": "https://www.raicom.com.cn/",
       "bonusCategory": "学科竞赛",
@@ -6297,11 +6484,12 @@
         },
         {
           "code": "FINAL",
-          "name": "全国总决赛（按赛项分四阶段：7月杭州/8月线上线下/9月杭州/10月武汉泰安广西）",
+          "name": "全国总决赛",
           "stageKind": "FINAL",
           "sequence": 2,
           "bonusTier": "NATIONAL",
-          "track": null
+          "track": null,
+          "note": "全国总决赛（按赛项分四阶段：7月杭州/8月线上线下/9月杭州/10月武汉泰安广西）"
         }
       ],
       "events": [
@@ -6364,6 +6552,7 @@
       "difficulty": 4,
       "effort": 4,
       "intro": "分科学探究类与创新创业类两个赛道，考查科研实验与成果转化能力。",
+      "stageChain": "网评 → 省赛 → 全国决赛",
       "officialUrl": "https://www.culsc.cn/",
       "sourceUrl": "https://culsc.cn/",
       "bonusCategory": "学科竞赛",
@@ -6385,11 +6574,12 @@
       "stages": [
         {
           "code": "QUALIFIER",
-          "name": "网评（网络评审）",
+          "name": "网评",
           "stageKind": "QUALIFIER",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "网评（网络评审）"
         },
         {
           "code": "PROVINCIAL",
@@ -6481,6 +6671,7 @@
       "difficulty": 4,
       "effort": 4,
       "intro": "华为主办，覆盖实践、挑战、创新、编程、教学多个赛道，全球总决赛收官。",
+      "stageChain": "省资格赛 → 省赛 → 全国总决赛 → 全球总决赛",
       "officialUrl": "https://e.huawei.com/cn/talent/ict-academy/#/ict-contest?compId=85132018",
       "sourceUrl": "https://e.huawei.com/cn/talent/ict-academy",
       "bonusCategory": "学科竞赛",
@@ -6532,11 +6723,12 @@
       "stages": [
         {
           "code": "QUALIFIER",
-          "name": "省资格赛（线上：实验环节2026-09-18~11-08，理论环节2026-11-14~15）",
+          "name": "省资格赛",
           "stageKind": "QUALIFIER",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "PRACTICE"
+          "track": "PRACTICE",
+          "note": "省资格赛（线上：实验环节2026-09-18~11-08，理论环节2026-11-14~15）"
         },
         {
           "code": "PROVINCIAL",
@@ -6604,11 +6796,12 @@
         },
         {
           "code": "QUALIFIER",
-          "name": "初赛（省资格赛线上完成）",
+          "name": "初赛",
           "stageKind": "QUALIFIER",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "PROGRAM"
+          "track": "PROGRAM",
+          "note": "初赛（省资格赛线上完成）"
         },
         {
           "code": "NATIONAL",
@@ -6628,35 +6821,39 @@
         },
         {
           "code": "QUALIFIER",
-          "name": "资格赛（线上，需完成两项算子开发相关认证）",
+          "name": "资格赛",
           "stageKind": "QUALIFIER",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "OPERATOR"
+          "track": "OPERATOR",
+          "note": "资格赛（线上，需完成两项算子开发相关认证）"
         },
         {
           "code": "NATIONAL",
-          "name": "决赛（算子赛题方式开展）",
+          "name": "决赛",
           "stageKind": "NATIONAL",
           "sequence": 2,
           "bonusTier": "NATIONAL",
-          "track": "OPERATOR"
+          "track": "OPERATOR",
+          "note": "决赛（算子赛题方式开展）"
         },
         {
           "code": "INTERNATIONAL",
-          "name": "全球总决赛（聚焦算子性能调优+现场答辩）",
+          "name": "全球总决赛",
           "stageKind": "INTERNATIONAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": "OPERATOR"
+          "track": "OPERATOR",
+          "note": "全球总决赛（聚焦算子性能调优+现场答辩）"
         },
         {
           "code": "OTHER",
-          "name": "报名后流程未公布（往届为初评+全国评审，本届细则以官网为准）",
+          "name": "报名后流程未公布",
           "stageKind": "OTHER",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "TEACH"
+          "track": "TEACH",
+          "note": "报名后流程未公布（往届为初评+全国评审，本届细则以官网为准）"
         },
         {
           "code": "OTHER",
@@ -6756,6 +6953,7 @@
       "difficulty": 4,
       "effort": 5,
       "intro": "中国电子教育学会主办，含芯片应用、芯片设计、FPGA 创新设计三个赛道，赛程各异。",
+      "stageChain": "报名 → 分赛区初赛/网评 → 分赛区复赛 → 全国总决赛",
       "officialUrl": "https://www.socchina.net",
       "sourceUrl": "https://www.socchina.net/",
       "bonusCategory": "学科竞赛",
@@ -6783,11 +6981,12 @@
       "stages": [
         {
           "code": "CAMPUS",
-          "name": "报名（含校赛选拔）",
+          "name": "报名",
           "stageKind": "CAMPUS",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": "APP"
+          "track": "APP",
+          "note": "报名（含校赛选拔）"
         },
         {
           "code": "REGIONAL",
@@ -6807,11 +7006,12 @@
         },
         {
           "code": "FINAL",
-          "name": "全国总决赛（南京江北新区）",
+          "name": "全国总决赛",
           "stageKind": "FINAL",
           "sequence": 4,
           "bonusTier": "NATIONAL",
-          "track": "APP"
+          "track": "APP",
+          "note": "全国总决赛（南京江北新区）"
         },
         {
           "code": "OTHER",
@@ -6831,11 +7031,12 @@
         },
         {
           "code": "QUALIFIER-2",
-          "name": "复赛（答辩）",
+          "name": "复赛",
           "stageKind": "QUALIFIER",
           "sequence": 3,
           "bonusTier": "NONE",
-          "track": "DESIGN"
+          "track": "DESIGN",
+          "note": "复赛（答辩）"
         },
         {
           "code": "FINAL",
@@ -6871,11 +7072,12 @@
         },
         {
           "code": "FINAL",
-          "name": "决赛（南京江北新区）",
+          "name": "决赛",
           "stageKind": "FINAL",
           "sequence": 4,
           "bonusTier": "NATIONAL",
-          "track": "FPGA"
+          "track": "FPGA",
+          "note": "决赛（南京江北新区）"
         }
       ],
       "events": [
@@ -6964,6 +7166,7 @@
       "difficulty": 4,
       "effort": 4,
       "intro": "教育部自动化类专业教指委等主办，以大区赛晋级全国总决赛。",
+      "stageChain": "校赛 → 区域赛 → 全国赛 → 全国总决赛",
       "officialUrl": "https://www.robotcontest.cn",
       "sourceUrl": "https://www.robotcontest.cn/",
       "bonusCategory": "学科竞赛",
@@ -6991,35 +7194,39 @@
       "stages": [
         {
           "code": "CAMPUS",
-          "name": "校赛（以学校为单位报名）",
+          "name": "校赛",
           "stageKind": "CAMPUS",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "校赛（以学校为单位报名）"
         },
         {
           "code": "REGIONAL",
-          "name": "区域赛（2026-06-10前完成选拔）",
+          "name": "区域赛",
           "stageKind": "REGIONAL",
           "sequence": 2,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "区域赛（2026-06-10前完成选拔）"
         },
         {
           "code": "NATIONAL",
-          "name": "全国赛（2026-07-12~13，产教融合赛时间另定）",
+          "name": "全国赛",
           "stageKind": "NATIONAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": null
+          "track": null,
+          "note": "全国赛（2026-07-12~13，产教融合赛时间另定）"
         },
         {
           "code": "FINAL",
-          "name": "全国总决赛（2026-08-17~20宁波/余姚）",
+          "name": "全国总决赛",
           "stageKind": "FINAL",
           "sequence": 4,
           "bonusTier": "NATIONAL",
-          "track": null
+          "track": null,
+          "note": "全国总决赛（2026-08-17~20宁波/余姚）"
         }
       ],
       "events": [
@@ -7080,6 +7287,7 @@
       "difficulty": 5,
       "effort": 5,
       "intro": "全国高等学校计算机教育研究会等主办，含 CPU、操作系统、编译、智能计算等赛项。",
+      "stageChain": "报名 → 初赛 → 全国总决赛",
       "officialUrl": "https://cscc.educg.net",
       "sourceUrl": "https://cscc.educg.net/",
       "bonusCategory": "学科竞赛",
@@ -7127,19 +7335,21 @@
         },
         {
           "code": "QUALIFIER",
-          "name": "初赛（线上评测）",
+          "name": "初赛",
           "stageKind": "QUALIFIER",
           "sequence": 2,
           "bonusTier": "NONE",
-          "track": "CPU"
+          "track": "CPU",
+          "note": "初赛（线上评测）"
         },
         {
           "code": "FINAL",
-          "name": "全国总决赛（西北工业大学）",
+          "name": "全国总决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": "CPU"
+          "track": "CPU",
+          "note": "全国总决赛（西北工业大学）"
         },
         {
           "code": "OTHER",
@@ -7151,27 +7361,30 @@
         },
         {
           "code": "REGIONAL",
-          "name": "区域赛（独立于全国赛）",
+          "name": "区域赛",
           "stageKind": "REGIONAL",
           "sequence": 2,
           "bonusTier": "NONE",
-          "track": "OS"
+          "track": "OS",
+          "note": "区域赛（独立于全国赛）"
         },
         {
           "code": "QUALIFIER",
-          "name": "初赛（全国赛线上）",
+          "name": "初赛",
           "stageKind": "QUALIFIER",
           "sequence": 3,
           "bonusTier": "NONE",
-          "track": "OS"
+          "track": "OS",
+          "note": "初赛（全国赛线上）"
         },
         {
           "code": "FINAL",
-          "name": "全国总决赛（南开大学）",
+          "name": "全国总决赛",
           "stageKind": "FINAL",
           "sequence": 4,
           "bonusTier": "NATIONAL",
-          "track": "OS"
+          "track": "OS",
+          "note": "全国总决赛（南开大学）"
         },
         {
           "code": "OTHER",
@@ -7191,11 +7404,12 @@
         },
         {
           "code": "FINAL",
-          "name": "全国总决赛（南开大学）",
+          "name": "全国总决赛",
           "stageKind": "FINAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": "COMPILER"
+          "track": "COMPILER",
+          "note": "全国总决赛（南开大学）"
         },
         {
           "code": "OTHER",
@@ -7341,6 +7555,7 @@
       "difficulty": 3,
       "effort": 3,
       "intro": "中国日报社主办，以英语演讲为核心，分校园选拔、地区赛与全国总决赛。",
+      "stageChain": "校园选拔/地区初赛 → 地区半决赛/决赛 → 全国半决赛/总决赛",
       "officialUrl": "https://contest.i21st.cn/",
       "sourceUrl": "https://contest.i21st.cn/",
       "bonusCategory": "学科竞赛",
@@ -7444,6 +7659,7 @@
       "difficulty": 3,
       "effort": 3,
       "intro": "上海外语教育出版社主办，考查跨文化沟通与案例分析能力。",
+      "stageChain": "校赛 → 省赛 → 全国决赛 → 全国总决赛",
       "officialUrl": "https://ict.sflep.com/",
       "sourceUrl": "https://ict.sflep.com/",
       "bonusCategory": "学科竞赛",
@@ -7485,19 +7701,21 @@
         },
         {
           "code": "PROVINCIAL",
-          "name": "省赛（复赛+决赛）",
+          "name": "省赛",
           "stageKind": "PROVINCIAL",
           "sequence": 2,
           "bonusTier": "PROVINCIAL",
-          "track": null
+          "track": null,
+          "note": "省赛（复赛+决赛）"
         },
         {
           "code": "NATIONAL",
-          "name": "全国决赛（案例文本评审+现场赛）",
+          "name": "全国决赛",
           "stageKind": "NATIONAL",
           "sequence": 3,
           "bonusTier": "NATIONAL",
-          "track": null
+          "track": null,
+          "note": "全国决赛（案例文本评审+现场赛）"
         },
         {
           "code": "FINAL",
@@ -7533,14 +7751,14 @@
           "label": "省赛（各省赛区自行安排，黑龙江等部分省5月举行，须于11月15日前完成并提交晋级名单）"
         },
         {
-          "stage": "PROVINCIAL",
+          "stage": "NATIONAL",
           "track": null,
           "nodeType": "SUBMISSION",
           "endAt": "2026-11-15",
           "label": "全国决赛案例文本提交截止（中国学生组晋级团队均须提交）"
         },
         {
-          "stage": "PROVINCIAL",
+          "stage": "NATIONAL",
           "track": null,
           "nodeType": "CONTEST",
           "startAt": "2026-12-03",
@@ -7566,6 +7784,7 @@
       "difficulty": 3,
       "effort": 4,
       "intro": "教育部计算机类专业教指委主办，上海交通大学承办，以物联网创新设计为内容。",
+      "stageChain": "报名 → 作品文档及实物演示视频提交 → 分赛区网上评审 → 分赛区决赛 → 全国总决赛",
       "officialUrl": "https://iot.sjtu.edu.cn",
       "sourceUrl": "https://iot.sjtu.edu.cn/",
       "bonusCategory": "学科竞赛",
@@ -7574,11 +7793,12 @@
       "stages": [
         {
           "code": "OTHER",
-          "name": "报名（4月1日系统开放）",
+          "name": "报名",
           "stageKind": "OTHER",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "报名（4月1日系统开放）"
         },
         {
           "code": "OTHER-2",
@@ -7590,27 +7810,30 @@
         },
         {
           "code": "REGIONAL",
-          "name": "分赛区网上评审（8月10日前）",
+          "name": "分赛区网上评审",
           "stageKind": "REGIONAL",
           "sequence": 3,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "分赛区网上评审（8月10日前）"
         },
         {
           "code": "REGIONAL-2",
-          "name": "分赛区决赛（8月20日前）",
+          "name": "分赛区决赛",
           "stageKind": "REGIONAL",
           "sequence": 4,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "分赛区决赛（8月20日前）"
         },
         {
           "code": "FINAL",
-          "name": "全国总决赛（贵州大学）",
+          "name": "全国总决赛",
           "stageKind": "FINAL",
           "sequence": 5,
           "bonusTier": "NATIONAL",
-          "track": null
+          "track": null,
+          "note": "全国总决赛（贵州大学）"
         }
       ],
       "events": [
@@ -7672,6 +7895,7 @@
       "difficulty": 4,
       "effort": 4,
       "intro": "高等学校国家级实验教学示范中心联席会主办，分 7 个学科赛道及国际赛道。",
+      "stageChain": "校赛 → 复赛 → 全国总决赛",
       "officialUrl": "http://www.jcyxds.com",
       "sourceUrl": "https://www.jcyxds.com/",
       "bonusCategory": "学科竞赛",
@@ -7723,19 +7947,21 @@
       "stages": [
         {
           "code": "CAMPUS",
-          "name": "校赛（校内选拔）",
+          "name": "校赛",
           "stageKind": "CAMPUS",
           "sequence": 1,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "校赛（校内选拔）"
         },
         {
           "code": "REGIONAL",
-          "name": "复赛（北部/东部/西部/中南部赛区）",
+          "name": "复赛",
           "stageKind": "REGIONAL",
           "sequence": 2,
           "bonusTier": "NONE",
-          "track": null
+          "track": null,
+          "note": "复赛（北部/东部/西部/中南部赛区）"
         },
         {
           "code": "FINAL",
@@ -7798,6 +8024,7 @@
       "difficulty": 3,
       "effort": 2,
       "intro": "全国大学生英语竞赛（NECCS），按 A/B/C/D 四类分组，初赛与决赛全国同步。",
+      "stageChain": "初赛 → 决赛",
       "officialUrl": "https://www.chinaneccs.cn/",
       "sourceUrl": "https://www.neccs.org.cn/",
       "bonusCategory": "文体竞赛",
@@ -7903,6 +8130,7 @@
       "difficulty": 3,
       "effort": 3,
       "intro": "教育部主办的全国大学生艺术展演，分声乐、器乐、舞蹈、戏剧、朗诵等类别。",
+      "stageChain": "校级展演 → 省级展演 → 全国汇演",
       "officialUrl": "http://www.moe.gov.cn/srcsite/A17/moe_794/moe_628/202604/t20260421_1434298.html",
       "sourceUrl": "https://www.moe.gov.cn/",
       "bonusCategory": "文体竞赛",
@@ -8027,6 +8255,7 @@
       "difficulty": 3,
       "effort": 3,
       "intro": "中国国际合唱节，团队按 A/B/C/D 级评定，A 级按国家级最高奖计。",
+      "stageChain": "报名 → 参演/合唱评测",
       "officialUrl": "https://www.cicfbj.cn/",
       "sourceUrl": "https://www.cicfbj.cn/",
       "bonusCategory": "文体竞赛",
@@ -8056,11 +8285,12 @@
         },
         {
           "code": "FINAL",
-          "name": "参演/合唱评测（北京）",
+          "name": "参演/合唱评测",
           "stageKind": "FINAL",
           "sequence": 2,
           "bonusTier": "NATIONAL",
-          "track": null
+          "track": null,
+          "note": "参演/合唱评测（北京）"
         }
       ],
       "events": [
@@ -8112,6 +8342,7 @@
       "difficulty": 3,
       "effort": 3,
       "intro": "华语辩论领域赛事，个人奖项仅“全程最佳辩手”“决赛最佳辩手”计入加分。",
+      "stageChain": "赛区选拔赛 → 全球总决赛",
       "officialUrl": null,
       "sourceUrl": "https://baike.baidu.com/item/世界华语辩论锦标赛",
       "bonusCategory": "文体竞赛",
@@ -8154,6 +8385,7 @@
       "difficulty": 3,
       "effort": 3,
       "intro": "华语辩论世界杯，分分区赛与总决赛，个人奖项计入口径同辩论类赛事。",
+      "stageChain": "赛区选拔赛 → 总决赛",
       "officialUrl": null,
       "sourceUrl": "https://baike.baidu.com/item/2026华语辩论世界杯",
       "bonusCategory": "文体竞赛",
@@ -8219,6 +8451,7 @@
       "difficulty": 3,
       "effort": 3,
       "intro": "全辩会国际华语辩论冠军赛，个人奖项仅最佳辩手计入加分。",
+      "stageChain": "小组赛/淘汰赛",
       "officialUrl": null,
       "sourceUrl": null,
       "bonusCategory": "文体竞赛",
@@ -8253,6 +8486,7 @@
       "difficulty": 3,
       "effort": 3,
       "intro": "世界大学生辩论巡回赛（星辰杯），赛区冠亚军晋级总决赛。",
+      "stageChain": "赛区赛 → 总决赛",
       "officialUrl": null,
       "sourceUrl": "https://debatetimer.cn/",
       "bonusCategory": "文体竞赛",
@@ -8296,6 +8530,7 @@
       "difficulty": 3,
       "effort": 2,
       "intro": "教育部等五部门联合开展，含法治素养与微课两个赛道，个人奖项仅最佳辩手类计入。",
+      "stageChain": "省级选拔/网络风采展示 → 全国总决赛",
       "officialUrl": "https://qspfw.moe.gov.cn/",
       "sourceUrl": "https://www.moe.gov.cn/",
       "bonusCategory": "文体竞赛",
@@ -8391,6 +8626,7 @@
       "difficulty": 2,
       "effort": 2,
       "intro": "教育部思政司主办，面向大学生网络文化作品，按类别征集与遴选。",
+      "stageChain": "作品征集/省级推选 → 全国遴选",
       "officialUrl": "https://dxs.moe.gov.cn/zx/hd/wlwhj/",
       "sourceUrl": "https://dxs.moe.gov.cn/zx/hd/wlwhj/",
       "bonusCategory": "文体竞赛",
@@ -8498,6 +8734,7 @@
       "difficulty": 2,
       "effort": 3,
       "intro": "四川省委宣传部、省文旅厅主办的省级戏剧小品（小戏）比赛。",
+      "stageChain": "初赛/复赛 → 决赛",
       "officialUrl": "https://www.yscz.org.cn/",
       "sourceUrl": "https://www.yscz.org.cn/",
       "bonusCategory": "文体竞赛",
@@ -8514,11 +8751,12 @@
         },
         {
           "code": "FINAL",
-          "name": "决赛（全省集中比赛）",
+          "name": "决赛",
           "stageKind": "FINAL",
           "sequence": 2,
           "bonusTier": "NATIONAL",
-          "track": null
+          "track": null,
+          "note": "决赛（全省集中比赛）"
         }
       ],
       "events": [

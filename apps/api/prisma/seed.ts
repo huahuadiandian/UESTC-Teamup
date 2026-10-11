@@ -45,6 +45,8 @@ interface SeedStage {
   bonusTier: BonusTier;
   /** 归属赛道 code；null = 全赛事共享阶段 */
   track: string | null;
+  /** 补充说明（原阶段名中的括号细节，如赛程日期、承办地） */
+  note?: string | null;
 }
 interface SeedEvent {
   stage: string;
@@ -261,11 +263,14 @@ async function main() {
         effort: c.effort,
         intro: c.intro,
         hasTracks: c.tracks.length > 0,
-        stageChain: (() => {
-          const names: string[] = [];
-          for (const s of c.stages) if (!names.includes(s.name)) names.push(s.name);
-          return names.join(' → ');
-        })(),
+        // 主链赛程链由生成脚本提供（多链赛事取主链），缺失时回退全量去重
+        stageChain:
+          c.stageChain ??
+          (() => {
+            const names: string[] = [];
+            for (const s of c.stages) if (!names.includes(s.name)) names.push(s.name);
+            return names.join(' → ');
+          })(),
         isBonusEligible: c.bonusEligible,
         bonusCategory: c.bonusCategory,
         bonusStandardId: standardIds[`${c.bonusCategory}:${BonusTier.NATIONAL}`] ?? null,
@@ -302,6 +307,7 @@ async function main() {
           stageKind: s.stageKind,
           sequence: s.sequence,
           bonusTier: s.bonusTier,
+          note: s.note ?? null,
         },
       });
       stageIdByKey[`${s.track ?? ''}:${s.code}`] = stage.id;
