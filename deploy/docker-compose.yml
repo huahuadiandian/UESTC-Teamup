@@ -45,7 +45,9 @@ services:
       redis:
         condition: service_healthy
     environment:
-      NODE_ENV: production
+      # 默认生产；当前 MAIL_PROVIDER=console 阶段被邮件模块生产守卫拒绝启动，
+      # 暂处模式可在 .env 设 NODE_ENV=development（与上一版一致）。实装 SMTP 后删掉该覆盖。
+      NODE_ENV: ${NODE_ENV:-production}
       DATABASE_URL: postgresql://teamup:${POSTGRES_PASSWORD}@db:5432/teamup
       REDIS_URL: redis://redis:6379
       # L12：后端 CORS 白名单读该变量，未设置时线上会恒回退 localhost，导致跨域请求被拒。
