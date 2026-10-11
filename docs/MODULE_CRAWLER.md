@@ -1,6 +1,12 @@
 # 关键模块：采集子系统
 
-## 当前接入状态（2026-09-27）
+> ⚠️ **本模块已于 2026-10-11 移除**：采集子系统（`apps/api/src/modules/crawler/` 与
+> `CrawlSource/CrawlSnapshot/CrawlItem/CrawlRevision/CrawlAnomaly` 等表）整体删除，
+> 竞赛信息当前**以人工维护为主**。本文档保留为**未来重启采集时的设计参考**，
+> 重启时需按 [COMPETITION_MODEL_V2.md](./COMPETITION_MODEL_V2.md) 的新模型重写发布流水线
+> （写入 `CompetitionStage` / `CompetitionEvent` 而非旧的 `CompetitionTimeline`）。
+
+## 当前接入状态（2026-09-27，历史）
 
 采集源分为两个主层级：`priority = 1` 是成电竞赛管理系统的通知公告与竞赛动态两个聚合 API；`priority = 2` 是各竞赛官网。研究生院竞赛实践页面为补充源（`priority = 3`）。第一层每 6 小时运行一次，第二层每天 03:00（北京时间）运行一次，补充源随第一层运行。`CrawlSource.cron` 保留为配置说明；当前调度按层级统一触发，不按每条源动态注册 cron。
 

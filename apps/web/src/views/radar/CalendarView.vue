@@ -31,7 +31,7 @@ const levelOptions = [Level.INTERNATIONAL, Level.NATIONAL, Level.PROVINCIAL, Lev
 
 // 报名期 / 赛程期 两类样式 + 级别配色
 function eventColor(t: TimelineNode): { bg: string; border: string } {
-  const blue = t.level === 'INTERNATIONAL' ? '#0A2E55' : t.level === 'NATIONAL' ? '#0F4C8C' : t.level === 'PROVINCIAL' ? '#D99F00' : '#2C7355';
+  const blue = t.stageKind === 'INTERNATIONAL' ? '#0A2E55' : t.stageKind === 'NATIONAL' || t.stageKind === 'FINAL' ? '#0F4C8C' : t.stageKind === 'PROVINCIAL' ? '#D99F00' : '#2C7355';
   if (t.kind === 'signup') {
     return { bg: `${blue}26`, border: `${blue}88` };
   }
@@ -72,7 +72,7 @@ const filteredEvents = computed(() =>
   allEvents.value.filter(
     (t) =>
       !selectedLevels.value.length ||
-      selectedLevels.value.includes(t.level || '') ||
+      t.competitionLevels.some((l) => selectedLevels.value.includes(l)) ||
       t.competitionLevels.some((l) => selectedLevels.value.includes(l)),
   ),
 );
@@ -179,7 +179,7 @@ function goIcs() {
               style="background: rgba(255,255,255,0.5)"
             >
               <div class="flex items-center gap-6px mb-4px">
-                <span class="level-chip" :class="`level-${t.level || t.competitionLevels[0] || 'SCHOOL'}`">
+                <span class="level-chip" :class="`level-${t.competitionLevels[0] || 'SCHOOL'}`">
                   {{ t.kind === 'signup' ? '报名' : '赛程' }}
                 </span>
                 <span class="text-12px color-ink-faint">{{ t.stage }}</span>

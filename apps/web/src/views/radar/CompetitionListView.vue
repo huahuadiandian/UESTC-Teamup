@@ -30,9 +30,12 @@ const filters = reactive({
   levels: parseLevels(route.query.levels),
   audience: '',
   format: '',
+  /** 竞赛类别（校教〔2026〕39号口径）：学科竞赛 / 文体竞赛 */
+  category: readQueryString(route.query.category),
   bonusOnly: false,
   status: '',
-  sort: 'LATEST',
+  /** 默认按认定文件顺序（学科竞赛在前、文体竞赛在后），与 PDF 清单一致 */
+  sort: 'CATALOG',
   /** 届次年份（Issue 6）：默认当前年份，可切换历史届次 */
   year: new Date().getFullYear() as number | null,
 });
@@ -128,7 +131,7 @@ watch(
 watch(page, () => load());
 
 function syncUrl() {
-  router.replace({ query: { ...route.query, q: filters.q || undefined, levels: filters.levels.join(',') || undefined, bonusOnly: filters.bonusOnly ? 'true' : undefined } });
+  router.replace({ query: { ...route.query, q: filters.q || undefined, levels: filters.levels.join(',') || undefined, category: filters.category || undefined, bonusOnly: filters.bonusOnly ? 'true' : undefined } });
 }
 
 /**
@@ -150,6 +153,8 @@ watch(
     }
     const lv = parseLevels(nq.levels);
     if (lv.join(',') !== filters.levels.join(',')) filters.levels = lv;
+    const cat = readQueryString(nq.category);
+    if (cat !== filters.category) filters.category = cat;
     const bonus = nq.bonusOnly === 'true';
     if (bonus !== filters.bonusOnly) filters.bonusOnly = bonus;
   },
@@ -187,8 +192,13 @@ function deadlineText(c: CompetitionListItem) {
 }
 
 const activeFilterCount = computed(
-  () => filters.levels.length + (filters.audience ? 1 : 0) + (filters.format ? 1 : 0) + (filters.bonusOnly ? 1 : 0) + (filters.status ? 1 : 0),
+  () => filters.levels.length + (filters.audience ? 1 : 0) + (filters.format ? 1 : 0) + (filters.category ? 1 : 0) + (filters.bonusOnly ? 1 : 0) + (filters.status ? 1 : 0),
 );
+
+/** 竞赛类别标签配色：学科=湛蓝、文体=银杏金 */
+function catClass(category: string | null): string {
+  return category === '文体竞赛' ? 'is-art' : 'is-academic';
+}
 
 // ---------- 移动端适配（ROADMAP P1-1.18） ----------
 // <768px：筛选侧栏改为底部抽屉、表格视图强制回卡片（el-table 窄屏横向溢出）
@@ -254,7 +264,8 @@ const effectiveView = computed<'card' | 'table'>(() => (isMobile.value ? 'card' 
           </el-button>
           <div class="flex items-center gap-6px md:ml-auto">
             <span class="text-13px color-ink-soft">排序</span>
-            <el-select v-model="filters.sort" style="width: 140px">
+            <el-select v-model="filters.sort" style="width: 150px">
+              <el-option value="CATALOG" label="认定文件顺序" />
               <el-option value="LATEST" label="最新收录" />
               <el-option value="DEADLINE" label="报名截止临近" />
               <el-option value="DIFFICULTY" label="难度" />
@@ -279,7 +290,10 @@ const effectiveView = computed<'card' | 'table'>(() => (isMobile.value ? 'card' 
                 :style="{ color: statusColor[c.status] }"
               >{{ statusText[c.status] }}</span>
             </div>
-            <LevelChips :levels="c.levels" />
+            <div class="flex items-center gap-6px flex-wrap">
+              <LevelChips :levels="c.levels" />
+              <span v-if="c.bonusCategory" class="cat-chip" :class="catClass(c.bonusCategory)">{{ c.bonusCategory }}</span>
+            </div>
             <div class="flex items-center justify-between mt-auto pt-6px">
               <span class="text-12px" :style="{ color: c.nextDeadline ? '#8a5800' : 'var(--ink-faint)' }">
                 ⏳ {{ deadlineText(c) }}
@@ -304,6 +318,12 @@ const effectiveView = computed<'card' | 'table'>(() => (isMobile.value ? 'card' 
             </el-table-column>
             <el-table-column label="级别" width="180">
               <template #default="{ row }"><LevelChips :levels="row.levels" :max="4" /></template>
+            </el-table-column>
+            <el-table-column label="类别" width="90">
+              <template #default="{ row }">
+                <span v-if="row.bonusCategory" class="cat-chip" :class="catClass(row.bonusCategory)">{{ row.bonusCategory }}</span>
+                <span v-else class="color-ink-faint">—</span>
+              </template>
             </el-table-column>
             <el-table-column label="加分" width="70">
               <template #default="{ row }">
@@ -347,6 +367,25 @@ const effectiveView = computed<'card' | 'table'>(() => (isMobile.value ? 'card' 
 </template>
 
 <style scoped>
+/* 竞赛类别标签：学科=湛蓝、文体=银杏金 */
+.cat-chip {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 18px;
+  white-space: nowrap;
+}
+.cat-chip.is-academic {
+  background: rgba(15, 76, 140, 0.1);
+  color: var(--uestc-blue);
+}
+.cat-chip.is-art {
+  background: rgba(217, 159, 0, 0.14);
+  color: #8a5800;
+}
+
 @media (max-width: 768px) {
   /* 移动端强制卡片视图：切换器隐藏，el-table 窄屏横向溢出不再暴露 */
   .seg-switch {

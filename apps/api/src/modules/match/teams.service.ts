@@ -349,8 +349,8 @@ export class TeamsService {
     // 招募截止默认填竞赛报名截止时间
     let deadline = input.deadline ?? null;
     if (!deadline) {
-      const signup = await this.prisma.competitionTimeline.findFirst({
-        where: { competitionId, stage: { contains: '报名' }, endAt: { gt: new Date() } },
+      const signup = await this.prisma.competitionEvent.findFirst({
+        where: { competitionId, nodeType: 'SIGNUP_END', endAt: { gt: new Date() } },
         orderBy: { endAt: 'asc' },
       });
       deadline = signup?.endAt ?? null;
@@ -452,17 +452,17 @@ export class TeamsService {
 
     const compIds = [...new Set(teams.map((t) => t.competitionId))];
     const raceStarts = new Map<string, Date>();
-    const timelines = await this.prisma.competitionTimeline.findMany({
+    const events = await this.prisma.competitionEvent.findMany({
       where: {
         competitionId: { in: compIds },
+        nodeType: 'CONTEST',
         startAt: { lte: now },
-        NOT: { stage: { contains: '报名' } },
       },
       orderBy: { startAt: 'asc' },
       select: { competitionId: true, startAt: true },
     });
-    for (const tl of timelines) {
-      if (!raceStarts.has(tl.competitionId) && tl.startAt) raceStarts.set(tl.competitionId, tl.startAt);
+    for (const ev of events) {
+      if (!raceStarts.has(ev.competitionId) && ev.startAt) raceStarts.set(ev.competitionId, ev.startAt);
     }
 
     const toCompete = teams.filter((t) => raceStarts.has(t.competitionId)).map((t) => t.id);
@@ -550,7 +550,13 @@ export class TeamsService {
         let createdId: string | undefined;
         try {
           const created = await this.prisma.competition.create({
-            data: { name, year, sourceUrl: '用户手动填写', status: 'PUBLISHED' },
+            data: {
+              code: `USER-${Date.now().toString(36).toUpperCase()}`,
+              name,
+              year,
+              sourceUrl: '用户手动填写',
+              status: 'PUBLISHED',
+            },
           });
           createdId = created.id;
         } catch (e) {
@@ -569,7 +575,7 @@ export class TeamsService {
         const admins = await this.prisma.user.findMany({ where: { role: 'ADMIN' }, select: { id: true } });
         await this.notify.notifyMany(
           admins.map((a) => a.id),
-          NotificationKind.CRAWL_ANOMALY,
+          NotificationKind.SYSTEM_NOTIFICATION,
           {
             competitionId,
             name,

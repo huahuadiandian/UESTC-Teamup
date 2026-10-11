@@ -10,6 +10,8 @@ defineProps<{
     levels: string[];
     audience: string;
     format: string;
+    /** 竞赛类别（校教〔2026〕39号口径）：学科竞赛 / 文体竞赛 */
+    category: string;
     status: string;
     year: number | null;
     bonusOnly: boolean;
@@ -41,6 +43,13 @@ defineProps<{
       <el-select v-model="filters.format" placeholder="全部" clearable size="default" style="width: 100%">
         <el-option :value="CompetitionFormat.INDIVIDUAL" :label="CompetitionFormatLabel[CompetitionFormat.INDIVIDUAL]" />
         <el-option :value="CompetitionFormat.TEAM" :label="CompetitionFormatLabel[CompetitionFormat.TEAM]" />
+      </el-select>
+    </div>
+    <div>
+      <div class="filter-label">竞赛类别</div>
+      <el-select v-model="filters.category" placeholder="全部" clearable size="default" style="width: 100%">
+        <el-option value="学科竞赛" label="学科竞赛" />
+        <el-option value="文体竞赛" label="文体竞赛" />
       </el-select>
     </div>
     <div>

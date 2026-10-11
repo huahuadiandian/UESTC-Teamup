@@ -12,7 +12,6 @@ import { NotificationService } from '../src/modules/notification/notification.se
 import { ViewerContext, UserSerializer } from '../src/common/auth/viewer.context';
 import { TeamsService } from '../src/modules/match/teams.service';
 import { CommentsService } from '../src/modules/radar/comments.service';
-import type { RedisService } from '../src/common/redis.service';
 import { RoleType, TeamGoal, TeamStatus, type Prisma } from '@prisma/client';
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -45,62 +44,13 @@ export function getPrisma(): PrismaService {
 
 let viewerSingleton: ViewerContext | null = null;
 
-/**
- * 内存版 Redis 桩：测试不依赖真实 Redis 实例。
- * 只实现服务层实际用到的语义（lock / unlock / incrWithTtl / get / set / del）。
- * - lock 为 SET NX 语义：键已存在则返回 false（与服务层「抢不到锁即拒绝」一致）
- * - incrWithTtl 只计数不设过期：测试进程短命，且 resetDb 会清空计数
- */
-class InMemoryRedis {
-  private store = new Map<string, string>();
-  private counters = new Map<string, number>();
-
-  async get(key: string): Promise<string | null> {
-    return this.store.get(key) ?? null;
-  }
-
-  async set(key: string, value: string, _ttlSeconds?: number): Promise<void> {
-    this.store.set(key, value);
-  }
-
-  async del(...keys: string[]): Promise<void> {
-    for (const k of keys) this.store.delete(k);
-  }
-
-  async incrWithTtl(key: string, _ttlSeconds: number): Promise<number> {
-    const next = (this.counters.get(key) ?? 0) + 1;
-    this.counters.set(key, next);
-    return next;
-  }
-
-  async lock(key: string, _ttlSeconds: number): Promise<boolean> {
-    if (this.store.has(key)) return false;
-    this.store.set(key, '1');
-    return true;
-  }
-
-  async unlock(key: string): Promise<void> {
-    this.store.delete(key);
-  }
-
-  /** 清空全部键与计数（resetDb 时调用，避免限流计数跨用例累积） */
-  reset(): void {
-    this.store.clear();
-    this.counters.clear();
-  }
-}
-
-export const testRedis = new InMemoryRedis();
-
 export function makeService(prisma: PrismaService) {
   const notify = new NotificationService(prisma);
   viewerSingleton ??= new ViewerContext();
   const serializer = new UserSerializer(viewerSingleton);
-  // 服务层依赖 RedisService（限流 / 发帖锁），测试注入内存桩
-  const redis = testRedis as unknown as RedisService;
   return {
-    teams: new TeamsService(prisma, notify, serializer, redis),
-    comments: new CommentsService(prisma, notify, redis),
+    teams: new TeamsService(prisma, notify, serializer),
+    comments: new CommentsService(prisma, notify),
     viewer: viewerSingleton,
   };
 }
@@ -112,15 +62,18 @@ const TRUNCATE_TABLES = [
   'Team',
   'Favorite',
   'UserSkill',
-  'CompetitionTimeline',
+  'CompetitionEvent',
+  'CompetitionStage',
+  'CompetitionTrack',
   'CompetitionLevel',
   'CompetitionTag',
+  'CompetitionRevision',
   'Competition',
+  'BonusStandard',
   'User',
 ];
 
 export async function resetDb(prisma: PrismaService) {
-  testRedis.reset();
   await prisma.$executeRawUnsafe(
     `TRUNCATE ${TRUNCATE_TABLES.map((t) => `"${t}"`).join(', ')} RESTART IDENTITY CASCADE`,
   );
@@ -148,8 +101,13 @@ export async function makeUser(
   });
 }
 
+let compSeq = 0;
+
 export async function makeCompetition(prisma: PrismaService, name: string) {
-  return prisma.competition.create({ data: { name, status: 'PUBLISHED' } });
+  compSeq += 1;
+  return prisma.competition.create({
+    data: { code: `TEST-${compSeq}`, name, year: new Date().getFullYear(), status: 'PUBLISHED' },
+  });
 }
 
 export interface MakeTeamPostOptions {

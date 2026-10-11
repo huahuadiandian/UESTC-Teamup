@@ -10,7 +10,7 @@ const CORRECTABLE_FIELDS: Record<string, 'text' | 'date'> = {
   intro: 'text',
   isBonusEligible: 'text',
   bonusCategory: 'text',
-  bonusPoints: 'text',
+  bonusSpecialRule: 'text',
 };
 
 /** URL 类字段：提交时必须校验 scheme，阻止 javascript: 等存储型 XSS */
@@ -27,17 +27,15 @@ export class CorrectionsService {
     const competition = await this.prisma.competition.findUnique({ where: { id: competitionId } });
     if (!competition) throw new NotFoundException('竞赛不存在');
 
-    // field 形如 "name"（竞赛字段）或 "timeline:<id>:endAt"（时间轴节点字段）
+    // field 形如 "name"（竞赛字段）或 "event:<id>:endAt"（时间节点字段）
     let currentValue: string | null = null;
-    let timelineId: string | null = null;
-    const [head, tlId, tlField] = dto.field.split(':');
+    const [head, evId, evField] = dto.field.split(':');
 
-    if (head === 'timeline') {
-      if (!tlId || !['startAt', 'endAt'].includes(tlField ?? '')) throw new BadRequestException('不支持的纠错字段');
-      const tl = await this.prisma.competitionTimeline.findUnique({ where: { id: tlId } });
-      if (!tl || tl.competitionId !== competitionId) throw new BadRequestException('时间节点不存在');
-      currentValue = (tlField === 'endAt' ? tl.endAt : tl.startAt)?.toISOString() ?? null;
-      timelineId = tlId;
+    if (head === 'event') {
+      if (!evId || !['startAt', 'endAt'].includes(evField ?? '')) throw new BadRequestException('不支持的纠错字段');
+      const ev = await this.prisma.competitionEvent.findUnique({ where: { id: evId } });
+      if (!ev || ev.competitionId !== competitionId) throw new BadRequestException('时间节点不存在');
+      currentValue = (evField === 'endAt' ? ev.endAt : ev.startAt)?.toISOString() ?? null;
     } else {
       if (!CORRECTABLE_FIELDS[head]) throw new BadRequestException('不支持的纠错字段');
       // URL 类字段：只接受 http/https，防止 javascript: 之类被采纳后写入库（存储型 XSS）
@@ -63,7 +61,7 @@ export class CorrectionsService {
       },
     });
 
-    // 通知管理员处理（纠错优先级高于采集任务）
+    // 通知管理员处理
     const admins = await this.prisma.user.findMany({ where: { role: 'ADMIN' }, select: { id: true } });
     await this.notify.notifyMany(
       admins.map((a) => a.id),

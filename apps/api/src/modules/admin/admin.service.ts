@@ -3,6 +3,7 @@ import {
   Audience,
   CompetitionFormat,
   CorrectionStatus,
+  EventNodeType,
   Level,
   PublishStatus,
   RevisionOrigin,
@@ -13,9 +14,20 @@ import { NotificationService } from '../notification/notification.service';
 import { CompetitionsService } from '../radar/competitions.service';
 import { decorateListItem } from '../radar/competitions.service';
 
+export interface UpsertEventInput {
+  id?: string;
+  stageId: string;
+  nodeType: EventNodeType;
+  label?: string;
+  startAt?: string | null;
+  endAt?: string | null;
+  location?: string;
+}
+
 export interface UpsertCompetitionInput {
   name: string;
-  /** 届次年份（Issue 6）：同一赛事可存在多个年度档案 */
+  code?: string;
+  /** 届次年份：同一赛事可存在多个年度档案 */
   year?: number;
   aliases?: string[];
   organizer?: string;
@@ -29,12 +41,13 @@ export interface UpsertCompetitionInput {
   effort?: number;
   isBonusEligible?: boolean;
   bonusCategory?: string;
-  bonusPoints?: string;
+  bonusSpecialRule?: string;
   sourceUrl?: string;
   status?: PublishStatus;
   levels?: Level[];
   tags?: string[];
-  timelines?: { id?: string; stage: string; level?: Level; startAt?: Date | null; endAt?: Date | null }[];
+  /** 时间节点：按 stageId 归属，支持增删改（人工维护赛程的核心入口） */
+  events?: UpsertEventInput[];
 }
 
 /** 竞赛主体上需要记版本的字段 */
@@ -48,7 +61,7 @@ const TRACKED_FIELDS = [
   'intro',
   'isBonusEligible',
   'bonusCategory',
-  'bonusPoints',
+  'bonusSpecialRule',
 ] as const;
 
 @Injectable()
@@ -62,39 +75,54 @@ export class AdminService {
   // ---------- 竞赛录入 / 编辑 ----------
 
   async createCompetition(input: UpsertCompetitionInput) {
-    const { levels, tags, timelines, ...fields } = input;
+    const { levels, tags, events, ...fields } = input;
     return this.prisma.$transaction(async (tx) => {
       const comp = await tx.competition.create({
         data: {
           ...fields,
-          // 届次年份必填（Issue 6）：后台未传时默认当前年份
+          code: fields.code ?? `C-${Date.now()}`,
+          // 届次年份必填：后台未传时默认当前年份
           year: fields.year ?? new Date().getFullYear(),
           aliases: fields.aliases ?? [],
           status: fields.status ?? PublishStatus.PUBLISHED,
           levels: { create: (levels ?? []).map((level) => ({ level })) },
           tags: { create: (tags ?? []).map((tag) => ({ tag })) },
-          timelines: {
-            create: (timelines ?? []).map((t) => ({ stage: t.stage, level: t.level, startAt: t.startAt ?? null, endAt: t.endAt ?? null })),
-          },
         },
-        include: { levels: true, tags: true, timelines: true },
       });
-      return comp;
+
+      for (const e of events ?? []) {
+        await tx.competitionEvent.create({
+          data: {
+            competitionId: comp.id,
+            stageId: e.stageId,
+            nodeType: e.nodeType,
+            label: e.label ?? null,
+            location: e.location ?? null,
+            startAt: e.startAt ? new Date(e.startAt) : null,
+            endAt: e.endAt ? new Date(e.endAt) : null,
+          },
+        });
+      }
+
+      return tx.competition.findUnique({
+        where: { id: comp.id },
+        include: { levels: true, tags: true, events: true },
+      });
     });
   }
 
-  /** 编辑：字段变更记 MANUAL revision；时间轴节点人工编辑自动 isLocked（Q9） */
+  /** 编辑：字段变更记 MANUAL revision；时间节点人工编辑自动 isLocked */
   async updateCompetition(id: string, input: UpsertCompetitionInput, actorId: string) {
     const existing = await this.prisma.competition.findUnique({
       where: { id },
-      include: { timelines: true, levels: true, tags: true },
+      include: { events: true, levels: true, tags: true },
     });
     if (!existing) throw new NotFoundException('竞赛不存在');
-    const { levels, tags, timelines, ...fields } = input;
+    const { levels, tags, events, ...fields } = input;
 
     await this.prisma.$transaction(async (tx) => {
       // 主体字段 diff → MANUAL revision
-      const revisions: Prisma.CrawlRevisionCreateManyInput[] = [];
+      const revisions: Prisma.CompetitionRevisionCreateManyInput[] = [];
       for (const f of TRACKED_FIELDS) {
         const oldV = (existing as unknown as Record<string, unknown>)[f];
         const newV = (fields as Record<string, unknown>)[f];
@@ -108,7 +136,7 @@ export class AdminService {
           });
         }
       }
-      if (revisions.length) await tx.crawlRevision.createMany({ data: revisions });
+      if (revisions.length) await tx.competitionRevision.createMany({ data: revisions });
 
       await tx.competition.update({ where: { id }, data: { ...fields } });
 
@@ -121,49 +149,56 @@ export class AdminService {
         await tx.competitionTag.createMany({ data: tags.map((tag) => ({ competitionId: id, tag })) });
       }
 
-      if (timelines) {
-        const keepIds = new Set(timelines.filter((t) => t.id && !t.id.startsWith('new-')).map((t) => t.id!));
+      if (events) {
+        const keepIds = new Set(events.filter((e) => e.id && !e.id.startsWith('new-')).map((e) => e.id!));
         // 删除被移除的节点（非锁定）
-        for (const tl of existing.timelines) {
-          if (!keepIds.has(tl.id) && !tl.isLocked) await tx.competitionTimeline.delete({ where: { id: tl.id } });
+        for (const ev of existing.events) {
+          if (!keepIds.has(ev.id) && !ev.isLocked) await tx.competitionEvent.delete({ where: { id: ev.id } });
         }
-        for (const t of timelines) {
-          const data = { stage: t.stage, level: t.level, startAt: t.startAt ?? null, endAt: t.endAt ?? null };
-          if (t.id && !t.id.startsWith('new-')) {
-            const old = existing.timelines.find((x) => x.id === t.id);
+        for (const e of events) {
+          const data = {
+            stageId: e.stageId,
+            nodeType: e.nodeType,
+            label: e.label ?? null,
+            location: e.location ?? null,
+            startAt: e.startAt ? new Date(e.startAt) : null,
+            endAt: e.endAt ? new Date(e.endAt) : null,
+          };
+          if (e.id && !e.id.startsWith('new-')) {
+            const old = existing.events.find((x) => x.id === e.id);
             const changed =
               old &&
-              (String(old.startAt ?? '') !== String(t.startAt ?? '') ||
-                String(old.endAt ?? '') !== String(t.endAt ?? '') ||
-                old.stage !== t.stage);
+              (String(old.startAt ?? '') !== String(data.startAt ?? '') ||
+                String(old.endAt ?? '') !== String(data.endAt ?? '') ||
+                old.nodeType !== e.nodeType);
             if (changed) {
-              // 人工修正自动加锁 + 记版本（防下次采集改回去）
-              await tx.competitionTimeline.update({ where: { id: t.id }, data: { ...data, isLocked: true, isAuto: false } });
-              await tx.crawlRevision.createMany({
+              // 人工修正自动加锁 + 记版本（防未来采集改回去）
+              await tx.competitionEvent.update({ where: { id: e.id }, data: { ...data, isLocked: true } });
+              await tx.competitionRevision.createMany({
                 data: [
                   {
                     competitionId: id,
-                    timelineId: t.id,
+                    stageId: e.stageId,
                     field: 'startAt',
                     oldValue: old?.startAt?.toISOString() ?? null,
-                    newValue: t.startAt?.toISOString() ?? null,
+                    newValue: data.startAt?.toISOString() ?? null,
                     origin: RevisionOrigin.MANUAL,
                   },
                   {
                     competitionId: id,
-                    timelineId: t.id,
+                    stageId: e.stageId,
                     field: 'endAt',
                     oldValue: old?.endAt?.toISOString() ?? null,
-                    newValue: t.endAt?.toISOString() ?? null,
+                    newValue: data.endAt?.toISOString() ?? null,
                     origin: RevisionOrigin.MANUAL,
                   },
                 ],
               });
             } else if (old) {
-              await tx.competitionTimeline.update({ where: { id: t.id }, data });
+              await tx.competitionEvent.update({ where: { id: e.id }, data });
             }
           } else {
-            await tx.competitionTimeline.create({ data: { competitionId: id, ...data } });
+            await tx.competitionEvent.create({ data: { competitionId: id, ...data } });
           }
         }
       }
@@ -172,11 +207,16 @@ export class AdminService {
     void actorId;
     return this.prisma.competition.findUnique({
       where: { id },
-      include: { levels: true, tags: true, timelines: true, customFields: { orderBy: { createdAt: 'asc' } } },
+      include: {
+        levels: true,
+        tags: true,
+        events: { include: { stage: { select: { id: true, name: true } } } },
+        customFields: { orderBy: { createdAt: 'asc' } },
+      },
     });
   }
 
-  // ---------- 竞赛自定义字段（Issue 2） ----------
+  // ---------- 竞赛自定义字段 ----------
 
   /**
    * 键名约束：1-30 字，中文 / 字母 / 数字 / 下划线 / 连字符 / 空格；
@@ -209,12 +249,12 @@ export class AdminService {
     });
 
     // 版本留痕（与主体字段同一套 revision 体系，origin=MANUAL，可回滚）
-    const oldValue = await this.prisma.crawlRevision.findFirst({
+    const oldValue = await this.prisma.competitionRevision.findFirst({
       where: { competitionId, field: `custom:${k}` },
       orderBy: { createdAt: 'desc' },
       select: { newValue: true },
     });
-    await this.prisma.crawlRevision.create({
+    await this.prisma.competitionRevision.create({
       data: {
         competitionId,
         field: `custom:${k}`,
@@ -236,7 +276,7 @@ export class AdminService {
 
     await this.prisma.$transaction([
       this.prisma.competitionCustomField.delete({ where: { id: existing.id } }),
-      this.prisma.crawlRevision.create({
+      this.prisma.competitionRevision.create({
         data: {
           competitionId,
           field: `custom:${k}`,
@@ -278,7 +318,12 @@ export class AdminService {
     const [rows, total] = await this.prisma.$transaction([
       this.prisma.competition.findMany({
         where,
-        include: { levels: true, tags: true, timelines: true, _count: { select: { teams: true } } },
+        include: {
+          levels: true,
+          tags: true,
+          events: { select: { id: true, nodeType: true, startAt: true, endAt: true } },
+          _count: { select: { teams: true } },
+        },
         orderBy: { updatedAt: 'desc' },
         skip: (query.page - 1) * query.pageSize,
         take: query.pageSize,
@@ -298,11 +343,20 @@ export class AdminService {
     };
   }
 
-  /** 管理台详情：levels / tags 需摊平成字符串数组（与前端表单契约一致，timelines 保持对象结构） */
+  /** 管理台详情：levels / tags 摊平成字符串数组；tracks / stages / events 供赛程维护 */
   async adminDetail(id: string) {
     const row = await this.prisma.competition.findUnique({
       where: { id },
-      include: { levels: true, tags: true, timelines: true, customFields: { orderBy: { createdAt: 'asc' } } },
+      include: {
+        levels: true,
+        tags: true,
+        tracks: { orderBy: [{ sortOrder: 'asc' }], select: { id: true, code: true, name: true } },
+        stages: {
+          orderBy: [{ sequence: 'asc' }],
+          include: { events: { orderBy: [{ startAt: 'asc' }] } },
+        },
+        customFields: { orderBy: { createdAt: 'asc' } },
+      },
     });
     if (!row) return null;
     return {
@@ -344,26 +398,26 @@ export class AdminService {
     }
     if (report.proposedValue == null) throw new BadRequestException('该纠错未提供建议值，无法采纳');
 
-    const [head, timelineId, tlField] = report.field.split(':');
+    const [head, eventId, evField] = report.field.split(':');
 
-    // 纵深防御：URL 类字段采纳前再次校验 scheme（历史数据可能已污染，防 javascript: 存储型 XSS）
+    // 纵深防御：URL 类字段采纳前再次校验 scheme
     if (URL_FIELDS.has(head)) assertHttpUrl(report.proposedValue);
 
     await this.prisma.$transaction(async (tx) => {
-      if (head === 'timeline' && timelineId) {
-        const tl = await tx.competitionTimeline.findUnique({ where: { id: timelineId } });
-        if (!tl) throw new NotFoundException('时间节点不存在');
+      if (head === 'event' && eventId) {
+        const ev = await tx.competitionEvent.findUnique({ where: { id: eventId } });
+        if (!ev) throw new NotFoundException('时间节点不存在');
         const newDate = new Date(report.proposedValue!);
         if (Number.isNaN(newDate.getTime())) throw new BadRequestException('建议值不是合法日期');
-        await tx.competitionTimeline.update({
-          where: { id: timelineId },
-          data: tlField === 'endAt' ? { endAt: newDate, isLocked: true, isAuto: false } : { startAt: newDate, isLocked: true, isAuto: false },
+        await tx.competitionEvent.update({
+          where: { id: eventId },
+          data: evField === 'endAt' ? { endAt: newDate, isLocked: true } : { startAt: newDate, isLocked: true },
         });
-        await tx.crawlRevision.create({
+        await tx.competitionRevision.create({
           data: {
             competitionId: report.competitionId,
-            timelineId,
-            field: tlField!,
+            stageId: ev.stageId,
+            field: evField!,
             oldValue: report.currentValue,
             newValue: report.proposedValue,
             origin: RevisionOrigin.MANUAL,
@@ -372,7 +426,7 @@ export class AdminService {
       } else if (head === 'isBonusEligible') {
         const v = report.proposedValue!.toLowerCase() === 'true';
         await tx.competition.update({ where: { id: report.competitionId }, data: { isBonusEligible: v } });
-        await tx.crawlRevision.create({
+        await tx.competitionRevision.create({
           data: {
             competitionId: report.competitionId,
             field: head,
@@ -386,7 +440,7 @@ export class AdminService {
           where: { id: report.competitionId },
           data: { [head]: report.proposedValue } as never,
         });
-        await tx.crawlRevision.create({
+        await tx.competitionRevision.create({
           data: {
             competitionId: report.competitionId,
             field: head,
@@ -405,6 +459,7 @@ export class AdminService {
       });
     });
 
+    void adminId;
     await this.notify.notify(report.reporterId, 'CORRECTION_NEW', {
       reportId,
       accepted: true,
@@ -416,26 +471,26 @@ export class AdminService {
   // ---------- 版本历史与回滚 ----------
 
   async revisions(query: { competitionId?: string; page: number; pageSize: number }) {
-    const where: Prisma.CrawlRevisionWhereInput = query.competitionId ? { competitionId: query.competitionId } : {};
+    const where: Prisma.CompetitionRevisionWhereInput = query.competitionId ? { competitionId: query.competitionId } : {};
     const [items, total] = await this.prisma.$transaction([
-      this.prisma.crawlRevision.findMany({
+      this.prisma.competitionRevision.findMany({
         where,
         include: {
           competition: { select: { id: true, name: true } },
-          timeline: { select: { id: true, stage: true } },
+          stage: { select: { id: true, name: true } },
         },
         orderBy: { createdAt: 'desc' },
         skip: (query.page - 1) * query.pageSize,
         take: query.pageSize,
       }),
-      this.prisma.crawlRevision.count({ where }),
+      this.prisma.competitionRevision.count({ where }),
     ]);
     return { items, total, page: query.page, pageSize: query.pageSize };
   }
 
-  /** 一键回滚：把字段写回旧值；回滚动作本身记为 ROLLBACK revision（ROADMAP 2.1） */
+  /** 一键回滚：把字段写回旧值；回滚动作本身记为 ROLLBACK revision */
   async rollback(revisionId: string) {
-    const rev = await this.prisma.crawlRevision.findUnique({ where: { id: revisionId } });
+    const rev = await this.prisma.competitionRevision.findUnique({ where: { id: revisionId } });
     if (!rev) throw new NotFoundException('版本记录不存在');
     if (rev.oldValue == null) throw new BadRequestException('该记录没有旧值可回滚');
 
@@ -454,13 +509,17 @@ export class AdminService {
           where: { competitionId: rev.competitionId, key },
         });
       }
-    } else if (rev.timelineId) {
-      const tl = await this.prisma.competitionTimeline.findUnique({ where: { id: rev.timelineId } });
-      if (!tl) throw new NotFoundException('时间节点已不存在');
+    } else if (rev.stageId) {
+      // 时间节点字段：按最近的节点回滚（stageId 记录的是所属阶段）
+      const ev = await this.prisma.competitionEvent.findFirst({
+        where: { competitionId: rev.competitionId ?? undefined, stageId: rev.stageId },
+        orderBy: { updatedAt: 'desc' },
+      });
+      if (!ev) throw new NotFoundException('时间节点已不存在');
       const d = new Date(rev.oldValue);
       if (Number.isNaN(d.getTime())) throw new BadRequestException('旧值不是合法日期');
-      await this.prisma.competitionTimeline.update({
-        where: { id: rev.timelineId },
+      await this.prisma.competitionEvent.update({
+        where: { id: ev.id },
         data: rev.field === 'endAt' ? { endAt: d, isLocked: true } : { startAt: d, isLocked: true },
       });
     } else if (rev.competitionId) {
@@ -480,10 +539,10 @@ export class AdminService {
       throw new BadRequestException('该记录没有关联对象');
     }
 
-    await this.prisma.crawlRevision.create({
+    await this.prisma.competitionRevision.create({
       data: {
         competitionId: rev.competitionId,
-        timelineId: rev.timelineId,
+        stageId: rev.stageId,
         field: rev.field,
         oldValue: rev.newValue,
         newValue: rev.oldValue,
@@ -494,12 +553,12 @@ export class AdminService {
   }
 }
 
-const CORRECTABLE_SIMPLE = new Set(['name', 'organizer', 'officialUrl', 'intro', 'bonusCategory', 'bonusPoints']);
+const CORRECTABLE_SIMPLE = new Set(['name', 'organizer', 'officialUrl', 'intro', 'bonusCategory', 'bonusSpecialRule']);
 
 /** URL 类字段：采纳写入前必须校验 scheme，只允许 http/https */
 const URL_FIELDS = new Set(['officialUrl', 'sourceUrl']);
 
-function assertHttpUrl(value: string) {
+function assertHttpUrl(value: string): void {
   if (!/^https?:\/\//i.test(value.trim())) {
     throw new BadRequestException('链接必须以 http:// 或 https:// 开头');
   }

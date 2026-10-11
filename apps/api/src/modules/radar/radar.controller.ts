@@ -20,8 +20,10 @@ class ListQueryDto {
   @IsOptional() @IsIn(['UNDERGRAD', 'POSTGRAD', 'MIXED']) audience?: string;
   @IsOptional() @IsIn(['INDIVIDUAL', 'TEAM']) format?: string;
   @IsOptional() @TransformBoolean() bonusOnly?: boolean;
+  /** 竞赛类别（校教〔2026〕39号口径）：学科竞赛 / 文体竞赛 */
+  @IsOptional() @IsIn(['学科竞赛', '文体竞赛']) category?: string;
   @IsOptional() @IsIn(['OPEN', 'UPCOMING', 'ENDED']) status?: 'OPEN' | 'UPCOMING' | 'ENDED';
-  @IsOptional() @IsIn(['DEADLINE', 'LATEST', 'DIFFICULTY', 'HOT']) sort?: string;
+  @IsOptional() @IsIn(['DEADLINE', 'LATEST', 'DIFFICULTY', 'HOT', 'CATALOG']) sort?: string;
   /** 届次年份（Issue 6）：缺省 = 当前年份 */
   @IsOptional() @IsInt() @Min(2000) @Max(2100) year?: number;
   @IsOptional() @IsInt() @Min(1) page: number = 1;

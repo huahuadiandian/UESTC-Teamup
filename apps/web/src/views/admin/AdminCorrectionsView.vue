@@ -40,7 +40,7 @@ function fieldLabel(f: string) {
     intro: '竞赛简介',
     isBonusEligible: '是否计入推免加分',
     bonusCategory: '加分认定类别',
-    bonusPoints: '加分分值',
+    bonusSpecialRule: '加分特殊规则',
   };
   return map[f] ?? f;
 }

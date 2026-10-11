@@ -71,7 +71,7 @@ function val(s: string | null) {
       <el-table-column label="对象" min-width="160">
         <template #default="{ row }">
           {{ row.competition?.name || '—' }}
-          <span v-if="row.timeline" class="color-ink-faint">（{{ row.timeline.stage }}）</span>
+          <span v-if="row.stage" class="color-ink-faint">（{{ row.stage.name }}）</span>
         </template>
       </el-table-column>
       <el-table-column prop="field" label="字段" width="90" />

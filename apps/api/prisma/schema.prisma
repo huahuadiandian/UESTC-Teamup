@@ -1,11 +1,11 @@
 // UESTC TeamUp 数据模型
-// 依据 docs/字段清单.md 落地。
-// 2026-09-19「广告牌模式」改版：
-// - 平台不做申请/邀请/审批/私聊，不跟踪成员与名额，移除 TeamMember / TeamSlot /
-//   Application / Invitation / Workspace / Review 及 SlotStatus / ApplicationStatus 枚举
-// - Team 即「招募帖」，联系方式直接公开；评论区 = Comment(targetType=TEAM) + CommentLike
-// - TeamStatus 精简为四态：RECRUITING / FULL 由队长切换，COMPETING 由系统按比赛时间设置，
-//   DISBANDED 由队长设置并进入归档仓库
+// 2026-10-11 竞赛模型 V2：
+// - 竞赛结构改为三维正交：Competition（主档）× CompetitionTrack（赛道/赛项）×
+//   CompetitionStage（赛程阶段）→ CompetitionEvent（时间节点）
+// - 阶段链由数据行定义，支持「校赛→省赛→国赛」「预选赛→区域赛→全国赛」等任意链
+// - 赛制（个人/团队、人数）下沉到赛道级，赛事级仅作兜底
+// - 移除 CompetitionTimeline 与采集子系统（Crawl*）相关表；人工维护优先
+// 详见 docs/COMPETITION_MODEL_V2.md 与 docs/COMPETITION_INSTANCES_V2.md
 
 generator client {
   provider      = "prisma-client-js"
@@ -22,6 +22,7 @@ datasource db {
 
 // ================= 枚举 =================
 
+/// 赛事覆盖级别（展示用；与加分折算口径 BonusTier 分离）
 enum Level {
   INTERNATIONAL
   NATIONAL
@@ -35,6 +36,7 @@ enum UserRole {
   ADMIN
 }
 
+/// 赛制：个人 / 团队（赛事级为兜底，赛道级可覆盖）
 enum CompetitionFormat {
   INDIVIDUAL
   TEAM
@@ -46,6 +48,7 @@ enum Audience {
   MIXED
 }
 
+/// 组队目标：保奖 / 学习练手 / 冲国一 / 只为加分
 enum TeamGoal {
   PRIZE
   PRACTICE
@@ -53,8 +56,38 @@ enum TeamGoal {
   BONUS_ONLY
 }
 
-// 招募帖状态：RECRUITING / FULL / DISBANDED 队长手动切换，
-// COMPETING 由系统根据竞赛时间线自动设置（比赛开始后不再自动回退）。
+/// 赛程阶段语义类型：覆盖「校赛→省赛→国赛」与「预选赛→区域赛→全国赛」等所有常见链
+enum StageKind {
+  CAMPUS // 校内赛 / 校赛
+  QUALIFIER // 预选赛 / 资格赛 / 网络赛
+  REGIONAL // 区域赛 / 赛区赛 / 分区赛
+  PROVINCIAL // 省级赛 / 省赛
+  NATIONAL // 全国赛 / 国赛
+  INTERNATIONAL // 国际赛
+  FINAL // 总决赛 / 终审决赛
+  OTHER
+}
+
+/// 时间节点类型
+enum EventNodeType {
+  SIGNUP_START // 报名开始
+  SIGNUP_END // 报名截止
+  SUBMISSION // 作品 / 材料提交
+  CONTEST // 比赛 / 答辩
+  RESULT // 结果公布
+  AWARD // 颁奖
+  OTHER
+}
+
+/// 推免认定档次（与 Level 区分：Level 是赛事级别展示，BonusTier 是加分折算）
+enum BonusTier {
+  NATIONAL
+  PROVINCIAL
+  NONE
+}
+
+/// 招募帖状态：RECRUITING / FULL / DISBANDED 队长手动切换，
+/// COMPETING 由系统根据竞赛赛程自动设置（比赛开始后不再自动回退）。
 enum TeamStatus {
   RECRUITING
   FULL
@@ -80,13 +113,6 @@ enum PublishStatus {
   ARCHIVED
 }
 
-enum SourceHealth {
-  HEALTHY
-  DEGRADED
-  FAILING
-  SUSPENDED
-}
-
 enum MaterialKind {
   PAST_PAPER
   OPEN_SOURCE
@@ -103,8 +129,6 @@ enum CommentTarget {
 enum NotificationKind {
   DDL_REMINDER
   COMMENT_REPLY
-  CRAWL_ANOMALY
-  SOURCE_FAILING
   CORRECTION_NEW
   SYSTEM_NOTIFICATION
   TEAM_INTENT
@@ -116,7 +140,6 @@ enum FeedbackType {
 }
 
 enum RevisionOrigin {
-  CRAWL
   MANUAL
   ROLLBACK
 }
@@ -125,19 +148,6 @@ enum CorrectionStatus {
   PENDING
   ACCEPTED
   REJECTED
-}
-
-enum SourceKind {
-  ACADEMIC_AFFAIRS
-  COLLEGE
-  COMPETITION_SITE
-  ACADEMY_LIST
-}
-
-enum ParseStrategy {
-  CSS
-  JSON_API
-  REGEX
 }
 
 // ================= 用户 =================
@@ -186,73 +196,160 @@ model UserSkill {
   @@id([userId, skill])
 }
 
-// ================= 竞赛雷达 =================
+// ================= 竞赛雷达（V2） =================
 
+/// 赛事主档：每届一行。code 为稳定业务编码，跨年沿用，届次用 year 区分。
 model Competition {
   id          String  @id @default(cuid())
+  code        String
   name        String
-  // 届次年份（2026-09-27）：同一赛事可有多个年度档案；唯一性 = 名称 + 年份
+  shortName   String?
   year        Int
   aliases     String[]
   organizer   String?
   officialUrl String?
+  sourceUrl   String?
 
+  /// 赛事级默认赛制（无赛道的赛事用这里；有赛道时由 CompetitionTrack 覆盖）
   format      CompetitionFormat?
   teamSizeMin Int?
   teamSizeMax Int?
   audience    Audience?
   intro       String?  @db.Text
+  difficulty  Int?
+  effort      Int?
 
-  difficulty Int?
-  effort     Int?
+  /// 结构派生字段（落库，便于列表筛选；可重算）
+  hasTracks   Boolean @default(false)
+  stageChain  String?
 
-  // 推免加分（独立可选字段，人工维护，爬虫无法获得）
-  isBonusEligible Boolean?
-  bonusCategory   String?
-  bonusPoints     String?
+  /// 推免加分
+  isBonusEligible  Boolean?
+  bonusCategory    String?
+  bonusStandardId  String?
+  bonusSpecialRule String? @db.Text
 
-  sourceUrl    String?
-  lastSyncedAt DateTime?
-  status       PublishStatus @default(PUBLISHED)
-  createdAt    DateTime      @default(now())
-  updatedAt    DateTime      @updatedAt
+  status    PublishStatus @default(PUBLISHED)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
 
-  levels        CompetitionLevel[]
-  timelines     CompetitionTimeline[]
-  tags          CompetitionTag[]
-  awards        CompetitionAward[]
-  materials     CompetitionMaterial[]
-  revisions     CrawlRevision[]
-  anomalies     CrawlAnomaly[]
-  corrections   CorrectionReport[]
-  teams         Team[]
-  customFields  CompetitionCustomField[]
-  feedbacks     Feedback[]
+  tracks       CompetitionTrack[]
+  stages       CompetitionStage[]
+  events       CompetitionEvent[]
+  levels       CompetitionLevel[]
+  tags         CompetitionTag[]
+  awards       CompetitionAward[]
+  materials    CompetitionMaterial[]
+  customFields CompetitionCustomField[]
+  revisions    CompetitionRevision[]
+  corrections  CorrectionReport[]
+  teams        Team[]
+  feedbacks    Feedback[]
+  bonusStandard BonusStandard? @relation(fields: [bonusStandardId], references: [id])
 
-  @@unique([name, year])
+  @@unique([code, year])
   @@index([status])
-  @@index([updatedAt])
   @@index([year])
+  @@index([updatedAt])
 }
 
-// 竞赛自定义键值属性（2026-09-27）：表达各竞赛特有信息（如数模的 QQ 交流群号）。
-// 修改走 CrawlRevision（field = "custom:<key>"）留痕，可回滚。
-model CompetitionCustomField {
-  id            String   @id @default(cuid())
+/// 赛道 / 赛项：顶层=赛道，子层=赛项（parentId 自引用）；无赛道的赛事此表为空。
+model CompetitionTrack {
+  id            String  @id @default(cuid())
   competitionId String
-  key           String
-  value         String   @db.Text
-  updatedById   String?
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+  parentId      String?
+  code          String
+  name          String
+  shortName     String?
+  aliases       String[]
+  description   String? @db.Text
+  sortOrder     Int     @default(0)
+  isActive      Boolean @default(true)
 
-  competition Competition @relation(fields: [competitionId], references: [id], onDelete: Cascade)
-  updatedBy   User?       @relation("CustomFieldUpdater", fields: [updatedById], references: [id])
+  /// 赛制下沉到赛道级：不同赛道可"个人/团队""人数区间"不同；留空回落到赛事级
+  format      CompetitionFormat?
+  teamSizeMin Int?
+  teamSizeMax Int?
 
-  @@unique([competitionId, key])
+  competition Competition        @relation(fields: [competitionId], references: [id], onDelete: Cascade)
+  parent      CompetitionTrack?  @relation("TrackTree", fields: [parentId], references: [id], onDelete: Cascade)
+  children    CompetitionTrack[] @relation("TrackTree")
+  stages      CompetitionStage[]
+
+  @@unique([competitionId, code])
+  @@index([competitionId, sortOrder])
+  @@index([parentId])
 }
 
-// 级别多值：一个竞赛常有 校赛→省赛→国赛 链路
+/// 赛程阶段：某赛事的阶段链 = 该赛事下按 sequence 排序的一组 Stage 行。
+/// trackId = null → 全赛事共享（如"报名"）；否则为该赛道专属。
+model CompetitionStage {
+  id            String    @id @default(cuid())
+  competitionId String
+  trackId       String?
+  code          String
+  name          String
+  stageKind     StageKind
+  scope         String?
+  sequence      Int
+  /// 推免认定口径：该阶段奖项折算到哪一档
+  bonusTier     BonusTier?
+  note          String?   @db.Text
+
+  competition Competition       @relation(fields: [competitionId], references: [id], onDelete: Cascade)
+  track       CompetitionTrack? @relation(fields: [trackId], references: [id], onDelete: Cascade)
+  events      CompetitionEvent[]
+  revisions   CompetitionRevision[]
+
+  @@unique([competitionId, trackId, code])
+  @@index([competitionId, sequence])
+  @@index([trackId])
+}
+
+/// 时间节点：挂在阶段上。一个阶段可有多个节点。
+model CompetitionEvent {
+  id            String        @id @default(cuid())
+  competitionId String
+  stageId       String
+  trackId       String?
+  nodeType      EventNodeType
+  label         String?
+  startAt       DateTime?
+  endAt         DateTime?
+  location      String?
+  isLocked      Boolean       @default(false)
+  sourceUrl     String?
+  note          String?       @db.Text
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  competition Competition      @relation(fields: [competitionId], references: [id], onDelete: Cascade)
+  stage       CompetitionStage @relation(fields: [stageId], references: [id], onDelete: Cascade)
+
+  @@index([competitionId, startAt])
+  @@index([stageId])
+  @@index([endAt])
+}
+
+/// 推免加分标准：按认定文件 + 类别（学科/文体）+ 档次
+model BonusStandard {
+  id          String    @id @default(cuid())
+  documentRef String
+  category    String
+  level       BonusTier
+  topPoints    String
+  secondPoints String
+  thirdPoints  String
+  note        String?   @db.Text
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  competitions Competition[]
+
+  @@unique([documentRef, category, level])
+}
+
+/// 覆盖级别（多值）
 model CompetitionLevel {
   competitionId String
   level         Level
@@ -261,26 +358,6 @@ model CompetitionLevel {
 
   @@id([competitionId, level])
   @@index([level])
-}
-
-// 时间节点（日历数据源）
-model CompetitionTimeline {
-  id            String    @id @default(cuid())
-  competitionId String
-  stage         String
-  level         Level?
-  startAt       DateTime?
-  endAt         DateTime?
-
-  isAuto   Boolean @default(false)
-  isLocked Boolean @default(false)
-
-  competition Competition     @relation(fields: [competitionId], references: [id], onDelete: Cascade)
-  revisions   CrawlRevision[]
-
-  @@index([startAt])
-  @@index([endAt])
-  @@index([competitionId])
 }
 
 model CompetitionTag {
@@ -293,11 +370,13 @@ model CompetitionTag {
   @@index([tag])
 }
 
+/// 获奖记录（赛事级）
 model CompetitionAward {
-  id            String  @id @default(cuid())
+  id            String      @id @default(cuid())
   competitionId String
   year          Int?
   awardName     String?
+  awardTier     BonusTier?
   teamName      String?
   members       String[]
   sourceUrl     String?
@@ -322,91 +401,38 @@ model CompetitionMaterial {
   @@index([kind])
 }
 
-// ================= 采集子系统（结构预留：流水线本次不实现） =================
+/// 竞赛自定义键值属性（长尾差异，如数模的 QQ 交流群号）
+model CompetitionCustomField {
+  id            String   @id @default(cuid())
+  competitionId String
+  key           String
+  value         String   @db.Text
+  updatedById   String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
 
-model CrawlSource {
-  id            String       @id @default(cuid())
-  name          String
-  url           String
-  kind          SourceKind
-  cron          String
-  parseStrategy ParseStrategy
-  selectorConf  Json
-  // 1 = 成电官方聚合，2 = 赛事官网，3 = 其他校内来源
-  priority      Int          @default(3)
-  enabled       Boolean      @default(true)
+  competition Competition @relation(fields: [competitionId], references: [id], onDelete: Cascade)
+  updatedBy   User?       @relation("CustomFieldUpdater", fields: [updatedById], references: [id])
 
-  lastRunAt        DateTime?
-  consecutiveFails Int       @default(0)
-  health           SourceHealth @default(HEALTHY)
-
-  snapshots CrawlSnapshot[]
-  items     CrawlItem[]
-  anomalies CrawlAnomaly[]
-  revisions CrawlRevision[]
+  @@unique([competitionId, key])
 }
 
-model CrawlSnapshot {
-  id          String   @id @default(cuid())
-  sourceId    String
-  contentHash String
-  fetchedAt   DateTime @default(now())
-
-  source CrawlSource @relation(fields: [sourceId], references: [id], onDelete: Cascade)
-
-  @@index([sourceId, fetchedAt])
-}
-
-model CrawlItem {
-  id        String   @id @default(cuid())
-  sourceId  String
-  title     String
-  link      String
-  externalId String?
-  rawText   String?  @db.Text
-  fetchedAt DateTime @default(now())
-  processed Boolean  @default(false)
-
-  source CrawlSource @relation(fields: [sourceId], references: [id], onDelete: Cascade)
-
-  @@index([sourceId, processed])
-  @@index([sourceId, externalId])
-}
-
-// 版本记录：CRAWL 预留 / MANUAL 人工修改 / ROLLBACK 回滚动作，供 /admin/revisions 回滚
-model CrawlRevision {
+/// 版本记录：人工修改 / 回滚留痕，供 /admin/revisions 回滚
+model CompetitionRevision {
   id            String   @id @default(cuid())
   competitionId String?
-  timelineId    String?
-  sourceId      String?
+  stageId       String?
   field         String
   oldValue      String?  @db.Text
   newValue      String?  @db.Text
   origin        RevisionOrigin
   createdAt     DateTime @default(now())
 
-  competition Competition?        @relation(fields: [competitionId], references: [id], onDelete: SetNull)
-  timeline    CompetitionTimeline? @relation(fields: [timelineId], references: [id], onDelete: SetNull)
-  source      CrawlSource? @relation(fields: [sourceId], references: [id], onDelete: SetNull)
+  competition Competition?       @relation(fields: [competitionId], references: [id], onDelete: SetNull)
+  stage       CompetitionStage?  @relation(fields: [stageId], references: [id], onDelete: SetNull)
 
   @@index([competitionId, createdAt])
-  @@index([timelineId, createdAt])
-  @@index([sourceId])
-}
-
-model CrawlAnomaly {
-  id            String   @id @default(cuid())
-  sourceId      String?
-  competitionId String?
-  rule          String
-  payload       Json
-  detectedAt    DateTime @default(now())
-  alerted       Boolean  @default(false)
-
-  source      CrawlSource? @relation(fields: [sourceId], references: [id], onDelete: SetNull)
-  competition Competition? @relation(fields: [competitionId], references: [id], onDelete: SetNull)
-
-  @@index([detectedAt])
+  @@index([stageId, createdAt])
 }
 
 model CorrectionReport {
@@ -454,7 +480,7 @@ model Team {
   competition Competition @relation(fields: [competitionId], references: [id])
   leader      User        @relation("TeamLeader", fields: [leaderId], references: [id])
   members     TeamMember[]
-  // 组队意愿（2026-09-27）：点击「我想组队」登记一条；(teamId, userId) 唯一防重复
+  // 组队意愿：点击「我想组队」登记一条；(teamId, userId) 唯一防重复
   intents     TeamIntent[]
 
   @@index([status, competitionId])
@@ -481,7 +507,7 @@ model TeamMember {
   @@index([teamId])
 }
 
-// 组队意愿（2026-09-27 Issue 1）：登录用户点击「我想组队」即登记，
+// 组队意愿：登录用户点击「我想组队」即登记，
 // 招募人据此知道谁对帖子感兴趣（只给计数，不给名单）；可撤销。
 model TeamIntent {
   id        String   @id @default(cuid())
@@ -517,7 +543,7 @@ model Post {
   @@index([kind, refined])
 }
 
-// 多态评论：COMPETITION / POST / TEAM（Q7，多态外键无原生支持，靠应用层维护）
+// 多态评论：COMPETITION / POST / TEAM（多态外键无原生支持，靠应用层维护）
 model Comment {
   id         String       @id @default(cuid())
   authorId   String
@@ -623,7 +649,7 @@ model Announcement {
   @@index([active, createdAt])
 }
 
-// 用户反馈（2026-09-27 Issue 5）：全站功能反馈 + 竞赛信息反馈，后台按日导出 JSON
+// 用户反馈：全站功能反馈 + 竞赛信息反馈，后台按日导出 JSON
 model Feedback {
   id              String       @id @default(cuid())
   type            FeedbackType

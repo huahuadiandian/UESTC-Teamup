@@ -49,12 +49,22 @@ onMounted(async () => {
   const preselect = route.query.competitionId as string;
   if (preselect) {
     try {
-      const c = await api.get<{ id: string; name: string; timelines: { stage: string; endAt: string | null }[] }>(
-        `/competitions/${preselect}`,
-      );
+      const c = await api.get<{
+        id: string;
+        name: string;
+        sharedStages: { events: { nodeType: string; endAt: string | null }[] }[];
+        tracks: { stages: { events: { nodeType: string; endAt: string | null }[] }[] }[];
+      }>(`/competitions/${preselect}`);
       form.value.competitionId = c.id;
       competitionOptions.value = [{ id: c.id, name: c.name }];
-      const signup = c.timelines.find((t) => t.stage.includes('报名') && t.endAt);
+      // 报名截止默认值：取所有阶段里最早的「报名截止」节点
+      const allEvents = [
+        ...(c.sharedStages ?? []).flatMap((s) => s.events),
+        ...(c.tracks ?? []).flatMap((t) => t.stages.flatMap((s) => s.events)),
+      ];
+      const signup = allEvents
+        .filter((e) => e.nodeType === 'SIGNUP_END' && e.endAt)
+        .sort((a, b) => new Date(a.endAt!).getTime() - new Date(b.endAt!).getTime())[0];
       if (signup?.endAt) form.value.deadline = signup.endAt.slice(0, 10);
     } catch {
       /* ignore */

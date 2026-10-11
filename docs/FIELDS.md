@@ -1,15 +1,14 @@
 # 字段清单（可编辑）
 
-> 生成时间：2026-09-19，基于 `apps/api/prisma/schema.prisma` 与 `packages/shared/src/index.ts`（已同步至 commit e22bee2）。
-> **2026-09-19 改版**：匹配域按「广告牌模式」重新设计并**已同步前后端代码**（迁移文件 `20260919130000_billboard_model`，启动数据库后运行 `pnpm db:migrate && pnpm db:seed` 生效）。
-> **2026-09-20 补充**：招募帖恢复「计划人数 + 已有成员情况」展示（队长手填，平台不做成员身份管理），新增 TeamMember 表与 Team.targetSize 字段（迁移 `20260920000000_team_roster`）。
+> 生成时间：2026-10-11，基于 `apps/api/prisma/schema.prisma`（**竞赛模型 V2**，迁移 `20261011080000_drop_legacy_competition` / `20261011100000_competition_bonus_category`）。
+> **2026-10-11 竞赛模型 V2**：竞赛结构改为三维正交 `Competition × CompetitionTrack × CompetitionStage → CompetitionEvent`；移除 `CompetitionTimeline` 与整套采集子系统（Crawl* 五张表 + `src/modules/crawler/`）。设计文档见 [COMPETITION_MODEL_V2.md](./COMPETITION_MODEL_V2.md)。
+> **2026-09-19 改版**：匹配域按「广告牌模式」设计。**2026-09-20**：恢复 `Team.targetSize` + `TeamMember`。**2026-09-27**：联系方式拆分 QQ/微信、新增组队意愿 `TeamIntent`、用户手动建档免审核即时发布。
 >
 > **用法**：直接在本文件上增删改行，改完后告诉我「清单改完了」，我会据此同步更新：
 > 后端 `schema.prisma`（并生成迁移）→ `packages/shared` 枚举与类型 → 前端 `api/types.ts`、表单页与列表页。
 >
 > - 「可空」= 该字段允许不填；「默认 X」= 未填时自动取值。
 > - 类型含义：文本 / 长文本 / 整数 / 布尔 / 时间 / JSON / 字符串数组。
-> - 标 🅿️ 的表为**预留表**（仅有表结构，功能未实现或流水线未跑通），改动只落库、不影响现有页面。
 
 ---
 
@@ -17,12 +16,11 @@
 
 1. [枚举](#枚举)
 2. [用户域](#用户域)：User、UserSkill
-3. [竞赛域](#竞赛域)：Competition、CompetitionLevel、CompetitionTimeline、CompetitionTag、CompetitionAward、CompetitionMaterial
-4. [采集域](#采集域)：CrawlSource、CrawlSnapshot、CrawlItem、CrawlRevision、CrawlAnomaly、CorrectionReport
-5. [匹配域](#匹配域)：Team（招募帖）
-6. [内容与通知域](#内容与通知域)：Post、Comment、CommentLike、Favorite、Notification、Report
-7. [管理域](#管理域)：MailLog、BanRecord、Announcement
-8. [附录：接口返回的派生字段（只读）](#附录接口返回的派生字段只读)
+3. [竞赛域（V2）](#竞赛域v2)：Competition、CompetitionTrack、CompetitionStage、CompetitionEvent、BonusStandard、CompetitionLevel、CompetitionTag、CompetitionAward、CompetitionMaterial、CompetitionCustomField、CompetitionRevision、CorrectionReport
+4. [匹配域](#匹配域广告牌模式)：Team（招募帖）、TeamMember、TeamIntent
+5. [内容与通知域](#内容与通知域)：Post、Comment、CommentLike、Favorite、Notification、Report、Feedback
+6. [管理域](#管理域)：MailLog、BanRecord、Announcement
+7. [附录：接口返回的派生字段（只读）](#附录接口返回的派生字段只读)
 
 ---
 
@@ -30,7 +28,7 @@
 
 改枚举值 = 同时改数据库枚举 + 前后端下拉选项；中文标签随值一起维护。
 
-### Level（竞赛级别）
+### Level（竞赛覆盖级别，展示用；与加分折算口径 BonusTier 分离）
 
 | 值 | 中文标签 |
 | --- | --- |
@@ -47,7 +45,7 @@
 | CONTRIBUTOR | 认证贡献者 |
 | ADMIN | 管理员 |
 
-### CompetitionFormat（赛制）
+### CompetitionFormat（赛制：赛事级为兜底，赛道级可覆盖）
 
 | 值 | 中文标签 |
 | --- | --- |
@@ -62,6 +60,41 @@
 | POSTGRAD | 研究生 |
 | MIXED | 本研皆可 |
 
+### StageKind（赛程阶段语义类型，V2 新增）
+
+> 覆盖「校赛→省赛→国赛」与「预选赛→区域赛→全国赛」等所有常见链；阶段链由数据行定义，不用枚举穷举。
+
+| 值 | 中文标签 |
+| --- | --- |
+| CAMPUS | 校内赛 / 校赛 |
+| QUALIFIER | 预选赛 / 资格赛 / 网络赛 |
+| REGIONAL | 区域赛 / 赛区赛 / 分区赛 |
+| PROVINCIAL | 省级赛 / 省赛 |
+| NATIONAL | 全国赛 / 国赛 |
+| INTERNATIONAL | 国际赛 |
+| FINAL | 总决赛 / 终审决赛 |
+| OTHER | 其他 |
+
+### EventNodeType（时间节点类型，V2 新增）
+
+| 值 | 中文标签 |
+| --- | --- |
+| SIGNUP_START | 报名开始 |
+| SIGNUP_END | 报名截止 |
+| SUBMISSION | 作品 / 材料提交 |
+| CONTEST | 比赛 / 答辩 |
+| RESULT | 结果公布 |
+| AWARD | 颁奖 |
+| OTHER | 其他 |
+
+### BonusTier（推免认定档次，V2 新增；与 Level 区分：Level 是级别展示，BonusTier 是加分折算）
+
+| 值 | 中文标签 |
+| --- | --- |
+| NATIONAL | 国家级 |
+| PROVINCIAL | 省级 |
+| NONE | 不认定 |
+
 ### TeamGoal（组队目标）
 
 | 值 | 中文标签 |
@@ -71,16 +104,16 @@
 | NATIONAL_FIRST | 冲国一 |
 | BONUS_ONLY | 保研加分 |
 
-### TeamStatus（招募帖状态，队长手动切换）
+### TeamStatus（招募帖状态）
 
-> 广告牌模式下无平台内成员/名额，状态全部由队长手动维护，无自动流转（自动归档 cron 一并移除）。
+> RECRUITING / FULL / DISBANDED 队长手动切换；COMPETING 由系统根据竞赛赛程自动设置（比赛节点开始后置为参赛，不自动回退）；DISBANDED 是终态（进入「我的」归档仓库）。
 
 | 值 | 中文标签 |
 | --- | --- |
 | RECRUITING | 招募中 |
 | FULL | 已满员 |
-| COMPETING | 已参赛 （系统根据比赛时间设置，用户不能手动设置，若在比赛前就选择已解散则系统就不用切换状态了）|
-| DISBANDED | 已解散 （选择已解散状态后放入用户的归档仓库中）|
+| COMPETING | 参赛中（系统设置，不能手动） |
+| DISBANDED | 已解散（终态，进归档仓库） |
 
 ### RoleType（队伍角色/空位类型）
 
@@ -103,15 +136,6 @@
 | DRAFT | 草稿 |
 | PUBLISHED | 已发布 |
 | ARCHIVED | 已下线 |
-
-### SourceHealth（采集源健康度）🅿️
-
-| 值 | 中文标签 |
-| --- | --- |
-| HEALTHY | 健康 |
-| DEGRADED | 降级 |
-| FAILING | 连续失败 |
-| SUSPENDED | 已停用 |
 
 ### MaterialKind（资料/帖子类型）
 
@@ -136,17 +160,14 @@
 | --- | --- |
 | DDL_REMINDER | DDL 提醒 |
 | COMMENT_REPLY | 回复 |
-| CRAWL_ANOMALY | 采集异常 |
-| SOURCE_FAILING | 数据源告警 |
 | CORRECTION_NEW | 用户纠错 |
-| SYSTEM NOTIFICATION | 系统通知 |
+| SYSTEM_NOTIFICATION | 系统通知 |
+| TEAM_INTENT | 组队意愿 |
 
-
-### RevisionOrigin（版本记录来源）🅿️
+### RevisionOrigin（版本记录来源）
 
 | 值 | 中文标签 |
 | --- | --- |
-| CRAWL | 爬虫写入 |
 | MANUAL | 人工修改 |
 | ROLLBACK | 回滚动作 |
 
@@ -158,22 +179,12 @@
 | ACCEPTED | 已采纳 |
 | REJECTED | 已驳回 |
 
-### SourceKind（采集源类型）🅿️
+### FeedbackType（用户反馈类型，2026-09-27 新增）
 
 | 值 | 中文标签 |
 | --- | --- |
-| ACADEMIC_AFFAIRS | 教务处 |
-| COLLEGE | 学院官网 |
-| COMPETITION_SITE | 竞赛官网 |
-| ACADEMY_LIST | 竞赛名录站 |
-
-### ParseStrategy（解析策略）🅿️
-
-| 值 | 中文标签 |
-| --- | --- |
-| CSS | CSS 选择器 |
-| JSON_API | JSON 接口 |
-| REGEX | 正则 |
+| FUNCTION | 功能反馈 |
+| COMPETITION_INFO | 竞赛信息反馈 |
 
 ---
 
@@ -186,7 +197,7 @@
 | id | 文本 | 主键，自动生成 | 用户 ID |
 | studentNo | 文本 | 必填，全局唯一 | 学号（登录用） |
 | email | 文本 | 必填，全局唯一 | 邮箱（登录用，验证码注册） |
-| passwordHash | 文本 | **注册时必填** | 密码哈希（scrypt）；首次验证码注册后可未设密码 |
+| passwordHash | 文本 | 可空 | 密码哈希（scrypt）；首次验证码注册后可未设密码，注册/完善资料流程中必填 |
 | college | 文本 | **必填** | 学院 |
 | grade | 整数 | **必填** | 年级（入学年份） |
 | major | 文本 | **必填** | 专业 |
@@ -196,6 +207,8 @@
 | banned | 布尔 | 默认 false | 是否已封禁 |
 | createdAt | 时间 | 自动 | 注册时间 |
 | updatedAt | 时间 | 自动 | 更新时间 |
+
+> 学号按登录态裁剪：接口序列化时**游客不下发 studentNo**（2026-09-27 隐私收敛）。
 
 ### UserSkill（用户技能）
 
@@ -207,61 +220,129 @@
 
 ---
 
-## 竞赛域
+## 竞赛域（V2）
 
-### Competition（竞赛）
+> 概念：**Track（在哪条赛道） × Stage（走到哪一层） → Event（具体哪天）**，三个维度正交。
+> 无赛道的赛事不建 Track 行，所有 Stage.trackId = null（共享阶段）。
+
+### Competition（赛事主档，每届一行）
 
 | 字段 | 类型 | 可空/默认 | 说明 |
 | --- | --- | --- | --- |
 | id | 文本 | 主键，自动生成 | 竞赛 ID |
+| code | 文本 | 必填，`(code, year)` 唯一 | 稳定业务编码，跨年沿用（如 CUMCM / HUAWEI-ICT）；用户手动建档自动生成 `USER-xxx` |
 | name | 文本 | 必填 | 竞赛名称 |
-| aliases | 字符串数组 | 必填（可为空数组） | 别名列表 |
+| shortName | 文本 | 可空 | 短名 |
+| year | 整数 | 必填 | 届次年份（唯一性 = code + year） |
+| aliases | 字符串数组 | 必填（可为空数组） | 别名列表（逗号分隔录入，用于搜索） |
 | organizer | 文本 | 可空 | 主办方 |
 | officialUrl | 文本 | 可空 | 官网地址 |
-| format | 枚举 CompetitionFormat | 可空 | 赛制（个人/团队） |
-| teamSizeMin | 整数 | 可空 | 最小队伍人数 |
-| teamSizeMax | 整数 | 可空 | 最大队伍人数 |
+| sourceUrl | 文本 | 可空 | 信息来源地址 |
+| format | 枚举 CompetitionFormat | 可空 | 赛事级默认赛制（无赛道时用；有赛道由 Track 覆盖） |
+| teamSizeMin | 整数 | 可空 | 最小队伍人数（赛事级兜底） |
+| teamSizeMax | 整数 | 可空 | 最大队伍人数（赛事级兜底） |
 | audience | 枚举 Audience | 可空 | 面向人群 |
 | intro | 长文本 | 可空 | 简介 |
 | difficulty | 整数 | 可空 | 难度评分（1-5） |
 | effort | 整数 | 可空 | 投入度评分（1-5） |
+| hasTracks | 布尔 | 默认 false | 结构派生字段：是否含赛道（落库便于筛选，可重算） |
+| stageChain | 文本 | 可空 | 结构派生字段：赛程链展示缓存，如「校赛 → 省赛 → 国赛」 |
 | isBonusEligible | 布尔 | 可空 | 是否推免加分 |
-| bonusCategory | 文本 | 可空 | 加分奖项类别 |
-| bonusPoints | 文本 | 可空 | 加分说明（文本，如「国一 3 分」） |
-| sourceUrl | 文本 | 可空 | 信息来源地址 |
-| lastSyncedAt | 时间 | 可空 | 最近同步时间 |
-| status | 枚举 PublishStatus | 默认 PUBLISHED | 发布状态 |
+| bonusCategory | 文本 | 可空 | **竞赛类别**（校教〔2026〕39号口径）：学科竞赛 / 文体竞赛；列表页可按此筛选，详情页按类别展示对应分值标准 |
+| bonusStandardId | 文本 | 可空 | 引用 BonusStandard（分值标准统一维护，无需逐赛填写） |
+| bonusSpecialRule | 长文本 | 可空 | 加分特殊规则文本（如美赛 Outstanding 映射） |
+| status | 枚举 PublishStatus | 默认 PUBLISHED | 发布状态（用户手动建档即时 PUBLISHED 并知会管理员） |
 | createdAt | 时间 | 自动 | 创建时间 |
 | updatedAt | 时间 | 自动 | 更新时间 |
 
-### CompetitionLevel（竞赛级别，多值）
+### CompetitionTrack（赛道 / 赛项，V2 新增）
+
+> 顶层 = 赛道，子层 = 赛项（parentId 自引用，树形）；无赛道的赛事此表为空。
+
+| 字段 | 类型 | 可空/默认 | 说明 |
+| --- | --- | --- | --- |
+| id | 文本 | 主键，自动生成 | 赛道 ID |
+| competitionId | 文本 | 必填，`(competitionId, code)` 唯一 | 所属竞赛 |
+| parentId | 文本 | 可空 | 父赛道（赛项挂在赛道下） |
+| code | 文本 | 必填 | 赛道编码，如 BIGDATA |
+| name | 文本 | 必填 | 赛道名，如 大数据挑战赛 |
+| shortName | 文本 | 可空 | 短名 |
+| aliases | 字符串数组 | 必填（可为空数组） | 别名 |
+| description | 长文本 | 可空 | 赛道描述 |
+| sortOrder | 整数 | 默认 0 | 排序 |
+| isActive | 布尔 | 默认 true | 是否启用 |
+| format | 枚举 CompetitionFormat | 可空 | 赛制下沉到赛道级（留空回落赛事级） |
+| teamSizeMin | 整数 | 可空 | 赛道级人数下限 |
+| teamSizeMax | 整数 | 可空 | 赛道级人数上限 |
+
+### CompetitionStage（赛程阶段，V2 新增）
+
+> 某赛事的阶段链 = 该赛事下按 sequence 排序的一组 Stage 行；trackId = null → 全赛事共享（如「报名」），否则为该赛道专属。
+
+| 字段 | 类型 | 可空/默认 | 说明 |
+| --- | --- | --- | --- |
+| id | 文本 | 主键，自动生成 | 阶段 ID |
+| competitionId | 文本 | 必填 | 所属竞赛 |
+| trackId | 文本 | 可空 | 所属赛道（null = 全赛事共享阶段） |
+| code | 文本 | 必填，`(competitionId, trackId, code)` 唯一 | 阶段编码 |
+| name | 文本 | 必填 | 展示名：「校赛」/「西南赛区」/「全国总决赛」 |
+| stageKind | 枚举 StageKind | 必填 | 语义类型 |
+| scope | 文本 | 可空 | 赛区/省份限定：「西南赛区」/「四川省」 |
+| sequence | 整数 | 必填 | 链内顺序（1,2,3...），前端按此渲染路线图 |
+| bonusTier | 枚举 BonusTier | 可空 | 推免认定口径：该阶段奖项折算到哪一档（与 stageKind 解耦） |
+| note | 长文本 | 可空 | 备注 |
+
+### CompetitionEvent（时间节点，V2 新增，替代 CompetitionTimeline）
+
+> 挂在阶段上，一个阶段可有多个节点；各赛道日期常常不同 → 分属各自阶段的节点。
+
+| 字段 | 类型 | 可空/默认 | 说明 |
+| --- | --- | --- | --- |
+| id | 文本 | 主键，自动生成 | 节点 ID |
+| competitionId | 文本 | 必填 | 所属竞赛（冗余，便于按赛事查询） |
+| stageId | 文本 | 必填 | 所属阶段 |
+| trackId | 文本 | 可空 | 冗余自 Stage，便于按赛道过滤 |
+| nodeType | 枚举 EventNodeType | 必填 | 节点类型 |
+| label | 文本 | 可空 | 自定义文案（覆盖默认名） |
+| startAt | 时间 | 可空 | 开始时间 |
+| endAt | 时间 | 可空 | 结束时间（通常为 DDL） |
+| location | 文本 | 可空 | 承办地 / 线上 |
+| isLocked | 布尔 | 默认 false | 人工锁定（预留给将来自动更新不覆盖） |
+| sourceUrl | 文本 | 可空 | 来源链接 |
+| note | 长文本 | 可空 | 备注 |
+| createdAt | 时间 | 自动 | 创建时间 |
+| updatedAt | 时间 | 自动 | 更新时间 |
+
+### BonusStandard（推免加分标准，V2 新增）
+
+> 按认定文件 + 类别 + 档次统一维护，替代对所有竞赛写死同一句 bonusPoints。
+
+| 字段 | 类型 | 可空/默认 | 说明 |
+| --- | --- | --- | --- |
+| id | 文本 | 主键，自动生成 | 标准 ID |
+| documentRef | 文本 | 必填，`(documentRef, category, level)` 唯一 | 认定文件标识，如「校教〔2026〕39号-2027届」 |
+| category | 文本 | 必填 | 类别：学科竞赛 / 文体竞赛 |
+| level | 枚举 BonusTier | 必填 | 档次（NATIONAL / PROVINCIAL） |
+| topPoints | 文本 | 必填 | 最高奖分值 |
+| secondPoints | 文本 | 必填 | 次高奖分值 |
+| thirdPoints | 文本 | 必填 | 次次高奖分值 |
+| note | 长文本 | 可空 | 备注 |
+
+### CompetitionLevel（竞赛覆盖级别，多值）
 
 | 字段 | 类型 | 可空/默认 | 说明 |
 | --- | --- | --- | --- |
 | competitionId | 文本 | 联合主键 | 所属竞赛 |
 | level | 枚举 Level | 联合主键 | 级别（一个竞赛可有 校→省→国 多档） |
 
-### CompetitionTimeline（时间节点）
-
-| 字段 | 类型 | 可空/默认 | 说明 |
-| --- | --- | --- | --- |
-| id | 文本 | 主键，自动生成 | 节点 ID |
-| competitionId | 文本 | 必填 | 所属竞赛 |
-| stage | 文本 | 必填 | 阶段名（报名、初赛、决赛…） |
-| level | 枚举 Level | 可空 | 该节点对应级别 |
-| startAt | 时间 | 可空 | 开始时间 |
-| endAt | 时间 | 可空 | 结束时间（通常为 DDL） |
-| isAuto | 布尔 | 默认 false | 是否爬虫自动抓取 |
-| isLocked | 布尔 | 默认 false | 锁定后人工修改不被爬虫覆盖 |
-
 ### CompetitionTag（竞赛标签）
 
 | 字段 | 类型 | 可空/默认 | 说明 |
 | --- | --- | --- | --- |
 | competitionId | 文本 | 联合主键 | 所属竞赛 |
-| tag | 文本 | 联合主键 | 标签名（自由文本） |
+| tag | 文本 | 联合主键 | 标签名（自由文本，逗号分隔录入） |
 
-### CompetitionAward（历届获奖）
+### CompetitionAward（历届获奖，赛事级）
 
 | 字段 | 类型 | 可空/默认 | 说明 |
 | --- | --- | --- | --- |
@@ -269,6 +350,7 @@
 | competitionId | 文本 | 必填 | 所属竞赛 |
 | year | 整数 | 可空 | 获奖年份 |
 | awardName | 文本 | 可空 | 奖项名 |
+| awardTier | 枚举 BonusTier | 可空 | 奖项折算档次 |
 | teamName | 文本 | 可空 | 队伍名 |
 | members | 字符串数组 | 必填（可为空数组） | 成员名单 |
 | sourceUrl | 文本 | 可空 | 来源链接 |
@@ -284,71 +366,30 @@
 | url | 文本 | 必填 | 链接 |
 | authorId | 文本 | 可空 | 上传者 |
 
----
-
-## 采集域
-
-### CrawlSource（采集源）🅿️
+### CompetitionCustomField（竞赛自定义键值，长尾差异）
 
 | 字段 | 类型 | 可空/默认 | 说明 |
 | --- | --- | --- | --- |
-| id | 文本 | 主键，自动生成 | 源 ID |
-| name | 文本 | 必填 | 源名称 |
-| url | 文本 | 必填 | 抓取地址 |
-| kind | 枚举 SourceKind | 必填 | 源类型 |
-| cron | 文本 | 必填 | 定时表达式 |
-| parseStrategy | 枚举 ParseStrategy | 必填 | 解析策略 |
-| selectorConf | JSON | 必填 | 选择器/解析配置 |
-| enabled | 布尔 | 默认 true | 是否启用 |
-| lastRunAt | 时间 | 可空 | 最近运行时间 |
-| consecutiveFails | 整数 | 默认 0 | 连续失败次数 |
-| health | 枚举 SourceHealth | 默认 HEALTHY | 健康度 |
+| id | 文本 | 主键，自动生成 | 行 ID |
+| competitionId | 文本 | 必填，`(competitionId, key)` 唯一 | 所属竞赛 |
+| key | 文本 | 必填 | 字段名（支持中文/字母/数字/下划线/短横线） |
+| value | 长文本 | 必填 | 字段值（纯文本，最长 500 字） |
+| updatedById | 文本 | 可空 | 最后修改人 |
+| createdAt | 时间 | 自动 | 创建时间 |
+| updatedAt | 时间 | 自动 | 更新时间 |
 
-### CrawlSnapshot（页面快照）🅿️
-
-| 字段 | 类型 | 可空/默认 | 说明 |
-| --- | --- | --- | --- |
-| id | 文本 | 主键，自动生成 | 快照 ID |
-| sourceId | 文本 | 必填 | 所属源 |
-| contentHash | 文本 | 必填 | 内容哈希（用于 diff） |
-| fetchedAt | 时间 | 自动 | 抓取时间 |
-
-### CrawlItem（原始条目）🅿️
-
-| 字段 | 类型 | 可空/默认 | 说明 |
-| --- | --- | --- | --- |
-| id | 文本 | 主键，自动生成 | 条目 ID |
-| sourceId | 文本 | 必填 | 所属源 |
-| title | 文本 | 必填 | 条目标题 |
-| link | 文本 | 必填 | 条目链接 |
-| rawText | 长文本 | 可空 | 原始文本 |
-| fetchedAt | 时间 | 自动 | 抓取时间 |
-| processed | 布尔 | 默认 false | 是否已处理入库 |
-
-### CrawlRevision（修改版本记录）🅿️
+### CompetitionRevision（版本记录：人工修改 / 回滚留痕）
 
 | 字段 | 类型 | 可空/默认 | 说明 |
 | --- | --- | --- | --- |
 | id | 文本 | 主键，自动生成 | 记录 ID |
-| competitionId | 文本 | 可空 | 关联竞赛 |
-| timelineId | 文本 | 可空 | 关联时间节点 |
+| competitionId | 文本 | 可空 | 关联竞赛（竞赛删除后置空） |
+| stageId | 文本 | 可空 | 关联阶段（阶段删除后置空） |
 | field | 文本 | 必填 | 被修改的字段名 |
 | oldValue | 长文本 | 可空 | 旧值 |
 | newValue | 长文本 | 可空 | 新值 |
-| origin | 枚举 RevisionOrigin | 必填 | 修改来源（爬虫/人工/回滚） |
+| origin | 枚举 RevisionOrigin | 必填 | 修改来源（人工 / 回滚） |
 | createdAt | 时间 | 自动 | 发生时间 |
-
-### CrawlAnomaly（采集异常）🅿️
-
-| 字段 | 类型 | 可空/默认 | 说明 |
-| --- | --- | --- | --- |
-| id | 文本 | 主键，自动生成 | 异常 ID |
-| sourceId | 文本 | 可空 | 关联源 |
-| competitionId | 文本 | 可空 | 关联竞赛 |
-| rule | 文本 | 必填 | 触发的规则名 |
-| payload | JSON | 必填 | 异常详情 |
-| detectedAt | 时间 | 自动 | 检出时间 |
-| alerted | 布尔 | 默认 false | 是否已告警 |
 
 ### CorrectionReport（用户纠错）
 
@@ -368,33 +409,30 @@
 
 ## 匹配域（广告牌模式）
 
-> **2026-09-19 产品改版**：平台不做申请 / 邀请 / 审批 / 私聊。队长发布招募帖（广告牌），感兴趣的人看到后通过帖子上公开的联系方式（微信 / QQ）直接联系队长，进队、退队都在平台外发生。
->
-> 随之移除：TeamSlot（名额表）、Application（申请）、Invitation（邀请）、Workspace（队伍空间）、Review（互评）及 ApplicationStatus 枚举。
-> **2026-09-20 补充**：恢复队长手填的「计划招募人数（Team.targetSize）+ 已有成员情况（TeamMember，纯展示）」，已有成员数量为派生计数。
->
-> 帖子下方的评论区 = Comment（targetType = TEAM，支持楼中楼回复）+ CommentLike 点赞，见「内容与通知域」。
+> 平台不做申请 / 邀请 / 审批 / 私聊。队长发布招募帖（广告牌），感兴趣的人看到后**登记「我想组队」意愿**或通过队长公开的联系方式直接线下联系；进队、退队都在平台外发生。
+> 帖子下方的评论区 = Comment（targetType = TEAM）+ CommentLike 点赞，见「内容与通知域」。
 
 ### Team（招募帖）
 
 | 字段 | 类型 | 可空/默认 | 说明 |
 | --- | --- | --- | --- |
 | id | 文本 | 主键，自动生成 | 帖子 ID |
-| competitionId | 文本 | 必填 | 所属竞赛 |
+| competitionId | 文本 | 必填 | 所属竞赛（也可只填竞赛名自动建档） |
 | leaderId | 文本 | 必填 | 发帖人（队长） |
 | goal | 枚举 TeamGoal | 必填 | 组队目标 |
-| neededRoles | RoleType[] | 必填（可为空数组） | 招募方向标签（卡片展示 + 按方向筛选） |
+| neededRoles | RoleType[] | 必填（可为空数组） | 招募方向标签（卡片展示 + 按方向筛选，最多 10 个，去重） |
 | requirement | 长文本 | 可空 | 招募要求（方向、水平等，自由文本） |
-| contact | 文本 | 必填 | 联系方式（微信 / QQ），直接公开展示 |
-| deadline | 时间 | 可空 | 招募截止时间 |
-| targetSize | 整数 | 可空 | 计划招募人数（队长填写，展示用） |
-| status | 枚举 TeamStatus | 默认 RECRUITING | 帖子状态，队长手动切换 |
+| qq | 文本 | 可空（QQ/微信至少一项） | QQ 号（最长 64 字；广告牌模式下按意愿解锁展示） |
+| wechat | 文本 | 可空（QQ/微信至少一项） | 微信号（最长 64 字） |
+| deadline | 时间 | 可空 | 招募截止时间（默认填竞赛报名截止时间） |
+| targetSize | 整数 | 可空 | 计划招募人数（含队长本人，1-99，展示用） |
+| status | 枚举 TeamStatus | 默认 RECRUITING | 帖子状态（COMPETING 由系统按赛程自动设置） |
 | createdAt | 时间 | 自动 | 发布时间 |
 | updatedAt | 时间 | 自动 | 更新时间 |
 
 ### TeamMember（已有成员情况，队长手填）
 
-> 广告牌模式：成员仅作展示信息（加入在平台外发生），不关联平台账号、不做身份管理；已有成员数量 = 本表行数（派生）。
+> 成员仅作展示信息（加入在平台外发生），不关联平台账号、不做身份管理；**memberCount = 1 + 本表行数（队长本人是第 1 人，B1 口径）**。
 
 | 字段 | 类型 | 可空/默认 | 说明 |
 | --- | --- | --- | --- |
@@ -407,11 +445,22 @@
 | intro | 长文本 | 可空 | 成员介绍（方向、经历，可含称呼） |
 | createdAt | 时间 | 自动 | 录入时间 |
 
+### TeamIntent（组队意愿，2026-09-27 新增）
+
+> 登录用户点击「我想组队」即登记；`(teamId, userId)` 唯一防重复，可撤销。招募人只看到计数，看不到名单。
+
+| 字段 | 类型 | 可空/默认 | 说明 |
+| --- | --- | --- | --- |
+| id | 文本 | 主键，自动生成 | 意愿 ID |
+| teamId | 文本 | 必填，`(teamId, userId)` 唯一 | 所属招募帖 |
+| userId | 文本 | 必填 | 登记人 |
+| createdAt | 时间 | 自动 | 登记时间 |
+
 ---
 
 ## 内容与通知域
 
-### Post（经验帖）
+### Post（经验帖，P2 仅建表预留）
 
 | 字段 | 类型 | 可空/默认 | 说明 |
 | --- | --- | --- | --- |
@@ -420,7 +469,7 @@
 | title | 文本 | 必填 | 标题 |
 | content | 长文本 | 必填 | 正文 |
 | kind | 枚举 MaterialKind | 必填 | 帖子类型 |
-| refined | 布尔 | 默认 false | 是否精华为管理 |
+| refined | 布尔 | 默认 false | 是否精华 |
 | likes | 整数 | 默认 0 | 点赞数 |
 | createdAt | 时间 | 自动 | 发布时间 |
 | updatedAt | 时间 | 自动 | 更新时间 |
@@ -434,7 +483,8 @@
 | targetType | 枚举 CommentTarget | 必填 | 目标类型（TEAM = 招募帖下的评论区） |
 | targetId | 文本 | 必填 | 目标 ID |
 | content | 长文本 | 必填 | 内容 |
-| parentId | 文本 | 可空 | 父评论（楼中楼回复） |
+| parentId | 文本 | 可空 | 父评论（楼中楼拍平：永远指向根评论） |
+| replyToId | 文本 | 可空 | 回复的回复时记录真实回复对象 |
 | likes | 整数 | 默认 0 | 点赞数（冗余计数，由 CommentLike 维护） |
 | createdAt | 时间 | 自动 | 发布时间 |
 
@@ -462,11 +512,11 @@
 | id | 文本 | 主键，自动生成 | 通知 ID |
 | userId | 文本 | 必填 | 接收人 |
 | kind | 枚举 NotificationKind | 必填 | 通知类型 |
-| payload | JSON | 必填 | 通知内容（跳转参数等） |
+| payload | JSON | 必填 | 通知内容（跳转参数、聚合计数等） |
 | readAt | 时间 | 可空 | 已读时间（空 = 未读） |
 | createdAt | 时间 | 自动 | 发出时间 |
 
-### Report（举报）🅿️
+### Report（举报，P2 处理台已建）
 
 | 字段 | 类型 | 可空/默认 | 说明 |
 | --- | --- | --- | --- |
@@ -478,11 +528,25 @@
 | handled | 布尔 | 默认 false | 是否已处理 |
 | createdAt | 时间 | 自动 | 举报时间 |
 
+### Feedback（用户反馈，2026-09-27 新增）
+
+| 字段 | 类型 | 可空/默认 | 说明 |
+| --- | --- | --- | --- |
+| id | 文本 | 主键，自动生成 | 反馈 ID |
+| type | 枚举 FeedbackType | 必填 | 类型（功能 / 竞赛信息） |
+| competitionId | 文本 | 可空 | 关联竞赛（删除后置空） |
+| competitionName | 文本 | 可空 | 提交时竞赛名快照（防竞赛改名后对不上号） |
+| pagePath | 文本 | 可空 | 提交页面路径 |
+| content | 长文本 | 必填 | 反馈内容 |
+| contact | 文本 | 可空 | 联系方式（自愿填） |
+| userId | 文本 | 可空 | 提交人（游客可提交，删除后置空） |
+| createdAt | 时间 | 自动 | 提交时间 |
+
 ---
 
 ## 管理域
 
-### MailLog（发信日志）
+### MailLog（发信日志，邮件留空暂不写入）
 
 | 字段 | 类型 | 可空/默认 | 说明 |
 | --- | --- | --- | --- |
@@ -510,7 +574,7 @@
 | id | 文本 | 主键，自动生成 | 公告 ID |
 | title | 文本 | 必填 | 标题 |
 | content | 长文本 | 必填 | 内容 |
-| active | 布尔 | 默认 true | 是否启用（站内横幅展示） |
+| active | 布尔 | 默认 true | 是否启用（站内弹窗/横幅展示） |
 | createdBy | 文本 | 必填 | 发布管理员 |
 | createdAt | 时间 | 自动 | 发布时间 |
 
@@ -520,21 +584,24 @@
 
 这些字段**不存库**，由后端查询时计算。如果你希望它们变成本人可编辑的真实字段，或调整计算规则，也可以直接改下面的表格告诉我。
 
-### 竞赛列表项（CompetitionListItem）
+### 竞赛列表项 / 详情（CompetitionListItem / CompetitionDetail）
 
 | 字段 | 说明 |
 | --- | --- |
 | recruitingTeams | 该竞赛下招募中的队伍数（计数） |
-| nextDeadline | 最近一个未过期的截止时间（取时间线最早 endAt） |
-| status | OPEN / UPCOMING / ENDED / UNKNOWN（由时间线推算） |
+| nextDeadline | 最近一个未过期的「报名截止」节点 endAt（V2：合并共享阶段与各赛道阶段下的事件计算） |
+| status | OPEN / UPCOMING / ENDED / UNKNOWN（由全部时间节点推算，列表与详情同口径） |
 
-> 竞赛详情页另有 `recruitingTeamsCount`：正在招募的队伍数量（游客亦可获取）。
-
-### 时间线节点（TimelineNode）
+### 竞赛详情 V2 结构（CompetitionDetail）
 
 | 字段 | 说明 |
 | --- | --- |
-| kind | signup / race：报名类节点 vs 比赛类节点（按阶段名推算） |
+| tracks[] | 赛道列表，每条含 `stages[]`（各挂 `events[]`）；`format`/`teamSizeMin/Max` 赛道级留空时回落赛事级 |
+| bonusStandard | 本竞赛关联的加分标准（其类别的国家级档） |
+| bonusStandards | 同认定文件 + 类别下的两档标准（国家级 + 省级），详情页加分表按此渲染 |
+| sharedStages[] | 全赛事共享阶段（trackId = null） |
+| editions | 同 code 的其他届次（`/years` 提供已收录年份） |
+| recruitingTeams | 本竞赛招募帖列表（含 memberCount / intentCount，游客不可见） |
 
 ### 招募帖（TeamListItem / TeamSummary）
 
@@ -542,4 +609,6 @@
 | --- | --- |
 | expired | 是否已过 deadline（由 deadline 推算） |
 | commentCount | 帖子评论数（计数） |
-| memberCount | 已有成员数量 = TeamMember 行数（派生） |
+| memberCount | 已有成员数量 = 1 + TeamMember 行数（队长本人是第 1 人，B1 口径） |
+| intentCount | 登记组队意愿的人数 |
+| contactUnlocked | 详情页：当前查看者是否已解锁联系方式（队长 / 管理员 / 已登记意愿者） |

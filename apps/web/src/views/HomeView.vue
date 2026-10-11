@@ -249,7 +249,7 @@ function reload() {
             <div v-if="miniMonth.length" class="flex flex-col gap-6px max-h-150px overflow-auto">
               <div v-for="t in miniMonth.slice(0, 6)" :key="t.id" class="flex items-center gap-8px text-12px">
                 <span class="color-ink-faint w-40px">{{ t.endAt ? fmtDate(t.endAt).slice(5) : '待定' }}</span>
-                <span class="level-chip" :class="`level-${t.level || t.competitionLevels[0] || 'SCHOOL'}`">{{ t.kind === 'signup' ? '报名' : '赛程' }}</span>
+                <span class="level-chip" :class="`level-${t.competitionLevels[0] || 'SCHOOL'}`">{{ t.kind === 'signup' ? '报名' : '赛程' }}</span>
                 <span class="truncate color-ink-soft">{{ t.competitionName }}</span>
               </div>
             </div>

@@ -42,14 +42,17 @@ export class JobsService {
         to: new Date(now.getTime() + d * 86400_000 + 3600_000),
       }));
 
-      // 1) 一次取回三个窗口内的「报名」节点（仅已发布竞赛）
-      const timelines = await this.prisma.competitionTimeline.findMany({
+      // 1) 一次取回三个窗口内的「报名截止」节点（仅已发布竞赛）
+      const timelines = await this.prisma.competitionEvent.findMany({
         where: {
-          stage: { contains: '报名' },
+          nodeType: 'SIGNUP_END',
           competition: { status: 'PUBLISHED' },
           OR: windows.map((w) => ({ endAt: { gte: w.from, lte: w.to } })),
         },
-        include: { competition: { select: { name: true } } },
+        include: {
+          stage: { select: { name: true } },
+          competition: { select: { name: true } },
+        },
       });
       if (!timelines.length) {
         this.logger.log('DDL 提醒发送 0 条');
@@ -85,8 +88,8 @@ export class JobsService {
       });
       const sentKeys = new Set<string>();
       for (const n of existing) {
-        const timelineId = (n.payload as { timelineId?: string } | null)?.timelineId;
-        if (timelineId) sentKeys.add(`${n.userId}:${timelineId}`);
+        const eventId = (n.payload as { eventId?: string } | null)?.eventId;
+        if (eventId) sentKeys.add(`${n.userId}:${eventId}`);
       }
 
       // 4) 内存组装后一次性批量写入
@@ -103,9 +106,9 @@ export class JobsService {
             userId,
             kind: 'DDL_REMINDER',
             payload: {
-              timelineId: tl.id,
+              eventId: tl.id,
               competitionName: tl.competition.name,
-              stage: tl.stage,
+              stage: tl.stage.name,
               endAt: tl.endAt,
               daysLeft,
             },

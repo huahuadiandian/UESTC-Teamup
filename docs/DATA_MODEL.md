@@ -1,5 +1,11 @@
 # 数据模型
 
+> ⚠️ **竞赛部分已由 V2 模型取代（2026-10-11）**：`CompetitionTimeline` 已移除，改为
+> `Competition` × `CompetitionTrack` × `CompetitionStage` → `CompetitionEvent` 三维正交模型；
+> 采集子系统（Crawl*）已整体移除，当前以人工维护为主。
+> 权威设计见 [COMPETITION_MODEL_V2.md](./COMPETITION_MODEL_V2.md) 与 [COMPETITION_INSTANCES_V2.md](./COMPETITION_INSTANCES_V2.md)。
+> 本文以下内容为**历史设计草图**，竞赛与采集相关章节仅供参考。
+
 > 相关：[README.md](./README.md)（项目速览）、[MODULE_CRAWLER.md](./MODULE_CRAWLER.md)、[OPEN_QUESTIONS.md](./OPEN_QUESTIONS.md)
 
 **状态**：设计草图（Prisma 风格伪代码），非最终 `schema.prisma`。

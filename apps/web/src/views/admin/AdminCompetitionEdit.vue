@@ -11,8 +11,20 @@ const router = useRouter();
 const isEdit = computed(() => !!route.params.id);
 const saving = ref(false);
 
+/** 时间节点（挂在赛程阶段上） */
+interface EventForm {
+  id?: string;
+  stageId: string;
+  nodeType: string;
+  label: string;
+  startAt: string | null;
+  endAt: string | null;
+  location: string;
+}
+
 const form = ref({
   name: '',
+  code: '',
   year: new Date().getFullYear() as number | null,
   aliases: [] as string[],
   organizer: '',
@@ -26,15 +38,18 @@ const form = ref({
   effort: null as number | null,
   isBonusEligible: null as boolean | null,
   bonusCategory: '',
-  bonusPoints: '',
+  bonusSpecialRule: '',
   sourceUrl: '',
   status: PublishStatus.PUBLISHED,
   levels: [] as Level[],
   tags: [] as string[],
-  timelines: [] as { id?: string; stage: string; level: Level | null; startAt: string | null; endAt: string | null }[],
+  events: [] as EventForm[],
 });
 
-/** Issue 2：竞赛自定义键值字段（保存即生效，进入版本留痕可回滚） */
+/** 可选阶段（来自竞赛已定义的赛程阶段） */
+const stageOptions = ref<{ id: string; name: string; sequence: number }[]>([]);
+
+/** 竞赛自定义键值字段 */
 interface CustomFieldRow { id: string; key: string; value: string }
 const customFields = ref<CustomFieldRow[]>([]);
 const newFieldKey = ref('');
@@ -43,9 +58,17 @@ const newFieldSaving = ref(false);
 
 const levelOptions = Object.values(Level).map((l) => ({ value: l, label: LevelLabel[l] }));
 
-type TimelineForm = { id?: string; stage: string; level: Level | null; startAt: string | null; endAt: string | null };
+const NODE_TYPE_OPTIONS = [
+  { value: 'SIGNUP_START', label: '报名开始' },
+  { value: 'SIGNUP_END', label: '报名截止' },
+  { value: 'SUBMISSION', label: '作品提交' },
+  { value: 'CONTEST', label: '比赛 / 答辩' },
+  { value: 'RESULT', label: '结果公布' },
+  { value: 'AWARD', label: '颁奖' },
+  { value: 'OTHER', label: '其他' },
+];
 
-/** S5：后端 adminDetail 现在返回字符串数组；防御性归一化，收到对象形态也不崩 */
+/** 后端 adminDetail 现在返回字符串数组；防御性归一化，收到对象形态也不崩 */
 function toStr(v: unknown): string {
   if (typeof v === 'string') return v;
   const o = v as { level?: unknown; name?: unknown } | null;
@@ -58,18 +81,13 @@ onMounted(async () => {
   try {
     c = await api.get<Record<string, any>>(`/admin/competitions/${route.params.id}`);
   } catch (e) {
-    // H10：编辑态拉取失败（不存在/无权限）不能变成 unhandled rejection
     ElMessage.error(e instanceof Error ? e.message : '竞赛信息加载失败');
     router.push({ name: 'admin-competitions' });
     return;
   }
-  /**
-   * S5：显式挑选表单字段，不再 `{...c}` 全量展开。
-   * 原来把接口返回的 id / createdAt / updatedAt 等一并塞进 form，
-   * save() 再 `{...form.value}` 全量回传，等于把只读字段写回后端。
-   */
   form.value = {
     name: c.name ?? '',
+    code: c.code ?? '',
     year: c.year ?? new Date().getFullYear(),
     aliases: Array.isArray(c.aliases) ? c.aliases : [],
     organizer: c.organizer ?? '',
@@ -83,19 +101,26 @@ onMounted(async () => {
     effort: c.effort ?? null,
     isBonusEligible: c.isBonusEligible ?? null,
     bonusCategory: c.bonusCategory ?? '',
-    bonusPoints: c.bonusPoints ?? '',
+    bonusSpecialRule: c.bonusSpecialRule ?? '',
     sourceUrl: c.sourceUrl ?? '',
     status: (c.status ?? PublishStatus.PUBLISHED) as PublishStatus,
     levels: (Array.isArray(c.levels) ? c.levels : []).map(toStr).filter(Boolean) as Level[],
     tags: (Array.isArray(c.tags) ? c.tags : []).map(toStr).filter(Boolean),
-    timelines: ((c.timelines ?? []) as TimelineForm[]).map((t) => ({
-      id: t.id,
-      stage: t.stage,
-      level: t.level,
-      startAt: t.startAt ? t.startAt.slice(0, 16) : null,
-      endAt: t.endAt ? t.endAt.slice(0, 16) : null,
+    events: (Array.isArray(c.events) ? c.events : []).map((e: Record<string, any>) => ({
+      id: e.id,
+      stageId: e.stageId,
+      nodeType: e.nodeType ?? 'OTHER',
+      label: e.label ?? '',
+      startAt: e.startAt ? String(e.startAt).slice(0, 16) : null,
+      endAt: e.endAt ? String(e.endAt).slice(0, 16) : null,
+      location: e.location ?? '',
     })),
   };
+  stageOptions.value = (Array.isArray(c.stages) ? c.stages : []).map((s: Record<string, any>) => ({
+    id: s.id,
+    name: s.name,
+    sequence: s.sequence ?? 0,
+  }));
   customFields.value = (Array.isArray(c.customFields) ? c.customFields : []).map((f: { id: string; key: string; value: string }) => ({
     id: f.id,
     key: f.key,
@@ -103,7 +128,7 @@ onMounted(async () => {
   }));
 });
 
-// ---------- 自定义字段（Issue 2） ----------
+// ---------- 自定义字段 ----------
 
 async function addCustomField() {
   if (!isEdit.value) {
@@ -133,7 +158,6 @@ async function addCustomField() {
   }
 }
 
-/** 编辑已有字段：失焦或点保存时提交 */
 async function saveCustomField(row: CustomFieldRow) {
   try {
     const updated = await api.put<{ id: string; key: string; value: string }>(
@@ -162,8 +186,23 @@ async function removeCustomField(row: CustomFieldRow) {
   }
 }
 
-function addTimeline() {
-  form.value.timelines.push({ stage: '', level: null, startAt: null, endAt: null });
+function addEvent() {
+  if (!stageOptions.value.length) {
+    ElMessage.warning('该竞赛还没有赛程阶段，请先在种子/数据库中定义阶段');
+    return;
+  }
+  form.value.events.push({
+    stageId: stageOptions.value[0].id,
+    nodeType: 'CONTEST',
+    label: '',
+    startAt: null,
+    endAt: null,
+    location: '',
+  });
+}
+
+function stageName(stageId: string) {
+  return stageOptions.value.find((s) => s.id === stageId)?.name ?? '（未知阶段）';
 }
 
 async function save() {
@@ -171,11 +210,15 @@ async function save() {
     ElMessage.warning('请填写竞赛名称');
     return;
   }
+  if (!isEdit.value && !form.value.code.trim()) {
+    ElMessage.warning('请填写竞赛编码（code，跨届次沿用）');
+    return;
+  }
   saving.value = true;
   try {
-    // S5：显式列出可写字段（原来 `...form.value` 会把只读字段一并回传）
     const payload = {
       name: form.value.name.trim(),
+      code: form.value.code.trim() || undefined,
       year: form.value.year ?? undefined,
       aliases: form.value.aliases.filter((a) => a.trim()),
       organizer: form.value.organizer || undefined,
@@ -189,24 +232,26 @@ async function save() {
       effort: form.value.effort ?? undefined,
       isBonusEligible: form.value.isBonusEligible ?? undefined,
       bonusCategory: form.value.bonusCategory || undefined,
-      bonusPoints: form.value.bonusPoints || undefined,
+      bonusSpecialRule: form.value.bonusSpecialRule || undefined,
       sourceUrl: form.value.sourceUrl || undefined,
       status: form.value.status,
       levels: form.value.levels,
       tags: form.value.tags.filter((t) => t.trim()),
-      timelines: form.value.timelines
-        .filter((t) => t.stage.trim())
-        .map((t) => ({
-          id: t.id,
-          stage: t.stage.trim(),
-          level: t.level ?? undefined,
-          startAt: t.startAt ? new Date(t.startAt).toISOString() : null,
-          endAt: t.endAt ? new Date(t.endAt).toISOString() : null,
+      events: form.value.events
+        .filter((e) => e.stageId)
+        .map((e) => ({
+          id: e.id,
+          stageId: e.stageId,
+          nodeType: e.nodeType,
+          label: e.label || undefined,
+          location: e.location || undefined,
+          startAt: e.startAt ? new Date(e.startAt).toISOString() : null,
+          endAt: e.endAt ? new Date(e.endAt).toISOString() : null,
         })),
     };
     if (isEdit.value) {
       await api.put(`/admin/competitions/${route.params.id}`, payload);
-      ElMessage.success('已保存（字段变更已记录版本，时间轴改动自动加锁）');
+      ElMessage.success('已保存（字段变更已记录版本，时间节点改动自动加锁）');
     } else {
       await api.post('/admin/competitions', payload);
       ElMessage.success('竞赛已录入');
@@ -229,11 +274,15 @@ async function save() {
           <el-input v-model="form.name" placeholder="全国大学生电子设计竞赛" />
         </div>
         <div>
-          <div class="f-label">届次年份 *（Issue 6：同名赛事按年份建多份档案）</div>
+          <div class="f-label">竞赛编码 code *（跨届次沿用，如 NUEDC / CUMCM）</div>
+          <el-input v-model="form.code" placeholder="NUEDC" :disabled="isEdit" />
+        </div>
+        <div>
+          <div class="f-label">届次年份 *（同名赛事按年份建多份档案）</div>
           <el-input-number v-model="form.year" :min="2000" :max="2100" controls-position="right" style="width: 100%" />
         </div>
         <div>
-          <div class="f-label">别名（逗号分隔，用于搜索与去重）</div>
+          <div class="f-label">别名（逗号分隔，用于搜索）</div>
           <el-input
             :model-value="form.aliases.join(',')"
             placeholder="电赛,TI杯"
@@ -249,7 +298,7 @@ async function save() {
           <el-input v-model="form.officialUrl" placeholder="https://" />
         </div>
         <div>
-          <div class="f-label">赛制</div>
+          <div class="f-label">赛制（赛事级默认，赛道可覆盖）</div>
           <el-select v-model="form.format" placeholder="—" clearable style="width: 100%">
             <el-option value="INDIVIDUAL" label="个人赛" />
             <el-option value="TEAM" label="团队赛" />
@@ -276,19 +325,11 @@ async function save() {
         <div class="grid grid-cols-2 gap-8px">
           <div>
             <div class="f-label">难度（1-5★）</div>
-            <el-rate
-              :model-value="form.difficulty ?? 0"
-              :max="5"
-              @update:model-value="(v: number) => (form.difficulty = v || null)"
-            />
+            <el-rate :model-value="form.difficulty ?? 0" :max="5" @update:model-value="(v: number) => (form.difficulty = v || null)" />
           </div>
           <div>
             <div class="f-label">投入度（1-5●）</div>
-            <el-rate
-              :model-value="form.effort ?? 0"
-              :max="5"
-              @update:model-value="(v: number) => (form.effort = v || null)"
-            />
+            <el-rate :model-value="form.effort ?? 0" :max="5" @update:model-value="(v: number) => (form.effort = v || null)" />
           </div>
         </div>
       </div>
@@ -324,39 +365,54 @@ async function save() {
           </div>
           <div>
             <div class="f-label">认定类别</div>
-            <el-input v-model="form.bonusCategory" placeholder="如：A类 / 国赛" />
+            <el-select v-model="form.bonusCategory" placeholder="未认定" clearable style="width: 100%">
+              <el-option value="学科竞赛" label="学科竞赛" />
+              <el-option value="文体竞赛" label="文体竞赛" />
+            </el-select>
           </div>
           <div>
-            <div class="f-label">分值说明</div>
-            <el-input v-model="form.bonusPoints" placeholder="如：国一3分/国二2分" />
+            <div class="f-label">特殊规则</div>
+            <el-input v-model="form.bonusSpecialRule" placeholder="如：美赛 Outstanding 按国家级最高奖计" />
           </div>
+        </div>
+        <div class="text-12px color-ink-faint mt-8px">
+          分值标准（国家级 3/2.5/1.5、省级 1/0.3/0.1 等）由 BonusStandard 统一维护，无需逐赛填写
         </div>
       </div>
 
-      <!-- 时间轴 -->
+      <!-- 时间节点 -->
       <div>
         <div class="flex items-center justify-between mb-6px">
-          <div class="f-label !mb-0 font-bold">时间轴节点</div>
-          <el-button size="small" plain round @click="addTimeline">+ 添加节点</el-button>
+          <div class="f-label !mb-0 font-bold">赛程时间节点（挂在阶段上）</div>
+          <el-button size="small" plain round @click="addEvent">+ 添加节点</el-button>
         </div>
-        <div class="flex flex-col gap-8px">
+        <div v-if="!stageOptions.length" class="text-12px color-ink-faint">
+          该竞赛还没有赛程阶段定义。阶段（校赛/省赛/国赛等）由竞赛骨架数据维护，可在数据库或种子数据中定义后再编辑时间节点。
+        </div>
+        <div v-else class="flex flex-col gap-8px">
           <div
-            v-for="(t, i) in form.timelines"
+            v-for="(e, i) in form.events"
             :key="i"
-            class="grid grid-cols-2 md:grid-cols-5 gap-8px items-center rounded-12px p-10px"
+            class="grid grid-cols-2 md:grid-cols-6 gap-8px items-center rounded-12px p-10px"
             style="background: rgba(255,255,255,0.5)"
           >
-            <el-input v-model="t.stage" placeholder="阶段：报名截止/初赛/决赛" />
-            <el-select v-model="t.level" placeholder="级别" clearable>
-              <el-option v-for="l in levelOptions" :key="l.value" :value="l.value" :label="l.label" />
+            <el-select v-model="e.stageId" placeholder="阶段">
+              <el-option v-for="s in stageOptions" :key="s.id" :value="s.id" :label="s.name" />
             </el-select>
-            <el-date-picker v-model="t.startAt" type="datetime" placeholder="开始" style="width: 100%" value-format="YYYY-MM-DDTHH:mm" />
-            <el-date-picker v-model="t.endAt" type="datetime" placeholder="截止" style="width: 100%" value-format="YYYY-MM-DDTHH:mm" />
-            <el-button type="danger" plain circle size="small" @click="form.timelines.splice(i, 1)">
+            <el-select v-model="e.nodeType" placeholder="节点类型">
+              <el-option v-for="n in NODE_TYPE_OPTIONS" :key="n.value" :value="n.value" :label="n.label" />
+            </el-select>
+            <el-date-picker v-model="e.startAt" type="datetime" placeholder="开始" style="width: 100%" value-format="YYYY-MM-DDTHH:mm" />
+            <el-date-picker v-model="e.endAt" type="datetime" placeholder="截止" style="width: 100%" value-format="YYYY-MM-DDTHH:mm" />
+            <el-input v-model="e.location" placeholder="地点（选填）" />
+            <el-button type="danger" plain circle size="small" @click="form.events.splice(i, 1)">
               <el-icon><i-ep-delete /></el-icon>
             </el-button>
           </div>
-          <div class="text-12px color-ink-faint">人工修改过的节点会自动加锁（isLocked），采集上线后也不会被自动更新覆盖</div>
+          <div class="text-12px color-ink-faint">
+            当前阶段：<span v-for="(s, idx) in stageOptions" :key="s.id">{{ idx ? ' · ' : '' }}{{ s.name }}</span>
+            —— 人工修改过的节点会自动加锁（isLocked），不会被自动更新覆盖
+          </div>
         </div>
       </div>
 
@@ -365,16 +421,12 @@ async function save() {
         <el-input v-model="form.intro" type="textarea" :rows="4" placeholder="给同学们看的介绍：比赛内容、形式、建议…" />
       </div>
 
-      <!-- 自定义字段（Issue 2）：表达各竞赛特有信息，如数模的 QQ 交流群号 -->
+      <!-- 自定义字段 -->
       <div class="rounded-14px p-14px" style="background: rgba(15,76,140,0.03)">
         <div class="f-label font-bold !mb-8px">📌 补充字段（展示在竞赛详情页「补充信息」区块，修改进入版本留痕）</div>
         <template v-if="isEdit">
           <div class="flex flex-col gap-8px">
-            <div
-              v-for="row in customFields"
-              :key="row.id"
-              class="flex items-center gap-8px"
-            >
+            <div v-for="row in customFields" :key="row.id" class="flex items-center gap-8px">
               <el-tag size="small" effect="plain" class="shrink-0" style="min-width: 90px; justify-content: center">{{ row.key }}</el-tag>
               <el-input v-model="row.value" maxlength="500" @change="saveCustomField(row)" />
               <el-button type="primary" plain size="small" @click="saveCustomField(row)">保存</el-button>

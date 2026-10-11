@@ -253,7 +253,7 @@ function backToEmail() {
           <el-input
             v-model="email"
             size="large"
-            placeholder="2024080909015@std.uestc.edu.cn"
+            placeholder="学号@std.uestc.edu.cn"
             @keyup.enter="sendCode"
           />
           <div class="text-12px color-ink-faint mt-6px">仅支持 @std.uestc.edu.cn 后缀，登录即注册</div>
@@ -293,7 +293,7 @@ function backToEmail() {
       <div v-else class="flex flex-col gap-16px">
         <div>
           <div class="text-13px color-ink-soft mb-6px">校园邮箱</div>
-          <el-input v-model="email" size="large" placeholder="2024080909015@std.uestc.edu.cn" />
+          <el-input v-model="email" size="large" placeholder="学号@std.uestc.edu.cn" />
         </div>
         <div>
           <div class="flex items-center justify-between mb-6px">

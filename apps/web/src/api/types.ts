@@ -4,17 +4,22 @@ export { dayjs };
 
 export interface CompetitionListItem {
   id: string;
+  /** 稳定业务编码（跨届次沿用） */
+  code: string;
   name: string;
-  /** 届次年份（Issue 6） */
+  /** 届次年份 */
   year: number | null;
   organizer: string | null;
   format: string | null;
   audience: string | null;
   difficulty: number | null;
   effort: number | null;
+  /** 是否含赛道 */
+  hasTracks: boolean;
+  /** 赛程链展示缓存，如「校赛 → 省赛 → 全国总决赛」 */
+  stageChain: string | null;
   isBonusEligible: boolean | null;
   bonusCategory: string | null;
-  bonusPoints: string | null;
   levels: string[];
   tags: string[];
   recruitingTeams: number;
@@ -23,12 +28,55 @@ export interface CompetitionListItem {
   updatedAt: string;
 }
 
+/** 时间节点（挂在赛程阶段上） */
+export interface StageEvent {
+  id: string;
+  nodeType: string;
+  label: string | null;
+  startAt: string | null;
+  endAt: string | null;
+  location: string | null;
+  isLocked: boolean;
+}
+
+/** 赛程阶段 */
+export interface CompetitionStageView {
+  id: string;
+  code: string;
+  name: string;
+  stageKind: string;
+  scope: string | null;
+  sequence: number;
+  bonusTier: string | null;
+  note: string | null;
+  events: StageEvent[];
+}
+
+/** 赛道 / 赛项 */
+export interface CompetitionTrackView {
+  id: string;
+  code: string;
+  name: string;
+  shortName: string | null;
+  description: string | null;
+  sortOrder: number;
+  parentId: string | null;
+  format: string | null;
+  teamSizeMin: number | null;
+  teamSizeMax: number | null;
+  stages: CompetitionStageView[];
+}
+
+/** 日历节点 */
 export interface TimelineNode {
   id: string;
   competitionId: string;
   competitionName: string;
+  competitionYear: number | null;
   stage: string;
-  level: string | null;
+  stageKind: string;
+  bonusTier: string | null;
+  nodeType: string;
   competitionLevels: string[];
   startAt: string | null;
   endAt: string | null;
@@ -36,30 +84,39 @@ export interface TimelineNode {
   kind: 'signup' | 'race';
 }
 
+export interface BonusStandardView {
+  id: string;
+  documentRef: string;
+  category: string;
+  level: string;
+  topPoints: string;
+  secondPoints: string;
+  thirdPoints: string;
+}
+
 export interface CompetitionDetail extends CompetitionListItem {
+  shortName: string | null;
   aliases: string[];
   officialUrl: string | null;
+  sourceUrl: string | null;
   intro: string | null;
   teamSizeMin: number | null;
   teamSizeMax: number | null;
-  sourceUrl: string | null;
-  lastSyncedAt: string | null;
-  timelines: {
-    id: string;
-    stage: string;
-    level: string | null;
-    startAt: string | null;
-    endAt: string | null;
-    isLocked: boolean;
-  }[];
-  awards: { id: string; year: number | null; awardName: string | null; teamName: string | null; members: string[] }[];
+  bonusSpecialRule: string | null;
+  bonusStandard: BonusStandardView | null;
+  /** 同认定文件 + 类别下的两档加分标准（国家级 + 省级），供加分表渲染 */
+  bonusStandards?: BonusStandardView[];
+  /** 赛道（含各自赛程） */
+  tracks: CompetitionTrackView[];
+  /** 全赛事共享的赛程阶段 */
+  sharedStages: CompetitionStageView[];
+  awards: { id: string; year: number | null; awardName: string | null; awardTier: string | null; teamName: string | null; members: string[] }[];
   materials: { id: string; kind: string; title: string; url: string }[];
-  /** 竞赛自定义键值字段（Issue 2「补充信息」区块） */
+  /** 竞赛自定义键值字段 */
   customFields?: { id: string; key: string; value: string }[];
-  /** 同名赛事的其他届次（Issue 6 年份切换） */
+  /** 同名赛事的其他届次 */
   editions?: { id: string; year: number }[];
   recruitingTeamsList?: TeamSummary[];
-  createdAt: string;
 }
 
 /** 招募帖（广告牌模式）：联系方式按「组队意愿」解锁，不再默认公开 */
@@ -165,8 +222,8 @@ export interface RevisionItem {
   id: string;
   competitionId: string | null;
   competition: { id: string; name: string } | null;
-  timelineId: string | null;
-  timeline: { id: string; stage: string } | null;
+  stageId: string | null;
+  stage: { id: string; name: string } | null;
   field: string;
   oldValue: string | null;
   newValue: string | null;
