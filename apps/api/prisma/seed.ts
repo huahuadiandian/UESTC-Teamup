@@ -213,6 +213,7 @@ async function main() {
 
   console.log('写入用户…');
   const users: Record<string, string> = {};
+  const demoPasswordHash = adminPassword ? await hashPassword(adminPassword) : null;
   for (const u of DEMO_USERS) {
     const created = await prisma.user.create({
       data: {
@@ -224,7 +225,7 @@ async function main() {
         major: u.major,
         role: u.role ?? 'STUDENT',
         bio: u.bio ?? null,
-        passwordHash: adminPassword ? hashPassword(adminPassword) : null,
+        passwordHash: demoPasswordHash,
         skills: { create: u.skills.map(([skill, level]) => ({ skill, level })) },
       },
     });

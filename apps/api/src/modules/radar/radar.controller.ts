@@ -94,8 +94,10 @@ export class RadarController {
   @Public()
   @Get('competitions/:id')
   async detail(@CurrentUser() user: User | undefined, @Param('id') id: string) {
-    const detail = await this.competitions.detail(id);
-    const recruitingTeamsCount = detail.recruitingTeams.length;
+    // DRAFT 竞赛仅管理员可预览（Issue 11）
+    const detail = await this.competitions.detail(id, user?.role);
+    // 独立 count，不受前 20 条分页限制（Issue 17：数组长度 ≠ 总量）
+    const recruitingTeamsCount = detail.recruitingTeamsCount;
     // 组队招募信息不是互联网公开信息：游客只能看到“有多少支队伍正在招募”，
     // 拿不到帖子详情 / 队长 / 联系方式。权限在服务端实施，不能只靠前端遮挡。
     if (!user) {
@@ -153,18 +155,19 @@ export class RadarController {
   @Public()
   @Get('comments')
   listComments(@CurrentUser() user?: User, @Query('targetType') targetType?: CommentTarget, @Query('targetId') targetId?: string) {
-    return this.comments.list(targetType as CommentTarget, targetId as string, user?.id);
+    // Issue 13：评论列表与队伍详情同口径 —— 隐藏队伍（非招募中/草稿竞赛）的评论同样不可读
+    return this.comments.list(targetType as CommentTarget, targetId as string, user?.id, user?.role);
   }
 
   @Post('comments')
   createComment(@CurrentUser() user: User, @Body() dto: CommentDto) {
-    return this.comments.create(user.id, dto);
+    return this.comments.create(user.id, dto, user.role);
   }
 
   /** 点赞 / 取消点赞（幂等切换） */
   @Post('comments/:id/like')
   toggleCommentLike(@CurrentUser() user: User, @Param('id') id: string) {
-    return this.comments.toggleLike(user.id, id);
+    return this.comments.toggleLike(user.id, id, user.role);
   }
 
   @Delete('comments/:id')

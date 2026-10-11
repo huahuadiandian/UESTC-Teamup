@@ -16,21 +16,31 @@ import {
   ValidateNested,
 } from 'class-validator';
 import { Admin, CurrentUser, Public, Roles } from '../../common/auth/decorators';
-import { Audience, CompetitionFormat, Level, PublishStatus } from '@prisma/client';
-import { AdminService, type UpsertCompetitionInput } from './admin.service';
+import { Audience, CompetitionFormat, EventNodeType, Level, PublishStatus } from '@prisma/client';
+import { AdminService, type UpsertCompetitionInput, type UpsertEventInput } from './admin.service';
 import { ReportsService } from './reports.service';
 import { AnnouncementsService } from './announcements.service';
 
-class TimelineItemDto {
+/**
+ * 时间节点（Issue 8）：与前端 AdminCompetitionEdit 提交的 events 数组同构 ——
+ * 挂在赛程阶段（stageId）上，支持 id（已有节点）/ 无 id（新增）。旧的
+ * timelines DTO 是 V1 遗留，events 字段曾被白名单静默丢弃导致编辑不生效。
+ */
+class EventItemDto {
   @IsOptional() @IsString() id?: string;
-  @IsString() @Length(1, 60) stage!: string;
-  @IsOptional() @IsEnum(Level) level?: Level;
+  @IsString() stageId!: string;
+  @IsEnum(EventNodeType) nodeType!: EventNodeType;
+  @IsOptional() @IsString() label?: string;
+  @IsOptional() @IsString() location?: string;
   @IsOptional() @IsDateString() startAt?: string | null;
   @IsOptional() @IsDateString() endAt?: string | null;
 }
 
 class CompetitionDto {
   @IsString() @Length(1, 120) name!: string;
+  /** 竞赛稳定编号（Issue 10）：跨届次沿用（如 NUEDC），(code, year) 唯一 */
+  @IsOptional() @IsString() @Matches(/^[A-Za-z0-9_-]{1,60}$/, { message: '编号只能包含字母、数字、下划线、连字符，最长 60 字' })
+  code?: string;
   /** 届次年份（Issue 6）：同一赛事按年份建多份档案 */
   @IsOptional() @IsInt() @Min(2000) @Max(2100) year?: number;
   @IsOptional() @IsArray() @IsString({ each: true }) aliases?: string[];
@@ -45,13 +55,15 @@ class CompetitionDto {
   @IsOptional() @IsInt() @Min(1) @Max(5) effort?: number;
   @IsOptional() @IsBoolean() isBonusEligible?: boolean;
   @IsOptional() @IsString() bonusCategory?: string;
+  /** 特殊加分规则（Issue 10）：此前被白名单过滤无法持久化 */
+  @IsOptional() @IsString() @Length(0, 500) bonusSpecialRule?: string;
   @IsOptional() @IsString() bonusPoints?: string;
   @IsOptional() @IsString() sourceUrl?: string;
   @IsOptional() @IsEnum(PublishStatus) status?: PublishStatus;
   @IsOptional() @IsArray() @IsEnum(Level, { each: true }) levels?: Level[];
   @IsOptional() @IsArray() @IsString({ each: true }) tags?: string[];
-  @IsOptional() @IsArray() @ValidateNested({ each: true }) @Type(() => TimelineItemDto)
-  timelines?: TimelineItemDto[];
+  @IsOptional() @IsArray() @ValidateNested({ each: true }) @Type(() => EventItemDto)
+  events?: EventItemDto[];
 }
 
 class CorrectionReviewDto {
@@ -253,13 +265,16 @@ export class AdminController {
   }
 
   private toInput(dto: CompetitionDto): UpsertCompetitionInput {
-    return {
-      ...dto,
-      timelines: dto.timelines?.map((t) => ({
-        ...t,
-        startAt: t.startAt ? new Date(t.startAt) : null,
-        endAt: t.endAt ? new Date(t.endAt) : null,
-      })),
-    } as UpsertCompetitionInput;
+    const events: UpsertEventInput[] | undefined = dto.events?.map((e) => ({
+      id: e.id,
+      stageId: e.stageId,
+      nodeType: e.nodeType,
+      label: e.label,
+      location: e.location,
+      startAt: e.startAt ?? null,
+      endAt: e.endAt ?? null,
+    }));
+    const { events: _raw, ...rest } = dto;
+    return { ...rest, events };
   }
 }

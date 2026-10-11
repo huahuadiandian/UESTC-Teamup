@@ -1,4 +1,5 @@
 import { BadRequestException, ForbiddenException, Injectable, NotFoundException } from '@nestjs/common';
+import { createHash } from 'node:crypto';
 import { NotificationKind, Prisma, RoleType, TeamGoal, TeamStatus, type Team } from '@prisma/client';
 import { PrismaService } from '../../common/prisma.service';
 import { UserSerializer, type SerializableUser } from '../../common/auth/viewer.context';
@@ -58,6 +59,16 @@ function memberCount(rows: number): number {
 /** 帖子的招募截止已过（B3）：公开发现流不再展示，避免「招募中」列表出现僵尸帖 */
 function deadlinePassed(deadline: Date | null, now: Date): boolean {
   return deadline != null && deadline < now;
+}
+
+/**
+ * 用户手动建档的竞赛编号（Issue 14）：由「名称 + 年份」确定性生成。
+ * 数据库唯一约束是 (code, year)，确定性编号让并发提交同届同名竞赛时
+ * 稳定命中同一条唯一约束，由 P2002 兜底回退，不会产生重复档案。
+ */
+function userCompetitionCode(name: string, year: number): string {
+  const hash = createHash('sha1').update(`${name}|${year}`).digest('hex').slice(0, 10).toUpperCase();
+  return `USER-${hash}`;
 }
 
 @Injectable()
@@ -246,12 +257,15 @@ export class TeamsService {
    * 同时给招募人发一条聚合站内消息：同一帖子未读消息只更新计数，不刷屏。
    */
   async registerIntent(teamId: string, userId: string) {
+    const now = new Date();
     const team = await this.prisma.team.findUnique({
       where: { id: teamId },
-      select: { id: true, leaderId: true, status: true, competition: { select: { name: true } } },
+      select: { id: true, leaderId: true, status: true, deadline: true, competition: { select: { name: true } } },
     });
     if (!team) throw new NotFoundException('招募帖不存在');
     if (team.status !== TeamStatus.RECRUITING) throw new BadRequestException('该帖子当前不在招募中');
+    // Issue 17：招募截止已过的帖子不再接受新的组队意愿（与公开列表的下架口径一致）
+    if (team.deadline && team.deadline < now) throw new BadRequestException('该帖子招募已截止');
     if (team.leaderId === userId) throw new BadRequestException('不能对自己的帖子登记组队意愿');
 
     try {
@@ -468,11 +482,13 @@ export class TeamsService {
     const toCompete = teams.filter((t) => raceStarts.has(t.competitionId)).map((t) => t.id);
     if (!toCompete.length) return { updated: 0 };
 
-    await this.prisma.team.updateMany({
-      where: { id: { in: toCompete } },
+    // Issue 16：更新条件复核当前状态 —— 筛选与写入之间队长可能已解散帖子，
+    // 带状态条件的原子更新保证 DISBANDED 不会被定时任务改回 COMPETING
+    const res = await this.prisma.team.updateMany({
+      where: { id: { in: toCompete }, status: { in: [TeamStatus.RECRUITING, TeamStatus.FULL] } },
       data: { status: TeamStatus.COMPETING },
     });
-    return { updated: toCompete.length };
+    return { updated: res.count };
   }
 
   // ==================================================================
@@ -528,9 +544,11 @@ export class TeamsService {
 
   /**
    * 选择竞赛或手动填写竞赛名（二选一）；手动填写时按名称自动建档（当年届次）。
-   * 2026-09-27 产品确认：用户手动建档**免审核、即时发布**（PUBLISHED），
-   * 仅通知管理员知悉；命中同届同名的历史 DRAFT 档案时一并转为发布。
-   * 唯一索引为 (name, year)：并发建档撞 P2002 时回退取当年已存在的那条。
+   * 竞赛唯一身份是 (code, year)（Issue 14）：用户建档的 code 由「名称 + 年份」
+   * 确定性生成，并发提交同届同名竞赛会命中同一条数据库唯一约束，不会再产生
+   * 名称相同、编号不同的重复档案。P2002 回退按 (name, year) 取已存在的那条。
+   * 2026-09-27 产品决策「免审核即时发布」仅适用于用户新建的档案：
+   * 命中管理员尚未发布的 DRAFT 时复用其 id，但不得擅自将其转为 PUBLISHED。
    */
   private async resolveCompetition(input: UpsertTeamInput): Promise<string> {
     let competitionId = input.competitionId;
@@ -539,19 +557,14 @@ export class TeamsService {
       const year = new Date().getFullYear();
       const existing = await this.prisma.competition.findFirst({ where: { name, year } });
       if (existing) {
+        // 复用已有档案（含管理员 DRAFT，不代为发布——Issue 14）
         competitionId = existing.id;
-        if (existing.status === 'DRAFT') {
-          await this.prisma.competition.update({
-            where: { id: existing.id },
-            data: { status: 'PUBLISHED' },
-          });
-        }
       } else {
         let createdId: string | undefined;
         try {
           const created = await this.prisma.competition.create({
             data: {
-              code: `USER-${Date.now().toString(36).toUpperCase()}`,
+              code: userCompetitionCode(name, year),
               name,
               year,
               sourceUrl: '用户手动填写',
@@ -560,7 +573,7 @@ export class TeamsService {
           });
           createdId = created.id;
         } catch (e) {
-          // 唯一索引冲突：另一个请求刚建了同届同名竞赛，回退取它
+          // (code, year) 唯一冲突：另一个并发请求刚建了同届同名竞赛，回退取它
           if (e instanceof Prisma.PrismaClientKnownRequestError && e.code === 'P2002') {
             const dup = await this.prisma.competition.findFirst({ where: { name, year } });
             if (!dup) throw e;

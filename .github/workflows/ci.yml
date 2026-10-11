@@ -1,0 +1,90 @@
+# CI（Issue 18）：PR / main 推送时自动执行
+#   - API：Prisma schema 校验、类型检查与构建、服务层测试（真实 PostgreSQL）
+#   - Web：vue-tsc 类型检查 + Vite 构建
+# 测试库为一次性容器，migrations（含历史破坏性迁移）在其中随意重放；生产库走
+# docs/DEPLOY_DB.md 的 safe-migrate 守卫流程，与 CI 无关。
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  api:
+    name: API · validate/build/test
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: teamup
+          POSTGRES_PASSWORD: teamup_dev
+          POSTGRES_DB: teamup_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U teamup"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      TEST_DATABASE_URL: postgresql://teamup:teamup_dev@127.0.0.1:5432/teamup_test?schema=public
+      REDIS_URL: redis://127.0.0.1:6379
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 12.4.2
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: 安装依赖
+        run: pnpm install --frozen-lockfile
+
+      - name: Prisma schema 校验
+        run: pnpm -F @teamup/api exec prisma validate
+
+      - name: 构建 shared + api
+        run: pnpm -F @teamup/shared build && pnpm -F @teamup/api build
+
+      - name: 服务层测试（teams / auth / mail / 审计修复回归）
+        run: pnpm -F @teamup/api test
+
+  web:
+    name: Web · typecheck/build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 12.4.2
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: 安装依赖
+        run: pnpm install --frozen-lockfile
+
+      - name: 构建 shared + web（vue-tsc --noEmit && vite build）
+        run: pnpm -F @teamup/shared build && pnpm -F @teamup/web build

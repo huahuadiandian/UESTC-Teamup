@@ -20,14 +20,22 @@ export interface ListCompetitionsQuery {
   pageSize: number;
 }
 
-const listInclude = {
+/** 列表 include：招募队伍计数与详情页「正在招募」同口径（Issue 17）——
+ *  只统计 RECRUITING 且招募截止未过的帖子，避免列表计数虚高 */
+const listInclude = (now: Date) => ({
   levels: true,
   tags: true,
   events: { select: { id: true, nodeType: true, startAt: true, endAt: true } },
-  _count: { select: { teams: { where: { status: 'RECRUITING' as const } } } },
-};
+  _count: {
+    select: {
+      teams: {
+        where: { status: 'RECRUITING' as const, OR: [{ deadline: null }, { deadline: { gte: now } }] },
+      },
+    },
+  },
+});
 
-type ListRow = Prisma.CompetitionGetPayload<{ include: typeof listInclude }>;
+type ListRow = Prisma.CompetitionGetPayload<{ include: ReturnType<typeof listInclude> }>;
 
 /** 报名截止：最近一个「报名截止」节点且仍在未来 */
 export function nextSignupDeadline(
@@ -137,7 +145,7 @@ export class CompetitionsService {
     const [rows, total] = await this.prisma.$transaction([
       this.prisma.competition.findMany({
         where,
-        include: listInclude,
+        include: listInclude(now),
         orderBy: orderBy.length ? orderBy : [{ updatedAt: 'desc' }],
         skip: (query.page - 1) * query.pageSize,
         take: query.pageSize,
@@ -185,7 +193,7 @@ export class CompetitionsService {
       .map((c) => c.id);
 
     const rows = pageIds.length
-      ? await this.prisma.competition.findMany({ where: { id: { in: pageIds } }, include: listInclude })
+      ? await this.prisma.competition.findMany({ where: { id: { in: pageIds } }, include: listInclude(now) })
       : [];
     const order = new Map(pageIds.map((id, i) => [id, i]));
     const items = rows
@@ -195,8 +203,12 @@ export class CompetitionsService {
     return { items, total, page: query.page, pageSize: query.pageSize };
   }
 
-  /** 详情：赛道 / 赛程阶段 / 时间节点 + 招募队伍 + 自定义字段 + 同名其他届次 */
-  async detail(id: string) {
+  /**
+   * 详情：赛道 / 赛程阶段 / 时间节点 + 招募队伍 + 自定义字段 + 同名其他届次。
+   * Issue 11：DRAFT 竞赛仅管理员可预览，普通用户与游客按「不存在」处理，
+   * 避免未发布的竞赛信息（时间节点 / 奖项 / 材料）被直链读取。
+   */
+  async detail(id: string, viewerRole?: string) {
     const row = await this.prisma.competition.findUnique({
       where: { id },
       include: {
@@ -223,6 +235,8 @@ export class CompetitionsService {
       },
     });
     if (!row || row.status === 'ARCHIVED') throw new NotFoundException('竞赛不存在或已下线');
+    if (row.status === 'DRAFT' && viewerRole !== 'ADMIN') throw new NotFoundException('竞赛不存在或已下线');
+    const now = new Date();
 
     // 同名赛事的其他届次
     const editions = await this.prisma.competition.findMany({
@@ -231,36 +245,41 @@ export class CompetitionsService {
       orderBy: { year: 'desc' },
     });
 
-    // “正在招募”只统计 RECRUITING 且招募截止未过的帖子
-    const recruitingTeams = await this.prisma.team.findMany({
-      where: {
-        competitionId: id,
-        status: 'RECRUITING',
-        OR: [{ deadline: null }, { deadline: { gte: new Date() } }],
-      },
-      orderBy: { createdAt: 'desc' },
-      take: 20,
-      select: {
-        id: true,
-        goal: true,
-        status: true,
-        deadline: true,
-        neededRoles: true,
-        targetSize: true,
-        leader: {
-          select: {
-            id: true,
-            nickname: true,
-            college: true,
-            grade: true,
-            major: true,
-            bio: true,
-            studentNo: true,
+    // “正在招募”只统计 RECRUITING 且招募截止未过的帖子；
+    // 列表仅展示前 20 条，总量由独立 count 提供（Issue 17：数组长度 ≠ 总量）
+    const recruitingWhere = {
+      competitionId: id,
+      status: 'RECRUITING' as const,
+      OR: [{ deadline: null }, { deadline: { gte: now } }],
+    };
+    const [recruitingTeams, recruitingTeamsCount] = await this.prisma.$transaction([
+      this.prisma.team.findMany({
+        where: recruitingWhere,
+        orderBy: { createdAt: 'desc' },
+        take: 20,
+        select: {
+          id: true,
+          goal: true,
+          status: true,
+          deadline: true,
+          neededRoles: true,
+          targetSize: true,
+          leader: {
+            select: {
+              id: true,
+              nickname: true,
+              college: true,
+              grade: true,
+              major: true,
+              bio: true,
+              studentNo: true,
+            },
           },
+          _count: { select: { members: true, intents: true } },
         },
-        _count: { select: { members: true, intents: true } },
-      },
-    });
+      }),
+      this.prisma.team.count({ where: recruitingWhere }),
+    ]);
 
     // 共享阶段（trackId = null）与赛道专属阶段合并成前端易消费的结构
     const tracks = row.tracks.map((t) => ({
@@ -300,7 +319,6 @@ export class CompetitionsService {
     }));
 
     // 派生字段：与列表同口径的报名截止与状态（V2 事件分散在各阶段/赛道下，需合并计算）
-    const now = new Date();
     const allEvents = [
       ...row.stages.flatMap((s) => s.events),
       ...row.tracks.flatMap((t) => t.stages.flatMap((s) => s.events)),
@@ -369,6 +387,8 @@ export class CompetitionsService {
         intentCount: t._count.intents,
         leader: t.leader,
       })),
+      // 独立 count，不受 take: 20 分页限制（Issue 17）
+      recruitingTeamsCount,
     };
   }
 

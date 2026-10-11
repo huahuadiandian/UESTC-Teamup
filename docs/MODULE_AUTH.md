@@ -151,14 +151,20 @@ QQ_SMTP_PASS=xxxxxxxxxxxxxxxx   # 16 位授权码，不是 QQ 密码
 | 全局每分钟上限 | 10 封 | **保护 QQ 邮箱额度，这是最关键的限流** |
 | 全局每日上限 | 200 封（默认） | `MAIL_GLOBAL_DAILY_LIMIT`，按 QQ 邮箱实际额度调整 |
 | 验证失败次数上限 | 5 次 | 超过作废，防爆破 |
+| 密码登录同邮箱连错上限 | 5 次 → 锁定 15 分钟 | Issue 12；锁定只影响密码登录，验证码登录仍可用 |
+| 密码登录同 IP 失败上限 | 10 分钟窗口内 30 次 → 拒绝 | Issue 12；阈值宽于单账号，容忍校园 NAT 共享出口 |
 
-> 2026-09-27 产品迭代（Issue 3）曾移除全部限流；2026-10-11 真实 SMTP 上线时**恢复了发码入口的最小配额矩阵**作为替代防护，
-> 其余入口（密码登录 / 名片 / 评论 / 发帖）维持去限流状态。日与分钟口径按北京时间计算，与部署容器时区解耦。
+> 2026-09-27 产品迭代（Issue 3）曾移除全部限流；2026-10-11 真实 SMTP 上线时**恢复了发码入口的最小配额矩阵**作为替代防护。
+> 同日审计（Issue 12）补齐密码登录维度的失败锁定：同邮箱连错 5 次锁 15 分钟、同 IP 10 分钟窗口内失败 30 次拒绝密码登录。
+> 日与分钟口径按北京时间计算，与部署容器时区解耦。
+>
+> **验证码为原子消费**（Issue 12）：校验、删除、失败计数在 Redis Lua 脚本内一次完成，
+> 并发请求无法复用同一个验证码（旧的 get → 校验 → del 三步存在并发重放窗口）。
 
 **Redis Key 设计（与实现一致）**
 
 ```
-verify:code:{email}              → 登录验证码，TTL 300s
+verify:code:{email}              → 登录验证码，TTL 300s（Lua 原子消费）
 verify:cooldown:{email}          → 登录重发冷却，TTL 60s
 verify:fail:{email}              → 登录失败计数，TTL 300s
 verify:quota:email:{email}:{yyyymmdd}
@@ -166,6 +172,9 @@ verify:quota:ip:{ip}:{yyyymmdd}
 verify:quota:global:min:{yyyymmddHHmm}   → 全局每分钟
 verify:quota:global:day:{yyyymmdd}       → 全局每日（保护额度）
 pwdreset:*                       → 找回密码同名体系，与登录配额互相隔离（全局限额共享）
+login:fail:{email}               → 密码登录连错计数，TTL 900s（Issue 12）
+login:lock:{email}               → 密码登录锁定标记，TTL 900s
+login:ipfail:{ip}:{10min窗口号}   → 同 IP 失败窗口计数，TTL 660s
 ```
 
 ---

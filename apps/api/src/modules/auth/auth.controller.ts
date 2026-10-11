@@ -100,7 +100,7 @@ export class AuthController {
   @Post('login-password')
   @HttpCode(200)
   async loginWithPassword(@Body() dto: LoginPasswordDto, @Req() req: Request, @Res({ passthrough: true }) res: Response) {
-    const { user } = await this.auth.loginWithPassword(dto.email.toLowerCase(), dto.password);
+    const { user } = await this.auth.loginWithPassword(dto.email.toLowerCase(), dto.password, req.ip ?? 'unknown');
     const sid = await this.sessions.create(user.id);
     setSessionCookie(res, sid);
     return { isNew: false, user: authUserView(user) };

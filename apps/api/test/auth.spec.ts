@@ -214,7 +214,7 @@ test('resetPassword：找回验证码重置密码并吊销该用户全部会话'
   } as Partial<SessionService>);
   const email = campusEmail(13);
   const user = await prisma.user.create({
-    data: { email, studentNo: studentNo(13), passwordHash: hashPassword('OldPass123') },
+    data: { email, studentNo: studentNo(13), passwordHash: await hashPassword('OldPass123') },
   });
 
   const { devCode } = await auth.sendResetCode(email, IP);
@@ -226,19 +226,75 @@ test('resetPassword：找回验证码重置密码并吊销该用户全部会话'
   await assert.rejects(auth.loginWithPassword(email, 'OldPass123'), /邮箱或密码不正确/);
 });
 
-test('loginWithPassword：连续失败不锁定（Issue 3 去限流决策保留）', async () => {
+test('loginWithPassword：邮箱连错 5 次锁定 15 分钟，验证码登录不受影响（Issue 12）', async () => {
   const prisma = getPrisma();
-  const auth = makeAuth(new FakeMail(), new FakeRedisService());
+  const redis = new FakeRedisService();
+  const mail = new FakeMail();
+  const auth = makeAuth(mail, redis);
   const email = campusEmail(14);
   await prisma.user.create({
-    data: { email, studentNo: studentNo(14), passwordHash: hashPassword('RightPass123') },
+    data: { email, studentNo: studentNo(14), passwordHash: await hashPassword('RightPass123') },
   });
 
-  for (let i = 0; i < 6; i += 1) {
-    await assert.rejects(auth.loginWithPassword(email, 'WrongPass123'), /邮箱或密码不正确/);
+  for (let i = 0; i < 5; i += 1) {
+    await assert.rejects(auth.loginWithPassword(email, 'WrongPass123', IP), /邮箱或密码不正确/);
   }
-  const login = await auth.loginWithPassword(email, 'RightPass123');
+  // 第 6 次即使密码正确也被锁定
+  await assert.rejects(auth.loginWithPassword(email, 'RightPass123', IP), /登录失败次数过多/);
+
+  // 锁定只影响密码登录：邮箱验证码作为第二因子仍然可用
+  const { devCode } = await auth.sendCode(email, IP);
+  const login = await auth.loginWithCode(email, devCode!);
   assert.equal(login.user.email, email);
+});
+
+test('loginWithPassword：成功登录清空失败计数（不累积误伤）', async () => {
+  const prisma = getPrisma();
+  const auth = makeAuth(new FakeMail(), new FakeRedisService());
+  const email = campusEmail(15);
+  await prisma.user.create({
+    data: { email, studentNo: studentNo(15), passwordHash: await hashPassword('RightPass123') },
+  });
+
+  for (let round = 0; round < 3; round += 1) {
+    for (let i = 0; i < 4; i += 1) {
+      await assert.rejects(auth.loginWithPassword(email, 'WrongPass123', IP), /邮箱或密码不正确/);
+    }
+    const ok = await auth.loginWithPassword(email, 'RightPass123', IP);
+    assert.equal(ok.user.email, email);
+  }
+});
+
+test('loginWithPassword：同 IP 失败窗口达 30 次后拒绝密码登录（Issue 12）', async () => {
+  const prisma = getPrisma();
+  const auth = makeAuth(new FakeMail(), new FakeRedisService());
+  // 6 个邮箱 × 5 次 = 30 次失败（单邮箱 5 次即锁，避免与邮箱锁定语义混淆）
+  for (let i = 0; i < 6; i += 1) {
+    const email = campusEmail(20 + i);
+    await prisma.user.create({
+      data: { email, studentNo: studentNo(20 + i), passwordHash: await hashPassword('RightPass123') },
+    });
+    for (let f = 0; f < 5; f += 1) {
+      await assert.rejects(auth.loginWithPassword(email, 'WrongPass123', IP), /邮箱或密码不正确/);
+    }
+  }
+
+  const victim = campusEmail(26);
+  await prisma.user.create({
+    data: { email: victim, studentNo: studentNo(26), passwordHash: await hashPassword('RightPass123') },
+  });
+  await assert.rejects(auth.loginWithPassword(victim, 'RightPass123', IP), /当前网络登录失败次数过多/);
+  // 其他 IP 不受影响
+  const ok = await auth.loginWithPassword(victim, 'RightPass123', '10.0.0.2');
+  assert.equal(ok.user.email, victim);
+});
+
+test('loginWithPassword：邮箱不存在与密码错误响应一致（防枚举）', async () => {
+  const auth = makeAuth(new FakeMail(), new FakeRedisService());
+  await assert.rejects(
+    auth.loginWithPassword('20991111@std.uestc.edu.cn', 'Whatever123', IP),
+    /邮箱或密码不正确/,
+  );
 });
 
 test('teardown', async () => {

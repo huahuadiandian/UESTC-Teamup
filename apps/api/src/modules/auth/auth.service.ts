@@ -22,6 +22,16 @@ const DAILY_PER_IP = 20; // 同 IP 每日上限
 const GLOBAL_PER_MINUTE = 10; // 全局每分钟上限（保护邮件额度）
 const MAX_FAILS = 5; // 验证码连错作废阈值
 
+/**
+ * 密码登录失败锁定（Issue 12）：同邮箱连错 LOGIN_EMAIL_MAX_FAILS 次锁定
+ * LOGIN_LOCK_SECONDS；同 IP 失败 LOGIN_IP_MAX_FAILS 次 / LOGIN_IP_WINDOW_SECONDS
+ * 内拒绝密码登录。验证码登录不受影响（第二因子仍可用，合法用户不会被完全锁死）。
+ */
+const LOGIN_EMAIL_MAX_FAILS = 5;
+const LOGIN_LOCK_SECONDS = 900; // 15 分钟
+const LOGIN_IP_WINDOW_SECONDS = 600; // 10 分钟滑动窗口
+const LOGIN_IP_MAX_FAILS = 30; // 校园 NAT 出口共享 IP，阈值需宽于单账号
+
 /** 全局每日上限（保护 QQ 邮箱额度，防账号被限）；可用 MAIL_GLOBAL_DAILY_LIMIT 调整 */
 function globalDailyLimit(): number {
   const n = Number(process.env.MAIL_GLOBAL_DAILY_LIMIT ?? 200);
@@ -145,18 +155,14 @@ export class AuthService {
     const ns = FLOWS[flow].ns;
     const codeKey = `${ns}:code:${email}`;
     const failKey = `${ns}:fail:${email}`;
-    const saved = await this.redis.get(codeKey);
-    if (!saved) throw new BadRequestException('验证码已过期，请重新发送');
-
-    if (saved !== code.trim()) {
-      const fails = await this.redis.incrWithTtl(failKey, CODE_TTL);
-      if (fails >= MAX_FAILS) {
-        await this.redis.del(codeKey, failKey);
-        throw new BadRequestException('错误次数过多，该验证码已作废，请重新发送');
-      }
-      throw new BadRequestException(`验证码错误（还剩 ${MAX_FAILS - fails} 次机会）`);
-    }
-    await this.redis.del(codeKey, failKey);
+    // 原子消费（Issue 12）：比对、删除、失败计数在 Redis 端一次完成，
+    // 并发请求不可能用同一个验证码通过两次校验
+    const result = await this.redis.consumeCodeWithFailLimit(codeKey, failKey, code.trim(), CODE_TTL, MAX_FAILS);
+    if (result === 'EXPIRED') throw new BadRequestException('验证码已过期，请重新发送');
+    if (result === 'OK') return;
+    if (result === 'VOID') throw new BadRequestException('错误次数过多，该验证码已作废，请重新发送');
+    const fails = Number(result.slice('WRONG:'.length)) || 1;
+    throw new BadRequestException(`验证码错误（还剩 ${MAX_FAILS - fails} 次机会）`);
   }
 
   /**
@@ -187,17 +193,51 @@ export class AuthService {
     return { user, isNew: true };
   }
 
-  /** 密码登录。错误信息统一，不区分邮箱/密码（防枚举） */
-  async loginWithPassword(email: string, password: string) {
+  /**
+   * 密码登录（Issue 12）：邮箱维度连错锁定 + IP 维度失败窗口限流。
+   * 错误信息统一，不区分邮箱/密码（防枚举）；账号不存在时也执行一次等价
+   * scrypt 计算，避免响应时长差异暴露邮箱是否已注册。
+   */
+  async loginWithPassword(email: string, password: string, ip = 'unknown') {
     if (!CAMPUS_EMAIL_RE.test(email)) throw new BadRequestException('请使用成电校园邮箱（@std.uestc.edu.cn）');
 
+    const emailFailKey = `login:fail:${email}`;
+    const emailLockKey = `login:lock:${email}`;
+    const ipWindow = Math.floor(Date.now() / (LOGIN_IP_WINDOW_SECONDS * 1000));
+    const ipFailKey = `login:ipfail:${ip}:${ipWindow}`;
+
+    if (await this.redis.get(emailLockKey)) {
+      throw new BadRequestException('登录失败次数过多，请 15 分钟后再试或使用邮箱验证码登录');
+    }
+    if (Number(await this.redis.get(ipFailKey)) >= LOGIN_IP_MAX_FAILS) {
+      throw new BadRequestException('当前网络登录失败次数过多，请稍后再试');
+    }
+
     const user = await this.prisma.user.findUnique({ where: { email } });
-    if (!user || !verifyPassword(password, user.passwordHash)) {
+    const ok = user
+      ? await verifyPassword(password, user.passwordHash)
+      : // 等时序：对不存在的邮箱执行同样强度的哈希计算
+        await verifyPassword(password, await dummyHash());
+
+    if (!ok) {
+      await this.recordLoginFailure(emailFailKey, emailLockKey, ipFailKey);
       throw new BadRequestException('邮箱或密码不正确');
     }
-    if (user.banned) throw new BadRequestException('该账号已被封禁，如有疑问请联系管理员');
+    if (user!.banned) throw new BadRequestException('该账号已被封禁，如有疑问请联系管理员');
 
-    return { user };
+    // 登录成功清空该邮箱的失败计数
+    await this.redis.del(emailFailKey);
+    return { user: user! };
+  }
+
+  /** 记录一次密码登录失败：邮箱连错达阈值上锁，IP 窗口计数 */
+  private async recordLoginFailure(emailFailKey: string, emailLockKey: string, ipFailKey: string) {
+    const fails = await this.redis.incrWithTtl(emailFailKey, LOGIN_LOCK_SECONDS);
+    if (fails >= LOGIN_EMAIL_MAX_FAILS) {
+      await this.redis.set(emailLockKey, '1', LOGIN_LOCK_SECONDS);
+      await this.redis.del(emailFailKey);
+    }
+    await this.redis.incrWithTtl(ipFailKey, LOGIN_IP_WINDOW_SECONDS + 60);
   }
 
   /**
@@ -213,12 +253,12 @@ export class AuthService {
 
     if (user.passwordHash) {
       if (!oldPassword) throw new BadRequestException('请输入当前密码');
-      if (!verifyPassword(oldPassword, user.passwordHash)) throw new BadRequestException('当前密码不正确');
+      if (!(await verifyPassword(oldPassword, user.passwordHash))) throw new BadRequestException('当前密码不正确');
     }
 
     await this.prisma.user.update({
       where: { id: userId },
-      data: { passwordHash: hashPassword(newPassword) },
+      data: { passwordHash: await hashPassword(newPassword) },
     });
     // H5：改密后吊销该用户全部会话，旧密码泄露的会话立即失效
     await this.sessions.destroyByUserId(userId);
@@ -238,12 +278,19 @@ export class AuthService {
 
     await this.prisma.user.update({
       where: { email },
-      data: { passwordHash: hashPassword(newPassword) },
+      data: { passwordHash: await hashPassword(newPassword) },
     });
     // H5：找回密码后吊销该用户全部会话（含可能被攻击者持有的会话）
     await this.sessions.destroyByUserId(user.id);
     return { ok: true };
   }
+}
+
+/** 防枚举用的哑哈希：首次使用时生成一次并缓存，强度与真实哈希一致 */
+let dummyHashPromise: Promise<string> | null = null;
+function dummyHash(): Promise<string> {
+  dummyHashPromise ??= hashPassword('dummy-password-for-timing-equalization');
+  return dummyHashPromise;
 }
 /**
  * 学号解析（Q10：学院编码规则未确认，解析失败不阻塞注册）

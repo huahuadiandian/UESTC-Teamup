@@ -206,4 +206,32 @@ export class FakeRedisService {
   async unlock(key: string): Promise<void> {
     this.store.delete(key);
   }
+
+  /**
+   * 原子消费验证码：与 RedisService 中 Lua 脚本同语义的内存实现
+   * （单线程事件循环里天然原子），返回 'OK' | 'EXPIRED' | 'WRONG:<n>' | 'VOID'。
+   */
+  async consumeCodeWithFailLimit(
+    codeKey: string,
+    failKey: string,
+    expected: string,
+    failTtlSeconds: number,
+    maxFails: number,
+  ): Promise<string> {
+    const saved = await this.get(codeKey);
+    if (saved === null) {
+      await this.del(failKey);
+      return 'EXPIRED';
+    }
+    if (saved === expected) {
+      await this.del(codeKey, failKey);
+      return 'OK';
+    }
+    const fails = await this.incrWithTtl(failKey, failTtlSeconds);
+    if (fails >= maxFails) {
+      await this.del(codeKey, failKey);
+      return 'VOID';
+    }
+    return `WRONG:${fails}`;
+  }
 }

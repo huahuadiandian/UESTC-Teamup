@@ -19,8 +19,12 @@ export class CommentsService {
   ) {}
 
   /** 多态评论（Q7）：存在性校验在应用层 */
-  async create(authorId: string, dto: { targetType: CommentTarget; targetId: string; content: string; parentId?: string }) {
-    await this.assertTarget(dto.targetType, dto.targetId);
+  async create(
+    authorId: string,
+    dto: { targetType: CommentTarget; targetId: string; content: string; parentId?: string },
+    viewerRole?: string,
+  ) {
+    await this.assertTarget(dto.targetType, dto.targetId, authorId, viewerRole);
 
     // 楼中楼拍平：回复的回复挂到根评论下，真实回复对象记在 replyToId
     let rootId: string | null = null;
@@ -59,7 +63,10 @@ export class CommentsService {
     return { ...comment, author: this.stripAuthor(comment.author), likes: 0, liked: false };
   }
 
-  async list(targetType: CommentTarget, targetId: string, viewerId?: string) {
+  async list(targetType: CommentTarget, targetId: string, viewerId?: string, viewerRole?: string) {
+    // Issue 13：列表同样受目标可见性约束 —— 不可访问的队伍，评论列表也不可访问
+    await this.assertTarget(targetType, targetId, viewerId, viewerRole);
+
     const rows = await this.prisma.comment.findMany({
       where: { targetType, targetId, parentId: null },
       orderBy: [{ likes: 'desc' }, { createdAt: 'desc' }],
@@ -107,9 +114,11 @@ export class CommentsService {
    * 改为让数据库唯一键裁决 —— create 撞 P2002 即视为已点赞，delete 撞 P2025 即视为已取消，
    * 计数只在写入真正成功时增减，避免并发下计数漂移。
    */
-  async toggleLike(userId: string, commentId: string) {
-    const comment = await this.prisma.comment.findUnique({ where: { id: commentId }, select: { id: true } });
+  async toggleLike(userId: string, commentId: string, viewerRole?: string) {
+    const comment = await this.prisma.comment.findUnique({ where: { id: commentId } });
     if (!comment) throw new NotFoundException('评论不存在');
+    // Issue 13：隐藏目标的评论不允许点赞互动
+    await this.assertTarget(comment.targetType as CommentTarget, comment.targetId, userId, viewerRole);
 
     const key = { userId_commentId: { userId, commentId } };
     try {
@@ -179,12 +188,30 @@ export class CommentsService {
     };
   }
 
-  private async assertTarget(targetType: CommentTarget, targetId: string) {
+  /**
+   * 目标可见性（Issue 13）：评论接口必须与目标详情接口同口径。
+   * - 队伍：非 RECRUITING（FULL/COMPETING/DISBANDED）仅队长与管理员可见，
+   *   其他人按「不存在」处理（与 teams.detail 的 Issue 4 规则一致）；
+   * - 竞赛：ARCHIVED 一律不可见，DRAFT 仅管理员可预览（与竞赛详情 Issue 11 一致）；
+   * - 删除或不存在的目标：统一 404。
+   */
+  private async assertTarget(targetType: CommentTarget, targetId: string, viewerId?: string, viewerRole?: string) {
     if (targetType === CommentTarget.COMPETITION) {
-      if (!(await this.prisma.competition.findUnique({ where: { id: targetId } })))
-        throw new NotFoundException('竞赛不存在');
+      const comp = await this.prisma.competition.findUnique({
+        where: { id: targetId },
+        select: { status: true },
+      });
+      if (!comp || comp.status === 'ARCHIVED') throw new NotFoundException('竞赛不存在');
+      if (comp.status === 'DRAFT' && viewerRole !== 'ADMIN') throw new NotFoundException('竞赛不存在');
     } else if (targetType === CommentTarget.TEAM) {
-      if (!(await this.prisma.team.findUnique({ where: { id: targetId } }))) throw new NotFoundException('招募帖不存在');
+      const team = await this.prisma.team.findUnique({
+        where: { id: targetId },
+        select: { leaderId: true, status: true },
+      });
+      if (!team) throw new NotFoundException('招募帖不存在');
+      if (team.status !== 'RECRUITING' && team.leaderId !== viewerId && viewerRole !== 'ADMIN') {
+        throw new NotFoundException('招募帖不存在');
+      }
     } else if (targetType === CommentTarget.POST) {
       if (!(await this.prisma.post.findUnique({ where: { id: targetId } }))) throw new NotFoundException('帖子不存在');
     }

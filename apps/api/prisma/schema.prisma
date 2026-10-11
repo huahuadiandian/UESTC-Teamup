@@ -325,6 +325,7 @@ model CompetitionEvent {
 
   competition Competition      @relation(fields: [competitionId], references: [id], onDelete: Cascade)
   stage       CompetitionStage @relation(fields: [stageId], references: [id], onDelete: Cascade)
+  revisions   CompetitionRevision[]
 
   @@index([competitionId, startAt])
   @@index([stageId])
@@ -422,6 +423,9 @@ model CompetitionRevision {
   id            String   @id @default(cuid())
   competitionId String?
   stageId       String?
+  /// 事件级定位（Issue 15）：一个阶段可有多个事件，回滚必须精确到事件本身；
+  /// 历史数据为空时回滚回退 stageId 口径
+  eventId       String?
   field         String
   oldValue      String?  @db.Text
   newValue      String?  @db.Text
@@ -430,6 +434,7 @@ model CompetitionRevision {
 
   competition Competition?       @relation(fields: [competitionId], references: [id], onDelete: SetNull)
   stage       CompetitionStage?  @relation(fields: [stageId], references: [id], onDelete: SetNull)
+  event       CompetitionEvent?  @relation(fields: [eventId], references: [id], onDelete: SetNull)
 
   @@index([competitionId, createdAt])
   @@index([stageId, createdAt])
