@@ -69,6 +69,8 @@ interface SeedCompetition {
   difficulty: number;
   effort: number;
   intro: string;
+  /** 主链赛程链缓存（生成脚本计算，缺失时回退全量去重） */
+  stageChain?: string | null;
   /** 官网首页（权威，公开展示） */
   officialUrl?: string | null;
   sourceUrl: string | null;
