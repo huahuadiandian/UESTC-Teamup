@@ -1,0 +1,4667 @@
+[
+ {
+  "code": "CIC",
+  "name": "中国国际大学生创新大赛",
+  "officialSite": "https://cy.ncss.cn",
+  "sourceUrl": "https://cy.ncss.cn/",
+  "tracks": [
+   {
+    "code": "MAIN",
+    "name": "高教主赛道"
+   },
+   {
+    "code": "RED",
+    "name": "青年红色筑梦之旅"
+   },
+   {
+    "code": "INDUSTRY",
+    "name": "产业命题赛道"
+   },
+   {
+    "code": "SPROUT",
+    "name": "萌芽赛道"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": null
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-08-10"
+   },
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-09-25"
+   }
+  ],
+  "seq": "1",
+  "csv": {
+   "最新届次": "2026年",
+   "报名开始时间": "2026-08-10",
+   "报名截止时间": "2026-09-25 12:00",
+   "校赛/省赛时间": "校赛2026-06~07；省级复赛2026-08~10（10-25前完成）",
+   "全国赛/决赛时间": "总决赛2026-11（南京大学承办）",
+   "结果公布/颁奖时间": "2026-11",
+   "当前状态": "省级复赛进行中",
+   "可信度": "高",
+   "备注": "校赛时段由“5~6月”更正为6~7月；总决赛承办校证实"
+  }
+ },
+ {
+  "code": "TZB-ACADEMIC",
+  "name": "“挑战杯”全国大学生课外学术科技作品竞赛",
+  "officialSite": null,
+  "sourceUrl": "https://www.tiaozhanbei.net/",
+  "tracks": [
+   {
+    "code": "PAPER",
+    "name": "自然科学类学术论文"
+   },
+   {
+    "code": "SURVEY",
+    "name": "哲学社会科学类调查报告"
+   },
+   {
+    "code": "INVENTION",
+    "name": "科技发明制作"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": null
+   },
+   {
+    "name": "全国终审决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2025-10-31"
+   }
+  ],
+  "seq": "2",
+  "csv": {
+   "最新届次": "第十九届（2025）",
+   "报名开始时间": "信息未公布",
+   "报名截止时间": "信息未公布",
+   "校赛/省赛时间": "校赛/省赛2025年上半年",
+   "全国赛/决赛时间": "终审决赛2025-10-31~11-03（南京大学）",
+   "结果公布/颁奖时间": "2025-11",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "终审决赛日期与地点证实"
+  }
+ },
+ {
+  "code": "TZB-BUSINESS",
+  "name": "“挑战杯”中国大学生创业计划大赛",
+  "officialSite": null,
+  "sourceUrl": "http://2026.tiaozhanbei.net/",
+  "tracks": [
+   {
+    "code": "TECH",
+    "name": "科技创新"
+   },
+   {
+    "code": "FUTURE",
+    "name": "未来产业"
+   },
+   {
+    "code": "RURAL",
+    "name": "乡村振兴"
+   },
+   {
+    "code": "SOCIAL",
+    "name": "社会治理"
+   },
+   {
+    "code": "ECO",
+    "name": "生态环保"
+   },
+   {
+    "code": "CULTURE",
+    "name": "文化创意"
+   },
+   {
+    "code": "REGION",
+    "name": "区域合作"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": null
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [],
+  "seq": "3",
+  "csv": {
+   "最新届次": "第十五届（2026）",
+   "报名开始时间": "2026-03（省级赛3月启动）",
+   "报名截止时间": "校级初赛5月底前",
+   "校赛/省赛时间": "校赛5月底前；省赛6月底前完成推报",
+   "全国赛/决赛时间": "国赛2026-07~11，终审决赛在大连理工大学（具体日期未公布）",
+   "结果公布/颁奖时间": "2026-11（预计）",
+   "当前状态": "省级赛已结束、备战国赛",
+   "可信度": "中",
+   "备注": "决赛具体日期仍未公布；报名起点补充为2026-03"
+  }
+ },
+ {
+  "code": "CMC",
+  "name": "全国大学生数学竞赛",
+  "officialSite": "https://www.cmathc.org.cn",
+  "sourceUrl": "https://www.cmathc.org.cn/tzgg/545.html",
+  "tracks": [
+   {
+    "code": "MATH-A",
+    "name": "数学A类"
+   },
+   {
+    "code": "MATH-B",
+    "name": "数学B类"
+   },
+   {
+    "code": "NON-MATH",
+    "name": "非数学类"
+   },
+   {
+    "code": "ECON",
+    "name": "经管类"
+   }
+  ],
+  "stages": [
+   {
+    "name": "初赛(分区赛)",
+    "kind": "QUALIFIER",
+    "track": null
+   },
+   {
+    "name": "决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "QUALIFIER",
+    "track": null,
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-10-19"
+   }
+  ],
+  "seq": "4",
+  "csv": {
+   "最新届次": "第十八届（2026）",
+   "报名开始时间": "信息未公布（各赛区自行）",
+   "报名截止时间": "2026-10-19（各赛区不一）",
+   "校赛/省赛时间": "初赛（分区赛）2026-11-14",
+   "全国赛/决赛时间": "决赛预计2027-04（大连理工大学）",
+   "结果公布/颁奖时间": "初赛奖各赛区评定；决赛奖2027年",
+   "当前状态": "报名中",
+   "可信度": "高",
+   "备注": "初赛2026-11-14获多校通知三方印证"
+  }
+ },
+ {
+  "code": "CUPT",
+  "name": "中国大学生物理学术竞赛",
+  "officialSite": null,
+  "sourceUrl": "https://pt.nankai.edu.cn/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "区域赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-08-12"
+   }
+  ],
+  "seq": "5",
+  "csv": {
+   "最新届次": "第十七届（2026）",
+   "报名开始时间": "各校自定",
+   "报名截止时间": "各校自定",
+   "校赛/省赛时间": "区域赛2026-05~07",
+   "全国赛/决赛时间": "全国决赛2026-08-12~17（苏州大学）",
+   "结果公布/颁奖时间": "2026-08",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "决赛时间地点获多校证实"
+  }
+ },
+ {
+  "code": "ICPC",
+  "name": "ACM-ICPC 国际大学生程序设计竞赛",
+  "officialSite": null,
+  "sourceUrl": "https://icpc.global/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "网络预选赛",
+    "kind": "QUALIFIER",
+    "track": null
+   },
+   {
+    "name": "区域赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "EC Final",
+    "kind": "FINAL",
+    "track": null
+   },
+   {
+    "name": "World Finals",
+    "kind": "INTERNATIONAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "INTERNATIONAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2027-01-26"
+   }
+  ],
+  "seq": "6",
+  "csv": {
+   "最新届次": "第51届（2026—2027赛季）",
+   "报名开始时间": "以各区域赛通知为准（2026-09~10）",
+   "报名截止时间": "以各站通知为准",
+   "校赛/省赛时间": "亚洲区域赛2026-10-17~12-20（西安/成都/武汉/南京/沈阳/上海/南昌/香港等）",
+   "全国赛/决赛时间": "EC Final 2027-01-26~28（杭州）",
+   "结果公布/颁奖时间": "赛后公布",
+   "当前状态": "区域赛即将开赛",
+   "可信度": "高",
+   "备注": "各站日期证实；首站西安2026-10-17尚未开赛"
+  }
+ },
+ {
+  "code": "CUMCM",
+  "name": "全国大学生数学建模竞赛",
+  "officialSite": "http://www.mcm.edu.cn",
+  "sourceUrl": "http://www.mcm.edu.cn/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "报名",
+    "kind": "OTHER",
+    "track": null
+   },
+   {
+    "name": "竞赛",
+    "kind": "NATIONAL",
+    "track": null
+   },
+   {
+    "name": "评奖",
+    "kind": "OTHER",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "NATIONAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-09-10"
+   }
+  ],
+  "seq": "7",
+  "csv": {
+   "最新届次": "2026年（高教社杯）",
+   "报名开始时间": "各校自定",
+   "报名截止时间": "各校自定",
+   "校赛/省赛时间": "无省赛，校级选拔",
+   "全国赛/决赛时间": "竞赛2026-09-10 18:00~09-13 20:00",
+   "结果公布/颁奖时间": "赛区成绩2026-10起陆续公布；全国奖约2026-11",
+   "当前状态": "已结束（成绩陆续公布）",
+   "可信度": "中",
+   "备注": "成绩公布口径由“约11月”更正为“赛区10月起、全国奖约11月”"
+  }
+ },
+ {
+  "code": "NUEDC",
+  "name": "全国大学生电子设计竞赛",
+  "officialSite": "http://nuedc.xjtu.edu.cn",
+  "sourceUrl": "http://nuedc.xjtu.edu.cn/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "校内选拔",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "赛区测评",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "全国集中竞赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "SIGNUP_END",
+    "endAt": "2025-05-31"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2025-07-30"
+   }
+  ],
+  "seq": "8",
+  "csv": {
+   "最新届次": "2025年（奇数年国赛）",
+   "报名开始时间": "2025-03~05（各赛区）",
+   "报名截止时间": "2025-05-31",
+   "校赛/省赛时间": "赛区测评2025-08-03~08",
+   "全国赛/决赛时间": "竞赛2025-07-30~08-02；全国总测评2025-08-15~22（大连）",
+   "结果公布/颁奖时间": "全国一/二等奖404/1150项公布",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "集中竞赛由“8-01~04”更正为7-30~8-02；总测评由“8-14~22”更正为8-15~22"
+  }
+ },
+ {
+  "code": "UMIC",
+  "name": "全国大学生机械创新设计大赛",
+  "officialSite": "https://umic.moocollege.com",
+  "sourceUrl": "https://umic.moocollege.com/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": null
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-17"
+   }
+  ],
+  "seq": "9",
+  "csv": {
+   "最新届次": "第十二届（2026）",
+   "报名开始时间": "2025-10起",
+   "报名截止时间": "各校自定",
+   "校赛/省赛时间": "预赛/省赛2026年上半年",
+   "全国赛/决赛时间": "全国决赛2026-07-17~20（哈尔滨工业大学）",
+   "结果公布/颁奖时间": "2026-07",
+   "当前状态": "已结束",
+   "可信度": "中",
+   "备注": "官方赛事网为7-17~20，哈工大新闻称7-16~19，存分歧"
+  }
+ },
+ {
+  "code": "SMARTCAR",
+  "name": "全国大学生智能汽车竞赛",
+  "officialSite": "https://www.smartcar.zone",
+  "sourceUrl": "https://www.smartcar.zone/",
+  "tracks": [
+   {
+    "code": "SPEED",
+    "name": "竞速组"
+   },
+   {
+    "code": "CREATIVE",
+    "name": "创意组"
+   },
+   {
+    "code": "OUTDOOR",
+    "name": "室外组"
+   }
+  ],
+  "stages": [
+   {
+    "name": "分赛区赛",
+    "kind": "REGIONAL",
+    "track": "SPEED"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "SPEED"
+   },
+   {
+    "name": "分赛区赛",
+    "kind": "REGIONAL",
+    "track": "CREATIVE"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "CREATIVE"
+   },
+   {
+    "name": "分赛区赛",
+    "kind": "REGIONAL",
+    "track": "OUTDOOR"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "OUTDOOR"
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": "SPEED",
+    "nodeType": "CONTEST",
+    "startAt": "2026-08-21"
+   }
+  ],
+  "seq": "10",
+  "csv": {
+   "最新届次": "第二十一届（2026）",
+   "报名开始时间": "2026-03起（网络报名）",
+   "报名截止时间": "各分赛区自定",
+   "校赛/省赛时间": "分赛区赛2026-07~08",
+   "全国赛/决赛时间": "室内总决赛2026-08-21~23（安徽大学）；室外总决赛2026-12底",
+   "结果公布/颁奖时间": "室内2026-08；室外2026-12",
+   "当前状态": "进行中（室外备赛）",
+   "可信度": "高",
+   "备注": "室内总决赛日期、室外12月底均证实"
+  }
+ },
+ {
+  "code": "CURC",
+  "name": "全国大学生机器人大赛（CURC）",
+  "officialSite": "https://www.curc.cn",
+  "sourceUrl": "https://www.curc.cn/",
+  "tracks": [
+   {
+    "code": "ROBOCON",
+    "name": "ROBOCON"
+   },
+   {
+    "code": "ROBOTAC",
+    "name": "ROBOTAC"
+   },
+   {
+    "code": "ROBOMASTER",
+    "name": "RoboMaster"
+   }
+  ],
+  "stages": [
+   {
+    "name": "预选赛",
+    "kind": "QUALIFIER",
+    "track": "ROBOCON"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "ROBOCON"
+   },
+   {
+    "name": "预选赛",
+    "kind": "QUALIFIER",
+    "track": "ROBOTAC"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "ROBOTAC"
+   },
+   {
+    "name": "预选赛",
+    "kind": "QUALIFIER",
+    "track": "ROBOMASTER"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "ROBOMASTER"
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": "ROBOCON",
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-09"
+   }
+  ],
+  "seq": "11",
+  "csv": {
+   "最新届次": "第二十五届（2026）",
+   "报名开始时间": "2025-09起",
+   "报名截止时间": "各赛项自定",
+   "校赛/省赛时间": "预选赛/小组赛2026年上半年",
+   "全国赛/决赛时间": "ROBOCON全国赛2026-07-09~17（南京理工大学江阴校区）",
+   "结果公布/颁奖时间": "2026-07",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "时间地点证实；含ROBOCON、ROBOTAC等赛项"
+  }
+ },
+ {
+  "code": "GDESIGN",
+  "name": "全国大学生光电设计竞赛",
+  "officialSite": "https://gd.moocollege.com",
+  "sourceUrl": "https://gd.moocollege.com/",
+  "tracks": [
+   {
+    "code": "CREATIVE",
+    "name": "创意设计类"
+   },
+   {
+    "code": "COMPETE",
+    "name": "竞技类"
+   }
+  ],
+  "stages": [
+   {
+    "name": "区赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "REGIONAL",
+    "track": null,
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-05-17"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-06-20"
+   }
+  ],
+  "seq": "12",
+  "csv": {
+   "最新届次": "第十四届（2026）",
+   "报名开始时间": "2026-03起",
+   "报名截止时间": "各赛区不一（部分2026-05-17截止）",
+   "校赛/省赛时间": "区赛2026年上半年（中部5-30~31南阳理工；东部6月杭州）",
+   "全国赛/决赛时间": "全国决赛2026-06-20~21（长春理工大学）",
+   "结果公布/颁奖时间": "2026-06",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "决赛由“6月下旬”明确为2026-06-20~21"
+  }
+ },
+ {
+  "code": "CISCN",
+  "name": "全国大学生信息安全竞赛",
+  "officialSite": "http://www.ciscn.cn",
+  "sourceUrl": "http://www.ciscn.cn/",
+  "tracks": [
+   {
+    "code": "WORKS",
+    "name": "作品赛"
+   },
+   {
+    "code": "CPRACTICE",
+    "name": "创新实践能力赛"
+   }
+  ],
+  "stages": [
+   {
+    "name": "分区赛",
+    "kind": "REGIONAL",
+    "track": "WORKS"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "WORKS"
+   },
+   {
+    "name": "分区赛",
+    "kind": "REGIONAL",
+    "track": "CPRACTICE"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "CPRACTICE"
+   }
+  ],
+  "events": [
+   {
+    "stage": "REGIONAL",
+    "track": "WORKS",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-07-05"
+   },
+   {
+    "stage": "FINAL",
+    "track": "WORKS",
+    "nodeType": "CONTEST",
+    "startAt": "2026-08-20"
+   }
+  ],
+  "seq": "13",
+  "csv": {
+   "最新届次": "第十九届（2026）",
+   "报名开始时间": "以官网通知为准",
+   "报名截止时间": "作品赛2026-07-05（作品提交7-03）",
+   "校赛/省赛时间": "分区赛（半决赛）2026年上半年",
+   "全国赛/决赛时间": "作品赛决赛2026-08-20~22（哈尔滨工业大学）；创新实践能力赛总决赛2026-08-29~30（齐鲁工业大学）",
+   "结果公布/颁奖时间": "2026-08~09",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "作品赛与创新实践能力赛分设，各决赛日期证实"
+  }
+ },
+ {
+  "code": "UCC",
+  "name": "“外研社·国才杯”“理解当代中国”全国大学生外语能力大赛",
+  "officialSite": null,
+  "sourceUrl": "https://ucc.fltrp.com/",
+  "tracks": [
+   {
+    "code": "SPEECH",
+    "name": "英语演讲"
+   },
+   {
+    "code": "DEBATE",
+    "name": "英语辩论"
+   },
+   {
+    "code": "WRITING",
+    "name": "英语写作"
+   },
+   {
+    "code": "READING",
+    "name": "英语阅读"
+   },
+   {
+    "code": "INTEGRATED",
+    "name": "英语综合能力"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "SPEECH"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "SPEECH"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "SPEECH"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "DEBATE"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "DEBATE"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "DEBATE"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "WRITING"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "WRITING"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "WRITING"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "READING"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "READING"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "READING"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "INTEGRATED"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "INTEGRATED"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "INTEGRATED"
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": "SPEECH",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-03-21"
+   }
+  ],
+  "seq": "14",
+  "csv": {
+   "最新届次": "2026年",
+   "报名开始时间": "2026-03-21（大赛启动）",
+   "报名截止时间": "各赛项不一",
+   "校赛/省赛时间": "校赛2026-09~10；省赛2026-10~11",
+   "全国赛/决赛时间": "全国决赛2026-12",
+   "结果公布/颁奖时间": "2026-12（预计）",
+   "当前状态": "省赛/校赛进行中",
+   "可信度": "中",
+   "备注": "启动由“4月”更正为2026-03-21；校赛补充为9~10月"
+  }
+ },
+ {
+  "code": "3CHUANG",
+  "name": "全国大学生电子商务“创新、创意及创业”挑战赛",
+  "officialSite": null,
+  "sourceUrl": "https://www.3chuang.net/",
+  "tracks": [
+   {
+    "code": "REGULAR",
+    "name": "常规赛"
+   },
+   {
+    "code": "PRACTICE",
+    "name": "实战赛"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": null
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "SIGNUP_START",
+    "startAt": "2025-10-20"
+   },
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "SIGNUP_END",
+    "endAt": "2025-12-31"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-10"
+   }
+  ],
+  "seq": "15",
+  "csv": {
+   "最新届次": "第十六届（2026）",
+   "报名开始时间": "2025-10-20",
+   "报名截止时间": "2025-12-31（官网延期至2026-01-20）",
+   "校赛/省赛时间": "校赛2026-03-11~04-10；省赛2026-04-20~06-22",
+   "全国赛/决赛时间": "全国总决赛2026-07-10~08-10（常规赛国赛实际08-10~11，宁波）",
+   "结果公布/颁奖时间": "2026-08（公示08-05~12）",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "报名实际延期至2026-01-20；国赛常规赛8-10~11在宁波"
+  }
+ },
+ {
+  "code": "JNJP",
+  "name": "全国大学生节能减排社会实践与科技竞赛",
+  "officialSite": "http://www.jienengjianpai.org",
+  "sourceUrl": "http://www.jienengjianpai.org/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-04-12"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-31"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "RESULT",
+    "startAt": "2026-08-02"
+   }
+  ],
+  "seq": "16",
+  "csv": {
+   "最新届次": "第十九届（“大工能动杯”）",
+   "报名开始时间": "信息未公布",
+   "报名截止时间": "2026-04-12（作品提交2026-05-20）",
+   "校赛/省赛时间": "校/省赛由各校自组织",
+   "全国赛/决赛时间": "2026-07-31~08-02（大连理工大学）",
+   "结果公布/颁奖时间": "2026-08-02闭幕式现场宣布获奖名单",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "国赛由“08-01~02”更正为07-31~08-02；获奖8-02现场宣布"
+  }
+ },
+ {
+  "code": "GCXL",
+  "name": "中国大学生工程实践与创新能力大赛",
+  "officialSite": "http://www.gcxl.edu.cn",
+  "sourceUrl": "http://www.gcxl.edu.cn/",
+  "tracks": [
+   {
+    "code": "BASIC",
+    "name": "工程基础赛项"
+   },
+   {
+    "code": "SMART",
+    "name": "智能+赛项"
+   },
+   {
+    "code": "VIRTUAL",
+    "name": "虚拟仿真赛项"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "BASIC"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "BASIC"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "BASIC"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "SMART"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "SMART"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "SMART"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "VIRTUAL"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "VIRTUAL"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "VIRTUAL"
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": "BASIC",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-09-08"
+   },
+   {
+    "stage": "CAMPUS",
+    "track": "BASIC",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-09-19"
+   }
+  ],
+  "seq": "17",
+  "csv": {
+   "最新届次": "第十届（2026年选拔，国赛2027）",
+   "报名开始时间": "信息未公布（校赛通知2026-09-08）",
+   "报名截止时间": "校赛2026-09-19",
+   "校赛/省赛时间": "省赛（四川）2026-11-13~15（西南科技大学）",
+   "全国赛/决赛时间": "国赛2027年6月前后（待定）",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "进行中",
+   "可信度": "高",
+   "备注": "两年一届；四川赛区省赛2026-11-13~15；国赛2027年6月前后"
+  }
+ },
+ {
+  "code": "GJCXCY",
+  "name": "全国大学生创新创业训练计划年会展示",
+  "officialSite": "http://gjcxcy.bjtu.edu.cn",
+  "sourceUrl": "http://gjcxcy.bjtu.edu.cn/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "校内推荐",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "年会展示",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-09-22"
+   }
+  ],
+  "seq": "18",
+  "csv": {
+   "最新届次": "第十九届",
+   "报名开始时间": "2026-09-22（通知发布）",
+   "报名截止时间": "各校推荐（未统一，约2026-10）",
+   "校赛/省赛时间": "—",
+   "全国赛/决赛时间": "2026-12（初定，西南交通大学）",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "报名中",
+   "可信度": "高",
+   "备注": "年会2026-12在西南交大举办；各校推荐截止未统一"
+  }
+ },
+ {
+  "code": "CIMC",
+  "name": "“西门子杯”中国智能制造挑战赛",
+  "officialSite": null,
+  "sourceUrl": "http://www.siemenscup-cimc.org.cn/",
+  "tracks": [
+   {
+    "code": "DIGITAL",
+    "name": "数字化双胞胎"
+   },
+   {
+    "code": "LOGIC",
+    "name": "逻辑控制"
+   },
+   {
+    "code": "PROCESS",
+    "name": "流程行业"
+   }
+  ],
+  "stages": [
+   {
+    "name": "分赛区初赛",
+    "kind": "REGIONAL",
+    "track": "DIGITAL"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "DIGITAL"
+   },
+   {
+    "name": "分赛区初赛",
+    "kind": "REGIONAL",
+    "track": "LOGIC"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "LOGIC"
+   },
+   {
+    "name": "分赛区初赛",
+    "kind": "REGIONAL",
+    "track": "PROCESS"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "PROCESS"
+   }
+  ],
+  "events": [
+   {
+    "stage": "REGIONAL",
+    "track": "DIGITAL",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-03-01"
+   },
+   {
+    "stage": "REGIONAL",
+    "track": "DIGITAL",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-05-31"
+   },
+   {
+    "stage": "REGIONAL",
+    "track": "DIGITAL",
+    "nodeType": "CONTEST",
+    "startAt": "2026-08-14"
+   }
+  ],
+  "seq": "19",
+  "csv": {
+   "最新届次": "第二十届",
+   "报名开始时间": "2026-03-01",
+   "报名截止时间": "2026-05-31",
+   "校赛/省赛时间": "分赛区初赛2026-07中旬（部分07-19~22）",
+   "全国赛/决赛时间": "全国总决赛2026-08-14~18（北京化工大学）",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "国赛2026-08-14~18在北京化工大学"
+  }
+ },
+ {
+  "code": "CHENGTU",
+  "name": "全国大学生先进成图技术与产品信息建模创新大赛",
+  "officialSite": "http://www.chengtudasai.com",
+  "sourceUrl": "http://www.chengtudasai.com/",
+  "tracks": [
+   {
+    "code": "MECH",
+    "name": "机械类"
+   },
+   {
+    "code": "ARCH",
+    "name": "建筑类"
+   },
+   {
+    "code": "ROAD",
+    "name": "道桥类"
+   },
+   {
+    "code": "WATER",
+    "name": "水利类"
+   }
+  ],
+  "stages": [
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "MECH"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "MECH"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "ARCH"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "ARCH"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "ROAD"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "ROAD"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "WATER"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "WATER"
+   }
+  ],
+  "events": [
+   {
+    "stage": "PROVINCIAL",
+    "track": "MECH",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-04-01"
+   },
+   {
+    "stage": "PROVINCIAL",
+    "track": "MECH",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-04-25"
+   },
+   {
+    "stage": "FINAL",
+    "track": "MECH",
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-21"
+   },
+   {
+    "stage": "FINAL",
+    "track": "MECH",
+    "nodeType": "RESULT",
+    "startAt": "2026-07-23"
+   }
+  ],
+  "seq": "20",
+  "csv": {
+   "最新届次": "第十九届（“高教杯”）",
+   "报名开始时间": "省赛报名2026-04-01",
+   "报名截止时间": "省赛2026-04-25；国赛报名2026-06-25",
+   "校赛/省赛时间": "省赛2026-05-29~30",
+   "全国赛/决赛时间": "国赛2026-07-21~23（长江大学主赛场）",
+   "结果公布/颁奖时间": "2026-07-23",
+   "当前状态": "已结束",
+   "可信度": "中",
+   "备注": "国赛由第一轮通知的07-31~08-03更正为07-21~23（长江大学）"
+  }
+ },
+ {
+  "code": "4C",
+  "name": "中国大学生计算机设计大赛",
+  "officialSite": "https://jsjds.blcu.edu.cn",
+  "sourceUrl": "https://jsjds.blcu.edu.cn/",
+  "tracks": [
+   {
+    "code": "SOFTWARE",
+    "name": "软件应用"
+   },
+   {
+    "code": "MICRO",
+    "name": "微课与教学辅助"
+   },
+   {
+    "code": "IOT",
+    "name": "物联网应用"
+   },
+   {
+    "code": "BIGDATA",
+    "name": "大数据应用"
+   },
+   {
+    "code": "MEDIA",
+    "name": "数媒设计"
+   }
+  ],
+  "stages": [
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "SOFTWARE"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "SOFTWARE"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "MICRO"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "MICRO"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "IOT"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "IOT"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "BIGDATA"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "BIGDATA"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "MEDIA"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "MEDIA"
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": "SOFTWARE",
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-17"
+   }
+  ],
+  "seq": "21",
+  "csv": {
+   "最新届次": "第19届",
+   "报名开始时间": "省赛报名2026-03~04（各省自定）",
+   "报名截止时间": "国赛报名约2026-05",
+   "校赛/省赛时间": "省赛2026-05",
+   "全国赛/决赛时间": "2026-07-17~08-20（6个决赛区）",
+   "结果公布/颁奖时间": "各决赛区结束即公布（2026-07~08）",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "决赛区：上海/杭州/合肥/长春/青岛/无锡"
+  }
+ },
+ {
+  "code": "CSSC",
+  "name": "全国大学生市场调查与分析大赛",
+  "officialSite": "http://www.china-cssc.org",
+  "sourceUrl": "http://www.china-cssc.org/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": null
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-09-21"
+   },
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-10-31"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2027-04-30"
+   }
+  ],
+  "seq": "22",
+  "csv": {
+   "最新届次": "第十七届（“正大杯”）",
+   "报名开始时间": "2026-09-21~30",
+   "报名截止时间": "本科组2026-10-31（研究生/留学生组2026-11-15）",
+   "校赛/省赛时间": "校赛2027-03-22前",
+   "全国赛/决赛时间": "省赛2027-04-30前；国赛2027年（待定）",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "报名中",
+   "可信度": "高",
+   "备注": "知识赛2026-11-01~11-20；第十六届（2026）已结束"
+  }
+ },
+ {
+  "code": "FWWB",
+  "name": "中国大学生服务外包创新创业大赛",
+  "officialSite": "https://fwwb.org.cn",
+  "sourceUrl": "https://fwwb.org.cn/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "区域赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "REGIONAL",
+    "track": null,
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-02-11"
+   },
+   {
+    "stage": "REGIONAL",
+    "track": null,
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-03-31"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-08-21"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "RESULT",
+    "startAt": "2026-08-24"
+   }
+  ],
+  "seq": "23",
+  "csv": {
+   "最新届次": "第十七届",
+   "报名开始时间": "2026-02-11",
+   "报名截止时间": "2026-03-31 16:00",
+   "校赛/省赛时间": "区域赛2026-06（06-06~07）",
+   "全国赛/决赛时间": "全国赛2026-08-21（无锡现场答辩）",
+   "结果公布/颁奖时间": "获奖名单2026-08-24",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "报名截止由“03-20”更正为2026-03-31；国赛8-21答辩、8-24公布"
+  }
+ },
+ {
+  "code": "C4",
+  "name": "中国高校计算机大赛",
+  "officialSite": null,
+  "sourceUrl": "http://www.c4best.cn/",
+  "tracks": [
+   {
+    "code": "BIGDATA",
+    "name": "大数据挑战赛"
+   },
+   {
+    "code": "GPLT",
+    "name": "团体程序设计天梯赛"
+   },
+   {
+    "code": "APP",
+    "name": "移动应用创新赛"
+   },
+   {
+    "code": "NET",
+    "name": "网络技术挑战赛"
+   },
+   {
+    "code": "AIC",
+    "name": "人工智能创意赛"
+   }
+  ],
+  "stages": [
+   {
+    "name": "报名",
+    "kind": "OTHER",
+    "track": "BIGDATA"
+   },
+   {
+    "name": "初赛",
+    "kind": "QUALIFIER",
+    "track": "BIGDATA"
+   },
+   {
+    "name": "决赛",
+    "kind": "FINAL",
+    "track": "BIGDATA"
+   },
+   {
+    "name": "报名",
+    "kind": "OTHER",
+    "track": "GPLT"
+   },
+   {
+    "name": "初赛",
+    "kind": "QUALIFIER",
+    "track": "GPLT"
+   },
+   {
+    "name": "决赛",
+    "kind": "FINAL",
+    "track": "GPLT"
+   },
+   {
+    "name": "报名",
+    "kind": "OTHER",
+    "track": "APP"
+   },
+   {
+    "name": "初赛",
+    "kind": "QUALIFIER",
+    "track": "APP"
+   },
+   {
+    "name": "决赛",
+    "kind": "FINAL",
+    "track": "APP"
+   },
+   {
+    "name": "报名",
+    "kind": "OTHER",
+    "track": "NET"
+   },
+   {
+    "name": "初赛",
+    "kind": "QUALIFIER",
+    "track": "NET"
+   },
+   {
+    "name": "决赛",
+    "kind": "FINAL",
+    "track": "NET"
+   },
+   {
+    "name": "报名",
+    "kind": "OTHER",
+    "track": "AIC"
+   },
+   {
+    "name": "初赛",
+    "kind": "QUALIFIER",
+    "track": "AIC"
+   },
+   {
+    "name": "决赛",
+    "kind": "FINAL",
+    "track": "AIC"
+   }
+  ],
+  "events": [
+   {
+    "stage": "OTHER",
+    "track": "BIGDATA",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-03-26"
+   },
+   {
+    "stage": "QUALIFIER",
+    "track": "BIGDATA",
+    "nodeType": "CONTEST",
+    "startAt": "2026-04-18"
+   }
+  ],
+  "seq": "24",
+  "csv": {
+   "最新届次": "第十一届（2026）",
+   "报名开始时间": "各子赛不一（大数据2026-03-26）",
+   "报名截止时间": "各子赛不一",
+   "校赛/省赛时间": "—",
+   "全国赛/决赛时间": "天梯2026-04-18；大数据挑战赛2026-08-29（清华大学）",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "多数已结束",
+   "可信度": "高",
+   "备注": "天梯赛4-18；大数据挑战赛国赛8-29在清华；移动应用/网络技术赛时间未公布"
+  }
+ },
+ {
+  "code": "CRC",
+  "name": "中国机器人大赛暨RoboCup机器人世界杯中国赛",
+  "officialSite": "https://www.caa.org.cn",
+  "sourceUrl": "https://www.caa.org.cn/",
+  "tracks": [
+   {
+    "code": "ROBOCUP",
+    "name": "RoboCup赛区"
+   },
+   {
+    "code": "ROBOT",
+    "name": "中国机器人大赛赛区"
+   }
+  ],
+  "stages": [
+   {
+    "name": "赛区赛",
+    "kind": "REGIONAL",
+    "track": "ROBOCUP"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "ROBOCUP"
+   },
+   {
+    "name": "赛区赛",
+    "kind": "REGIONAL",
+    "track": "ROBOT"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "ROBOT"
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": "ROBOCUP",
+    "nodeType": "CONTEST",
+    "startAt": "2026-10-16"
+   }
+  ],
+  "seq": "25",
+  "csv": {
+   "最新届次": "2026年",
+   "报名开始时间": "信息未公布",
+   "报名截止时间": "信息未公布",
+   "校赛/省赛时间": "RoboCup中国赛区2026-05-02~04",
+   "全国赛/决赛时间": "中国机器人大赛2026-10-16~18（杭州）",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "即将举办",
+   "可信度": "高",
+   "备注": "中国机器人大赛赛区10-16~18杭州；RoboCup赛区已于5月举办"
+  }
+ },
+ {
+  "code": "ZPY",
+  "name": "全国周培源大学生力学竞赛",
+  "officialSite": "http://zpy.cstam.org.cn",
+  "sourceUrl": "http://zpy.cstam.org.cn/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "个人赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [],
+  "seq": "26",
+  "csv": {
+   "最新届次": "第十六届（2027）",
+   "报名开始时间": "信息未公布",
+   "报名截止时间": "信息未公布",
+   "校赛/省赛时间": "无省级赛（各省设考场）",
+   "全国赛/决赛时间": "个人赛单数年举办（2027，具体未公布）",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "信息未公布",
+   "可信度": "中",
+   "备注": "每两年一届、无省级赛；第十六届（2027）通知未发布，2026为空档年"
+  }
+ },
+ {
+  "code": "CSB",
+  "name": "“中国软件杯”大学生软件设计大赛",
+  "officialSite": null,
+  "sourceUrl": "https://www.cnsoftbei.com/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "区域赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "REGIONAL",
+    "track": null,
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-03-24"
+   },
+   {
+    "stage": "REGIONAL",
+    "track": null,
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-06-30"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "RESULT",
+    "startAt": "2026-08-25"
+   }
+  ],
+  "seq": "27",
+  "csv": {
+   "最新届次": "第十五届",
+   "报名开始时间": "2026-03-24",
+   "报名截止时间": "2026-06-30",
+   "校赛/省赛时间": "区域赛2026-08（名单08-25）",
+   "全国赛/决赛时间": "总决赛答辩2026-08",
+   "结果公布/颁奖时间": "区域赛名单2026-08-25；证书2026-08-29",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": ""
+  }
+ },
+ {
+  "code": "NCDA",
+  "name": "未来设计师·全国高校数字艺术设计大赛",
+  "officialSite": "https://www.ncda.org.cn",
+  "sourceUrl": "https://www.ncda.org.cn/",
+  "tracks": [
+   {
+    "code": "VISUAL",
+    "name": "视觉传达"
+   },
+   {
+    "code": "ENV",
+    "name": "环境设计"
+   },
+   {
+    "code": "ANIM",
+    "name": "动画"
+   },
+   {
+    "code": "PRODUCT",
+    "name": "产品设计"
+   }
+  ],
+  "stages": [
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "VISUAL"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "VISUAL"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "ENV"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "ENV"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "ANIM"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "ANIM"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "PRODUCT"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "PRODUCT"
+   }
+  ],
+  "events": [
+   {
+    "stage": "PROVINCIAL",
+    "track": "VISUAL",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2025-10-31"
+   },
+   {
+    "stage": "PROVINCIAL",
+    "track": "VISUAL",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-06-20"
+   },
+   {
+    "stage": "FINAL",
+    "track": "VISUAL",
+    "nodeType": "CONTEST",
+    "startAt": "2026-08-08"
+   },
+   {
+    "stage": "FINAL",
+    "track": "VISUAL",
+    "nodeType": "RESULT",
+    "startAt": "2026-08-26"
+   }
+  ],
+  "seq": "28",
+  "csv": {
+   "最新届次": "第十四届（NCDA）",
+   "报名开始时间": "2025-10-31（作品征集起）",
+   "报名截止时间": "2026-06-20（截止投稿）",
+   "校赛/省赛时间": "省赛2026-08-08前后",
+   "全国赛/决赛时间": "国赛2026-08-08~26",
+   "结果公布/颁奖时间": "国奖公示2026-08-26",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "以学院为单位统一报名"
+  }
+ },
+ {
+  "code": "CHINAUS",
+  "name": "中美青年创客大赛",
+  "officialSite": "https://chinaus-maker.cscse.edu.cn",
+  "sourceUrl": "https://chinaus-maker.cscse.edu.cn/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "分赛区选拔赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-31"
+   }
+  ],
+  "seq": "29",
+  "csv": {
+   "最新届次": "2026年（共创未来）",
+   "报名开始时间": "2026-05前后",
+   "报名截止时间": "各分赛区不同（至2026-06下旬）",
+   "校赛/省赛时间": "分赛区选拔赛2026-06（沈阳6-06、北京6-14）",
+   "全国赛/决赛时间": "全国总决赛2026-07-31（上海张江）",
+   "结果公布/颁奖时间": "决赛后",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "全国总决赛由“7月中下旬”更正为2026-07-31"
+  }
+ },
+ {
+  "code": "CICIEC",
+  "name": "全国大学生集成电路创新创业大赛",
+  "officialSite": "https://univ.ciciec.com",
+  "sourceUrl": "http://univ.ciciec.com/",
+  "tracks": [
+   {
+    "code": "CHIP-DESIGN",
+    "name": "芯片设计赛道"
+   },
+   {
+    "code": "CHIP-APP",
+    "name": "芯片应用赛道"
+   },
+   {
+    "code": "FPGA",
+    "name": "FPGA赛道"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校内赛",
+    "kind": "CAMPUS",
+    "track": "CHIP-DESIGN"
+   },
+   {
+    "name": "分赛区决赛",
+    "kind": "REGIONAL",
+    "track": "CHIP-DESIGN"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "CHIP-DESIGN"
+   },
+   {
+    "name": "校内赛",
+    "kind": "CAMPUS",
+    "track": "CHIP-APP"
+   },
+   {
+    "name": "分赛区决赛",
+    "kind": "REGIONAL",
+    "track": "CHIP-APP"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "CHIP-APP"
+   },
+   {
+    "name": "校内赛",
+    "kind": "CAMPUS",
+    "track": "FPGA"
+   },
+   {
+    "name": "分赛区决赛",
+    "kind": "REGIONAL",
+    "track": "FPGA"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "FPGA"
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": "CHIP-DESIGN",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-03-31"
+   },
+   {
+    "stage": "REGIONAL",
+    "track": "CHIP-DESIGN",
+    "nodeType": "CONTEST",
+    "startAt": "2026-08-23"
+   }
+  ],
+  "seq": "30",
+  "csv": {
+   "最新届次": "第十届（2026）",
+   "报名开始时间": "2026-01下旬",
+   "报名截止时间": "2026-03-31",
+   "校赛/省赛时间": "校内赛2026-03~05；分赛区决赛2026-06底~07",
+   "全国赛/决赛时间": "芯片设计赛项2026-07下旬；芯片应用赛项2026-08-23（无锡）",
+   "结果公布/颁奖时间": "随总决赛",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "报名始为1月下旬；总决赛跨7月下旬~8月下旬"
+  }
+ },
+ {
+  "code": "SUNADA",
+  "name": "全国大学生广告艺术大赛",
+  "officialSite": "https://www.sun-ada.net",
+  "sourceUrl": "https://www.sun-ada.net/",
+  "tracks": [
+   {
+    "code": "PRINT",
+    "name": "平面类"
+   },
+   {
+    "code": "VIDEO",
+    "name": "视频类"
+   },
+   {
+    "code": "ANIM",
+    "name": "动画类"
+   },
+   {
+    "code": "PLAN",
+    "name": "策划案类"
+   }
+  ],
+  "stages": [
+   {
+    "name": "赛区评审",
+    "kind": "PROVINCIAL",
+    "track": "PRINT"
+   },
+   {
+    "name": "全国总评审",
+    "kind": "FINAL",
+    "track": "PRINT"
+   },
+   {
+    "name": "赛区评审",
+    "kind": "PROVINCIAL",
+    "track": "VIDEO"
+   },
+   {
+    "name": "全国总评审",
+    "kind": "FINAL",
+    "track": "VIDEO"
+   },
+   {
+    "name": "赛区评审",
+    "kind": "PROVINCIAL",
+    "track": "ANIM"
+   },
+   {
+    "name": "全国总评审",
+    "kind": "FINAL",
+    "track": "ANIM"
+   },
+   {
+    "name": "赛区评审",
+    "kind": "PROVINCIAL",
+    "track": "PLAN"
+   },
+   {
+    "name": "全国总评审",
+    "kind": "FINAL",
+    "track": "PLAN"
+   }
+  ],
+  "events": [
+   {
+    "stage": "PROVINCIAL",
+    "track": "PRINT",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-05-10"
+   },
+   {
+    "stage": "PROVINCIAL",
+    "track": "PRINT",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-06-12"
+   }
+  ],
+  "seq": "31",
+  "csv": {
+   "最新届次": "第18届（2026）",
+   "报名开始时间": "2026-05-10（线上开放）",
+   "报名截止时间": "2026-06-12 16:00",
+   "校赛/省赛时间": "赛区报送全国2026-07-05前",
+   "全国赛/决赛时间": "全国总评审2026-06~08",
+   "结果公布/颁奖时间": "获奖结果2026-09",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "结果公布由“随总评审”更正为2026-09"
+  }
+ },
+ {
+  "code": "MEDU",
+  "name": "中国大学生医学技术技能大赛",
+  "officialSite": "https://medu.bjmu.edu.cn",
+  "sourceUrl": "https://medu.bjmu.edu.cn/",
+  "tracks": [
+   {
+    "code": "CLINICAL",
+    "name": "临床医学"
+   },
+   {
+    "code": "NURSING",
+    "name": "护理学"
+   },
+   {
+    "code": "PHARMACY",
+    "name": "药学"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "CLINICAL"
+   },
+   {
+    "name": "片区赛",
+    "kind": "REGIONAL",
+    "track": "CLINICAL"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "CLINICAL"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "NURSING"
+   },
+   {
+    "name": "片区赛",
+    "kind": "REGIONAL",
+    "track": "NURSING"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "NURSING"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "PHARMACY"
+   },
+   {
+    "name": "片区赛",
+    "kind": "REGIONAL",
+    "track": "PHARMACY"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "PHARMACY"
+   }
+  ],
+  "events": [],
+  "seq": "32",
+  "csv": {
+   "最新届次": "2026年（届次未明确公布）",
+   "报名开始时间": "各校自定",
+   "报名截止时间": "各校自定",
+   "校赛/省赛时间": "校赛2026-04~06；片区区域赛时间未公布",
+   "全国赛/决赛时间": "信息未公布",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "进行中",
+   "可信度": "低",
+   "备注": "仅见校级选拔，无公开全国赛通知；建议按校级认定"
+  }
+ },
+ {
+  "code": "MEICC",
+  "name": "中国大学生机械工程创新创意大赛",
+  "officialSite": "https://meicc.cmes.org",
+  "sourceUrl": "https://meicc.cmes.org/",
+  "tracks": [
+   {
+    "code": "IMIC",
+    "name": "智能制造赛"
+   },
+   {
+    "code": "MAT",
+    "name": "材料成型赛"
+   },
+   {
+    "code": "DESIGN",
+    "name": "创新设计赛"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "IMIC"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "IMIC"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "IMIC"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "MAT"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "MAT"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "MAT"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "DESIGN"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "DESIGN"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "DESIGN"
+   }
+  ],
+  "events": [],
+  "seq": "33",
+  "csv": {
+   "最新届次": "2026年",
+   "报名开始时间": "2026-03起",
+   "报名截止时间": "各赛项自定",
+   "校赛/省赛时间": "省级/区域选拔赛2026年",
+   "全国赛/决赛时间": "各赛项全国总决赛2026-11前",
+   "结果公布/颁奖时间": "随赛项公布",
+   "当前状态": "进行中",
+   "可信度": "中",
+   "备注": "3赛道19赛项，时间各异"
+  }
+ },
+ {
+  "code": "JXDS",
+  "name": "全国大学生金相技能大赛",
+  "officialSite": "http://www.jxds.tech",
+  "sourceUrl": "http://www.jxds.tech/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "校内初赛",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "分赛区复赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-04-05"
+   },
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-25"
+   }
+  ],
+  "seq": "34",
+  "csv": {
+   "最新届次": "第十五届（2026）",
+   "报名开始时间": "2026-03（校内）",
+   "报名截止时间": "2026-04-05",
+   "校赛/省赛时间": "初赛2026-05-05前",
+   "全国赛/决赛时间": "2026-07-25~29（武汉理工大学）",
+   "结果公布/颁奖时间": "随决赛",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "报名截止由“04-06”更正为04-05；决赛由“7-25~30”更正为7-25~29"
+  }
+ },
+ {
+  "code": "HUACAN",
+  "name": "两岸新锐设计竞赛·华灿奖",
+  "officialSite": "http://www.huacanjiang.com",
+  "sourceUrl": "http://www.huacanjiang.com/",
+  "tracks": [
+   {
+    "code": "VISUAL",
+    "name": "视觉传达"
+   },
+   {
+    "code": "DIGITAL",
+    "name": "数字媒体"
+   },
+   {
+    "code": "PRODUCT",
+    "name": "产品设计"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "VISUAL"
+   },
+   {
+    "name": "赛区赛",
+    "kind": "REGIONAL",
+    "track": "VISUAL"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "VISUAL"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "DIGITAL"
+   },
+   {
+    "name": "赛区赛",
+    "kind": "REGIONAL",
+    "track": "DIGITAL"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "DIGITAL"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "PRODUCT"
+   },
+   {
+    "name": "赛区赛",
+    "kind": "REGIONAL",
+    "track": "PRODUCT"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "PRODUCT"
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": "VISUAL",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-10-19"
+   },
+   {
+    "stage": "CAMPUS",
+    "track": "VISUAL",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-11-27"
+   }
+  ],
+  "seq": "35",
+  "csv": {
+   "最新届次": "2026华灿奖",
+   "报名开始时间": "2026-10-19（官网开放）",
+   "报名截止时间": "创意赛道2026-11-27 17:00；定向主题赛道2027-03-05 17:00",
+   "校赛/省赛时间": "校赛截止2026-12-29；赛区赛截止2027-01-29",
+   "全国赛/决赛时间": "总决赛2027-03~04",
+   "结果公布/颁奖时间": "颁奖2027-05",
+   "当前状态": "即将开始（10-19开放）",
+   "可信度": "高",
+   "备注": "官网2026-10-19才开放，10-11尚未开始"
+  }
+ },
+ {
+  "code": "STRUCT",
+  "name": "全国大学生结构设计竞赛",
+  "officialSite": "https://www.structurecontest.com",
+  "sourceUrl": "https://www.structurecontest.com/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "分区赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-10-14"
+   }
+  ],
+  "seq": "36",
+  "csv": {
+   "最新届次": "第十九届（2026）",
+   "报名开始时间": "网上报名（各省通知）",
+   "报名截止时间": "各省自定",
+   "校赛/省赛时间": "分区赛2026-04~07",
+   "全国赛/决赛时间": "2026-10-14~18（内蒙古科技大学）",
+   "结果公布/颁奖时间": "随总决赛",
+   "当前状态": "进行中",
+   "可信度": "高",
+   "备注": "2026-08-05前各省报送名单"
+  }
+ },
+ {
+  "code": "MILAN",
+  "name": "米兰设计周--中国高校设计学科师生优秀作品展",
+  "officialSite": null,
+  "sourceUrl": "http://www.milan-aap.org.cn/",
+  "tracks": [
+   {
+    "code": "VISUAL",
+    "name": "视觉传达"
+   },
+   {
+    "code": "ENV",
+    "name": "环境设计"
+   },
+   {
+    "code": "PRODUCT",
+    "name": "产品设计"
+   }
+  ],
+  "stages": [
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "VISUAL"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "VISUAL"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "ENV"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "ENV"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "PRODUCT"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "PRODUCT"
+   }
+  ],
+  "events": [
+   {
+    "stage": "PROVINCIAL",
+    "track": "VISUAL",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2027-03-31"
+   }
+  ],
+  "seq": "37",
+  "csv": {
+   "最新届次": "第十一届（2027赛季）",
+   "报名开始时间": "2026-10",
+   "报名截止时间": "2027-03-31（部分校）~2027-04",
+   "校赛/省赛时间": "省赛评审2027-04~05",
+   "全国赛/决赛时间": "国赛评审2027-05~06",
+   "结果公布/颁奖时间": "颁奖典礼2027-07~08",
+   "当前状态": "报名中",
+   "可信度": "高",
+   "备注": "第十届（2026）已于2026-07颁奖结束"
+  }
+ },
+ {
+  "code": "MCM",
+  "name": "美国大学生数学建模竞赛",
+  "officialSite": null,
+  "sourceUrl": "https://www.comap.com/",
+  "tracks": [
+   {
+    "code": "MCM",
+    "name": "MCM"
+   },
+   {
+    "code": "ICM",
+    "name": "ICM"
+   }
+  ],
+  "stages": [
+   {
+    "name": "报名",
+    "kind": "OTHER",
+    "track": null
+   },
+   {
+    "name": "竞赛",
+    "kind": "NATIONAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "NATIONAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2027-01-28"
+   }
+  ],
+  "seq": "38",
+  "csv": {
+   "最新届次": "2027年赛季",
+   "报名开始时间": "2026年（COMAP已开放注册）",
+   "报名截止时间": "按COMAP规定（约赛前）",
+   "校赛/省赛时间": "—",
+   "全国赛/决赛时间": "2027-01-28~02-01",
+   "结果公布/颁奖时间": "赛后约2个月",
+   "当前状态": "报名中",
+   "可信度": "高",
+   "备注": "2026赛季已结束；2027赛季已开放注册"
+  }
+ },
+ {
+  "code": "IGEM",
+  "name": "国际基因工程机器大赛（iGEM）",
+  "officialSite": "https://igem.org",
+  "sourceUrl": "https://igem.org/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "注册",
+    "kind": "QUALIFIER",
+    "track": null
+   },
+   {
+    "name": "评审与提交",
+    "kind": "OTHER",
+    "track": null
+   },
+   {
+    "name": "Grand Jamboree",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "OTHER",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-11-13"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "RESULT",
+    "startAt": "2026-11-16"
+   }
+  ],
+  "seq": "39",
+  "csv": {
+   "最新届次": "2026赛季",
+   "报名开始时间": "Stage I 2026-01",
+   "报名截止时间": "Stage II 2026年内（约7月roster freeze）",
+   "校赛/省赛时间": "—",
+   "全国赛/决赛时间": "Grand Jamboree 2026-11-13~16（巴黎）",
+   "结果公布/颁奖时间": "2026-11-16",
+   "当前状态": "进行中",
+   "可信度": "高",
+   "备注": "Wiki冻结2026-10-21"
+  }
+ },
+ {
+  "code": "CAAIROBOT",
+  "name": "中国机器人及人工智能大赛",
+  "officialSite": "https://www.caairobot.com",
+  "sourceUrl": "https://www.caairobot.com/",
+  "tracks": [
+   {
+    "code": "ROBOT",
+    "name": "机器人赛项"
+   },
+   {
+    "code": "AI",
+    "name": "人工智能赛项"
+   },
+   {
+    "code": "INNOV",
+    "name": "创新赛项"
+   }
+  ],
+  "stages": [
+   {
+    "name": "省级选拔赛",
+    "kind": "PROVINCIAL",
+    "track": "ROBOT"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "ROBOT"
+   },
+   {
+    "name": "省级选拔赛",
+    "kind": "PROVINCIAL",
+    "track": "AI"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "AI"
+   },
+   {
+    "name": "省级选拔赛",
+    "kind": "PROVINCIAL",
+    "track": "INNOV"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "INNOV"
+   }
+  ],
+  "events": [
+   {
+    "stage": "PROVINCIAL",
+    "track": "ROBOT",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-03-01"
+   }
+  ],
+  "seq": "40",
+  "csv": {
+   "最新届次": "第二十八届（2026）",
+   "报名开始时间": "2026-03-01",
+   "报名截止时间": "各省赛区自定",
+   "校赛/省赛时间": "省级选拔赛2026-06-07前",
+   "全国赛/决赛时间": "2026-07中下旬",
+   "结果公布/颁奖时间": "随决赛",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "校赛前30%进省赛"
+  }
+ },
+ {
+  "code": "CUBEC",
+  "name": "全国高校商业精英挑战赛",
+  "officialSite": null,
+  "sourceUrl": "https://cubec.org.cn/",
+  "tracks": [
+   {
+    "code": "BRAND",
+    "name": "品牌策划竞赛"
+   },
+   {
+    "code": "EXPO",
+    "name": "会展专业创新创业实践竞赛"
+   },
+   {
+    "code": "TRADE",
+    "name": "国际贸易竞赛"
+   },
+   {
+    "code": "INNOV",
+    "name": "创新创业竞赛"
+   },
+   {
+    "code": "ELITE",
+    "name": "精英赛"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "BRAND"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "BRAND"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "BRAND"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "EXPO"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "EXPO"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "EXPO"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "TRADE"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "TRADE"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "TRADE"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "INNOV"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "INNOV"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "INNOV"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "ELITE"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "ELITE"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "ELITE"
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": "BRAND",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-08-07"
+   },
+   {
+    "stage": "FINAL",
+    "track": "BRAND",
+    "nodeType": "CONTEST",
+    "startAt": "2026-10-17"
+   },
+   {
+    "stage": "FINAL",
+    "track": "BRAND",
+    "nodeType": "RESULT",
+    "startAt": "2026-11-13"
+   }
+  ],
+  "seq": "41",
+  "csv": {
+   "最新届次": "第十四届（2026）",
+   "报名开始时间": "2026-01（通知）/各赛道陆续",
+   "报名截止时间": "创业计划赛道2026-08-07",
+   "校赛/省赛时间": "校赛2026-08-13前；省赛2026-09-03前",
+   "全国赛/决赛时间": "创业计划赛道2026-10-17~18（线上）",
+   "结果公布/颁奖时间": "精英赛2026-11-13~15",
+   "当前状态": "进行中",
+   "可信度": "高",
+   "备注": "含5赛道，时间各异"
+  }
+ },
+ {
+  "code": "CDEC",
+  "name": "中国好创意暨全国数字艺术设计大赛",
+  "officialSite": "http://www.cdec.org.cn",
+  "sourceUrl": "http://www.cdec.org.cn/",
+  "tracks": [
+   {
+    "code": "VISUAL",
+    "name": "视觉传达"
+   },
+   {
+    "code": "ENV",
+    "name": "环境设计"
+   },
+   {
+    "code": "ANIM",
+    "name": "动画"
+   },
+   {
+    "code": "GAME",
+    "name": "游戏设计"
+   }
+  ],
+  "stages": [
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "VISUAL"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "VISUAL"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "ENV"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "ENV"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "ANIM"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "ANIM"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "GAME"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "GAME"
+   }
+  ],
+  "events": [
+   {
+    "stage": "PROVINCIAL",
+    "track": "VISUAL",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2025-10-20"
+   },
+   {
+    "stage": "PROVINCIAL",
+    "track": "VISUAL",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-06-30"
+   },
+   {
+    "stage": "FINAL",
+    "track": "VISUAL",
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-24"
+   },
+   {
+    "stage": "FINAL",
+    "track": "VISUAL",
+    "nodeType": "RESULT",
+    "startAt": "2026-08-25"
+   }
+  ],
+  "seq": "42",
+  "csv": {
+   "最新届次": "第20届（2026）",
+   "报名开始时间": "2025-10-20",
+   "报名截止时间": "2026-06-30 17:00",
+   "校赛/省赛时间": "省赛评审2026-07-08~20",
+   "全国赛/决赛时间": "国赛评审2026-07-24~30",
+   "结果公布/颁奖时间": "国赛获奖公布2026-08-25前",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": ""
+  }
+ },
+ {
+  "code": "3DDS",
+  "name": "全国三维数字化创新设计大赛",
+  "officialSite": "http://3dds.3ddl.net",
+  "sourceUrl": "http://3dds.3ddl.net/",
+  "tracks": [
+   {
+    "code": "DIGITAL",
+    "name": "数字工业"
+   },
+   {
+    "code": "CULTURE",
+    "name": "数字文化"
+   },
+   {
+    "code": "LIFE",
+    "name": "数字人居"
+   }
+  ],
+  "stages": [
+   {
+    "name": "初赛",
+    "kind": "CAMPUS",
+    "track": "DIGITAL"
+   },
+   {
+    "name": "复赛/省赛",
+    "kind": "PROVINCIAL",
+    "track": "DIGITAL"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "DIGITAL"
+   },
+   {
+    "name": "初赛",
+    "kind": "CAMPUS",
+    "track": "CULTURE"
+   },
+   {
+    "name": "复赛/省赛",
+    "kind": "PROVINCIAL",
+    "track": "CULTURE"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "CULTURE"
+   },
+   {
+    "name": "初赛",
+    "kind": "CAMPUS",
+    "track": "LIFE"
+   },
+   {
+    "name": "复赛/省赛",
+    "kind": "PROVINCIAL",
+    "track": "LIFE"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "LIFE"
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": "DIGITAL",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-04-20"
+   },
+   {
+    "stage": "CAMPUS",
+    "track": "DIGITAL",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-08-23"
+   }
+  ],
+  "seq": "43",
+  "csv": {
+   "最新届次": "第19届（2026）",
+   "报名开始时间": "2026-04-20",
+   "报名截止时间": "2026-08-23",
+   "校赛/省赛时间": "初赛选拔2026-08-24~31；复赛/省赛作品提交09-01~09-10、评审09-11~10-31",
+   "全国赛/决赛时间": "2026-11~12",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "进行中",
+   "可信度": "高",
+   "备注": "三级赛制；复赛/省赛细分为作品提交9.1-9.10与评审9.11-10.31"
+  }
+ },
+ {
+  "code": "XCBDS",
+  "name": "“学创杯”全国大学生创业综合模拟大赛",
+  "officialSite": null,
+  "sourceUrl": "http://www.xcbds.com/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": null
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "SIGNUP_START",
+    "startAt": "2025-12-15"
+   }
+  ],
+  "seq": "44",
+  "csv": {
+   "最新届次": "第十三届（2026）",
+   "报名开始时间": "2025-12-15",
+   "报名截止时间": "信息未公布（无统一截止）",
+   "校赛/省赛时间": "校赛2026-01~09；省赛2026-08~10",
+   "全国赛/决赛时间": "2026-11（半决赛在线+总决选现场）",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "进行中",
+   "可信度": "高",
+   "备注": "河北/广东等省赛已办；报名自2025-12-15起，无统一截止"
+  }
+ },
+ {
+  "code": "DTCP",
+  "name": "大学生新一代信息通信科技大赛",
+  "officialSite": null,
+  "sourceUrl": "https://www.ksup.cn/",
+  "tracks": [
+   {
+    "code": "ENG",
+    "name": "工程实践赛道"
+   },
+   {
+    "code": "EDU",
+    "name": "产教融合赛道"
+   },
+   {
+    "code": "ICT",
+    "name": "ICT通识赛道"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "ENG"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "ENG"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "ENG"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "EDU"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "EDU"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "EDU"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "ICT"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "ICT"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "ICT"
+   }
+  ],
+  "events": [],
+  "seq": "45",
+  "csv": {
+   "最新届次": "第十三届（2026）",
+   "报名开始时间": "2025-12",
+   "报名截止时间": "2026-03（官网口径3月底；部分校3-07/3-10）",
+   "校赛/省赛时间": "校赛约2026-03；省赛/区域赛2026-04中旬",
+   "全国赛/决赛时间": "全国总决赛2026-07（线下）",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "已结束",
+   "可信度": "中",
+   "备注": "官网口径更正为“省赛4月中旬、全国总决赛7月”；报名截止非统一3-10"
+  }
+ },
+ {
+  "code": "WLSYCX",
+  "name": "全国大学生物理实验竞赛",
+  "officialSite": "https://wlsycx.moocollege.com",
+  "sourceUrl": "https://wlsycx.moocollege.com/",
+  "tracks": [
+   {
+    "code": "TOPIC",
+    "name": "命题类"
+   },
+   {
+    "code": "FREE",
+    "name": "自选类"
+   },
+   {
+    "code": "LECTURE",
+    "name": "讲课类"
+   },
+   {
+    "code": "INTL",
+    "name": "国际赛道"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "TOPIC"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "TOPIC"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "FREE"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "FREE"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "LECTURE"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "LECTURE"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "INTL"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "INTL"
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": "TOPIC",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-04-30"
+   }
+  ],
+  "seq": "46",
+  "csv": {
+   "最新届次": "第十二届（2026）",
+   "报名开始时间": "各校自定（部分校3~4月校内报名）",
+   "报名截止时间": "各校自定（如哈工大校内截止2026-04-30）",
+   "校赛/省赛时间": "各校自定，预赛约2026-09初",
+   "全国赛/决赛时间": "决赛窗口2026-09~11",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "进行中",
+   "可信度": "中",
+   "备注": "决赛窗口更正为2026年9-11月；“报名5-15起/截止9-15”无官方统一依据"
+  }
+ },
+ {
+  "code": "RAICOM",
+  "name": "睿抗机器人开发者大赛（RAICOM）",
+  "officialSite": "https://www.raicom.com.cn",
+  "sourceUrl": "https://www.raicom.com.cn/",
+  "tracks": [
+   {
+    "code": "RAICOM-CAI",
+    "name": "CAI 赛道"
+   },
+   {
+    "code": "RAICOM-ROBOT",
+    "name": "机器人赛道"
+   },
+   {
+    "code": "RAICOM-INNOV",
+    "name": "创新赛道"
+   }
+  ],
+  "stages": [
+   {
+    "name": "区域赛",
+    "kind": "REGIONAL",
+    "track": "RAICOM-CAI"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "RAICOM-CAI"
+   },
+   {
+    "name": "区域赛",
+    "kind": "REGIONAL",
+    "track": "RAICOM-ROBOT"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "RAICOM-ROBOT"
+   },
+   {
+    "name": "区域赛",
+    "kind": "REGIONAL",
+    "track": "RAICOM-INNOV"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "RAICOM-INNOV"
+   }
+  ],
+  "events": [
+   {
+    "stage": "REGIONAL",
+    "track": "RAICOM-CAI",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-04-01"
+   },
+   {
+    "stage": "REGIONAL",
+    "track": "RAICOM-CAI",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-07-31"
+   },
+   {
+    "stage": "FINAL",
+    "track": "RAICOM-CAI",
+    "nodeType": "RESULT",
+    "startAt": "2026-08-18"
+   }
+  ],
+  "seq": "47",
+  "csv": {
+   "最新届次": "2026赛季",
+   "报名开始时间": "2026-04-01",
+   "报名截止时间": "2026-07-31",
+   "校赛/省赛时间": "省级/区域赛2026-04~09（广东省赛6-27~7-15）",
+   "全国赛/决赛时间": "全国总决赛2026-07~10（杭州7-15~17、深圳8-15~18）",
+   "结果公布/颁奖时间": "2026-08-18（总决赛落幕）",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "报名截止更正为2026-07-31、开始更正为2026-04-01"
+  }
+ },
+ {
+  "code": "CULSC",
+  "name": "全国大学生生命科学竞赛",
+  "officialSite": "https://culsc.cn",
+  "sourceUrl": "https://culsc.cn/",
+  "tracks": [
+   {
+    "code": "RESEARCH",
+    "name": "科学探究类"
+   },
+   {
+    "code": "INNOV",
+    "name": "创新创业类"
+   }
+  ],
+  "stages": [
+   {
+    "name": "网评",
+    "kind": "QUALIFIER",
+    "track": "RESEARCH"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "RESEARCH"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "RESEARCH"
+   },
+   {
+    "name": "网评",
+    "kind": "QUALIFIER",
+    "track": "INNOV"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "INNOV"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "INNOV"
+   }
+  ],
+  "events": [
+   {
+    "stage": "QUALIFIER",
+    "track": "RESEARCH",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2025-08-01"
+   },
+   {
+    "stage": "QUALIFIER",
+    "track": "RESEARCH",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-01-15"
+   }
+  ],
+  "seq": "48",
+  "csv": {
+   "最新届次": "第十一届（2026）",
+   "报名开始时间": "科学探究类2025-08-01；创新创业类2026-01-20",
+   "报名截止时间": "科学探究类2026-01-15；创新创业类2026-04-20",
+   "校赛/省赛时间": "网评/省赛2026-06~07",
+   "全国赛/决赛时间": "全国决赛2026-07下旬",
+   "结果公布/颁奖时间": "已结束（具体公布日未明）",
+   "当前状态": "已结束",
+   "可信度": "中",
+   "备注": "科学探究类证实；创新创业类起止未独立核实，保留"
+  }
+ },
+ {
+  "code": "HUAWEI-ICT",
+  "name": "华为ICT大赛",
+  "officialSite": "https://www.huawei.com/minisite/ict-competition-2025-2026-global/cn/index.html",
+  "sourceUrl": "https://e.huawei.com/cn/talent/ict-academy",
+  "tracks": [
+   {
+    "code": "PRACTICE",
+    "name": "实践赛"
+   },
+   {
+    "code": "CHALLENGE",
+    "name": "挑战赛"
+   },
+   {
+    "code": "INNOV",
+    "name": "创新赛"
+   },
+   {
+    "code": "PROGRAM",
+    "name": "编程赛"
+   },
+   {
+    "code": "TEACH",
+    "name": "教学赛"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "PRACTICE"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "PRACTICE"
+   },
+   {
+    "name": "全球总决赛",
+    "kind": "FINAL",
+    "track": "PRACTICE"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "CHALLENGE"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "CHALLENGE"
+   },
+   {
+    "name": "全球总决赛",
+    "kind": "FINAL",
+    "track": "CHALLENGE"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "INNOV"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "INNOV"
+   },
+   {
+    "name": "全球总决赛",
+    "kind": "FINAL",
+    "track": "INNOV"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "PROGRAM"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "PROGRAM"
+   },
+   {
+    "name": "全球总决赛",
+    "kind": "FINAL",
+    "track": "PROGRAM"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "TEACH"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "TEACH"
+   },
+   {
+    "name": "全球总决赛",
+    "kind": "FINAL",
+    "track": "TEACH"
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": "PRACTICE",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-10-31"
+   }
+  ],
+  "seq": "49",
+  "csv": {
+   "最新届次": "第十一届（2026-2027）",
+   "报名开始时间": "2026-09（各校9月启动）",
+   "报名截止时间": "实践/挑战赛2026-10-31；算子赛2026-10-26；创新/编程/教学赛2026-11-30",
+   "校赛/省赛时间": "信息未公布",
+   "全国赛/决赛时间": "信息未公布",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "报名中",
+   "可信度": "高",
+   "备注": "算子赛需2026-10-26前完成两项认证方可获正式资格"
+  }
+ },
+ {
+  "code": "SOCCHINA",
+  "name": "全国大学生嵌入式芯片与系统设计竞赛",
+  "officialSite": "https://www.socchina.net",
+  "sourceUrl": "https://www.socchina.net/",
+  "tracks": [
+   {
+    "code": "APP",
+    "name": "芯片应用赛道"
+   },
+   {
+    "code": "DESIGN",
+    "name": "芯片设计赛道"
+   },
+   {
+    "code": "FPGA",
+    "name": "FPGA创新设计赛道"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "APP"
+   },
+   {
+    "name": "分赛区初/复赛",
+    "kind": "REGIONAL",
+    "track": "APP"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "APP"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "DESIGN"
+   },
+   {
+    "name": "分赛区初/复赛",
+    "kind": "REGIONAL",
+    "track": "DESIGN"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "DESIGN"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "FPGA"
+   },
+   {
+    "name": "分赛区初/复赛",
+    "kind": "REGIONAL",
+    "track": "FPGA"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "FPGA"
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": "APP",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-07-06"
+   },
+   {
+    "stage": "CAMPUS",
+    "track": "APP",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-04-20"
+   },
+   {
+    "stage": "FINAL",
+    "track": "APP",
+    "nodeType": "CONTEST",
+    "startAt": "2026-11-20"
+   },
+   {
+    "stage": "FINAL",
+    "track": "APP",
+    "nodeType": "RESULT",
+    "startAt": "2026-10-09"
+   }
+  ],
+  "seq": "50",
+  "csv": {
+   "最新届次": "第九届（2026）",
+   "报名开始时间": "芯片应用赛道2026-02；FPGA赛道2026-07-06",
+   "报名截止时间": "芯片应用赛道2026-04-20；FPGA赛道2026-09-22",
+   "校赛/省赛时间": "芯片应用赛道分赛区初/复赛2026-07；FPGA初赛2026-09~11",
+   "全国赛/决赛时间": "芯片应用赛道2026-08；FPGA决赛2026-11-20~22",
+   "结果公布/颁奖时间": "芯片应用赛道2026-10-09公布获奖",
+   "当前状态": "进行中（FPGA赛道）",
+   "可信度": "中",
+   "备注": "含三赛道；芯片应用赛道已结束，FPGA决赛日期待官方二次确认"
+  }
+ },
+ {
+  "code": "ROBOTCONTEST",
+  "name": "中国高校智能机器人创意大赛",
+  "officialSite": "https://www.robotcontest.cn",
+  "sourceUrl": "https://www.robotcontest.cn/",
+  "tracks": [
+   {
+    "code": "CREATIVE",
+    "name": "创意类"
+   },
+   {
+    "code": "COMPETE",
+    "name": "竞技类"
+   }
+  ],
+  "stages": [
+   {
+    "name": "大区赛",
+    "kind": "REGIONAL",
+    "track": "CREATIVE"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "CREATIVE"
+   },
+   {
+    "name": "大区赛",
+    "kind": "REGIONAL",
+    "track": "COMPETE"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "COMPETE"
+   }
+  ],
+  "events": [
+   {
+    "stage": "REGIONAL",
+    "track": "CREATIVE",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-04-01"
+   },
+   {
+    "stage": "REGIONAL",
+    "track": "CREATIVE",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-05-08"
+   },
+   {
+    "stage": "FINAL",
+    "track": "CREATIVE",
+    "nodeType": "CONTEST",
+    "startAt": "2026-08-17"
+   }
+  ],
+  "seq": "51",
+  "csv": {
+   "最新届次": "第九届（2026）",
+   "报名开始时间": "2026-04-01（约）",
+   "报名截止时间": "2026-05-08（部分通知2026-05-10）",
+   "校赛/省赛时间": "大区赛/省赛决赛约2026-05-30~31",
+   "全国赛/决赛时间": "全国总决赛2026-08-17~19（宁波）",
+   "结果公布/颁奖时间": "2026-08中下旬",
+   "当前状态": "已结束",
+   "可信度": "中",
+   "备注": "全国总决赛8-17~19（8-19宁波落幕）证实；大区赛日期待核"
+  }
+ },
+ {
+  "code": "CSCC",
+  "name": "全国大学生计算机系统能力大赛",
+  "officialSite": "https://cscc.educg.net",
+  "sourceUrl": "https://cscc.educg.net/",
+  "tracks": [
+   {
+    "code": "CPU",
+    "name": "CPU设计赛"
+   },
+   {
+    "code": "OS",
+    "name": "操作系统设计赛"
+   },
+   {
+    "code": "COMPILER",
+    "name": "编译系统设计赛"
+   },
+   {
+    "code": "AI",
+    "name": "智能计算赛"
+   }
+  ],
+  "stages": [
+   {
+    "name": "初赛",
+    "kind": "QUALIFIER",
+    "track": "CPU"
+   },
+   {
+    "name": "决赛",
+    "kind": "FINAL",
+    "track": "CPU"
+   },
+   {
+    "name": "初赛",
+    "kind": "QUALIFIER",
+    "track": "OS"
+   },
+   {
+    "name": "决赛",
+    "kind": "FINAL",
+    "track": "OS"
+   },
+   {
+    "name": "初赛",
+    "kind": "QUALIFIER",
+    "track": "COMPILER"
+   },
+   {
+    "name": "决赛",
+    "kind": "FINAL",
+    "track": "COMPILER"
+   },
+   {
+    "name": "初赛",
+    "kind": "QUALIFIER",
+    "track": "AI"
+   },
+   {
+    "name": "决赛",
+    "kind": "FINAL",
+    "track": "AI"
+   }
+  ],
+  "events": [
+   {
+    "stage": "QUALIFIER",
+    "track": "CPU",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-05-18"
+   },
+   {
+    "stage": "QUALIFIER",
+    "track": "CPU",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-06-15"
+   },
+   {
+    "stage": "QUALIFIER",
+    "track": "CPU",
+    "nodeType": "CONTEST",
+    "startAt": "2026-08-12"
+   },
+   {
+    "stage": "FINAL",
+    "track": "CPU",
+    "nodeType": "RESULT",
+    "startAt": "2026-08-21"
+   }
+  ],
+  "seq": "52",
+  "csv": {
+   "最新届次": "2026年",
+   "报名开始时间": "2026-05-18",
+   "报名截止时间": "2026-06-15",
+   "校赛/省赛时间": "初赛（线上）2026-06-20~07-15",
+   "全国赛/决赛时间": "先导杯2026-08-12~15；操作系统/编译/CPU赛2026-08-18~24",
+   "结果公布/颁奖时间": "2026-08-21（颁奖典礼）",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "分CPU设计、操作系统设计、编译系统设计、智能计算等赛项"
+  }
+ },
+ {
+  "code": "I21ST",
+  "name": "“21世纪杯”全国英语演讲比赛",
+  "officialSite": null,
+  "sourceUrl": "https://contest.i21st.cn/",
+  "tracks": [
+   {
+    "code": "UNIV",
+    "name": "大学组"
+   },
+   {
+    "code": "SENIOR",
+    "name": "高中组"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校园选拔",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "地区赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "全国半决赛/总决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [],
+  "seq": "53",
+  "csv": {
+   "最新届次": "第31届（2026）",
+   "报名开始时间": "2026-01",
+   "报名截止时间": "2026-04（校园选拔/地区初赛1~4月）",
+   "校赛/省赛时间": "地区半决赛/决赛2026-04~07",
+   "全国赛/决赛时间": "全国半决赛/总决赛2026-10（拟）",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "进行中",
+   "可信度": "高",
+   "备注": "官网原文一致；全国赛地点待定"
+  }
+ },
+ {
+  "code": "SFLEP",
+  "name": "“外教社杯”全国高校学生跨文化能力大赛",
+  "officialSite": null,
+  "sourceUrl": "https://ict.sflep.com/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": null
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-12-03"
+   }
+  ],
+  "seq": "54",
+  "csv": {
+   "最新届次": "第九届（2026）",
+   "报名开始时间": "各校自定（校赛3月起）",
+   "报名截止时间": "各校自定",
+   "校赛/省赛时间": "校赛2026-03起；省赛2026-05~11（黑龙江5-30~31，部分省10月）",
+   "全国赛/决赛时间": "全国总决赛2026-12-03~06（上海外国语大学）",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "进行中",
+   "可信度": "高",
+   "备注": "全国总决赛12-03~06证实；省赛“11-15前”偏窄，有省份5月/10月举行"
+  }
+ },
+ {
+  "code": "IOTSJTU",
+  "name": "全国大学生物联网设计竞赛",
+  "officialSite": "https://iot.sjtu.edu.cn",
+  "sourceUrl": "https://iot.sjtu.edu.cn/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "分赛区决赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "REGIONAL",
+    "track": null,
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-06-15"
+   },
+   {
+    "stage": "REGIONAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-08-22"
+   }
+  ],
+  "seq": "55",
+  "csv": {
+   "最新届次": "第十三届（2026）",
+   "报名开始时间": "2026-03（通知3月发布）",
+   "报名截止时间": "2026-06-15",
+   "校赛/省赛时间": "分赛区决赛2026-08-20前",
+   "全国赛/决赛时间": "全国总决赛2026-08-22~24（贵州大学）",
+   "结果公布/颁奖时间": "2026-08底",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "届次补充为“第十三届（2026）”"
+  }
+ },
+ {
+  "code": "JCYXDS",
+  "name": "全国大学生医学创新大赛暨“一带一路”国际竞赛",
+  "officialSite": null,
+  "sourceUrl": "https://www.jcyxds.com/",
+  "tracks": [
+   {
+    "code": "BASIC",
+    "name": "基础医学"
+   },
+   {
+    "code": "CLINICAL",
+    "name": "临床医学"
+   },
+   {
+    "code": "PHARMACY",
+    "name": "药学"
+   },
+   {
+    "code": "PUBLIC",
+    "name": "公共卫生"
+   },
+   {
+    "code": "NURSING",
+    "name": "护理学"
+   },
+   {
+    "code": "TCM",
+    "name": "中医学"
+   },
+   {
+    "code": "STOMATOLOGY",
+    "name": "口腔医学"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "BASIC"
+   },
+   {
+    "name": "复赛/分区赛",
+    "kind": "REGIONAL",
+    "track": "BASIC"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "BASIC"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "CLINICAL"
+   },
+   {
+    "name": "复赛/分区赛",
+    "kind": "REGIONAL",
+    "track": "CLINICAL"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "CLINICAL"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "PHARMACY"
+   },
+   {
+    "name": "复赛/分区赛",
+    "kind": "REGIONAL",
+    "track": "PHARMACY"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "PHARMACY"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "PUBLIC"
+   },
+   {
+    "name": "复赛/分区赛",
+    "kind": "REGIONAL",
+    "track": "PUBLIC"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "PUBLIC"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "NURSING"
+   },
+   {
+    "name": "复赛/分区赛",
+    "kind": "REGIONAL",
+    "track": "NURSING"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "NURSING"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "TCM"
+   },
+   {
+    "name": "复赛/分区赛",
+    "kind": "REGIONAL",
+    "track": "TCM"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "TCM"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "STOMATOLOGY"
+   },
+   {
+    "name": "复赛/分区赛",
+    "kind": "REGIONAL",
+    "track": "STOMATOLOGY"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "STOMATOLOGY"
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": "BASIC",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-04-15"
+   },
+   {
+    "stage": "FINAL",
+    "track": "BASIC",
+    "nodeType": "RESULT",
+    "startAt": "2026-08-14"
+   }
+  ],
+  "seq": "56",
+  "csv": {
+   "最新届次": "第十二届（2026）",
+   "报名开始时间": "2026-01（通知1~2月）",
+   "报名截止时间": "2026-04-15",
+   "校赛/省赛时间": "校赛2026-04-30前；复赛/区赛2026-05~07",
+   "全国赛/决赛时间": "全国总决赛2026-08中下旬（复旦大学）",
+   "结果公布/颁奖时间": "2026-08-14（高职高专赛道名单）/8月中下旬",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "报名截止由“04-14”更正为04-15；总决赛承办校为复旦大学"
+  }
+ },
+ {
+  "code": "NECCS",
+  "name": "全国大学生英语竞赛",
+  "officialSite": null,
+  "sourceUrl": "https://www.neccs.org.cn/",
+  "tracks": [
+   {
+    "code": "A",
+    "name": "研究生类"
+   },
+   {
+    "code": "B",
+    "name": "英语专业类"
+   },
+   {
+    "code": "C",
+    "name": "非英语专业本科"
+   },
+   {
+    "code": "D",
+    "name": "体育艺术类"
+   }
+  ],
+  "stages": [
+   {
+    "name": "初赛",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "SIGNUP_START",
+    "startAt": "2025-12-17"
+   },
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-03-13"
+   },
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-05-10"
+   }
+  ],
+  "seq": "B1",
+  "csv": {
+   "最新届次": "第28届（2026）",
+   "报名开始时间": "2025-12-17",
+   "报名截止时间": "2026-03-13",
+   "校赛/省赛时间": "初赛2026-04-12",
+   "全国赛/决赛时间": "决赛2026-05-10",
+   "结果公布/颁奖时间": "2026-06（特/一等奖名单6-01起陆续公布）",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "全部证实，无分歧；第29届（2027）约2026-12启动"
+  }
+ },
+ {
+  "code": "ARTSHOW",
+  "name": "全国大学生艺术展演",
+  "officialSite": null,
+  "sourceUrl": "https://www.moe.gov.cn/",
+  "tracks": [
+   {
+    "code": "VOCAL",
+    "name": "声乐"
+   },
+   {
+    "code": "INSTR",
+    "name": "器乐"
+   },
+   {
+    "code": "DANCE",
+    "name": "舞蹈"
+   },
+   {
+    "code": "DRAMA",
+    "name": "戏剧"
+   },
+   {
+    "code": "RECITE",
+    "name": "朗诵"
+   },
+   {
+    "code": "WORKSHOP",
+    "name": "艺术实践工作坊"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校级展演",
+    "kind": "CAMPUS",
+    "track": "VOCAL"
+   },
+   {
+    "name": "省级展演",
+    "kind": "PROVINCIAL",
+    "track": "VOCAL"
+   },
+   {
+    "name": "全国汇演",
+    "kind": "FINAL",
+    "track": "VOCAL"
+   },
+   {
+    "name": "校级展演",
+    "kind": "CAMPUS",
+    "track": "INSTR"
+   },
+   {
+    "name": "省级展演",
+    "kind": "PROVINCIAL",
+    "track": "INSTR"
+   },
+   {
+    "name": "全国汇演",
+    "kind": "FINAL",
+    "track": "INSTR"
+   },
+   {
+    "name": "校级展演",
+    "kind": "CAMPUS",
+    "track": "DANCE"
+   },
+   {
+    "name": "省级展演",
+    "kind": "PROVINCIAL",
+    "track": "DANCE"
+   },
+   {
+    "name": "全国汇演",
+    "kind": "FINAL",
+    "track": "DANCE"
+   },
+   {
+    "name": "校级展演",
+    "kind": "CAMPUS",
+    "track": "DRAMA"
+   },
+   {
+    "name": "省级展演",
+    "kind": "PROVINCIAL",
+    "track": "DRAMA"
+   },
+   {
+    "name": "全国汇演",
+    "kind": "FINAL",
+    "track": "DRAMA"
+   },
+   {
+    "name": "校级展演",
+    "kind": "CAMPUS",
+    "track": "RECITE"
+   },
+   {
+    "name": "省级展演",
+    "kind": "PROVINCIAL",
+    "track": "RECITE"
+   },
+   {
+    "name": "全国汇演",
+    "kind": "FINAL",
+    "track": "RECITE"
+   },
+   {
+    "name": "校级展演",
+    "kind": "CAMPUS",
+    "track": "WORKSHOP"
+   },
+   {
+    "name": "省级展演",
+    "kind": "PROVINCIAL",
+    "track": "WORKSHOP"
+   },
+   {
+    "name": "全国汇演",
+    "kind": "FINAL",
+    "track": "WORKSHOP"
+   }
+  ],
+  "events": [],
+  "seq": "B2",
+  "csv": {
+   "最新届次": "第八届（2026-2027）",
+   "报名开始时间": "校级展演2026-04起",
+   "报名截止时间": "信息未公布",
+   "校赛/省赛时间": "省级展演2026年内",
+   "全国赛/决赛时间": "全国汇演2027年",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "进行中",
+   "可信度": "高",
+   "备注": "三阶段（校/省/全国汇演），全国汇演在2027年"
+  }
+ },
+ {
+  "code": "CICF",
+  "name": "中国国际合唱节",
+  "officialSite": null,
+  "sourceUrl": "https://www.cicfbj.cn/",
+  "tracks": [
+   {
+    "code": "A",
+    "name": "A 级"
+   },
+   {
+    "code": "B",
+    "name": "B 级"
+   },
+   {
+    "code": "C",
+    "name": "C 级"
+   },
+   {
+    "code": "D",
+    "name": "D 级"
+   }
+  ],
+  "stages": [
+   {
+    "name": "参赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "SIGNUP_START",
+    "startAt": "2025-10-31"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-13"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "RESULT",
+    "startAt": "2026-07-20"
+   }
+  ],
+  "seq": "B3",
+  "csv": {
+   "最新届次": "第十八届（2026）",
+   "报名开始时间": "2025-10-31（官宣报名起）",
+   "报名截止时间": "信息未公布（约2026上半年）",
+   "校赛/省赛时间": "无（非分层）",
+   "全国赛/决赛时间": "2026-07-13~20（北京）",
+   "结果公布/颁奖时间": "2026-07-20（闭幕）",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "7-13国家大剧院开幕；31国306团"
+  }
+ },
+ {
+  "code": "WCDC",
+  "name": "世界华语辩论锦标赛",
+  "officialSite": null,
+  "sourceUrl": "https://baike.baidu.com/item/世界华语辩论锦标赛",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "分区赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "总决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [],
+  "seq": "B4",
+  "csv": {
+   "最新届次": "信息未公布（可查最新为第十届，2019-2020）",
+   "报名开始时间": "信息未公布",
+   "报名截止时间": "信息未公布",
+   "校赛/省赛时间": "信息未公布",
+   "全国赛/决赛时间": "信息未公布",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "信息未公布",
+   "可信度": "低",
+   "备注": "百科称已办九届，可查最新为第十届（2019-2020）；2025/2026新届次无可靠来源"
+  }
+ },
+ {
+  "code": "WCDB",
+  "name": "华语辩论世界杯",
+  "officialSite": null,
+  "sourceUrl": "https://baike.baidu.com/item/2026华语辩论世界杯",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "分区赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "总决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-13"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "RESULT",
+    "startAt": "2026-07-19"
+   }
+  ],
+  "seq": "B5",
+  "csv": {
+   "最新届次": "2026届",
+   "报名开始时间": "信息未公布",
+   "报名截止时间": "信息未公布",
+   "校赛/省赛时间": "分区赛2026上半年",
+   "全国赛/决赛时间": "2026-07-13~19（北京石景山首钢园，7-19总决赛）",
+   "结果公布/颁奖时间": "2026-07-19总决赛",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "主题“百炼铸新声”；冠军为中国人民大学"
+  }
+ },
+ {
+  "code": "QBIANHUI",
+  "name": "全辩会·国际华语辩论冠军赛",
+  "officialSite": null,
+  "sourceUrl": "",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "淘汰赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [],
+  "seq": "B6",
+  "csv": {
+   "最新届次": "信息未公布（可查首届2019-10-07）",
+   "报名开始时间": "信息未公布",
+   "报名截止时间": "信息未公布",
+   "校赛/省赛时间": "信息未公布",
+   "全国赛/决赛时间": "信息未公布",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "信息未公布",
+   "可信度": "低",
+   "备注": "仅查到首届（2019重庆大学）及2020网络冠军赛；与“新国辩”易混淆，最新届次无公开信息"
+  }
+ },
+ {
+  "code": "WUDT",
+  "name": "世界大学生辩论巡回赛",
+  "officialSite": null,
+  "sourceUrl": "https://debatetimer.cn/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "分区赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "总决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [],
+  "seq": "B7",
+  "csv": {
+   "最新届次": "2025赛季",
+   "报名开始时间": "信息未公布（约2025上半年）",
+   "报名截止时间": "信息未公布",
+   "校赛/省赛时间": "分区赛2025上半年（东北10-12）",
+   "全国赛/决赛时间": "总决赛2025-10",
+   "结果公布/颁奖时间": "2025-10",
+   "当前状态": "2025届已结束（2026信息未公布）",
+   "可信度": "中",
+   "备注": "24支赛区冠亚军晋级总决赛；品牌旧称“晨星杯”"
+  }
+ },
+ {
+  "code": "XFXJXF",
+  "name": "全国学生“学宪法讲宪法”活动",
+  "officialSite": null,
+  "sourceUrl": "https://www.moe.gov.cn/",
+  "tracks": [
+   {
+    "code": "LITERACY",
+    "name": "法治素养"
+   },
+   {
+    "code": "MICRO",
+    "name": "微课"
+   }
+  ],
+  "stages": [
+   {
+    "name": "省级选拔",
+    "kind": "PROVINCIAL",
+    "track": "LITERACY"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "LITERACY"
+   },
+   {
+    "name": "省级选拔",
+    "kind": "PROVINCIAL",
+    "track": "MICRO"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "MICRO"
+   }
+  ],
+  "events": [
+   {
+    "stage": "PROVINCIAL",
+    "track": "LITERACY",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-07-01"
+   },
+   {
+    "stage": "PROVINCIAL",
+    "track": "LITERACY",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-10-10"
+   },
+   {
+    "stage": "FINAL",
+    "track": "LITERACY",
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-28"
+   }
+  ],
+  "seq": "B8",
+  "csv": {
+   "最新届次": "第十一届（2026）",
+   "报名开始时间": "2026-07-01（网络风采作品上传）",
+   "报名截止时间": "2026-10-10（作品上传截止）",
+   "校赛/省赛时间": "省级选拔2026下半年",
+   "全国赛/决赛时间": "法治素养总决赛2026-11；微课总决赛2026-07-28~31（哈尔滨）",
+   "结果公布/颁奖时间": "2026-11（选手公示）；12月上旬国家宪法日颁奖",
+   "当前状态": "进行中",
+   "可信度": "高",
+   "备注": "活动期2026年5-12月；更正为“法治素养总决赛11月、微课总决赛7月底、颁奖12月上旬”"
+  }
+ },
+ {
+  "code": "WLWHJ",
+  "name": "全国大学生网络文化节",
+  "officialSite": null,
+  "sourceUrl": "https://dxs.moe.gov.cn/zx/hd/wlwhj/",
+  "tracks": [
+   {
+    "code": "VIDEO",
+    "name": "短视频"
+   },
+   {
+    "code": "PHOTO",
+    "name": "摄影"
+   },
+   {
+    "code": "WRITING",
+    "name": "网文"
+   },
+   {
+    "code": "MUSIC",
+    "name": "歌曲"
+   },
+   {
+    "code": "DESIGN",
+    "name": "公益广告"
+   }
+  ],
+  "stages": [
+   {
+    "name": "省级推选",
+    "kind": "PROVINCIAL",
+    "track": null
+   },
+   {
+    "name": "全国遴选",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "RESULT",
+    "startAt": "2026-08-31"
+   }
+  ],
+  "seq": "B9",
+  "csv": {
+   "最新届次": "第八届（2025-2026）",
+   "报名开始时间": "2025-07（校内征集7-02起）",
+   "报名截止时间": "信息未公布",
+   "校赛/省赛时间": "省级推选2026年内",
+   "全国赛/决赛时间": "作品征集/遴选2026年",
+   "结果公布/颁奖时间": "2026-08-31（教育部思政司遴选结果公示）",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "2025-06发通知、7月征集，2026-08-31公示结果"
+  }
+ },
+ {
+  "code": "SCXIJU",
+  "name": "四川省戏剧小品（小戏）比赛",
+  "officialSite": null,
+  "sourceUrl": "https://www.yscz.org.cn/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "参赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "RESULT",
+    "startAt": "2025-07-24"
+   }
+  ],
+  "seq": "B10",
+  "csv": {
+   "最新届次": "第二十届（2025）",
+   "报名开始时间": "信息未公布",
+   "报名截止时间": "信息未公布",
+   "校赛/省赛时间": "无（非分层）",
+   "全国赛/决赛时间": "决赛2025-06中下旬（达州通川，6-16/17开幕，为期5天）",
+   "结果公布/颁奖时间": "获奖结果公布2025-07-24（拟获奖公示6-25）",
+   "当前状态": "已结束（二十一届未公布）",
+   "可信度": "中",
+   "备注": "决赛为6月中下旬；“07-26”系闭幕报道日而非赛期"
+  }
+ }
+]

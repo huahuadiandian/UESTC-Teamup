@@ -1,0 +1,266 @@
+[
+ {
+  "code": "CMC",
+  "officialUrl": "https://www.cms.org.cn/Home/comp/comp/cid/16.html",
+  "seasonStatus": "第十八届报名中：初赛2026-11-14（周六）9:00-11:30举行，决赛预计2027年4月在大连理工大学，决赛具体时间2027年1月通知",
+  "structure": {
+   "tracks": [
+    {"code": "MATH-A", "name": "数学专业A类", "description": "具有数学一级学科博士点高校或数学学科评估B-以上高校的数学类专业学生只能报A类"},
+    {"code": "MATH-B", "name": "数学专业B类", "description": "不符合A类报考条件的数学类专业学生（西藏、青海、宁夏、内蒙古赛区均可报B类）"},
+    {"code": "NON-MATH-A", "name": "非数学专业A类（理工类）", "description": "专业代码07（理科）、08（工科）的非数学类本科生只能报A类或数学专业类"},
+    {"code": "NON-MATH-B", "name": "非数学专业B类（经管文史类）", "description": "非数学专业类中的经管文史方向"},
+    {"code": "VOCATIONAL", "name": "高职高专类", "description": "高职高专学生报考类别不限，普通高校非数学类本科生不能报考"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "初赛（以省、自治区、直辖市为赛区，军队院校为独立赛区，全国统一命题同一时间考试）", "kind": "PROVINCIAL"},
+     {"name": "决赛（中国数学会青年工作与大学生数学竞赛委员会、大连理工大学组织）", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "基线四赛道（数学A类/数学B类/非数学类/经管类）与官方第十八届通知不符：官方分为数学专业类、非数学专业类、高职高专类三大类；初赛按数学专业A/B类、非数学专业A类（理工）/B类（经管文史）、高职高专类分别命题评奖，基线中的『经管类』实为非数学专业B类且遗漏高职高专类；决赛数学专业类分低年级组（大一大二）/高年级组（大三大四）。基线将初赛标为QUALIFIER（分区赛），官方口径为省级赛区组织的全国统一笔试，改为PROVINCIAL。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_END", "startAt": "2026-10-19", "endAt": null, "label": "报名截止（官方通知：2026年10月19日前按所在赛区要求报名；各赛区校内截止自定，如上海外国语9-18、山东理工10-14）", "scope": "全国", "source": "https://www.cms.org.cn/Uploads/20260702/35e54e88a20625150d47ca69b6aff1c6.pdf"},
+   {"nodeType": "OTHER", "startAt": "2026-10-30", "endAt": null, "label": "各赛区向中国数学会汇款截止（用于决赛名额分配）", "scope": "全国", "source": "https://www.cms.org.cn/Uploads/20260702/35e54e88a20625150d47ca69b6aff1c6.pdf"},
+   {"nodeType": "CONTEST", "startAt": "2026-11-14", "endAt": "2026-11-14", "label": "初赛 9:00-11:30（全国统一命题）", "scope": "全国", "source": "https://www.cms.org.cn/Uploads/20260702/35e54e88a20625150d47ca69b6aff1c6.pdf"},
+   {"nodeType": "OTHER", "startAt": "2026-11", "endAt": null, "label": "决赛名额分配表发布（11月下旬，具体日期未公布）", "scope": "全国", "source": "https://www.cms.org.cn/Uploads/20260702/35e54e88a20625150d47ca69b6aff1c6.pdf"},
+   {"nodeType": "CONTEST", "startAt": "2027-04", "endAt": null, "label": "决赛（预计2027年4月，大连理工大学；具体时间2027年1月通知）", "scope": "全国", "source": "https://www.cms.org.cn/Uploads/20260702/35e54e88a20625150d47ca69b6aff1c6.pdf"}
+  ],
+  "sources": [
+   "https://www.cms.org.cn/Uploads/20260702/35e54e88a20625150d47ca69b6aff1c6.pdf",
+   "https://www.cms.org.cn/Home/comp/comp/cid/16.html",
+   "https://www.cmathc.org.cn/tzgg/545.html"
+  ],
+  "confidence": "高",
+  "notes": "官网归属修正：基线officialSite www.cmathc.org.cn 为第三方聚合站（页脚声明『信息搜集整理自互联网』），cmathc.cn（竞赛官网）已停止更新（最新为2024年第十六届通知）；权威发布渠道为中国数学会官网竞赛栏目（第十八届通知PDF，2026-06-10发文、2026-07-02上网）。初赛获奖由各赛区评定并报中国数学会审核，公布时间各赛区未统一公布；报名费100元/人（80元赛区+20元全国）；决赛总人数约1000人（数学类500含单列100、非数学类500，高职高专类名额视初赛情况）。初赛2026-11-14与基线一致并获官方PDF直接证实。"
+ },
+ {
+  "code": "CUPT",
+  "officialUrl": null,
+  "seasonStatus": "第十七届已结束：全国赛2026-08-12~16在苏州大学举行（哈尔滨工业大学冠军、北京大学亚军）；第十八届信息未公布",
+  "structure": {
+   "tracks": [
+    {"code": "TEAM", "name": "团体赛", "description": "围绕17个开放性物理课题的团队对抗式学术辩论"},
+    {"code": "WORK", "name": "作品赛", "description": "学术海报展示与现场答辩，另设最佳实验图片评选"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "校赛/校内选拔", "kind": "CAMPUS"},
+     {"name": "省级赛（部分省份，如福建2026-04-17~19集美大学、安徽、山东等）", "kind": "PROVINCIAL"},
+     {"name": "区域赛（东北、华北、华东、中南、西南、西北六赛区）", "kind": "REGIONAL"},
+     {"name": "全国赛", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "补充tracks：官方设团体赛、作品赛（含最佳实验图片评选）等赛道（基线为空）；阶段在基线『区域赛→全国决赛』基础上补充校内选拔与省级赛（部分省份先办省赛再晋级区赛、国赛）。"
+  },
+  "events": [
+   {"nodeType": "CONTEST", "startAt": "2026-05-15", "endAt": "2026-05-17", "label": "中南赛区（第九届）竞赛，华中师范大学（武汉）", "scope": "中南赛区", "source": "https://physics.ccnu.edu.cn"},
+   {"nodeType": "CONTEST", "startAt": "2026-06-05", "endAt": "2026-06-07", "label": "华北赛区竞赛，内蒙古科技大学（21所高校200余名师生）", "scope": "华北赛区", "source": "https://www.imust.edu.cn"},
+   {"nodeType": "CONTEST", "startAt": "2026-08-12", "endAt": "2026-08-16", "label": "全国赛（第十七届），苏州大学；部分高校报道含闭幕环节持续至8-17", "scope": "全国", "source": "https://www.suda.edu.cn/suda_news/jxky/202608/cf9b4838-e470-4ce3-954d-0bde9fbf535d.html"}
+  ],
+  "sources": [
+   "https://www.suda.edu.cn/suda_news/jxky/202608/cf9b4838-e470-4ce3-954d-0bde9fbf535d.html",
+   "https://physics.suda.edu.cn/db/3b/c1905a711483/page.htm",
+   "https://ss.usth.edu.cn/info/1057/3135.htm",
+   "https://www.imust.edu.cn",
+   "https://physics.ccnu.edu.cn"
+  ],
+  "confidence": "中",
+  "notes": "全国赛时间地点（8-12~16苏州大学、876名参赛师生、主办承办单位）获苏大官网直接证实，基线一致；区域赛日期来自承办校（华北：内蒙古科技大学2026-01-13第一轮通知；中南：华中师范大学承办），但仅能提供站点级URL，未取得通知原文直链。CUPT无独立官网：cupt-iypt.com 为山东大学背景的资讯站且已停更（最新2024），南开大学 pt.nankai.edu.cn 为赛事信息站，故 officialUrl 置 null。2026赛季整体已结束，第十八届（2027）信息未公布。"
+ },
+ {
+  "code": "ICPC",
+  "officialUrl": "https://icpc.global/",
+  "seasonStatus": "第51届（2026—2027赛季）进行中：两场网络预选赛（9-06、9-12）已结束，亚洲EC区域赛自10月17日西安站起陆续举行，EC-Final 2027-01-26~28杭州",
+  "structure": {
+   "tracks": [],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "网络预选赛（PTA平台两场，成绩作为各区域赛入围重要参考）", "kind": "QUALIFIER"},
+     {"name": "亚洲EC区域赛（西安、成都、武汉、南京、沈阳、上海、南昌、港澳8站）", "kind": "REGIONAL"},
+     {"name": "EC-Final（杭州）", "kind": "FINAL"},
+     {"name": "World Finals", "kind": "INTERNATIONAL"}
+    ]
+   },
+   "structureCorrected": false,
+   "structureNote": "与基线一致（网络预选赛→区域赛→EC-Final→World Finals）；补充：本届EC区域赛共8站+EC-Final（杭州站，2027-01-26~28）。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_END", "startAt": "2026-08-26", "endAt": null, "label": "网络预选赛第一场报名、缴费截止（23:59:59，PTA平台120元/队）", "scope": "全国", "source": "https://icpc.pku.edu.cn/tzgg/12450f30353743ccaa302be16a7a1d85.htm"},
+   {"nodeType": "CONTEST", "startAt": "2026-09-06", "endAt": "2026-09-06", "label": "网络预选赛第一场 13:00-18:00", "scope": "全国", "source": "https://icpc.pku.edu.cn/tzgg/12450f30353743ccaa302be16a7a1d85.htm"},
+   {"nodeType": "SIGNUP_END", "startAt": "2026-09-01", "endAt": null, "label": "网络预选赛第二场报名、缴费截止（23:59:59）", "scope": "全国", "source": "https://icpc.pku.edu.cn/tzgg/12450f30353743ccaa302be16a7a1d85.htm"},
+   {"nodeType": "CONTEST", "startAt": "2026-09-12", "endAt": "2026-09-12", "label": "网络预选赛第二场 13:00-18:00", "scope": "全国", "source": "https://icpc.pku.edu.cn/tzgg/12450f30353743ccaa302be16a7a1d85.htm"},
+   {"nodeType": "SIGNUP_END", "startAt": "2026-09-30", "endAt": null, "label": "西安站参赛费缴纳截止（24:00，以银行受理收据为准）", "scope": "西安赛站", "source": "https://icpc.pku.edu.cn/tzgg/f5516ebbc85f414a89224a1adf91a380.htm"},
+   {"nodeType": "CONTEST", "startAt": "2026-10-16", "endAt": "2026-10-18", "label": "西安区域赛（西北工业大学长安校区：10-16~17签到，10-17开幕式+热身赛，正式赛10-18 09:00-14:00，10-18颁奖）", "scope": "西安赛站", "source": "https://icpc.pku.edu.cn/tzgg/f5516ebbc85f414a89224a1adf91a380.htm"},
+   {"nodeType": "SIGNUP_END", "startAt": "2026-10-10", "endAt": null, "label": "成都站队伍注册截止（23:59，icpc.global注册+中文报名系统uep.pintia.cn填报）", "scope": "成都赛站", "source": "https://icpc.pku.edu.cn/tzgg/16b0883826d74a238e0ca1423ea52a2e.htm"},
+   {"nodeType": "CONTEST", "startAt": "2026-10-24", "endAt": "2026-10-25", "label": "成都区域赛（电子科技大学：10-24报道/开幕式/热身赛，正式赛10-25 09:00-14:00）", "scope": "成都赛站", "source": "https://icpc.pku.edu.cn/tzgg/16b0883826d74a238e0ca1423ea52a2e.htm"},
+   {"nodeType": "CONTEST", "startAt": "2026-10-31", "endAt": "2026-11-01", "label": "武汉区域赛（据北京总部2026各区域赛汇总表）", "scope": "武汉赛站", "source": "https://icpc.pku.edu.cn/ssxx/bed2c89264fd4d90b08bc93036051186.htm"},
+   {"nodeType": "CONTEST", "startAt": "2026-11-07", "endAt": "2026-11-08", "label": "南京区域赛（据北京总部2026各区域赛汇总表）", "scope": "南京赛站", "source": "https://icpc.pku.edu.cn/ssxx/bed2c89264fd4d90b08bc93036051186.htm"},
+   {"nodeType": "CONTEST", "startAt": "2026-11-14", "endAt": "2026-11-15", "label": "沈阳区域赛（据北京总部2026各区域赛汇总表）", "scope": "沈阳赛站", "source": "https://icpc.pku.edu.cn/ssxx/bed2c89264fd4d90b08bc93036051186.htm"},
+   {"nodeType": "CONTEST", "startAt": "2026-12-05", "endAt": "2026-12-06", "label": "上海区域赛（据北京总部2026各区域赛汇总表）", "scope": "上海赛站", "source": "https://icpc.pku.edu.cn/ssxx/bed2c89264fd4d90b08bc93036051186.htm"},
+   {"nodeType": "CONTEST", "startAt": "2026-12-19", "endAt": "2026-12-20", "label": "南昌区域赛（据北京总部2026各区域赛汇总表）", "scope": "南昌赛站", "source": "https://icpc.pku.edu.cn/ssxx/bed2c89264fd4d90b08bc93036051186.htm"},
+   {"nodeType": "CONTEST", "startAt": "2027-01-09", "endAt": "2027-01-10", "label": "港澳区域赛（据北京总部2026各区域赛汇总表）", "scope": "港澳赛站", "source": "https://icpc.pku.edu.cn/ssxx/bed2c89264fd4d90b08bc93036051186.htm"},
+   {"nodeType": "CONTEST", "startAt": "2027-01-26", "endAt": "2027-01-28", "label": "EC-Final（杭州，The 2026 ICPC Asia East Continent Final）", "scope": "EC赛区", "source": "https://icpc.pku.edu.cn/ssxx/bed2c89264fd4d90b08bc93036051186.htm"},
+   {"nodeType": "CONTEST", "startAt": "2026-11-15", "endAt": "2026-11-20", "label": "第50届 World Finals（迪拜，UAE；2025-2026赛季各区域晋级队伍参加；具体日期来自icpc.global报道，PKU通知确认地点）", "scope": "全球", "source": "https://icpc.pku.edu.cn/docs/2026-06/b499882a22254105826f4c09a2b56dfc.pdf"}
+  ],
+  "sources": [
+   "https://icpc.global/",
+   "https://icpc.pku.edu.cn/tzgg/12450f30353743ccaa302be16a7a1d85.htm",
+   "https://icpc.pku.edu.cn/tzgg/f5516ebbc85f414a89224a1adf91a380.htm",
+   "https://icpc.pku.edu.cn/docs/2026-09/414cce375b4e4ce99dafececfb6ac3f5.pdf",
+   "https://icpc.pku.edu.cn/tzgg/16b0883826d74a238e0ca1423ea52a2e.htm",
+   "https://icpc.pku.edu.cn/docs/2026-09/8bb3449cf16246568dbccbaa631cc242.pdf",
+   "https://icpc.pku.edu.cn/ssxx/bed2c89264fd4d90b08bc93036051186.htm",
+   "https://icpc.pku.edu.cn/docs/2026-06/b499882a22254105826f4c09a2b56dfc.pdf"
+  ],
+  "confidence": "高",
+  "notes": "时区：中国赛事时间均为北京时间UTC+8；World Finals日期2026-11-15~20来自icpc.global相关报道（英文来源），PKU官方PDF仅确认地点为迪拜。武汉/南京/沈阳/上海/南昌/港澳各站日期按ICPC北京总部2026-08-05《2026 ICPC Asia EC各区域赛情况汇总》表格顺序对应（西安10-17~18、成都10-24~25已经由承办校邀请函PDF直接证实）；杭州站即EC-Final站。基线修正：基线events中『World Finals 2027-01-26』实为EC-Final日期，已更正为EC-Final FINAL节点，并补齐全部区域赛站次；第51届World Finals尚未排期。"
+ },
+ {
+  "code": "CUMCM",
+  "officialUrl": "https://www.mcm.edu.cn",
+  "seasonStatus": "2026年竞赛已结束（9-10 18:00至9-13 20:00），各赛区成绩陆续公布，全国获奖名单预计11月上中旬公示",
+  "structure": {
+   "tracks": [],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "报名（各校组织，经中国知网 cumcm.cnki.net 报名系统）", "kind": "OTHER"},
+     {"name": "竞赛（全国统一开卷、通讯赛制）", "kind": "NATIONAL"},
+     {"name": "评奖（赛区评审→全国评审→公示）", "kind": "OTHER"}
+    ]
+   },
+   "structureCorrected": false,
+   "structureNote": "与基线一致（报名→全国统一竞赛→评奖；无省级赛，部分高校组织校内选拔）。"
+  },
+  "events": [
+   {"nodeType": "CONTEST", "startAt": "2026-09-10", "endAt": "2026-09-13", "label": "竞赛（9-10 18:00 至 9-13 20:00，北京时间；赛题2026-09-10 18:00在官网发布）", "scope": "全国", "source": "https://www.mcm.edu.cn/html_cn/node/27b6e148f8113f09b0269f64a02629fb.html"},
+   {"nodeType": "RESULT", "startAt": "2026-11", "endAt": null, "label": "全国获奖名单公示（预计2026-11；2025年为11-01~11-07初稿公示、2024年为11-11公布；各赛区成绩10月起先期公布）", "scope": "全国", "source": "https://dxs.moe.gov.cn/qkt_sxjm"}
+  ],
+  "sources": [
+   "https://www.mcm.edu.cn/html_cn/node/27b6e148f8113f09b0269f64a02629fb.html",
+   "https://www.mcm.edu.cn/",
+   "https://dxs.moe.gov.cn/qkt_sxjm"
+  ],
+  "confidence": "中",
+  "notes": "竞赛起止时间与基线一致，官网赛题页直接证实9-10 18:00（北京时间）发布赛题；9-13 20:00截止为官方通知口径（多校转发一致）。2026年『关于举办竞赛的通知』原文未能在官网检索到（官网首页无对应条目）；2026年报名截止口径为9-07 20:00（转载信息，未获官网原文，不单列event）。各赛区成绩10月起由各赛区组委会公布（徐州医科大、深圳北理莫斯科大学等已发布喜报，无统一官方页面）。官方设本科组与专科组（A/B/C题、D/E题），本次未从官网章程页面直接取证，tracks维持基线为空。成绩时间口径与基线csv修正后一致（赛区10月起、全国约11月），已补充2024/2025年公布惯例佐证。"
+ },
+ {
+  "code": "MCM",
+  "officialUrl": "https://www.comap.com/contests/mcm-icm",
+  "seasonStatus": "2027赛季报名中：竞赛2027-01-28至02-01；2026赛季已结束",
+  "structure": {
+   "tracks": [
+    {"code": "MCM", "name": "MCM", "description": "数学建模竞赛，A/B/C题"},
+    {"code": "ICM", "name": "ICM", "description": "交叉学科建模竞赛，D/E/F题"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "报名（COMAP官网注册，按队报名）", "kind": "OTHER"},
+     {"name": "竞赛（全球统一网络赛，美东时间）", "kind": "INTERNATIONAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "竞赛阶段kind由基线的NATIONAL修正为INTERNATIONAL（美国COMAP主办的国际赛事）；MCM/ICM双赛道保持。"
+  },
+  "events": [
+   {"nodeType": "CONTEST", "startAt": "2027-01-28", "endAt": "2027-02-01", "label": "MCM/ICM 竞赛（官方：Upcoming Contest Dates: January 28 — February 1, 2027；美国东部时间）", "scope": "全球", "source": "https://comap.org/contests/mcm-icm"}
+  ],
+  "sources": [
+   "https://comap.org/contests/mcm-icm",
+   "https://www.comap.com/"
+  ],
+  "confidence": "高",
+  "notes": "时区：美国东部时间（EST）；往年赛题于开赛首日17:00 EST发布，第三方称报名截止约为开赛当日15:00 EST（官网页面未列明，未经核实不写入events）。成绩一般在赛后约2个月公布（惯例，官网未列2027年评审日程）；2026赛季竞赛已于2026年1月结束。"
+ },
+ {
+  "code": "ZPY",
+  "officialUrl": "http://zpy.cstam.org.cn",
+  "seasonStatus": "2026年为空档年（单数年办赛）；第十六届预计2027年举办，官方通知尚未发布",
+  "structure": {
+   "tracks": [],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "个人赛（全国统一笔试，各省设考点）", "kind": "NATIONAL"},
+     {"name": "团体赛（『理论设计与操作』『基础力学实验』『空间轨道设计』，承办高校举行）", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "个人赛kind由基线的FINAL修正为NATIONAL（全国统一笔试而非总决赛）；补充团体赛阶段（第15届设三个团体赛项目，2025-07在东南大学等举行）。"
+  },
+  "events": [],
+  "sources": [
+   "http://zpy.cstam.org.cn/",
+   "https://lxsj.cstam.org.cn"
+  ],
+  "confidence": "中",
+  "notes": "官网首页确认（『全国周培源大学生力学竞赛-官方网站』）；官网最新动态为第15届（2025）团体赛纪实（2025-07）及2026-05『关于推荐第40届全国青少年科技创新大赛参赛选手的通知』，无第十六届信息，与基线『2026空档年、第十六届通知未发布』一致。第15届第一轮通知于2025年3月发布（中国石油大学（北京）克拉玛依校区等转发），第十六届预计2027年初启动，建议关注中国力学学会（lxsj.cstam.org.cn）与竞赛官网；获奖名单在竞赛官网与《力学与实践》杂志公布。所有2026年内events为空（无官方安排可写）。"
+ },
+ {
+  "code": "WLSYCX",
+  "officialUrl": "https://wlsycx.moocollege.com",
+  "seasonStatus": "第十二届进行中（2026年5-12月，哈尔滨工业大学承办）：预赛报名已截止（5-15），全国决赛正式报名9-01~9-15，决赛日期未公布",
+  "structure": {
+   "tracks": [
+    {"code": "TOPIC", "name": "命题类创新作品", "description": "从组委会公布的命题项目中选题提交作品"},
+    {"code": "FREE", "name": "自选课题类创新作品", "description": "从组委会公布的自选类项目中选题提交作品"},
+    {"code": "LECTURE", "name": "大学生物理实验讲课比赛", "description": "自选讲课内容提交讲课视频（16-20分钟）"},
+    {"code": "INTL", "name": "国际赛道", "description": "面向国际学生的赛道（承办校通知提及，细则见通知附件）"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "校内选拔（各校自定，如中科大3-06~3-31、哈工大4-30截止）", "kind": "CAMPUS"},
+     {"name": "区域/省级选拔（部分地区：第三届西南地区选拔赛决赛2026-07-22~25云南大学；西北地区竞赛2026年8月；省级选拔优秀作品可获决赛直通车）", "kind": "REGIONAL"},
+     {"name": "预赛（作品网络初评/远程评审）", "kind": "QUALIFIER"},
+     {"name": "全国决赛（现场赛，日期待第二轮通知）", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "三处修正：①竞赛全周期为2026年5-12月（第一轮通知），基线『决赛窗口9-11月』无官方来源，决赛日期实际未公布（上届2025-11-21~23中南大学）；②基线csv『报名5-15起/截止9-15』需拆分修正为：预赛报名截止2026-05-15、全国决赛正式报名2026-09-01~9-15（第一轮通知口径）；③补充区域选拔阶段（西南、西北等），预赛为全国网络初评而非现场赛。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_END", "startAt": "2026-05-15", "endAt": null, "label": "预赛报名截止：各参赛高校通过网络填报预赛报名表（约5月初发布报名表）", "scope": "全国", "source": "https://www.teach.ustc.edu.cn/notice/notice-info/19853.html"},
+   {"nodeType": "SIGNUP_END", "startAt": "2026-09-01", "endAt": "2026-09-15", "label": "全国决赛正式报名窗口：晋级队伍提交正式报名、上传参赛资料并完成缴费（详细方案见第二轮通知）", "scope": "全国", "source": "https://www.teach.ustc.edu.cn/notice/notice-info/19853.html"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-22", "endAt": "2026-07-25", "label": "第三届西南地区大学生物理实验竞赛（创新）暨第十二届全国赛选拔赛决赛（云南大学）", "scope": "西南地区", "source": "http://www.ynu.edu.cn"}
+  ],
+  "sources": [
+   "https://www.teach.ustc.edu.cn/notice/notice-info/19853.html",
+   "https://www.teach.ustc.edu.cn/?attachment_id=19858",
+   "https://wlsycx.moocollege.com",
+   "http://www.ynu.edu.cn"
+  ],
+  "confidence": "中",
+  "notes": "第一轮通知（盖章版）PDF经中科大教务处2026-03-06转发取得（https://www.teach.ustc.edu.cn/wp-content/uploads/2026/03/2026年第十二届全国大学生物理实验竞赛-创新第一轮通知.pdf）；PDF为扫描件、文本提取部分乱码，『预赛报名5-15前填报』『决赛正式报名9-01~9-15』与西北农林、中国农大等多校转发口径一致。竞赛由教育部高等学校大学物理课程教学指导委员会等指导、全国高等学校实验物理教学研究会和竞赛组委会举办，哈工大承办，工作邮箱cupet@hit.edu.cn，官方平台wlsycx.moocollege.com。全国决赛日期与承办安排待第二轮通知，未公布故不单列event。"
+ },
+ {
+  "code": "IGEM",
+  "officialUrl": "https://igem.org",
+  "seasonStatus": "2026赛季进行中：队伍名单已冻结（9-16），Wiki冻结（10-21）后进入评审，Grand Jamboree 2026-11-13~16巴黎",
+  "structure": {
+   "tracks": [],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "注册与组队（赛季分阶段开放报名，Team Roster Freeze为最终名单截止）", "kind": "QUALIFIER"},
+     {"name": "交付物提交与评审（Wiki、演示视频、评审表、Registry贡献等）", "kind": "OTHER"},
+     {"name": "Grand Jamboree（巴黎，含Expo、评审、Finalist角逐与结果发布）", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": false,
+   "structureNote": "与基线一致（注册→评审与提交→Grand Jamboree）。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_END", "startAt": "2026-09-16", "endAt": null, "label": "Team Roster Freeze（队伍名单冻结，15:00 UTC）", "scope": "全球", "source": "https://competition.igem.org/calendar"},
+   {"nodeType": "SUBMISSION", "startAt": "2026-10-21", "endAt": null, "label": "Wiki Freeze：项目Wiki及相关交付物冻结（15:00 UTC）", "scope": "全球", "source": "https://competition.igem.org/calendar"},
+   {"nodeType": "SUBMISSION", "startAt": "2026-10-28", "endAt": null, "label": "Presentation Video 提交截止", "scope": "全球", "source": "https://competition.igem.org/calendar"},
+   {"nodeType": "CONTEST", "startAt": "2026-11-13", "endAt": "2026-11-16", "label": "Grand Jamboree（巴黎 Paris Convention Centre：11-13起Expo与评审，11-15公布Finalists）", "scope": "全球", "source": "https://jamboree.igem.org/"},
+   {"nodeType": "RESULT", "startAt": "2026-11-16", "endAt": null, "label": "Final Day Show & Results Publication（获奖结果公布）", "scope": "全球", "source": "https://competition.igem.org/calendar"}
+  ],
+  "sources": [
+   "https://competition.igem.org/calendar",
+   "https://jamboree.igem.org/"
+  ],
+  "confidence": "高",
+  "notes": "时区：官方日历节点均标注UTC（如15:00 UTC），Grand Jamboree现场为巴黎当地时间（CET）。基线修正：csv中『roster freeze约7月』有误，官方日历为2026-09-16；Wiki冻结2026-10-21、Jamboree 11-13~16巴黎与基线一致并获官方（competition.igem.org、jamboree.igem.org）证实。赛季注册于2026年年初分阶段开放（Stage I 1月启动为基线口径，官方日历未列具体日），故不单列SIGNUP_START。2027赛季信息未公布。"
+ }
+]

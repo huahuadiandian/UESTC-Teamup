@@ -1,0 +1,205 @@
+[
+ {
+  "code": "HUAWEI-ICT",
+  "officialUrl": "https://e.huawei.com/cn/talent/ict-academy/#/ict-contest?compId=85132018",
+  "seasonStatus": "第十一届（2026-2027）中国赛区报名中（2026-08-31~11-30），实践赛/挑战赛/算子赛报名截止在即，省资格赛线上实验环节已开赛",
+  "structure": {
+   "tracks": [
+    {"code": "PRACTICE", "name": "实践赛", "description": "设网络、云、基础软件三个赛项，考察ICT理论知识、上机实践与团队合作；基础软件和云赛项含实践+理论两部分，网络赛项仅理论测试"},
+    {"code": "CHALLENGE", "name": "挑战赛", "description": "基于鲲鹏+昇腾国产计算平台开展人工智能和高性能计算调优；全球层面华为官方称含基于鲲鹏、昇腾平台的「超智融合」赛道；3-5名学生+1名指导教师"},
+    {"code": "INNOV", "name": "创新赛", "description": "考察AI与ICT技术综合应用创新，运用华为AI及大数据、云计算、物联网等技术设计可落地方案或完成智能体开发；3名学生+1名指导教师"},
+    {"code": "PROGRAM", "name": "编程赛", "description": "以仓颉编程为主要方向，涵盖现代语言特性、AI与智能体应用及现代软件工程；3名学生+1名指导教师"},
+    {"code": "OPERATOR", "name": "昇腾AI算子开发赛道（算子赛）", "description": "依托昇腾异构计算架构CANN，考察基于Ascend C的自定义算子开发、精度调试及性能优化；目前仅面向中国开放，属独立的学生赛道（中国赛区四个学生赛道之一），不属于实践赛或挑战赛"},
+    {"code": "TEACH", "name": "教学赛", "description": "面向教师开展的赛道，报名截止2026-11-30"},
+    {"code": "ELITE", "name": "精英赛", "description": "模拟ICT销售业务场景，采取邀请制，不设公开报名"}
+   ],
+   "stagesByTrack": {
+    "PRACTICE": [
+     {"name": "省资格赛（线上：实验环节2026-09-18~11-08，理论环节2026-11-14~15）", "kind": "QUALIFIER"},
+     {"name": "省赛", "kind": "PROVINCIAL"},
+     {"name": "全国总决赛", "kind": "NATIONAL"},
+     {"name": "全球总决赛", "kind": "INTERNATIONAL"}
+    ],
+    "CHALLENGE": [
+     {"name": "初赛", "kind": "QUALIFIER"},
+     {"name": "中国总决赛", "kind": "NATIONAL"}
+    ],
+    "INNOV": [
+     {"name": "初赛", "kind": "QUALIFIER"},
+     {"name": "中国总决赛", "kind": "NATIONAL"},
+     {"name": "全球总决赛", "kind": "INTERNATIONAL"}
+    ],
+    "PROGRAM": [
+     {"name": "初赛（省资格赛线上完成）", "kind": "QUALIFIER"},
+     {"name": "中国总决赛", "kind": "NATIONAL"},
+     {"name": "全球总决赛", "kind": "INTERNATIONAL"}
+    ],
+    "OPERATOR": [
+     {"name": "资格赛（线上，需完成两项算子开发相关认证）", "kind": "QUALIFIER"},
+     {"name": "决赛（算子赛题方式开展）", "kind": "NATIONAL"},
+     {"name": "全球总决赛（聚焦算子性能调优+现场答辩）", "kind": "INTERNATIONAL"}
+    ],
+    "TEACH": [
+     {"name": "报名后流程未公布（往届为初评+全国评审，本届细则以官网为准）", "kind": "OTHER"}
+    ],
+    "ELITE": [
+     {"name": "邀请制，无公开报名与公开赛程", "kind": "OTHER"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "与基线差异：①所有赛道均无校赛环节（校内仅为报名信息统计，非比赛层级），基线的CAMPUS阶段全部删除；②各赛道流程差异大：实践赛为省资格赛→省赛→全国总决赛→全球总决赛四级，创新赛/编程赛为初赛→中国总决赛→全球总决赛三级，挑战赛仅初赛→中国总决赛两级，算子赛为资格赛→决赛→全球总决赛三阶段，精英赛为邀请制；③算子赛是中国赛区独立学生赛道（中国赛区设实践赛、创新赛、编程赛、算子赛四个学生赛道），并非实践赛子项；④华为官方新闻确认2026-2027赛季全球设教学赛、实践赛、创新赛、挑战赛、编程赛五大赛道，算子赛与精英赛为中国区/邀请制补充"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2026-08-31", "endAt": null, "label": "第十一届华为ICT大赛中国赛区报名开始", "scope": "全国", "source": "https://cxcy.tyut.edu.cn/info/1026/8153.htm（报名2026-08-31~10-31/11-30）；https://www.sohu.com（10月赛讯速递：中国赛区2026-08-31—11-30）"},
+   {"nodeType": "CONTEST", "startAt": "2026-09-18", "endAt": "2026-11-08", "label": "实践赛省资格赛线上实验环节", "scope": "全国", "source": "https://cxcy.tyut.edu.cn/info/1026/8153.htm"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-10-26", "label": "算子赛报名截止（资格赛需在华为人才在线完成两项算子开发相关认证）", "scope": "全国", "source": "https://cxcy.tyut.edu.cn/info/1026/8153.htm；https://xxjd.shnu.edu.cn/18/c3/c27065a858307/page.htm"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-10-31", "label": "实践赛、挑战赛报名截止", "scope": "全国", "source": "https://cxcy.tyut.edu.cn/info/1026/8153.htm；https://www.sohu.com（10月赛讯速递）"},
+   {"nodeType": "CONTEST", "startAt": "2026-11-14", "endAt": "2026-11-15", "label": "实践赛省资格赛理论环节", "scope": "全国", "source": "https://cxcy.tyut.edu.cn/info/1026/8153.htm"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-11-30", "label": "创新赛、编程赛、教学赛报名截止（中国赛区整体报名窗口关闭）", "scope": "全国", "source": "https://cxcy.tyut.edu.cn/info/1026/8153.htm；https://www.huawei.com/cn/news/2026/9/ioi-2026-uzbekistan"},
+   {"nodeType": "CONTEST", "startAt": "2026-12-01", "endAt": "2026-12-31", "label": "实践赛省赛（2026年12月，具体日期以省赛区通知为准）", "scope": "全国", "source": "https://cxcy.tyut.edu.cn/info/1026/8153.htm"},
+   {"nodeType": "CONTEST", "startAt": "2027-03-01", "endAt": "2027-03-31", "label": "实践赛全国总决赛（2027年3月，具体日期未公布）", "scope": "全国", "source": "https://cxcy.tyut.edu.cn/info/1026/8153.htm"},
+   {"nodeType": "CONTEST", "startAt": "2027-05-01", "endAt": "2027-05-31", "label": "全球总决赛（2027年5月，往届在深圳举行；具体日期未公布）", "scope": "全球", "source": "https://cxcy.tyut.edu.cn/info/1026/8153.htm；https://www.huawei.com/cn/news/2026/6/ict-competition-global（第十届全球总决赛2026年6月深圳举行，为本届规律参照）"}
+  ],
+  "sources": [
+   "https://www.huawei.com/cn/news/2026/9/ioi-2026-uzbekistan",
+   "https://cxcy.tyut.edu.cn/info/1026/8153.htm",
+   "https://xxjd.shnu.edu.cn/18/c3/c27065a858307/page.htm",
+   "https://www.sohu.com",
+   "https://www.huawei.com/cn/news/2026/6/ict-competition-global",
+   "https://e.huawei.com/cn/talent/ict-academy/#/ict-contest?compId=85132018"
+  ],
+  "confidence": "高",
+  "notes": "第十一届全球官方minisite尚未上线（huawei.com/minisite/ict-competition-2026-2027-global 返回404），赛道清单以华为官方新闻（2026-09，2026-2027赛季已开放报名、设五大赛道）+ 太原理工大学2026-09-29通知 + 上海师范大学2026-10通知为据。各赛道省赛/国赛/全球总决赛仅实践赛有明确月份（2026-12省赛、2027-03全国、2027-05全球），创新/编程/挑战/算子赛的全国赛具体日期未公布；实践赛全球总决赛2027-05为通知口径。算子赛「两项认证」具体认证名称（往届为华为人才在线昇腾相关微认证）各校通知均未列明，以官网为准。每人限报一个赛道，报名截止后不得更换队员与指导教师。"
+ },
+ {
+  "code": "TZB-ACADEMIC",
+  "officialUrl": "https://2025.tiaozhanbei.net/",
+  "seasonStatus": "第十九届（2025，南京大学承办）已结束；第二十届已启动前期筹备（2025-11发布联合发起高校名单），2027年举行",
+  "structure": {
+   "tracks": [
+    {"code": "MAIN", "name": "主体赛", "description": "分三类作品：自然科学类学术论文（仅限本科生）、哲学社会科学类社会调查报告（围绕发展成就、文明文化、美丽中国、民生福祉、中国之治五个组别）、科技发明制作（侧重应用价值和转化前景）"},
+    {"code": "JBGS", "name": "「揭榜挂帅」擂台赛", "description": "2025年度中国青年科技创新「揭榜挂帅」擂台赛，设人工智能领域、新能源领域等主擂台，企业/科研机构出题、团队揭榜打擂"},
+    {"code": "AIPLUS", "name": "「人工智能+」专项赛", "description": "第十九届新增专项赛，设独立终审决赛（2025-11-02开赛）"}
+   ],
+   "stagesByTrack": {
+    "MAIN": [
+     {"name": "校级比赛（2025年3-4月，各校评审选拔）", "kind": "CAMPUS"},
+     {"name": "省级比赛（2025年4-6月，各省组织）", "kind": "PROVINCIAL"},
+     {"name": "国赛申报（2025年6-8月）", "kind": "NATIONAL"},
+     {"name": "国赛初审（2025年7-9月，全国初评）", "kind": "NATIONAL"},
+     {"name": "终审决赛（2025-10-31~11-03，南京大学）", "kind": "FINAL"}
+    ],
+    "JBGS": [
+     {"name": "揭榜报名/打擂（企业发榜→团队揭榜→评审）", "kind": "QUALIFIER"},
+     {"name": "终审/授奖公示（由团中央统一组织评审）", "kind": "FINAL"}
+    ],
+    "AIPLUS": [
+     {"name": "省级/校级遴选（随主体赛或单独组织）", "kind": "PROVINCIAL"},
+     {"name": "专项赛终审决赛（2025-11-02，南京大学）", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "与基线差异：基线把「自然科学类学术论文/哲学社会科学类调查报告/科技发明制作」列为三条平行赛道有误——它们是主体赛内部的三类作品分类（其中哲社类再分5个组别）；本届真实赛道结构为「主体赛+『揭榜挂帅』擂台赛（2025升级为中国青年科技创新擂台赛）+『人工智能+』专项赛（十九届新增）」三条线。基线的全国决赛日期2025-10-31正确但缺结束日期（实际至11-03）"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2025-02-01", "endAt": null, "label": "第十九届竞赛启动（官方流程图：2月启动）", "scope": "全国", "source": "https://2025.tiaozhanbei.net/（赛程流程图）"},
+   {"nodeType": "CONTEST", "startAt": "2025-03-01", "endAt": "2025-04-30", "label": "校级比赛（各校集中在2025年3-4月）", "scope": "全国", "source": "https://2025.tiaozhanbei.net/；四川大学/贵州黔南科技学院等校赛通知"},
+   {"nodeType": "CONTEST", "startAt": "2025-04-01", "endAt": "2025-06-30", "label": "省级比赛（各省4-6月，如江苏省赛2025年4-5月）", "scope": "全国", "source": "https://2025.tiaozhanbei.net/"},
+   {"nodeType": "SIGNUP_END", "startAt": "2025-06-01", "endAt": "2025-08-31", "label": "国赛申报（2025年6-8月）", "scope": "全国", "source": "https://2025.tiaozhanbei.net/"},
+   {"nodeType": "REVIEW", "startAt": "2025-07-01", "endAt": "2025-09-30", "label": "国赛初审（2025年7-9月）", "scope": "全国", "source": "https://2025.tiaozhanbei.net/"},
+   {"nodeType": "CONTEST", "startAt": "2025-10-31", "endAt": "2025-11-03", "label": "终审决赛（南京大学，主体赛DAY1于11-02开赛）", "scope": "全国", "source": "https://2025.tiaozhanbei.net/（DAY1新闻2025-11-02）；http://cpc.people.com.cn（人民网2025-11-04报道）"},
+   {"nodeType": "CONTEST", "startAt": "2025-11-02", "endAt": null, "label": "「人工智能+」专项赛终审决赛开赛", "scope": "全国", "source": "https://2025.tiaozhanbei.net/（DAY2新闻2025-11-02）"},
+   {"nodeType": "AWARD", "startAt": "2025-11-04", "endAt": null, "label": "结果揭晓：清华大学捧杯、56所高校获优胜杯，主体赛特等奖96个/一等奖187个/二等奖369个/三等奖993个", "scope": "全国", "source": "http://cpc.people.com.cn（人民网2025-11-04）"},
+   {"nodeType": "OTHER", "startAt": "2025-11-14", "endAt": null, "label": "第二十届联合发起高校名单发布（第二十届筹备启动，赛事定于2027年）", "scope": "全国", "source": "https://www.tiaozhanbei.net/（第二十届联合发起高校名单，组委会2025-11-15发布）；https://2025.tiaozhanbei.net/（2025-11-14）"},
+   {"nodeType": "SIGNUP_END", "startAt": "2026-05-30", "endAt": "2026-06-30", "label": "2026年度「揭榜挂帅」擂台赛第二批榜题揭榜报名（第一批此前已发榜）", "scope": "全国", "source": "https://www.tiaozhanbei.net/article/15841/（组委会2026-05-20发布）"}
+  ],
+  "sources": [
+   "https://2025.tiaozhanbei.net/",
+   "https://www.tiaozhanbei.net/",
+   "http://cpc.people.com.cn",
+   "https://www.tiaozhanbei.net/article/15841/",
+   "https://www.tiaozhanbei.net/article/15842/",
+   "https://ic.njust.edu.cn（南京理工大学转发第十九届通知）"
+  ],
+  "confidence": "高",
+  "notes": "第十九届结构由官方专题站+人民网报道双重印证；校赛/省赛/国赛申报等月份来自官方专题站流程图（未标注具体年份日期），属官方口径。第二十届仅官宣「联合发起高校名单」（2025-11），正式通知、承办高校与赛程均未公布（未公布）。2026年度「揭榜挂帅」擂台赛同时作为第十五届创业计划大赛的专项赛，第一批榜题于2026年5月中下旬发榜、第二批2026-05-20发布（报名2026-05-30~06-30）。"
+ },
+ {
+  "code": "TZB-BUSINESS",
+  "officialUrl": "https://www.tiaozhanbei.net/article/15842/",
+  "seasonStatus": "第十五届（2026，大连理工大学承办全国终审决赛）省级复赛已结束，备战10月全国决赛",
+  "structure": {
+   "tracks": [
+    {"code": "ADV-MFG", "name": "先进制造赛道", "description": "重大技术装备、工业母机、航空航天、海洋装备、具身智能、高端仪器、低空经济等"},
+    {"code": "IT", "name": "新一代信息技术赛道", "description": "集成电路、人工智能、量子科技、第六代移动通信、基础软件、网络安全等"},
+    {"code": "BIO", "name": "生物医药与健康科技赛道", "description": "脑机接口、生物制造、高端医疗装备、中医药传承创新等"},
+    {"code": "NE-MAT", "name": "新能源新材料赛道", "description": "绿色能源、先进材料、氢能和核聚变能、低碳环保等"},
+    {"code": "AGRI", "name": "现代农业与食品科技赛道", "description": "科技农业、绿色农业、生物育种、食品健康等"},
+    {"code": "CONSUME", "name": "新消费与文化创意赛道", "description": "新大众文艺、国潮文创、沉浸式消费、农文旅融合、品牌运营等"},
+    {"code": "SERVICE", "name": "现代服务与社会治理赛道", "description": "智慧城市、智慧政务、乡村治理、社区服务、供应链服务等"},
+    {"code": "INTL", "name": "国际交流合作赛道", "description": "服务高质量共建「一带一路」，推动落实全球发展倡议、全球安全倡议、全球文明倡议、全球治理倡议等"}
+   ],
+   "stagesByTrack": {
+    "ADV-MFG": [
+     {"name": "校级初赛（2026年5月底前）", "kind": "CAMPUS"},
+     {"name": "省级复赛（2026年6月底前完成推报）", "kind": "PROVINCIAL"},
+     {"name": "全国终审决赛（2026年10月，大连理工大学，按专科组/本科组/研究生组评审）", "kind": "FINAL"}
+    ],
+    "IT": [
+     {"name": "校级初赛（2026年5月底前）", "kind": "CAMPUS"},
+     {"name": "省级复赛（2026年6月底前）", "kind": "PROVINCIAL"},
+     {"name": "全国终审决赛（2026年10月，大连理工大学）", "kind": "FINAL"}
+    ],
+    "BIO": [
+     {"name": "校级初赛（2026年5月底前）", "kind": "CAMPUS"},
+     {"name": "省级复赛（2026年6月底前）", "kind": "PROVINCIAL"},
+     {"name": "全国终审决赛（2026年10月，大连理工大学）", "kind": "FINAL"}
+    ],
+    "NE-MAT": [
+     {"name": "校级初赛（2026年5月底前）", "kind": "CAMPUS"},
+     {"name": "省级复赛（2026年6月底前）", "kind": "PROVINCIAL"},
+     {"name": "全国终审决赛（2026年10月，大连理工大学）", "kind": "FINAL"}
+    ],
+    "AGRI": [
+     {"name": "校级初赛（2026年5月底前）", "kind": "CAMPUS"},
+     {"name": "省级复赛（2026年6月底前）", "kind": "PROVINCIAL"},
+     {"name": "全国终审决赛（2026年10月，大连理工大学）", "kind": "FINAL"}
+    ],
+    "CONSUME": [
+     {"name": "校级初赛（2026年5月底前）", "kind": "CAMPUS"},
+     {"name": "省级复赛（2026年6月底前）", "kind": "PROVINCIAL"},
+     {"name": "全国终审决赛（2026年10月，大连理工大学）", "kind": "FINAL"}
+    ],
+    "SERVICE": [
+     {"name": "校级初赛（2026年5月底前）", "kind": "CAMPUS"},
+     {"name": "省级复赛（2026年6月底前）", "kind": "PROVINCIAL"},
+     {"name": "全国终审决赛（2026年10月，大连理工大学）", "kind": "FINAL"}
+    ],
+    "INTL": [
+     {"name": "校级初赛（2026年5月底前）", "kind": "CAMPUS"},
+     {"name": "省级复赛（2026年6月底前）", "kind": "PROVINCIAL"},
+     {"name": "全国终审决赛（2026年10月，大连理工大学）", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "与基线差异重大：基线7条「赛道」（科技创新/未来产业/乡村振兴/社会治理/生态环保/文化创意/区域合作）是第十四届（2024）5个组别的拆散残片，第十五届（2026）已全面改版——主体赛设8个赛道（先进制造、新一代信息技术、生物医药与健康科技、新能源新材料、现代农业与食品科技、新消费与文化创意、现代服务与社会治理、国际交流合作），另设2项专项赛：「揭榜挂帅」专项赛（即2026年度中国青年科技创新「揭榜挂帅」擂台赛）和东北振兴产业升级专项赛（两项专项赛成绩均不纳入学校团体总分）。全国决赛按团队学历最高成员分专科组、本科组、研究生组评审，约1900个项目进入全国决赛"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2026-03-01", "endAt": null, "label": "大赛启动（本届自3月启动，累计征集项目5万余个、近35万名大学生参与）", "scope": "全国", "source": "https://baike.baidu.com（第十五届词条）；https://www.tiaozhanbei.net/article/15842/（2026-05-23通知）"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-05-31", "label": "校级初赛完成（5月底前）", "scope": "全国", "source": "https://www.tiaozhanbei.net/article/15842/"},
+   {"nodeType": "SIGNUP_END", "startAt": "2026-05-30", "endAt": "2026-06-30", "label": "2026年度「揭榜挂帅」擂台赛第二批榜题揭榜报名（第一批此前已发榜，启幕新闻2026-05-21）", "scope": "全国", "source": "https://www.tiaozhanbei.net/article/15841/；https://2026.tiaozhanbei.net/"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-06-30", "label": "省级复赛完成并向全国推报（6月底前，各省终审决赛集中于2026年6-7月，如新疆07-02、重庆07-08落幕）", "scope": "全国", "source": "https://www.tiaozhanbei.net/article/15842/；https://2026.tiaozhanbei.net/（省级赛新闻）"},
+   {"nodeType": "CONTEST", "startAt": "2026-10-01", "endAt": "2026-10-31", "label": "全国终审决赛（2026年10月，大连理工大学；官方通知口径为「11月前」；约1900个项目入围，具体日期未公布）", "scope": "全国", "source": "https://www.tiaozhanbei.net/article/15842/；https://2026.tiaozhanbei.net/（赛程节点「10月 全国决赛」）"},
+   {"nodeType": "AWARD", "startAt": null, "endAt": null, "label": "全国决赛结果公布/「挑战杯」闭幕会暨青创报国汇报会（与全国决赛同期，具体日期未公布）", "scope": "全国", "source": "https://www.tiaozhanbei.net/article/15842/（配套活动）"}
+  ],
+  "sources": [
+   "https://www.tiaozhanbei.net/article/15842/",
+   "https://2026.tiaozhanbei.net/",
+   "https://www.tiaozhanbei.net/article/15841/",
+   "https://baike.baidu.com",
+   "https://www.tiaozhanbei.net/"
+  ],
+  "confidence": "高",
+  "notes": "赛道结构以官网2026-05-23《关于举办第十五届「挑战杯」建设银行中国大学生创业计划竞赛的通知》全文为准（组织机构：主办含辽宁省人民政府，承办大连理工大学、共青团辽宁省委）。全国终审决赛具体日期尚未公布（未公布）：通知仅说「全国决赛（11月前）…将在大连理工大学举办」，官方专题站赛程节点标注「10月 全国决赛」。校赛/省赛时间为通知规定的截止期限（5月底前/6月底前），各省实际终审在6月底-7月完成。专项赛（揭榜挂帅、东北振兴）成绩不纳入学校团体总分。"
+ }
+]

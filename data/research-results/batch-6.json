@@ -1,0 +1,282 @@
+[
+ {
+  "code": "JNJP",
+  "officialUrl": "http://www.jienengjianpai.org",
+  "seasonStatus": "第十九届已落幕：全国总决赛2026-07-31~08-02在大连理工大学举行，获奖名单已于08-02闭幕式公布",
+  "structure": {
+   "tracks": [
+    {"code": "SCI_TECH", "name": "科技作品类", "description": "实物制作（含模型）、软件、设计等科技类作品"},
+    {"code": "SOCIAL_PRAC", "name": "社会实践类", "description": "社会实践调研报告类作品"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "校赛", "kind": "CAMPUS"},
+     {"name": "全国网络函评", "kind": "QUALIFIER"},
+     {"name": "全国专家会评", "kind": "QUALIFIER"},
+     {"name": "全国总决赛", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "基线缺赛道与评审环节：按第一轮通知补充科技作品类/社会实践类两条赛道（分研究生组、本科生组），流程为校赛→函评→会评→全国决赛；举办省级赛事的省份另设省赛推荐通道（可选）。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2026-03-12", "label": "第一轮通知发布、报名启动", "scope": "全国", "source": "https://www.jienengjianpai.org/sys-nd/36.html"},
+   {"nodeType": "SIGNUP_END", "endAt": "2026-04-12", "label": "高校报名表提交截止（18:00前）", "scope": "全国", "source": "https://www.jienengjianpai.org/sys-nd/36.html"},
+   {"nodeType": "CONTEST", "startAt": "2026-05-10", "endAt": "2026-05-20", "label": "作品申报系统提交（05-10开放、05-20 24:00截止）", "scope": "全国", "source": "https://www.jienengjianpai.org/sys-nd/36.html"},
+   {"nodeType": "CONTEST", "startAt": "2026-05-21", "endAt": "2026-06-03", "label": "全国网络函评", "scope": "全国", "source": "https://www.jienengjianpai.org/sys-nd/36.html"},
+   {"nodeType": "CONTEST", "startAt": "2026-06-20", "endAt": "2026-06-21", "label": "全国专家会评", "scope": "全国", "source": "https://www.jienengjianpai.org/sys-nd/36.html"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-31", "endAt": "2026-08-02", "label": "全国总决赛（大连理工大学）", "scope": "全国", "source": "https://www.jienengjianpai.org/sys-nd/36.html"},
+   {"nodeType": "RESULT", "startAt": "2026-08-02", "label": "闭幕式公布获奖名单", "scope": "全国", "source": "https://news.dlut.edu.cn/info/1231/148405.htm"}
+  ],
+  "sources": [
+   "https://www.jienengjianpai.org/sys-nd/36.html",
+   "https://news.dlut.edu.cn/info/1231/148405.htm",
+   "https://news.dlut.edu.cn/info/1071/148545.htm",
+   "http://www.jienengjianpai.org/"
+  ],
+  "confidence": "高",
+  "notes": "官网URL正确。第十九届由大连理工大学承办（“大工能动杯”），教育部高教司、能源动力类教指委指导。基线日期全部核实无误：报名截止04-12、决赛07-31~08-02（大工新闻称8月1日启幕，与07-31报到开幕不矛盾）、获奖08-02公布。本届主赛道特等奖16件、一等奖202件、优秀组织奖226所高校（据大工新闻网）。"
+ },
+ {
+  "code": "GCXL",
+  "officialUrl": "http://www.gcxl.edu.cn",
+  "seasonStatus": "第十届周期进行中：2026年为省内选拔年（四川省赛11-13~15在西南科技大学），全国总决赛2027年举行，官网报名平台已开放第十届（2027）竞赛报名",
+  "structure": {
+   "tracks": [
+    {"code": "SOLAR", "name": "太阳能电动车", "description": "工程实践类赛项（2026年北京市赛设置之一）"},
+    {"code": "LOGISTICS", "name": "智能物流搬运", "description": "智能应用类赛项"},
+    {"code": "RESCUE", "name": "智能救援", "description": "智能应用类赛项"},
+    {"code": "EOS", "name": "企业运营仿真", "description": "虚拟仿真类赛项"},
+    {"code": "SMARTLINE", "name": "智能产线设计与仿真", "description": "虚拟仿真类赛项"},
+    {"code": "FUTURE", "name": "未来技术探索", "description": "创新探索类赛项（允许研究生参加）"},
+    {"code": "CULTURE", "name": "工程文化", "description": "工程素养类赛项"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "校赛", "kind": "CAMPUS"},
+     {"name": "省赛（赛区选拔）", "kind": "PROVINCIAL"},
+     {"name": "全国总决赛", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "基线三赛道（工程基础/智能+/虚拟仿真）为旧届结构。第十届（2026省赛-2027国赛）周期重组为7个赛项（据2026年北京市教委竞赛通知、北工大转发）；四川赛区按项目编号组织（如项目II-1智能物流搬运等），各赛区赛项设置以当地通知为准；另设专项赛项（如实验室安全应急技能竞赛，四川决赛2026年10月下旬）。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2026-09-08", "label": "四川赛区校赛启动（电子科技大学发布参赛暨国赛选拔通知）", "scope": "四川省", "source": "https://www.smee.uestc.edu.cn"},
+   {"nodeType": "SIGNUP_END", "endAt": "2026-09-19", "label": "四川赛区校赛报名截止", "scope": "四川省", "source": "https://www.smee.uestc.edu.cn"},
+   {"nodeType": "CONTEST", "startAt": "2026-11-13", "endAt": "2026-11-15", "label": "2026年四川省大学生工程实践与创新能力大赛（西南科技大学）", "scope": "四川省", "source": "https://www.smee.uestc.edu.cn"}
+  ],
+  "sources": [
+   "http://www.gcxl.edu.cn/",
+   "https://www.smee.uestc.edu.cn",
+   "https://gxzx.cafuc.edu.cn",
+   "https://jxny.bjut.edu.cn",
+   "https://www.uwh.edu.cn/qcxy/detail"
+  ],
+  "confidence": "高",
+  "notes": "两年一届获证实：多校通知明确“2027年第十届中国大学生工程实践与创新能力大赛”，报名平台为官网gcxl.edu.cn“竞赛报名”，华南理工通知校级报名截止2026-10-10；即2026为省内选拔年、国赛2027年。四川省赛11月13-15日在西南科技大学举办（电子科大09-08通知原文），川教函〔2026〕156号列入省级竞赛项目，省赛参赛费1200元/队、校赛各赛项前4名晋级（民航飞行学院通知）。北京市2026省赛设7赛项（北京市教委2026-02-03通知）。"
+ },
+ {
+  "code": "CIMC",
+  "officialUrl": "http://www.siemenscup-cimc.org.cn",
+  "seasonStatus": "第二十届已落幕：总决赛2026-08-14~18在北京化工大学（昌平校区）举行，最终成绩与获奖名单08-25发布",
+  "structure": {
+   "tracks": [
+    {"code": "INNOVATION", "name": "智能制造创新研发类", "description": "含自由探索方向、工业硬件研发方向"},
+    {"code": "ENGINEERING", "name": "智能制造工程设计与应用类", "description": "含智能制造通识（试）、流程行业自动化、离散行业自动化（逻辑算法/工程实践）、离散行业运动控制、信息化网络化、智能装备设计与数字孪生制造、精密智造与协作机器人、工业嵌入式系统开发（试）、智能产线数字孪生设计与开发（试）等方向"},
+    {"code": "IDEOLOGY", "name": "工程思政类", "description": "2026年新增类别（如可持续发展与ESG方向，筹备中）"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "全国分赛区初赛（线上）", "kind": "REGIONAL"},
+     {"name": "全国总决赛（线下）", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "基线赛道（数字化双胞胎/逻辑控制/流程行业）为旧口径：2026年第二十届按“创新研发类、工程设计与应用类、工程思政类”三大类组织赛项与方向（据官网竞赛简介与参赛说明）。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2026-03-01", "label": "全国报名开始（第二十届通知2026-02-25发布）", "scope": "全国", "source": "http://www.siemenscup-cimc.org.cn/competition"},
+   {"nodeType": "SIGNUP_END", "endAt": "2026-05-31", "label": "全国报名截止", "scope": "全国", "source": "http://www.siemenscup-cimc.org.cn/competition"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-20", "endAt": "2026-07-22", "label": "全国分赛区初赛（各赛区7月上中旬时间不一，例：华北二赛区现场赛）", "scope": "华北二赛区（全国分赛区）", "source": "http://www.siemenscup-cimc.org.cn/competition"},
+   {"nodeType": "CONTEST", "startAt": "2026-08-14", "endAt": "2026-08-18", "label": "全国总决赛（北京化工大学昌平校区）", "scope": "全国", "source": "http://www.siemenscup-cimc.org.cn/notice/NoticeDetail?id=2946"},
+   {"nodeType": "RESULT", "startAt": "2026-08-25", "label": "全国总决赛最终成绩与获奖名单发布", "scope": "全国", "source": "http://www.siemenscup-cimc.org.cn/notice/NoticeDetail?id=2967"}
+  ],
+  "sources": [
+   "http://www.siemenscup-cimc.org.cn/",
+   "http://www.siemenscup-cimc.org.cn/competition",
+   "http://www.siemenscup-cimc.org.cn/notice/NoticeDetail?id=2946",
+   "http://www.siemenscup-cimc.org.cn/notice/NoticeDetail?id=2967"
+  ],
+  "confidence": "高",
+  "notes": "基线日期全部核实无误：报名2026-03-01~05-31、总决赛08-14~18在北京化工大学（补齐officialSite）。初赛由各分赛区于7月线上组织（初赛成绩公示07-26/27）。本届约1070所高校参与，总决赛430所高校1109支队伍、4000余名师生参赛。由教育部指导、中国仿真学会主办，2006年由北京化工大学与西门子共同发起。获奖证书说明2026-09-02发布。"
+ },
+ {
+  "code": "CHENGTU",
+  "officialUrl": "http://www.chengtudasai.com",
+  "seasonStatus": "第十九届已落幕：全国总决赛2026年7月在主赛场长江大学（湖北荆州）举行、07-23闭幕，获奖名单公示文件已发布官网",
+  "structure": {
+   "tracks": [
+    {"code": "MECH", "name": "机械类", "description": "机械类先进成图技术与产品信息建模"},
+    {"code": "ARCH", "name": "建筑类", "description": "建筑类先进成图技术与BIM建模"},
+    {"code": "ROAD", "name": "道桥类", "description": "道桥类先进成图技术"},
+    {"code": "WATER", "name": "水利类", "description": "水利类先进成图技术"},
+    {"code": "OPEN", "name": "开放赛道", "description": "各专业开放赛道（赛题按时发布于官网）"},
+    {"code": "INTL", "name": "国际赛道", "description": "含逆向工程与创新设计分赛道、高精度3D视觉数字化测量与建模等（第十九届首次加入“逆向工程与创新设计”，报道称共六大类别）"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "校赛（校内初赛）", "kind": "CAMPUS"},
+     {"name": "省赛", "kind": "PROVINCIAL"},
+     {"name": "全国总决赛", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "保留基线机械/建筑/道桥/水利四类；第十九届另设开放赛道、国际赛道，并首次加入“逆向工程与创新设计”赛道（安徽工业大学报道称为六大类别，考察成图技术、创新设计及AI应用能力），故补充OPEN与INTL。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_END", "endAt": "2026-04-12", "label": "校内选拔赛报名截止（例：湖南工商大学03-27通知）", "scope": "湖南省", "source": "https://jwc.hutb.edu.cn"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-19", "endAt": "2026-07-23", "label": "第十九届“高教杯”全国总决赛（主赛场长江大学，线上线下结合；部分赛区通知写07-20~23）", "scope": "全国", "source": "http://www.chengtudasai.com/"}
+  ],
+  "sources": [
+   "http://www.chengtudasai.com/",
+   "https://jwc.hutb.edu.cn",
+   "https://msec.scu.edu.cn",
+   "https://xxgk.dhu.edu.cn"
+  ],
+  "confidence": "中",
+  "notes": "重要修正：基线“国赛07-21~23”与官网组委会通知（总决赛在长江大学举行）及多校报道不符——民航飞行学院称7月19-23日、重庆建筑工程职业学院称7月20-23日、四川大学新闻称07-23总决赛在主赛场长江大学圆满落幕，故修正为07-19~23（基线所称“第一轮通知07-31~08-03”为旧版日程，个别学校通知仍沿用）。基线省赛05-29~30为一省安排（未逐一核实），各省省赛5-6月不一。官网“第十九届成图大赛(决赛)获奖名单公示文件”已发布，高校获奖喜报自08-06起陆续出现；本届约1200所高校、53万学生参与校级选拔，约2.1万名选手进入总决赛。"
+ },
+ {
+  "code": "STRUCT",
+  "officialUrl": "http://www.structurecontest.com",
+  "seasonStatus": "第十九届全国总决赛即将举行：2026-10-14~18在内蒙古科技大学（赛题“勒勒车模型结构设计与制作”），各省分区赛已于4-7月完成",
+  "structure": {
+   "tracks": [],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "分区赛（各省、自治区、直辖市）", "kind": "REGIONAL"},
+     {"name": "全国总决赛", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": false,
+   "structureNote": "一致：竞赛不分赛道，采用各省分区赛选拔+全国总决赛两级（高校校内选拔产生分区赛参赛队）。"
+  },
+  "events": [
+   {"nodeType": "CONTEST", "startAt": "2026-10-14", "endAt": "2026-10-18", "label": "第十九届全国总决赛（内蒙古科技大学，赛题“勒勒车”）", "scope": "全国", "source": "http://www.structurecontest.com/"}
+  ],
+  "sources": [
+   "http://www.structurecontest.com/",
+   "https://www.imust.edu.cn",
+   "http://www.whtzsfw.com"
+  ],
+  "confidence": "高",
+  "notes": "官网URL正确（https证书异常，建议http访问）。官网2025-12-31发布《2026年关于组织第十九届全国大学生结构设计竞赛的通知》、2026-01-01公布赛题、04-28发布分区赛获奖数据填报通知；内蒙古科技大学2024-11获第十九届承办权。多来源证实总决赛2026-10-14~18（云南赛区07-22报道“将于10月14日至18日赴内蒙古科技大学参加全国总决赛”）。各省分区赛2026年4-7月举行（如北京市赛06-09、内蒙古大学06-28、宁夏06-29、云南07-22）。"
+ },
+ {
+  "code": "UMIC",
+  "officialUrl": "https://12umic.hit.edu.cn",
+  "seasonStatus": "第十二届常规赛已落幕：全国决赛第二阶段现场评审2026-07-17~20在哈尔滨工业大学举行、评审结果07-20公布；新增“数字孪生设计挑战赛季”2026-09启动、正在进行",
+  "structure": {
+   "tracks": [
+    {"code": "REGULAR", "name": "常规赛", "description": "第十二届主题“灵巧·智能，美好生活”（博实杯）"},
+    {"code": "FISCHER", "name": "慧鱼组专项", "description": "慧鱼创新设计专项竞赛（全国集中比赛）"},
+    {"code": "DIGITWIN", "name": "数字孪生设计挑战赛季", "description": "2026年9月新增赛季（第5号通知启动）"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "校赛", "kind": "CAMPUS"},
+     {"name": "省级赛区预赛", "kind": "PROVINCIAL"},
+     {"name": "全国决赛", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "基线无赛道划分：补充常规赛/慧鱼组/数字孪生赛季三个板块（后两者为专项）；常规赛仍为校赛→省赛（赛区预赛）→全国决赛两级选拔+决赛（决赛含两个阶段：评审作品公示与现场评审）。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2025-10-27", "label": "高校组织报名启动（中国农业大学10-27转发大赛通知；报名自2025年10月起陆续开始）", "scope": "全国", "source": "https://coe.cau.edu.cn"},
+   {"nodeType": "RESULT", "startAt": "2026-07-01", "label": "全国决赛第二阶段评审作品及拟获二、三等奖名单公示", "scope": "全国", "source": "https://12umic.hit.edu.cn/2026/0701/c20012a395608/page.htm"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-17", "endAt": "2026-07-20", "label": "“博实杯”常规赛全国决赛第二阶段现场评审（哈尔滨工业大学）", "scope": "全国", "source": "https://12umic.hit.edu.cn/2026/0720/c20012a397695/page.htm"},
+   {"nodeType": "RESULT", "startAt": "2026-07-20", "label": "常规赛全国决赛评审结果公布", "scope": "全国", "source": "https://12umic.hit.edu.cn/2026/0720/c20012a397695/page.htm"},
+   {"nodeType": "OTHER", "startAt": "2026-09-15", "label": "第5号通知：启动数字孪生设计挑战赛季并公布赛事安排", "scope": "全国", "source": "https://12umic.hit.edu.cn/2026/0915/c20012a401561/page.htm"}
+  ],
+  "sources": [
+   "https://12umic.hit.edu.cn",
+   "https://12umic.hit.edu.cn/2026/0720/c20012a397695/page.htm",
+   "https://12umic.hit.edu.cn/2026/0915/c20012a401561/page.htm",
+   "https://coe.cau.edu.cn"
+  ],
+  "confidence": "高",
+  "notes": "届次节奏为两年一届（第十一届2024、第十二届2026）。基线日期分歧已解决：第十二届专题官网（哈工大）评审结果通知证实决赛为07-17~20，基线中“官方7-17~20”正确、“哈工大新闻7-16~19”弃用。本届707所高校5753件作品参赛、134所高校210件作品进入决赛；参加全国决赛名单06-15前公布。慧鱼组竞赛2026-04-18~19在青岛理工大学举行（246所高校755支队伍，据公开报道）；省级预赛集中于2026年3-5月（如陕西赛区05-08~10）。基线officialSite umic.moocollege.com（高校学生竞赛网/报名平台）本次仅见平台首页，未能确认大赛专区，官方URL已更新为第十二届专题官网。"
+ },
+ {
+  "code": "MEDU",
+  "officialUrl": "https://medu.bjmu.edu.cn",
+  "seasonStatus": "2026年全国赛无公开通知：未检索到教育部或组委会2026年通知；最近一届完整全国赛为第十届（2021年1-5月），第十一届仅见高校选拔（2023起）与分区赛报道",
+  "structure": {
+   "tracks": [
+    {"code": "CLIN5", "name": "临床医学专业（五年制）", "description": "临床医学五年制本科赛道"},
+    {"code": "CLIN8", "name": "临床医学专业（八年制）", "description": "临床医学八年制（长学制）赛道"},
+    {"code": "TCM", "name": "中医学专业", "description": "中医学本科赛道"},
+    {"code": "PREVENT", "name": "预防医学专业", "description": "预防医学本科赛道"},
+    {"code": "NURSING", "name": "护理学专业", "description": "护理学本科赛道"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "校赛（校内选拔）", "kind": "CAMPUS"},
+     {"name": "分区赛（预选赛）", "kind": "REGIONAL"},
+     {"name": "全国总决赛", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "赛道修正：基线含“药学”有误——教育部办公厅第十届通知（教高厅函〔2020〕26号）设五个赛道（临床五年制、临床八年制、中医学、预防医学、护理学），无药学（药学仅见于部分省级赛如山东）。阶段结构（校赛→分区赛→总决赛）与教育部赛制一致，予以保留。"
+  },
+  "events": [],
+  "sources": [
+   "http://www.moe.gov.cn/srcsite/A08/moe_740/s7956/202012/t20201218_506766.html",
+   "https://medu.bjmu.edu.cn",
+   "https://jwc.gzhmu.edu.cn"
+  ],
+  "confidence": "低",
+  "notes": "2026年公开信息少、可信度低，仅见校级选拔（与基线判断一致），events留空。教育部第十届为2021年1-5月（总决赛2021-05在天津，天津医科大学与天津中医药大学承办，211所高校497支队伍参赛、81所高校142支队伍晋级总决赛）。第十一届选拔通知见广州医科大学教务处（2023-08，面向2019级）；百度百科载第十一届西南西北分区赛（2025年，陕西中医药大学获五年制赛道特等奖），但第十一届全国总决赛通知未公开。大赛官网medu.bjmu.edu.cn挂靠全国医学教育发展中心，公开内容多为2021年第十届。"
+ },
+ {
+  "code": "JCYXDS",
+  "officialUrl": "http://www.jcyxds.com",
+  "seasonStatus": "第十二届已落幕：全国总决赛暨“一带一路”国际竞赛2026-08-14~18在复旦大学举行，获奖名单已公布",
+  "structure": {
+   "tracks": [
+    {"code": "BASIC_CLIN", "name": "基础临床", "description": "基础医学+临床医学方向（含检验医学类作品单列，本科组推荐7项）"},
+    {"code": "FORENSIC", "name": "法医学", "description": "法医学方向（本科组推荐2项）"},
+    {"code": "STOMATOLOGY", "name": "口腔医学", "description": "口腔医学方向（本科组推荐2项）"},
+    {"code": "PREVENT", "name": "预防医学", "description": "公共卫生/预防医学方向"},
+    {"code": "PHARM_TCM", "name": "药学中医药", "description": "药学与中医药方向"},
+    {"code": "INTERDISC", "name": "交叉学科", "description": "医工等交叉方向"},
+    {"code": "INTL", "name": "国际赛道（“一带一路”国际竞赛）", "description": "国境外高校参赛，与总决赛同期"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "校赛（校内选拔）", "kind": "CAMPUS"},
+     {"name": "复赛（北部/东部/西部/中南部赛区）", "kind": "REGIONAL"},
+     {"name": "全国总决赛", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "基线7赛道（基础医学/临床医学/药学/公共卫生/护理学/中医学/口腔医学）与第十二届不符：本届本科组按基础临床、法医学、口腔医学、预防医学、药学中医药、交叉学科及国际赛道分设7个赛道（分实验设计和创新研究两大类别，参照国家自然科学基金委医学科学部指南）；另有高职高专组（设基础临床、药学中医药、护理学、交叉学科4赛道，复赛2026年5月在长春医学高等专科学校举行）。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_END", "endAt": "2026-04-15", "label": "报名截止", "scope": "全国", "source": "http://www.jcyxds.com/"},
+   {"nodeType": "CONTEST", "startAt": "2026-04-20", "endAt": "2026-04-30", "label": "校内选拔赛（例：包头医学院04-20启动；官网要求04-30前完成校赛）", "scope": "各高校", "source": "http://www.jcyxds.com/"},
+   {"nodeType": "CONTEST", "startAt": "2026-05-01", "endAt": "2026-07-27", "label": "复赛（北部/东部/西部/中南部赛区；官网日程2026年5月~7月、7月27日前完成）", "scope": "全国", "source": "http://www.jcyxds.com/"},
+   {"nodeType": "CONTEST", "startAt": "2026-08-14", "endAt": "2026-08-18", "label": "全国总决赛暨“一带一路”国际竞赛（复旦大学）", "scope": "全国", "source": "https://www.gxtcmu.edu.cn"}
+  ],
+  "sources": [
+   "http://www.jcyxds.com/",
+   "http://www.cmm.zju.edu.cn",
+   "https://www.gxtcmu.edu.cn",
+   "https://jwc.ncu.edu.cn"
+  ],
+  "confidence": "高",
+  "notes": "官网URL正确（https证书异常指向moocollege平台，建议http访问；基线officialSite为空已补齐）。主办：高等学校大学生医学创新竞赛委员会，总决赛由复旦大学承办，系中国高等教育学会竞赛目录内赛事。第一轮通知2025年11月下旬发布（山东大学齐鲁医学院2025-11-24转发）。总决赛08-14~18在复旦大学闭幕（广西中医药大学等多校报道），基线RESULT“08-14高职高专赛道名单”保留于备注：高职高专组复赛5月举行、其获奖名单于总决赛期间（08-14）公布。"
+ }
+]

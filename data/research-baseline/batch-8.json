@@ -1,0 +1,365 @@
+[
+ {
+  "code": "CICF",
+  "name": "中国国际合唱节",
+  "officialSite": null,
+  "sourceUrl": "https://www.cicfbj.cn/",
+  "tracks": [
+   {
+    "code": "A",
+    "name": "A 级"
+   },
+   {
+    "code": "B",
+    "name": "B 级"
+   },
+   {
+    "code": "C",
+    "name": "C 级"
+   },
+   {
+    "code": "D",
+    "name": "D 级"
+   }
+  ],
+  "stages": [
+   {
+    "name": "参赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "SIGNUP_START",
+    "startAt": "2025-10-31"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-13"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "RESULT",
+    "startAt": "2026-07-20"
+   }
+  ],
+  "seq": "B3",
+  "csv": {
+   "最新届次": "第十八届（2026）",
+   "报名开始时间": "2025-10-31（官宣报名起）",
+   "报名截止时间": "信息未公布（约2026上半年）",
+   "校赛/省赛时间": "无（非分层）",
+   "全国赛/决赛时间": "2026-07-13~20（北京）",
+   "结果公布/颁奖时间": "2026-07-20（闭幕）",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "7-13国家大剧院开幕；31国306团"
+  }
+ },
+ {
+  "code": "WCDC",
+  "name": "世界华语辩论锦标赛",
+  "officialSite": null,
+  "sourceUrl": "https://baike.baidu.com/item/世界华语辩论锦标赛",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "分区赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "总决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [],
+  "seq": "B4",
+  "csv": {
+   "最新届次": "信息未公布（可查最新为第十届，2019-2020）",
+   "报名开始时间": "信息未公布",
+   "报名截止时间": "信息未公布",
+   "校赛/省赛时间": "信息未公布",
+   "全国赛/决赛时间": "信息未公布",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "信息未公布",
+   "可信度": "低",
+   "备注": "百科称已办九届，可查最新为第十届（2019-2020）；2025/2026新届次无可靠来源"
+  }
+ },
+ {
+  "code": "WCDB",
+  "name": "华语辩论世界杯",
+  "officialSite": null,
+  "sourceUrl": "https://baike.baidu.com/item/2026华语辩论世界杯",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "分区赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "总决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-13"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "RESULT",
+    "startAt": "2026-07-19"
+   }
+  ],
+  "seq": "B5",
+  "csv": {
+   "最新届次": "2026届",
+   "报名开始时间": "信息未公布",
+   "报名截止时间": "信息未公布",
+   "校赛/省赛时间": "分区赛2026上半年",
+   "全国赛/决赛时间": "2026-07-13~19（北京石景山首钢园，7-19总决赛）",
+   "结果公布/颁奖时间": "2026-07-19总决赛",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "主题“百炼铸新声”；冠军为中国人民大学"
+  }
+ },
+ {
+  "code": "QBIANHUI",
+  "name": "全辩会·国际华语辩论冠军赛",
+  "officialSite": null,
+  "sourceUrl": "",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "淘汰赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [],
+  "seq": "B6",
+  "csv": {
+   "最新届次": "信息未公布（可查首届2019-10-07）",
+   "报名开始时间": "信息未公布",
+   "报名截止时间": "信息未公布",
+   "校赛/省赛时间": "信息未公布",
+   "全国赛/决赛时间": "信息未公布",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "信息未公布",
+   "可信度": "低",
+   "备注": "仅查到首届（2019重庆大学）及2020网络冠军赛；与“新国辩”易混淆，最新届次无公开信息"
+  }
+ },
+ {
+  "code": "WUDT",
+  "name": "世界大学生辩论巡回赛",
+  "officialSite": null,
+  "sourceUrl": "https://debatetimer.cn/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "分区赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "总决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [],
+  "seq": "B7",
+  "csv": {
+   "最新届次": "2025赛季",
+   "报名开始时间": "信息未公布（约2025上半年）",
+   "报名截止时间": "信息未公布",
+   "校赛/省赛时间": "分区赛2025上半年（东北10-12）",
+   "全国赛/决赛时间": "总决赛2025-10",
+   "结果公布/颁奖时间": "2025-10",
+   "当前状态": "2025届已结束（2026信息未公布）",
+   "可信度": "中",
+   "备注": "24支赛区冠亚军晋级总决赛；品牌旧称“晨星杯”"
+  }
+ },
+ {
+  "code": "XFXJXF",
+  "name": "全国学生“学宪法讲宪法”活动",
+  "officialSite": null,
+  "sourceUrl": "https://www.moe.gov.cn/",
+  "tracks": [
+   {
+    "code": "LITERACY",
+    "name": "法治素养"
+   },
+   {
+    "code": "MICRO",
+    "name": "微课"
+   }
+  ],
+  "stages": [
+   {
+    "name": "省级选拔",
+    "kind": "PROVINCIAL",
+    "track": "LITERACY"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "LITERACY"
+   },
+   {
+    "name": "省级选拔",
+    "kind": "PROVINCIAL",
+    "track": "MICRO"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "MICRO"
+   }
+  ],
+  "events": [
+   {
+    "stage": "PROVINCIAL",
+    "track": "LITERACY",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-07-01"
+   },
+   {
+    "stage": "PROVINCIAL",
+    "track": "LITERACY",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-10-10"
+   },
+   {
+    "stage": "FINAL",
+    "track": "LITERACY",
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-28"
+   }
+  ],
+  "seq": "B8",
+  "csv": {
+   "最新届次": "第十一届（2026）",
+   "报名开始时间": "2026-07-01（网络风采作品上传）",
+   "报名截止时间": "2026-10-10（作品上传截止）",
+   "校赛/省赛时间": "省级选拔2026下半年",
+   "全国赛/决赛时间": "法治素养总决赛2026-11；微课总决赛2026-07-28~31（哈尔滨）",
+   "结果公布/颁奖时间": "2026-11（选手公示）；12月上旬国家宪法日颁奖",
+   "当前状态": "进行中",
+   "可信度": "高",
+   "备注": "活动期2026年5-12月；更正为“法治素养总决赛11月、微课总决赛7月底、颁奖12月上旬”"
+  }
+ },
+ {
+  "code": "WLWHJ",
+  "name": "全国大学生网络文化节",
+  "officialSite": null,
+  "sourceUrl": "https://dxs.moe.gov.cn/zx/hd/wlwhj/",
+  "tracks": [
+   {
+    "code": "VIDEO",
+    "name": "短视频"
+   },
+   {
+    "code": "PHOTO",
+    "name": "摄影"
+   },
+   {
+    "code": "WRITING",
+    "name": "网文"
+   },
+   {
+    "code": "MUSIC",
+    "name": "歌曲"
+   },
+   {
+    "code": "DESIGN",
+    "name": "公益广告"
+   }
+  ],
+  "stages": [
+   {
+    "name": "省级推选",
+    "kind": "PROVINCIAL",
+    "track": null
+   },
+   {
+    "name": "全国遴选",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "RESULT",
+    "startAt": "2026-08-31"
+   }
+  ],
+  "seq": "B9",
+  "csv": {
+   "最新届次": "第八届（2025-2026）",
+   "报名开始时间": "2025-07（校内征集7-02起）",
+   "报名截止时间": "信息未公布",
+   "校赛/省赛时间": "省级推选2026年内",
+   "全国赛/决赛时间": "作品征集/遴选2026年",
+   "结果公布/颁奖时间": "2026-08-31（教育部思政司遴选结果公示）",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "2025-06发通知、7月征集，2026-08-31公示结果"
+  }
+ },
+ {
+  "code": "SCXIJU",
+  "name": "四川省戏剧小品（小戏）比赛",
+  "officialSite": null,
+  "sourceUrl": "https://www.yscz.org.cn/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "参赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "RESULT",
+    "startAt": "2025-07-24"
+   }
+  ],
+  "seq": "B10",
+  "csv": {
+   "最新届次": "第二十届（2025）",
+   "报名开始时间": "信息未公布",
+   "报名截止时间": "信息未公布",
+   "校赛/省赛时间": "无（非分层）",
+   "全国赛/决赛时间": "决赛2025-06中下旬（达州通川，6-16/17开幕，为期5天）",
+   "结果公布/颁奖时间": "获奖结果公布2025-07-24（拟获奖公示6-25）",
+   "当前状态": "已结束（二十一届未公布）",
+   "可信度": "中",
+   "备注": "决赛为6月中下旬；“07-26”系闭幕报道日而非赛期"
+  }
+ }
+]

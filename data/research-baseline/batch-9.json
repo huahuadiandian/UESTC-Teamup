@@ -1,0 +1,250 @@
+[
+ {
+  "code": "TZB-ACADEMIC",
+  "name": "“挑战杯”全国大学生课外学术科技作品竞赛",
+  "officialSite": null,
+  "sourceUrl": "https://www.tiaozhanbei.net/",
+  "tracks": [
+   {
+    "code": "PAPER",
+    "name": "自然科学类学术论文"
+   },
+   {
+    "code": "SURVEY",
+    "name": "哲学社会科学类调查报告"
+   },
+   {
+    "code": "INVENTION",
+    "name": "科技发明制作"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": null
+   },
+   {
+    "name": "全国终审决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2025-10-31"
+   }
+  ],
+  "seq": "2",
+  "csv": {
+   "最新届次": "第十九届（2025）",
+   "报名开始时间": "信息未公布",
+   "报名截止时间": "信息未公布",
+   "校赛/省赛时间": "校赛/省赛2025年上半年",
+   "全国赛/决赛时间": "终审决赛2025-10-31~11-03（南京大学）",
+   "结果公布/颁奖时间": "2025-11",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "终审决赛日期与地点证实"
+  }
+ },
+ {
+  "code": "TZB-BUSINESS",
+  "name": "“挑战杯”中国大学生创业计划大赛",
+  "officialSite": null,
+  "sourceUrl": "http://2026.tiaozhanbei.net/",
+  "tracks": [
+   {
+    "code": "TECH",
+    "name": "科技创新"
+   },
+   {
+    "code": "FUTURE",
+    "name": "未来产业"
+   },
+   {
+    "code": "RURAL",
+    "name": "乡村振兴"
+   },
+   {
+    "code": "SOCIAL",
+    "name": "社会治理"
+   },
+   {
+    "code": "ECO",
+    "name": "生态环保"
+   },
+   {
+    "code": "CULTURE",
+    "name": "文化创意"
+   },
+   {
+    "code": "REGION",
+    "name": "区域合作"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": null
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [],
+  "seq": "3",
+  "csv": {
+   "最新届次": "第十五届（2026）",
+   "报名开始时间": "2026-03（省级赛3月启动）",
+   "报名截止时间": "校级初赛5月底前",
+   "校赛/省赛时间": "校赛5月底前；省赛6月底前完成推报",
+   "全国赛/决赛时间": "国赛2026-07~11，终审决赛在大连理工大学（具体日期未公布）",
+   "结果公布/颁奖时间": "2026-11（预计）",
+   "当前状态": "省级赛已结束、备战国赛",
+   "可信度": "中",
+   "备注": "决赛具体日期仍未公布；报名起点补充为2026-03"
+  }
+ },
+ {
+  "code": "HUAWEI-ICT",
+  "name": "华为ICT大赛",
+  "officialSite": "https://www.huawei.com/minisite/ict-competition-2025-2026-global/cn/index.html",
+  "sourceUrl": "https://e.huawei.com/cn/talent/ict-academy",
+  "tracks": [
+   {
+    "code": "PRACTICE",
+    "name": "实践赛"
+   },
+   {
+    "code": "CHALLENGE",
+    "name": "挑战赛"
+   },
+   {
+    "code": "INNOV",
+    "name": "创新赛"
+   },
+   {
+    "code": "PROGRAM",
+    "name": "编程赛"
+   },
+   {
+    "code": "TEACH",
+    "name": "教学赛"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "PRACTICE"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "PRACTICE"
+   },
+   {
+    "name": "全球总决赛",
+    "kind": "FINAL",
+    "track": "PRACTICE"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "CHALLENGE"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "CHALLENGE"
+   },
+   {
+    "name": "全球总决赛",
+    "kind": "FINAL",
+    "track": "CHALLENGE"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "INNOV"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "INNOV"
+   },
+   {
+    "name": "全球总决赛",
+    "kind": "FINAL",
+    "track": "INNOV"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "PROGRAM"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "PROGRAM"
+   },
+   {
+    "name": "全球总决赛",
+    "kind": "FINAL",
+    "track": "PROGRAM"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "TEACH"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "TEACH"
+   },
+   {
+    "name": "全球总决赛",
+    "kind": "FINAL",
+    "track": "TEACH"
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": "PRACTICE",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-10-31"
+   }
+  ],
+  "seq": "49",
+  "csv": {
+   "最新届次": "第十一届（2026-2027）",
+   "报名开始时间": "2026-09（各校9月启动）",
+   "报名截止时间": "实践/挑战赛2026-10-31；算子赛2026-10-26；创新/编程/教学赛2026-11-30",
+   "校赛/省赛时间": "信息未公布",
+   "全国赛/决赛时间": "信息未公布",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "报名中",
+   "可信度": "高",
+   "备注": "算子赛需2026-10-26前完成两项认证方可获正式资格"
+  }
+ }
+]

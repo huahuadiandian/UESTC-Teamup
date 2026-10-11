@@ -1,0 +1,313 @@
+[
+ {
+  "code": "UCC",
+  "officialUrl": "https://ucc.fltrp.com/",
+  "seasonStatus": "2026届进行中：省赛阶段（英语组国际传播综合能力/笔译省赛10月24日、31日两场），全国决赛2026年12月在北京举行",
+  "structure": {
+   "tracks": [
+    {"code": "SPEECH", "name": "英语演讲", "description": "定题演讲题目“China in the Garden of Civilizations”（文明百花园，中国共芳华），校赛/省赛设演讲赛项晋级通道"},
+    {"code": "INTCOM", "name": "国际传播综合能力", "description": "考查读、写、译综合能力，含全国统一线上初赛（2026-10-11）"},
+    {"code": "TRANS", "name": "英语笔译", "description": "考查汉英互译能力，与综合能力赛项同场线上初赛"},
+    {"code": "VIDEO", "name": "英语短视频", "description": "个人或团队参赛的短视频作品赛项，题目2026-03-21发布"},
+    {"code": "SPECIAL", "name": "“四新”专项", "description": "围绕“四新”建设提交2000—3000词英文研究报告，省赛提交制"},
+    {"code": "MULTILING", "name": "多语种组", "description": "俄、德、法、西、阿、日、意、葡、韩9语种，不设分赛项，考查综合运用能力"},
+    {"code": "CHINESE", "name": "国际中文组", "description": "面向来华留学生的中文短视频赛项，采用省赛、国赛两级赛制"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "校赛", "kind": "CAMPUS"},
+     {"name": "省赛", "kind": "PROVINCIAL"},
+     {"name": "全国决赛", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "重大修正：基线五大赛项（演讲/辩论/写作/阅读/综合能力）已过时。据官网2026年大赛通知，英语组实际设演讲、国际传播综合能力（涵盖读/写/译，原写作、阅读并入）、笔译、短视频、“四新”专项；口译赛项改为隔年举办（下次2027年）；“外研社·国才杯”全国英语辩论赛为独立赛事，不属本大赛；另设多语种组与国际中文组。阶段流程（校赛-省赛-全国决赛）与基线一致"
+  },
+  "events": [
+   {"nodeType": "OTHER", "startAt": "2026-03-21", "endAt": null, "label": "大赛启动：定题演讲题目与短视频赛项题目发布", "scope": "全国", "source": "https://ucc.fltrp.com/"},
+   {"nodeType": "SIGNUP_START", "startAt": "2026-06-02", "endAt": null, "label": "官网报名通道开放（选手须在本校截止时间前完成注册报名）", "scope": "全国", "source": "https://ucc.fltrp.com/c/2026-04-15/517928.shtml"},
+   {"nodeType": "CONTEST", "startAt": "2026-04-01", "endAt": "2026-10-31", "label": "校赛（各院校自行组织，4—10月；须于省赛报名截止前填报晋级名单）", "scope": "院校", "source": "https://ucc.fltrp.com/c/2026-04-15/517928.shtml"},
+   {"nodeType": "SUBMISSION", "startAt": "2026-09-16", "endAt": "2026-09-23", "label": "英语组“四新”专项省赛研究报告提交（2000—3000词）", "scope": "全国", "source": "https://ucc.fltrp.com/c/2026-04-15/517928.shtml"},
+   {"nodeType": "CONTEST", "startAt": "2026-10-11", "endAt": null, "label": "英语组国际传播综合能力/笔译赛项全国统一线上初赛（9:30-11:00）", "scope": "全国", "source": "https://mp.weixin.qq.com/s/1vpF5gNN0RFh336UUQ57Vg"},
+   {"nodeType": "CONTEST", "startAt": "2026-10-11", "endAt": null, "label": "多语种组省赛（线上）", "scope": "全国", "source": "https://ucc.fltrp.com/c/2026-04-15/517928.shtml"},
+   {"nodeType": "CONTEST", "startAt": "2026-10-24", "endAt": "2026-10-31", "label": "英语组国际传播综合能力、笔译赛项省赛（组委会于10月24日、10月31日各办一场，选手可选其一）", "scope": "全国", "source": "https://ucc.fltrp.com/c/2026-04-15/517928.shtml"},
+   {"nodeType": "CONTEST", "startAt": "2026-10-01", "endAt": "2026-11-30", "label": "“四新”专项国赛（10—11月）", "scope": "全国", "source": "https://ucc.fltrp.com/c/2026-04-15/517928.shtml"},
+   {"nodeType": "CONTEST", "startAt": "2026-11-01", "endAt": "2026-12-31", "label": "其余赛项全国决赛（11—12月；演讲等赛项全国决赛2026年12月在北京举行，具体日期待组委会公布）", "scope": "全国", "source": "https://ucc.fltrp.com/c/2026-04-15/517928.shtml"}
+  ],
+  "sources": [
+   "https://ucc.fltrp.com/",
+   "https://ucc.fltrp.com/c/2026-04-15/517928.shtml",
+   "https://mp.weixin.qq.com/s/1vpF5gNN0RFh336UUQ57Vg"
+  ],
+  "confidence": "高",
+  "notes": "官方大赛通知（官网“大赛通知”栏目，2026-04-15发布）载明：大赛2026年4月至12月举行，校赛4—10月、省赛9—11月、国赛10—12月；官网报名页面6月2日开放；演讲赛项全国决赛12月在北京（四川大学教务处通知佐证，具体日期待定）；口译赛项隔年举办（下次2027年）；短视频赛项报名各校截止多在9月中旬"
+ },
+ {
+  "code": "SFLEP",
+  "officialUrl": "https://ict.sflep.com/",
+  "seasonStatus": "第九届进行中：校赛收尾（5—9月）、省赛推进（11月15日前完成），全国决赛暨全国总决赛12月3—6日在上海举行",
+  "structure": {
+   "tracks": [
+    {"code": "TEAM_UG", "name": "团队现场赛·中国学生本科院校组", "description": "3人团队，参赛语种英语，案例用英语撰写"},
+    {"code": "TEAM_VOC", "name": "团队现场赛·中国学生职业院校组", "description": "3人团队，职业本科院校归入本组"},
+    {"code": "TEAM_INTL", "name": "团队现场赛·国际学生组", "description": "3人团队，参赛语种汉语"},
+    {"code": "VIDEO", "name": "短视频大赛", "description": "设中国学生英语组（本科/高职）、德语组、日语组、国际学生组4个组别，经全国赛直通通道参赛"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "校赛", "kind": "CAMPUS"},
+     {"name": "省赛（复赛+决赛）", "kind": "PROVINCIAL"},
+     {"name": "全国决赛（案例文本评审+现场赛）", "kind": "NATIONAL"},
+     {"name": "全国总决赛", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "修正：基线未划分赛道且把全国赛只记为“全国总决赛”一个节点。据第九届章程，团队现场赛分3个组别、另有独立的短视频大赛（4个组别、走全国赛直通通道）；全国赛分“决赛”（中国学生组含案例文本评审+现场赛）与“总决赛”（知识问答、情境述评、讲述中国故事）两个环节。校赛→省赛→全国赛三级框架与基线一致"
+  },
+  "events": [
+   {"nodeType": "CONTEST", "startAt": "2026-05-01", "endAt": "2026-09-30", "label": "校赛（各校自行组织，2026年5—9月）", "scope": "院校", "source": "https://ictvd.oss-cn-beijing.aliyuncs.com/uploadfile/2026/0401/20260401041236519.pdf"},
+   {"nodeType": "CONTEST", "startAt": "2026-05-01", "endAt": "2026-09-30", "label": "短视频大赛（2026年5—9月）", "scope": "全国", "source": "https://ictvd.oss-cn-beijing.aliyuncs.com/uploadfile/2026/0401/20260401041236519.pdf"},
+   {"nodeType": "CONTEST", "startAt": null, "endAt": "2026-11-15", "label": "省赛（各省赛区自行安排，黑龙江等部分省5月举行，须于11月15日前完成并提交晋级名单）", "scope": "省级", "source": "https://ictvd.oss-cn-beijing.aliyuncs.com/uploadfile/2026/0401/20260401041236519.pdf"},
+   {"nodeType": "SUBMISSION", "startAt": null, "endAt": "2026-11-15", "label": "全国决赛案例文本提交截止（中国学生组晋级团队均须提交）", "scope": "全国", "source": "https://ictvd.oss-cn-beijing.aliyuncs.com/uploadfile/2026/0401/20260401041236519.pdf"},
+   {"nodeType": "CONTEST", "startAt": "2026-12-03", "endAt": "2026-12-06", "label": "全国决赛（现场赛）暨全国总决赛（上海）", "scope": "全国", "source": "https://ictvd.oss-cn-beijing.aliyuncs.com/uploadfile/2026/0401/20260401041236519.pdf"}
+  ],
+  "sources": [
+   "https://ict.sflep.com/",
+   "https://ictvd.oss-cn-beijing.aliyuncs.com/uploadfile/2026/0401/20260401041236519.pdf"
+  ],
+  "confidence": "高",
+  "notes": "第九届章程（官网“国赛章程”栏目PDF，2026-04-01发布）载明：大赛分校赛、省赛、全国赛三级；省赛复赛含案例开发与展析、名言名句解读，决赛含知识问答、情境述评、讲述中国故事；总决赛成绩决定特等奖（前7名），决赛成绩40%+总决赛成绩60%？章程表述为决赛与总决赛独立计分、最终排名依据总决赛成绩；中国学生组全国赛二等奖选手可免费参加一次2027年全国跨文化能力考试"
+ },
+ {
+  "code": "I21ST",
+  "officialUrl": "https://contest.i21st.cn/",
+  "seasonStatus": "第31届进行中：校园选拔/地区初赛1—5月、地区半决赛/决赛4—7月，全国半决赛/总决赛拟于2026年10月举行",
+  "structure": {
+   "tracks": [
+    {"code": "UNIV", "name": "大学组", "description": "面向在校大学生（含研究生）的演讲比赛组别"},
+    {"code": "SENIOR", "name": "高中组", "description": "面向高中生的演讲比赛组别（赛事另设初中、小学等组别，平台仅收录高校相关组别）"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "校园选拔/地区初赛", "kind": "CAMPUS"},
+     {"name": "地区半决赛/决赛", "kind": "REGIONAL"},
+     {"name": "全国半决赛/总决赛", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": false,
+   "structureNote": "一致：校园选拔→地区赛→全国半决赛/总决赛三阶段框架与基线相符（官网通知原文一致）"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2026-01-01", "endAt": null, "label": "报名启动（各赛区/各校1月起陆续开放，月份级精度）", "scope": "全国", "source": "https://contest.i21st.cn/"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-05-04", "label": "报名及演讲稿/视频上传截止（以江苏大学为例2026-04-15至05-04，各校截止不一）", "scope": "院校", "source": "https://jwc.ujs.edu.cn/"},
+   {"nodeType": "CONTEST", "startAt": "2026-05-05", "endAt": null, "label": "校园初赛（线上，以江苏大学为例5月5日）", "scope": "院校", "source": "https://jwc.ujs.edu.cn/"},
+   {"nodeType": "CONTEST", "startAt": "2026-04-01", "endAt": "2026-07-31", "label": "地区半决赛/决赛（各重点城市落地或线上，含即席演讲、已备演讲、现场问答）", "scope": "区域", "source": "https://contest.i21st.cn/"},
+   {"nodeType": "CONTEST", "startAt": "2026-10-01", "endAt": "2026-10-31", "label": "全国半决赛/总决赛（拟于2026年10月，具体日期与地点未公布）", "scope": "全国", "source": "https://contest.i21st.cn/"}
+  ],
+  "sources": [
+   "https://contest.i21st.cn/",
+   "https://jwc.ujs.edu.cn/"
+  ],
+  "confidence": "中",
+  "notes": "全国半决赛/总决赛“2026年10月（拟）”为组委会初步安排，精确日期未公布；报名方式为“21世纪杯”微信服务号活动中心报名并上传演讲稿与视频；地区决赛形式为已备演讲4分钟+现场问答2分钟"
+ },
+ {
+  "code": "CSSC",
+  "officialUrl": "http://www.china-cssc.org/",
+  "seasonStatus": "第十七届报名中（2026-10-31截止），知识赛网考11月1—20日，各阶段总决赛2027年5月举行",
+  "structure": {
+   "tracks": [
+    {"code": "ZHKS", "name": "专科组", "description": "全日制在校专科生，知识赛网考通过后组队参加实践赛"},
+    {"code": "BENKE", "name": "本科组", "description": "全日制在校本科生，知识赛网考通过后组队参加实践赛"},
+    {"code": "YJS", "name": "研究生组", "description": "全日制在校研究生，直接报名实践赛（无知识赛网考）"},
+    {"code": "LSX", "name": "在华留学生组", "description": "在华留学生，以中文撰写报告，不设企业命题赛和省赛"}
+   ],
+   "stagesByTrack": {
+    "ZHKS": [
+     {"name": "知识赛（个人网考）", "kind": "QUALIFIER"},
+     {"name": "校赛", "kind": "CAMPUS"},
+     {"name": "企业命题赛", "kind": "OTHER"},
+     {"name": "省赛", "kind": "PROVINCIAL"},
+     {"name": "全国赛初赛（报告+PPT评审）", "kind": "NATIONAL"},
+     {"name": "全国总决赛", "kind": "FINAL"}
+    ],
+    "BENKE": [
+     {"name": "知识赛（个人网考）", "kind": "QUALIFIER"},
+     {"name": "校赛", "kind": "CAMPUS"},
+     {"name": "企业命题赛", "kind": "OTHER"},
+     {"name": "省赛", "kind": "PROVINCIAL"},
+     {"name": "全国赛初赛（报告+PPT评审）", "kind": "NATIONAL"},
+     {"name": "全国总决赛", "kind": "FINAL"}
+    ],
+    "YJS": [
+     {"name": "校赛", "kind": "CAMPUS"},
+     {"name": "企业命题赛", "kind": "OTHER"},
+     {"name": "省赛", "kind": "PROVINCIAL"},
+     {"name": "全国赛初赛（报告+PPT评审）", "kind": "NATIONAL"},
+     {"name": "全国总决赛", "kind": "FINAL"}
+    ],
+    "LSX": [
+     {"name": "校赛", "kind": "CAMPUS"},
+     {"name": "全国赛初赛", "kind": "NATIONAL"},
+     {"name": "全国总决赛", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "修正：基线无组别划分。据中商统〔2026〕33号，大赛分专科/本科/研究生/在华留学生四个组别；赛事分知识赛（个人赛，仅专科、本科组）与实践赛（团队赛）两大阶段，实践赛分校赛、企业命题赛、省赛及全国总决赛（本科/专科/研究生组含全国赛初赛环节）；在华留学生组不设企业命题赛和省赛"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2026-09-21", "endAt": null, "label": "参赛报名开始（大赛2026年9月正式启动，报名入口9月下旬开放；前期核实为9月21日前后）", "scope": "全国", "source": "https://bs.usst.edu.cn/2026/0924/c10537a371077/page.htm"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-10-31", "label": "参赛报名截止（全部组别统一；院校报名与学生报名均须在10月31日前完成）", "scope": "全国", "source": "https://bs.usst.edu.cn/2026/0924/c10537a371077/page.htm"},
+   {"nodeType": "CONTEST", "startAt": "2026-11-01", "endAt": "2026-11-20", "label": "知识赛（个人网考，专科组、本科组）", "scope": "全国", "source": "https://bs.usst.edu.cn/2026/0924/c10537a371077/page.htm"},
+   {"nodeType": "OTHER", "startAt": "2026-11-17", "endAt": "2026-11-30", "label": "实践赛发文及企业命题公布（11月17日），企业命题解读（11月18—30日）", "scope": "全国", "source": "https://bs.usst.edu.cn/2026/0924/c10537a371077/page.htm"},
+   {"nodeType": "CONTEST", "startAt": null, "endAt": "2027-03-22", "label": "校赛（实践赛校级选拔，2027-03-22前完成；在华留学生组校赛2027-03-30前完成）", "scope": "院校", "source": "https://bs.usst.edu.cn/2026/0924/c10537a371077/page.htm"},
+   {"nodeType": "CONTEST", "startAt": null, "endAt": "2027-04-10", "label": "企业命题赛（参赛报告2027年3月底一次性提交）", "scope": "全国", "source": "https://bs.usst.edu.cn/2026/0924/c10537a371077/page.htm"},
+   {"nodeType": "CONTEST", "startAt": null, "endAt": "2027-04-30", "label": "省赛（专科组2027-04-12前、研究生组2027-04-20前、本科组2027-04-30前完成）", "scope": "省级", "source": "https://bs.usst.edu.cn/2026/0924/c10537a371077/page.htm"},
+   {"nodeType": "CONTEST", "startAt": null, "endAt": "2027-05-14", "label": "全国赛初赛（专科组/在华留学生组2027-04-20前、研究生组2027-04-30前、本科组2027-05-14前结束）", "scope": "全国", "source": "https://bs.usst.edu.cn/2026/0924/c10537a371077/page.htm"},
+   {"nodeType": "CONTEST", "startAt": "2027-05-08", "endAt": "2027-05-09", "label": "专科组全国总决赛（江苏经贸职业技术学院）", "scope": "全国", "source": "https://bs.usst.edu.cn/2026/0924/c10537a371077/page.htm"},
+   {"nodeType": "CONTEST", "startAt": "2027-05-15", "endAt": "2027-05-16", "label": "研究生组暨在华留学生组全国总决赛（上海工程技术大学）", "scope": "全国", "source": "https://bs.usst.edu.cn/2026/0924/c10537a371077/page.htm"},
+   {"nodeType": "CONTEST", "startAt": "2027-05-29", "endAt": "2027-05-30", "label": "本科组全国总决赛（上海财经大学）", "scope": "全国", "source": "https://bs.usst.edu.cn/2026/0924/c10537a371077/page.htm"}
+  ],
+  "sources": [
+   "http://www.china-cssc.org/",
+   "https://bs.usst.edu.cn/2026/0924/c10537a371077/page.htm"
+  ],
+  "confidence": "高",
+  "notes": "核心依据：中商统〔2026〕33号《关于第十七届全国大学生市场调查与分析大赛的通知》（上海理工大学管理学院2026-09-24转发，含官方PDF附件）。修正基线错误：研究生/留学生组报名截止并非2026-11-15，官方通知规定全部组别统一2026-10-31截止。本科组专科组第1名/前6名团队晋级2027年8月下旬在泰国举办的第十四届亚太地区大学生市调大赛总决赛"
+ },
+ {
+  "code": "MILAN",
+  "officialUrl": "https://milan-aap.org.cn/",
+  "seasonStatus": "第十一届（2027赛季）官网已上线并进入报名启动期，官方征集细则尚未检索到",
+  "structure": {
+   "tracks": [
+    {"code": "OPEN", "name": "非命题赛场", "description": "作品创作类（视觉传达、环境设计、产品设计、数字媒体等十余类）+论文类（设计史论研究、设计教育实践、设计前沿探索）+教学创新竞赛"},
+    {"code": "COMMISSIONED", "name": "命题赛场", "description": "联合企业开展的命题类赛项"},
+    {"code": "SPECIAL", "name": "专项赛场", "description": "专项主题赛事（含职教赛道等）"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "省赛评审", "kind": "PROVINCIAL"},
+     {"name": "国赛评审", "kind": "NATIONAL"},
+     {"name": "米兰展出/颁奖典礼", "kind": "INTERNATIONAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "修正：基线三赛道（视觉传达/环境设计/产品设计）过窄。实际按“赛场”组织：非命题赛场（含视觉传达、环境设计、产品设计、时尚设计、工艺美术、数字媒体、数字摄影、虚拟IP、建筑设计、城市设计、景观设计等作品类及论文类、教学创新竞赛）、命题赛场、专项赛场；参赛组别分本科生研究生组、高职高专学生组、高校教师组、专业设计师及设计爱好者组；阶段流程省赛评审→国赛评审→米兰展出与颁奖，与基线两级评审框架一致"
+  },
+  "events": [
+   {"nodeType": "OTHER", "startAt": "2026-10-01", "endAt": null, "label": "第十一届（2027赛季）官网已切换上线、进入报名期（官网标题“2027第十一届”；具体报名开始日未公布，月份级精度）", "scope": "全国", "source": "https://milan-aap.org.cn/"}
+  ],
+  "sources": [
+   "https://milan-aap.org.cn/"
+  ],
+  "confidence": "中",
+  "notes": "第十一届报名截止、省赛/国赛评审时间均未公布。按往届规律（第十届：通知2025-10-27发布，线上报名2025-10至2026-03/04-10，省赛评审2026-04~05，国赛评审2026-05~06，颁奖典礼2026-07-23在上海理工大学举行）预计第十一届截稿约2027年3—4月、颁奖2027年7—8月，仅供参考。赛事2020年1月列入全国普通高校学科竞赛排行榜内竞赛项目"
+ },
+ {
+  "code": "CULSC",
+  "officialUrl": "https://www.culsc.cn/",
+  "seasonStatus": "第十二届（2027赛季）科学探究类报名中（2027-01-15截止）；创新创业类通知未发布",
+  "structure": {
+   "tracks": [
+    {"code": "RESEARCH", "name": "科学探究类", "description": "面向本科生团队的研究探究类项目，经网络报名、网评、省赛晋级全国决赛"},
+    {"code": "INNOV", "name": "创新创业类", "description": "面向本科生团队的创新创业类项目，往年网络申报3—4月进行"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "网评（网络评审）", "kind": "QUALIFIER"},
+     {"name": "省赛", "kind": "PROVINCIAL"},
+     {"name": "全国决赛", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": false,
+   "structureNote": "一致：科学探究类/创新创业类两赛道及网评→省赛→全国决赛流程与基线相符；当前届次由第十一届（2026，已结束）更新为第十二届（2027赛季，科学探究类报名中）"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2026-08-01", "endAt": null, "label": "第十二届科学探究类通知发布并开启网络报名（2026年8月，四川大学通知显示8月1日启动）", "scope": "全国", "source": "https://www.jwc.ynu.edu.cn/info/1009/4387.htm"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2027-01-15", "label": "网络报名截止（当天24点）", "scope": "全国", "source": "https://www.jwc.ynu.edu.cn/info/1009/4387.htm"},
+   {"nodeType": "SUBMISSION", "startAt": null, "endAt": "2027-01-31", "label": "研究综述和实验设计上传截止", "scope": "全国", "source": "https://www.jwc.ynu.edu.cn/info/1009/4387.htm"},
+   {"nodeType": "OTHER", "startAt": null, "endAt": "2027-03-31", "label": "报名费缴纳及缴费凭证上传截止", "scope": "全国", "source": "https://www.jwc.ynu.edu.cn/info/1009/4387.htm"},
+   {"nodeType": "SUBMISSION", "startAt": null, "endAt": "2027-05-31", "label": "实验记录、论文、参赛承诺书上传截止；团队成员、指导老师加入截止（指导老师系统确认材料至2027-06-03）", "scope": "全国", "source": "https://www.jwc.ynu.edu.cn/info/1009/4387.htm"},
+   {"nodeType": "CONTEST", "startAt": "2027-06-01", "endAt": "2027-07-31", "label": "网络评审和省赛（2027年6—7月）", "scope": "省级", "source": "https://www.jwc.ynu.edu.cn/info/1009/4387.htm"},
+   {"nodeType": "CONTEST", "startAt": "2027-07-21", "endAt": "2027-07-31", "label": "全国决赛（2027年7月下旬，陕西师范大学承办）", "scope": "全国", "source": "https://www.jwc.ynu.edu.cn/info/1009/4387.htm"}
+  ],
+  "sources": [
+   "https://www.culsc.cn/",
+   "https://www.jwc.ynu.edu.cn/info/1009/4387.htm",
+   "https://life.scu.edu.cn/info/1158/5442.htm"
+  ],
+  "confidence": "高",
+  "notes": "第十二届科学探究类时间表完整（云南大学教务处转发通知）；创新创业类第十二届通知截至核查日未检索到（往届报名约2026-01-20至2026-04-20），报名起止记为未公布；第十一届（2026）已结束（创新创业类总决赛2026年8月在武汉工程大学举行）"
+ },
+ {
+  "code": "NECCS",
+  "officialUrl": "https://www.chinaneccs.cn/",
+  "seasonStatus": "第28届（2026）已结束；第29届（2027）通知未发布，按惯例预计2026年12月前后启动报名",
+  "structure": {
+   "tracks": [
+    {"code": "A", "name": "A类·研究生", "description": "研究生参赛类别"},
+    {"code": "B", "name": "B类·英语专业", "description": "英语专业本专科学生参赛类别"},
+    {"code": "C", "name": "C类·非英语专业本科", "description": "非英语专业本科生参赛类别"},
+    {"code": "D", "name": "D类·体育艺术类", "description": "体育类、艺术类专业学生参赛类别"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "初赛", "kind": "CAMPUS"},
+     {"name": "决赛", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": false,
+   "structureNote": "结构一致：A/B/C/D四类及初赛→决赛两级赛制与基线相符；修正点为官网URL（www.neccs.org.cn已无法解析，现为www.chinaneccs.cn）及事件节点（基线将决赛日期2026-05-10误标为初赛节点，初赛实为2026-04-12）"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2025-12-17", "endAt": null, "label": "第28届报名启动（前期核实）", "scope": "全国", "source": "https://www.chinaneccs.cn/"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-03-13", "label": "报名截止（各校略有差异，如中南大学1月4日—3月11日、中国石油大学3月13日前）", "scope": "院校", "source": "https://sfs.upc.edu.cn/"},
+   {"nodeType": "CONTEST", "startAt": "2026-04-12", "endAt": null, "label": "初赛（全国统一，9:00-11:00，各校组织）", "scope": "全国", "source": "https://www.chinaneccs.cn/"},
+   {"nodeType": "CONTEST", "startAt": "2026-05-10", "endAt": null, "label": "决赛（全国统一，9:00-11:00，分省安排考点）", "scope": "全国", "source": "https://www.chinaneccs.cn/"},
+   {"nodeType": "RESULT", "startAt": "2026-06-01", "endAt": null, "label": "特等奖/一等奖名单自6月1日起陆续公布（前期核实）", "scope": "全国", "source": "https://www.chinaneccs.cn/"}
+  ],
+  "sources": [
+   "https://www.chinaneccs.cn/",
+   "https://sfs.upc.edu.cn/"
+  ],
+  "confidence": "中",
+  "notes": "第29届（2027）通知未发布：报名开始/截止、初赛决赛日期均未公布；按历年规律预计2026年12月启动报名、2027年4月中旬初赛、5月中旬决赛，仅供参考。报名费50元/人，经赛氪网等平台报名"
+ },
+ {
+  "code": "ARTSHOW",
+  "officialUrl": "http://www.moe.gov.cn/srcsite/A17/moe_794/moe_628/202604/t20260421_1434298.html",
+  "seasonStatus": "第八届进行中：省级展演阶段（2026年8—12月），全国汇演2027年在重庆市举办",
+  "structure": {
+   "tracks": [
+    {"code": "VOCAL", "name": "声乐", "description": "艺术表演类项目（分集体/个人）"},
+    {"code": "INSTR", "name": "器乐", "description": "艺术表演类项目（分集体/个人）"},
+    {"code": "DANCE", "name": "舞蹈", "description": "艺术表演类项目（分集体/个人）"},
+    {"code": "DRAMA", "name": "戏剧（含戏曲）", "description": "艺术表演类项目（分集体/个人）"},
+    {"code": "RECITE", "name": "朗诵", "description": "艺术表演类项目（分集体/个人）"},
+    {"code": "WORKSHOP", "name": "艺术实践工作坊", "description": "围绕艺术与科技、艺术与校园、艺术与生活、艺术与乡村等主题的学生实践工作坊"},
+    {"code": "ARTWORK", "name": "艺术作品类", "description": "绘画、书法、篆刻、摄影、设计、影视等学生艺术作品"},
+    {"code": "CASE", "name": "高校美育改革创新优秀成果", "description": "高校、教育行政部门申报的美育改革创新成果（第八届由“案例”调整为“优秀成果”）"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "校级展演", "kind": "CAMPUS"},
+     {"name": "省级展演", "kind": "PROVINCIAL"},
+     {"name": "全国汇演", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "修正：基线仅收录艺术表演类5项与工作坊，缺“艺术作品类”（绘画、书法、篆刻、摄影、设计、影视6类）和“高校美育改革创新优秀成果”；据教体艺函〔2026〕2号，项目共4大类（艺术表演类、艺术作品类、艺术实践工作坊、高校美育改革创新优秀成果）。校级→省级→全国汇演三阶段结构与基线一致，全国汇演2027年由重庆市承办"
+  },
+  "events": [
+   {"nodeType": "CONTEST", "startAt": "2026-04-01", "endAt": "2026-07-31", "label": "校级展演（2026年4—7月，各校组织）", "scope": "院校", "source": "http://www.moe.gov.cn/srcsite/A17/moe_794/moe_628/202604/t20260421_1434298.html"},
+   {"nodeType": "CONTEST", "startAt": "2026-08-01", "endAt": "2026-12-31", "label": "省级展演（2026年8—12月，各省级教育行政部门组织）", "scope": "省级", "source": "http://www.moe.gov.cn/srcsite/A17/moe_794/moe_628/202604/t20260421_1434298.html"},
+   {"nodeType": "CONTEST", "startAt": "2027-01-01", "endAt": "2027-06-30", "label": "全国汇演（2027年，重庆市承办；全国汇演阶段2027年1—6月）", "scope": "全国", "source": "http://www.moe.gov.cn/srcsite/A17/moe_794/moe_628/202604/t20260421_1434298.html"}
+  ],
+  "sources": [
+   "http://www.moe.gov.cn/srcsite/A17/moe_794/moe_628/202604/t20260421_1434298.html"
+  ],
+  "confidence": "高",
+  "notes": "依据教育部《关于举办全国第八届大学生艺术展演活动的通知》（教体艺函〔2026〕2号，2026年4月印发）；本届主题“向美而行，逐梦未来”；参演对象为全国普通高校全日制在籍学生（含本专科生、研究生）；各省按分省分类报送数量表向组委会推荐节目、作品、工作坊及优秀成果，具体各省展演日期未公布"
+ }
+]

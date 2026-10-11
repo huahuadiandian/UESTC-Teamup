@@ -1,0 +1,311 @@
+[
+ {
+  "code": "NUEDC",
+  "officialUrl": "http://nuedc.xjtu.edu.cn",
+  "seasonStatus": "2026年为双数年专题赛年（不办全国性电赛），设嵌入式AI（英特尔杯）、模拟电子系统设计（TI杯）、信息科技前沿（瑞萨杯）三项专题赛；截至2026-10-11三项专题赛均已结束，下一届国赛在2027年（单数年）。",
+  "structure": {
+   "tracks": [
+    {"code": "EMAI", "name": "嵌入式AI专题赛（英特尔杯）", "description": "原嵌入式系统专题邀请赛更名，上海交通大学承办，初赛选拔+决赛邀请"},
+    {"code": "TISIM", "name": "模拟电子系统设计专题赛（TI杯）", "description": "初赛与双数年省级电赛合并举行，决赛全封闭命题，东南大学任秘书处"},
+    {"code": "RENESAS", "name": "信息科技前沿专题赛（瑞萨杯）", "description": "瑞萨杯专题赛，初赛+决赛"}
+   ],
+   "stagesByTrack": {
+    "EMAI": [{"name": "校内选拔/报名", "kind": "CAMPUS"}, {"name": "初赛（选拔+邀请）", "kind": "QUALIFIER"}, {"name": "决赛（上海交通大学）", "kind": "FINAL"}],
+    "TISIM": [{"name": "报名与赛区确认", "kind": "OTHER"}, {"name": "初赛（与省级赛合并，半封闭四天三夜）", "kind": "REGIONAL"}, {"name": "决赛（武汉大学，全封闭）", "kind": "FINAL"}],
+    "RENESAS": [{"name": "初赛", "kind": "QUALIFIER"}, {"name": "决赛", "kind": "FINAL"}]
+   },
+   "structureCorrected": true,
+   "structureNote": "基线的『校内选拔→赛区测评→全国集中竞赛』三阶段为单数年国赛流程（适用于2025届，已结束）；2026双数年为专题赛年，仅设三项专题赛，结构已按2026年实际更正。"
+  },
+  "events": [
+   {"nodeType": "OTHER", "startAt": "2025-12-04", "endAt": null, "label": "《关于组织2026年全国大学生电子设计竞赛专题竞赛的通知》发布", "scope": "shared", "source": "https://www.nuedc-training.com.cn/index/news/details/new_id/343"},
+   {"nodeType": "OTHER", "startAt": "2026-04-30", "endAt": null, "label": "TI杯：各赛区回复参赛确认函截止", "scope": "TISIM", "source": "https://www.nuedc-training.com.cn/index/news/details/new_id/345"},
+   {"nodeType": "RESULT", "startAt": "2026-04-11", "endAt": null, "label": "信息科技前沿专题赛（瑞萨杯）初赛获奖名单公布", "scope": "RENESAS", "source": "http://nuedc.xjtu.edu.cn"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-29", "endAt": "2026-08-01", "label": "TI杯初赛（7月29日8:00-8月1日20:00，与省级赛合并；部分赛区测评8月2-5日）", "scope": "TISIM", "source": "https://www.nuedc-training.com.cn"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-16", "endAt": "2026-07-20", "label": "嵌入式AI专题赛决赛评审（7月16日报到并抽签，上海交通大学承办）", "scope": "EMAI", "source": "https://nuedc.sjtu.edu.cn"},
+   {"nodeType": "CONTEST", "startAt": "2026-08-23", "endAt": "2026-08-27", "label": "TI杯决赛（武汉大学电工电子国家级实验教学示范中心，8月23日报到）", "scope": "TISIM", "source": "https://www.nuedc-training.com.cn/index/news/details/new_id/345"}
+  ],
+  "sources": [
+   "http://nuedc.xjtu.edu.cn",
+   "https://www.nuedc-training.com.cn/index/news/details/new_id/343",
+   "https://www.nuedc-training.com.cn/index/news/details/new_id/345",
+   "https://nuedc.sjtu.edu.cn",
+   "https://xcee.hnu.edu.cn"
+  ],
+  "confidence": "高",
+  "notes": "TI杯初赛时间（7-29 8:00至8-1 20:00）来自组委会统一安排通知及多所高校赛区通知；决赛地点武汉大学已由TI杯专题赛通知确认。各专题赛报名由各赛区/学校组织，全国不设统一报名截止日（如上海校内截止6-14、山东赛区6-29）。基线events中2025国赛数据（7-30~8-02竞赛、8-15~22总测评）仍有效但属2025届。"
+ },
+ {
+  "code": "SOCCHINA",
+  "officialUrl": "https://www.socchina.net",
+  "seasonStatus": "第九届（2026）芯片应用赛道已结束（全国总决赛8月在南京江北新区收官，获奖名单8月24日公布）；FPGA创新设计赛道进行中（11月20-22日决赛）；芯片设计赛道本届时间未公布。",
+  "structure": {
+   "tracks": [
+    {"code": "APP", "name": "芯片应用赛道", "description": "15个企业赛道+1个产业赛题，本届报名17142支队伍/44563人，2-8月举行"},
+    {"code": "DESIGN", "name": "芯片设计赛道（官网称设计专项赛）", "description": "官网口径为设计专项赛，历届于6-12月举行"},
+    {"code": "FPGA", "name": "FPGA创新设计赛道", "description": "高云等企业合作，7-11月举行"}
+   ],
+   "stagesByTrack": {
+    "APP": [{"name": "报名（含校赛选拔）", "kind": "CAMPUS"}, {"name": "分赛区初赛/网评", "kind": "REGIONAL"}, {"name": "分赛区复赛", "kind": "REGIONAL"}, {"name": "全国总决赛（南京江北新区）", "kind": "FINAL"}],
+    "DESIGN": [{"name": "报名", "kind": "OTHER"}, {"name": "初赛", "kind": "QUALIFIER"}, {"name": "复赛（答辩）", "kind": "QUALIFIER"}, {"name": "总决赛", "kind": "FINAL"}],
+    "FPGA": [{"name": "报名", "kind": "OTHER"}, {"name": "作品设计", "kind": "OTHER"}, {"name": "作品提交", "kind": "OTHER"}, {"name": "决赛（南京江北新区）", "kind": "FINAL"}]
+   },
+   "structureCorrected": true,
+   "structureNote": "三赛道划分与基线一致（官网将芯片设计赛道称『设计专项赛』）；主要修正为事件归属：基线把FPGA赛道的报名起始7-6误记为芯片应用赛道报名开始（应用赛道实际2月10日发报名通知）；应用赛道获奖公布时间由基线的10-09修正为8-24。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2026-02-10", "endAt": null, "label": "芯片应用赛道报名启动（报名通知发布）", "scope": "APP", "source": "https://www.socchina.net/wx/inform?value=3"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-04-20", "label": "芯片应用赛道报名截止", "scope": "APP", "source": "https://jwc.swjtu.edu.cn/vatuu/WebAction?setAction=newsDetail&viewType=web&newsId=EA44F8B24AA9CA1D"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-15", "endAt": "2026-07-28", "label": "芯片应用赛道分赛区复赛（东部7-19、中部7-21、南部7-22、西南7-23、西北/北部7-28）", "scope": "APP", "source": "https://www.socchina.net/wx/inform?value=3"},
+   {"nodeType": "CONTEST", "startAt": "2026-08-13", "endAt": null, "label": "芯片应用赛道全国总决赛成绩公示（总决赛8月在南京江北新区收官）", "scope": "APP", "source": "https://www.socchina.net/wx/inform?value=3"},
+   {"nodeType": "RESULT", "startAt": "2026-08-24", "endAt": null, "label": "芯片应用赛道全国总决赛获奖名单公布", "scope": "APP", "source": "https://www.socchina.net/wx/inform?value=3"},
+   {"nodeType": "SIGNUP_START", "startAt": "2026-07-06", "endAt": null, "label": "FPGA赛道竞赛通知发布并开始报名", "scope": "FPGA", "source": "https://jiaowu.buaa.edu.cn"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-09-22", "label": "FPGA赛道报名截止（24:00）", "scope": "FPGA", "source": "https://jiaowu.buaa.edu.cn"},
+   {"nodeType": "SUBMISSION", "startAt": null, "endAt": "2026-11-04", "label": "FPGA赛道作品提交截止（18:00）", "scope": "FPGA", "source": "https://jiaowu.buaa.edu.cn"},
+   {"nodeType": "CONTEST", "startAt": "2026-11-20", "endAt": "2026-11-22", "label": "FPGA赛道决赛（南京江北新区）", "scope": "FPGA", "source": "https://jiaowu.buaa.edu.cn"}
+  ],
+  "sources": [
+   "https://www.socchina.net",
+   "https://www.socchina.net/wx/inform?value=3",
+   "https://jiaowu.buaa.edu.cn",
+   "https://jwc.swjtu.edu.cn/vatuu/WebAction?setAction=newsDetail&viewType=web&newsId=EA44F8B24AA9CA1D",
+   "https://seie.hitwh.edu.cn/2026/0310/c1677a211075/page.htm"
+  ],
+  "confidence": "中",
+  "notes": "芯片设计赛道（设计专项赛）第九届的具体报名/初赛/决赛时间在官网通知列表中未见2026年专项通知（最近的设计赛道通知为2023年），标注未公布。官网通知显示：应用赛道初赛晋级复赛名单7-15公示、分赛区成绩8-14公示、总决赛成绩8-13公示、总决赛获奖名单8-24公布（修正基线的10-09）。"
+ },
+ {
+  "code": "CICIEC",
+  "officialUrl": "https://univ.ciciec.com",
+  "seasonStatus": "第十届（2026）已结束：两大主赛项全国总决赛于8月18-21日（上海）和8月下旬（无锡）举行，获奖名单分别于8-21、8-25公示；职业技能赛项初赛9月评审。",
+  "structure": {
+   "tracks": [
+    {"code": "CHIP-DESIGN-IND", "name": "芯片设计与产业链赛项", "description": "含各芯片设计类企业命题，总决赛由临港新片区/同济大学/华东师范大学承办（上海海洋大学）"},
+    {"code": "CHIP-APP", "name": "芯片应用与芯创成果赛项", "description": "总决赛由无锡滨湖区/东南大学/江南大学承办"},
+    {"code": "VOC", "name": "职业技能赛项", "description": "分企业命题赛道与综合赛道，面向中高职及本硕博"}
+   ],
+   "stagesByTrack": {
+    "shared": [{"name": "报名", "kind": "OTHER"}, {"name": "初赛（作品提交与评审）", "kind": "QUALIFIER"}, {"name": "分赛区决赛", "kind": "REGIONAL"}, {"name": "全国总决赛", "kind": "FINAL"}],
+    "VOC": [{"name": "团队报名", "kind": "OTHER"}, {"name": "初赛（作品提交与评审）", "kind": "QUALIFIER"}]
+   },
+   "structureCorrected": true,
+   "structureNote": "基线的『芯片设计赛道/芯片应用赛道/FPGA赛道』为往届口径；第十届官网口径为三大类赛项：芯片设计与产业链、芯片应用与芯创成果、职业技能，已更正；主赛项流程为报名→初赛→分赛区决赛（7月）→全国总决赛（8月）。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2026-01", "endAt": null, "label": "主赛项报名启动（官方口径：报名2026年1月-3月）", "scope": "shared", "source": "https://univ.ciciec.com"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-03-31", "label": "主赛项报名截止", "scope": "shared", "source": "https://univ.ciciec.com"},
+   {"nodeType": "SUBMISSION", "startAt": null, "endAt": "2026-05-07", "label": "初赛作品提交截止（初赛评审5月）", "scope": "shared", "source": "https://univ.ciciec.com"},
+   {"nodeType": "REGIONAL", "startAt": "2026-07-01", "endAt": "2026-07-31", "label": "分赛区决赛（西南赛区7月18-20日在电子科技大学举办）", "scope": "shared", "source": "https://icse.uestc.edu.cn"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-30", "endAt": null, "label": "全国总决赛比赛通知发布（比赛要求及说明7-31发布）", "scope": "shared", "source": "https://univ.ciciec.com"},
+   {"nodeType": "FINAL", "startAt": "2026-08-18", "endAt": "2026-08-21", "label": "芯片设计与产业链赛项全国总决赛（上海海洋大学，8-21临港滴水湖会议中心颁奖典礼）", "scope": "CHIP-DESIGN-IND", "source": "https://univ.ciciec.com"},
+   {"nodeType": "RESULT", "startAt": "2026-08-21", "endAt": null, "label": "芯片设计与产业链赛项总决赛获奖名单公示", "scope": "CHIP-DESIGN-IND", "source": "https://univ.ciciec.com"},
+   {"nodeType": "FINAL", "startAt": "2026-08-23", "endAt": null, "label": "芯片应用与芯创成果赛项全国总决赛（无锡；具体日期沿用前期核实的8-23）", "scope": "CHIP-APP", "source": "https://univ.ciciec.com"},
+   {"nodeType": "RESULT", "startAt": "2026-08-25", "endAt": null, "label": "芯片应用与芯创成果赛项总决赛获奖名单公示", "scope": "CHIP-APP", "source": "https://univ.ciciec.com"},
+   {"nodeType": "SIGNUP_START", "startAt": "2026-05-15", "endAt": "2026-09-15", "label": "职业技能赛项报名（企业命题赛道至7-15，综合赛道至9-15；初赛作品提交截止9-10）", "scope": "VOC", "source": "https://m.saikr.com"}
+  ],
+  "sources": [
+   "https://univ.ciciec.com",
+   "https://icse.uestc.edu.cn",
+   "https://m.saikr.com",
+   "https://cgxy.nchu.edu.cn"
+  ],
+  "confidence": "高",
+  "notes": "全国总决赛分赛项在不同城市举行：芯片设计与产业链赛项8-18~21上海（上海海洋大学），芯片应用与芯创成果赛项8月下旬无锡——基线『芯片设计7月下旬』的说法已被官网总决赛通知（7-30发布、8月比赛）修正。分赛区决赛官方口径为2026年7月（西南赛区7-18~20电子科大）。"
+ },
+ {
+  "code": "GDESIGN",
+  "officialUrl": "https://gd.moocollege.com",
+  "seasonStatus": "第十四届（2026）已结束：全国决赛6月19-21日在长春理工大学举行，创意赛道与『宇瞳杯』光学设计赛道首次同步开赛，共687所高校、26500人次报名。",
+  "structure": {
+   "tracks": [
+    {"code": "CREATIVE", "name": "创意赛道", "description": "创意类项目，区赛（各区域赛区）晋级国赛现场赛"},
+    {"code": "OPTICS", "name": "『宇瞳杯』光学设计赛道", "description": "光学设计类（赛题如微光夜视观察物镜设计、AR眼镜拍摄镜头设计），初评后全国决赛"}
+   ],
+   "stagesByTrack": {
+    "CREATIVE": [{"name": "报名（各校/赛区组织）", "kind": "OTHER"}, {"name": "区赛决赛（如东南区6月5-6日福建江夏学院）", "kind": "REGIONAL"}, {"name": "全国决赛（长春理工大学）", "kind": "FINAL"}],
+    "OPTICS": [{"name": "报名与初评", "kind": "QUALIFIER"}, {"name": "全国决赛（长春理工大学）", "kind": "FINAL"}]
+   },
+   "structureCorrected": true,
+   "structureNote": "第十四届为『创意赛道+宇瞳杯光学设计赛道』双赛道同步开赛，基线的『创意设计类/竞技类』口径已更正；流程为区赛晋级国赛制（与基线两级结构一致）。"
+  },
+  "events": [
+   {"nodeType": "REGIONAL", "startAt": "2026-06-05", "endAt": "2026-06-06", "label": "东南区赛创意赛道决赛（福建江夏学院承办）", "scope": "CREATIVE", "source": "https://eis.fjjxu.edu.cn"},
+   {"nodeType": "FINAL", "startAt": "2026-06-19", "endAt": "2026-06-21", "label": "全国决赛暨『宇瞳杯』光学设计赛道决赛（长春理工大学）", "scope": "shared", "source": "https://bitopiclab.com/news"}
+  ],
+  "sources": [
+   "https://gd.moocollege.com",
+   "https://bitopiclab.com/news",
+   "https://eis.fjjxu.edu.cn",
+   "http://spee.gzhu.edu.cn"
+  ],
+  "confidence": "中",
+  "notes": "全国决赛时间由基线的6-20~21细化为6-19~21（北理工实验室获奖报道确认『决赛6月19-21日在长春理工大学举行』）。各赛区报名截止不一（基线记录部分赛区5-17截止，未能再次核实）；西南赛区现场决赛于2026年5月举行（贵州大学等承办，来源为检索摘要，未获原文URL）；国赛推荐截止约6-5（西安交大等校通知）。"
+ },
+ {
+  "code": "CSCC",
+  "officialUrl": "https://cscc.educg.net",
+  "seasonStatus": "2026年各赛道已全部结束：OS/编译（华为毕昇杯）总决赛8月18-20日、CPU（龙芯杯）总决赛8月21-24日，颁奖典礼8月21日在南开大学举行；龙芯杯获奖名单9月2日公布。",
+  "structure": {
+   "tracks": [
+    {"code": "CPU", "name": "CPU设计赛（龙芯杯）", "description": "基于LoongArch自主设计CPU，第十届由西北工业大学承办，官网nscscc.com"},
+    {"code": "OS", "name": "操作系统设计赛", "description": "设全国赛与区域赛（相对独立可同时报名），含内核实现/功能挑战等赛道"},
+    {"code": "COMPILER", "name": "编译系统设计赛（华为毕昇杯）", "description": "分编译系统实现赛道与编译系统挑战赛道"},
+    {"code": "AICOMP", "name": "智能计算创新设计赛", "description": "educg平台报名，5-6月报名6-7月比赛"},
+    {"code": "AISIS", "name": "智能系统创新设计赛", "description": "初赛3-6月进行"}
+   ],
+   "stagesByTrack": {
+    "CPU": [{"name": "报名", "kind": "OTHER"}, {"name": "初赛（线上评测）", "kind": "QUALIFIER"}, {"name": "全国总决赛（西北工业大学）", "kind": "FINAL"}],
+    "OS": [{"name": "报名", "kind": "OTHER"}, {"name": "区域赛（独立于全国赛）", "kind": "REGIONAL"}, {"name": "初赛（全国赛线上）", "kind": "QUALIFIER"}, {"name": "全国总决赛（南开大学）", "kind": "FINAL"}],
+    "COMPILER": [{"name": "报名", "kind": "OTHER"}, {"name": "初赛", "kind": "QUALIFIER"}, {"name": "全国总决赛（南开大学）", "kind": "FINAL"}],
+    "AICOMP": [{"name": "报名", "kind": "OTHER"}, {"name": "初赛", "kind": "QUALIFIER"}, {"name": "决赛", "kind": "FINAL"}],
+    "AISIS": [{"name": "报名", "kind": "OTHER"}, {"name": "初赛", "kind": "QUALIFIER"}]
+   },
+   "structureCorrected": true,
+   "structureNote": "赛项口径修正：基线『AI 智能计算赛』规范为『智能计算创新设计赛』，另查得智能系统创新设计赛（初赛3-9~6-1）及数据库系统赛入口；基线中报名5-18~6-15实为智能计算创新设计赛（原误挂在CPU赛道），龙芯杯报名为3-25~6-20；决赛按承办校分开：OS/编译8-18~20南开，CPU 8-21~24西工大；基线『先导杯8-12~15』未查到2026年对应安排（先导杯智能计算大奖赛为另一独立赛事）。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2026-03-25", "endAt": null, "label": "CPU设计赛（龙芯杯）报名开始（章程3-26发布）", "scope": "CPU", "source": "https://www.nscscc.com"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-06-20", "label": "CPU设计赛（龙芯杯）报名截止", "scope": "CPU", "source": "https://m.saikr.com"},
+   {"nodeType": "SIGNUP_START", "startAt": "2026-03-18", "endAt": null, "label": "操作系统设计赛报名开始", "scope": "OS", "source": "https://os.educg.net"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-05-28", "label": "操作系统设计赛报名截止", "scope": "OS", "source": "https://os.educg.net"},
+   {"nodeType": "CONTEST", "startAt": "2026-05-27", "endAt": "2026-08-17", "label": "OS功能挑战赛道活动周期（OpenCamp平台）", "scope": "OS", "source": "https://opencamp.cn"},
+   {"nodeType": "SIGNUP_START", "startAt": "2026-05-18", "endAt": "2026-06-15", "label": "智能计算创新设计赛报名（5-18启动、6-15截止，6-20前后开通比赛账号）", "scope": "AICOMP", "source": "https://os.educg.net"},
+   {"nodeType": "CONTEST", "startAt": "2026-03-09", "endAt": "2026-06-01", "label": "智能系统创新设计赛初赛", "scope": "AISIS", "source": "https://os.educg.net"},
+   {"nodeType": "FINAL", "startAt": "2026-08-18", "endAt": "2026-08-20", "label": "操作系统设计赛与编译系统设计赛（华为毕昇杯）全国总决赛（南开大学津南校区）", "scope": "OS", "source": "https://cc.nankai.edu.cn"},
+   {"nodeType": "FINAL", "startAt": "2026-08-21", "endAt": "2026-08-24", "label": "CPU设计赛（龙芯杯）全国总决赛（西北工业大学长安校区）", "scope": "CPU", "source": "https://cc.nankai.edu.cn/2026/page"},
+   {"nodeType": "AWARD", "startAt": "2026-08-21", "endAt": null, "label": "大赛颁奖典礼（南开大学津南校区）", "scope": "shared", "source": "https://cc.nankai.edu.cn"},
+   {"nodeType": "RESULT", "startAt": "2026-09-02", "endAt": null, "label": "龙芯杯团体赛和个人赛决赛获奖名单公布", "scope": "CPU", "source": "https://www.nscscc.com"}
+  ],
+  "sources": [
+   "https://cscc.educg.net",
+   "https://os.educg.net",
+   "https://www.nscscc.com",
+   "https://cc.nankai.edu.cn",
+   "https://cc.nankai.edu.cn/2026/page",
+   "https://opencamp.cn",
+   "https://m.saikr.com"
+  ],
+  "confidence": "高",
+  "notes": "2026年大赛涵盖CPU设计赛、操作系统设计赛、编译系统设计赛、数据库系统赛、智能计算创新设计赛、智能系统创新设计赛等（os.educg.net导航口径）。全国总决赛窗口8-18~24：南开大学承办OS/编译（8-18~20），西北工业大学承办CPU龙芯杯（8-21~24）；中国科大校报确认『各赛道全国总决赛于8月18日至24日先后举行』。"
+ },
+ {
+  "code": "DTCP",
+  "officialUrl": "https://www.ksup.cn",
+  "seasonStatus": "第十三届已结束：全国总决赛2026年7月14-18日在武汉科技大学举办并收官；本届起赛事简称『信科赛』；下一届（第十四届）报名预计2026年下半年启动。",
+  "structure": {
+   "tracks": [
+    {"code": "ENG", "name": "工程实践赛（赛道一）", "description": "聚焦5G-A/6G关键技术、AI、无线通信网络工程实践，2人一队，分本科A/B组、研究生组等"},
+    {"code": "EDU", "name": "产教融合5G+创新应用赛（赛道二）", "description": "含软件无线电、射频电路、智能网联车、智能制造、行业垂直应用五个赛项，4-6人跨专业组队"},
+    {"code": "ICT", "name": "ICT基础通识赛（赛道三）", "description": "电路分析、通信原理等基础知识，虚拟仿真完成赛题，2人一队"}
+   ],
+   "stagesByTrack": {
+    "ENG": [{"name": "校赛", "kind": "CAMPUS"}, {"name": "省赛", "kind": "PROVINCIAL"}, {"name": "全国总决赛", "kind": "FINAL"}],
+    "EDU": [{"name": "校内选拔与方案提交", "kind": "CAMPUS"}, {"name": "省级评审", "kind": "PROVINCIAL"}, {"name": "全国总决赛", "kind": "FINAL"}],
+    "ICT": [{"name": "校赛", "kind": "CAMPUS"}, {"name": "省赛", "kind": "PROVINCIAL"}, {"name": "全国总决赛", "kind": "FINAL"}]
+   },
+   "structureCorrected": false,
+   "structureNote": "三赛道划分与基线一致（工程实践赛/产教融合5G+创新应用赛/ICT基础通识赛）；官网域名确认为 www.ksup.cn（信科赛官网），补充基线缺失的officialSite。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2025-12-15", "endAt": null, "label": "报名开始（教师代表统一登录官网报名）", "scope": "shared", "source": "https://m.saikr.com/vse/58072"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-04-04", "label": "报名截止（原定3月10日，延期通知后为4月4日24:00）", "scope": "shared", "source": "https://m.saikr.com/vse/58072"},
+   {"nodeType": "SUBMISSION", "startAt": null, "endAt": "2026-04-13", "label": "赛道二（产教融合）省赛设计方案提交截止（24:00）", "scope": "EDU", "source": "https://m.saikr.com/vse/58072"},
+   {"nodeType": "CONTEST", "startAt": "2026-04-18", "endAt": "2026-04-26", "label": "赛道一、赛道三省赛（顺延为4月18-19日、4月25-26日两批）", "scope": "ENG", "source": "https://m.saikr.com/vse/58072"},
+   {"nodeType": "FINAL", "startAt": "2026-07-14", "endAt": "2026-07-18", "label": "全国总决赛（武汉科技大学黄家湖校区）", "scope": "shared", "source": "https://m.c114.com.cn"}
+  ],
+  "sources": [
+   "https://www.ksup.cn",
+   "https://m.saikr.com/vse/58072",
+   "https://m.c114.com.cn",
+   "https://www.cuit.edu.cn/info/1006/16218.htm"
+  ],
+  "confidence": "高",
+  "notes": "省赛一等奖入围全国总决赛；总决赛日期有『7月14-18日』（C114报道）与『7月15-18日主赛程』两种口径，采用C114的14-18日。基线csv『省赛4月中旬、总决赛7月』得到证实并精确到日；报名截止修正为延期后的4-4（原3-10）。"
+ },
+ {
+  "code": "IOTSJTU",
+  "officialUrl": "https://iot.sjtu.edu.cn",
+  "seasonStatus": "第十三届（2026）已结束：全国总决赛8月22-24日在贵州大学举行，同济大学等高校已发布获奖报道。",
+  "structure": {
+   "tracks": [],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "报名（4月1日系统开放）", "kind": "OTHER"},
+     {"name": "作品文档及实物演示视频提交", "kind": "OTHER"},
+     {"name": "分赛区网上评审（8月10日前）", "kind": "REGIONAL"},
+     {"name": "分赛区决赛（8月20日前）", "kind": "REGIONAL"},
+     {"name": "全国总决赛（贵州大学）", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": false,
+   "structureNote": "与基线一致：不设赛道；2026年设华东、华北、华中及西南、西北、东北5个分赛区，区赛→国赛两级流程。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2026-04-01", "endAt": null, "label": "竞赛系统开放报名", "scope": "shared", "source": "https://cise.glut.edu.cn"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-06-15", "label": "报名截止", "scope": "shared", "source": "https://www.shiep.edu.cn"},
+   {"nodeType": "SUBMISSION", "startAt": "2026-05-15", "endAt": "2026-07-27", "label": "作品文档及实物演示视频提交", "scope": "shared", "source": "https://cise.glut.edu.cn"},
+   {"nodeType": "CONTEST", "startAt": "2026-08-10", "endAt": "2026-08-20", "label": "分赛区网上评审（8月10日前完成并公布晋级名单）、分赛区决赛（8月20日前完成，如华中及西南分赛区决赛在贵州大学举行，269队参赛）", "scope": "shared", "source": "https://cise.glut.edu.cn"},
+   {"nodeType": "FINAL", "startAt": "2026-08-22", "endAt": "2026-08-24", "label": "全国总决赛（贵州大学）", "scope": "shared", "source": "https://www.shiep.edu.cn"}
+  ],
+  "sources": [
+   "https://iot.sjtu.edu.cn",
+   "https://www.shiep.edu.cn",
+   "https://cise.glut.edu.cn",
+   "https://ee.xjtu.edu.cn"
+  ],
+  "confidence": "高",
+  "notes": "时间线与基线一致并补全：4-1报名开放、6-15截止、5-15~7-27作品提交、8-10前网评、8-20前分赛区决赛、8-22~24总决赛（贵州大学）。官网证书过期但域名仍有效。每队学生不超过4人、指导教师不超过2人。"
+ },
+ {
+  "code": "C4",
+  "officialUrl": "https://www.c4best.cn",
+  "seasonStatus": "第十一届（2026）各子赛多数已结束：天梯赛4-18完赛、大数据总决赛8-29清华完赛、移动应用初赛报名已截止（决赛未公布）、网络技术挑战赛报名已截止（挑战赛未公布）、AI创意赛复赛9-30截止材料（总决赛下半年）。",
+  "structure": {
+   "tracks": [
+    {"code": "GPLT", "name": "团体程序设计天梯赛（第十一届）", "description": "团体赛10人一队；2026新增普及赛（个人赛）赛道；官网gplt.pintia.cn/gplt.patest.cn"},
+    {"code": "BIGDATA", "name": "大数据挑战赛（第十一届）", "description": "全球开放、免费，和鲸社区平台报名，清华承办总决赛，赛题为股价收益预测"},
+    {"code": "APP", "name": "移动应用创新赛（第十一届）", "description": "Apple与浙江大学联合举办，设启明/启迪/启航三赛道，官网appcontest.net"},
+    {"code": "NET", "name": "网络技术挑战赛（第十一届）", "description": "资格赛→选拔赛→挑战赛三阶段，官网net.c4best.cn"},
+    {"code": "AIC", "name": "人工智能创意赛（第九届）", "description": "鸿蒙赛道+昇腾赛道（华为开发者联盟承办），初赛/复赛线上、总决赛现场答辩"}
+   ],
+   "stagesByTrack": {
+    "GPLT": [{"name": "报名", "kind": "OTHER"}, {"name": "普及赛（个人赛，3月14日）", "kind": "NATIONAL"}, {"name": "团体赛全国总决赛（4月18日单场）", "kind": "FINAL"}],
+    "BIGDATA": [{"name": "报名", "kind": "OTHER"}, {"name": "线上赛（初赛）", "kind": "QUALIFIER"}, {"name": "全国总决赛（清华大学）", "kind": "FINAL"}],
+    "APP": [{"name": "报名与初赛作品提交", "kind": "OTHER"}, {"name": "初赛", "kind": "QUALIFIER"}, {"name": "复赛", "kind": "QUALIFIER"}, {"name": "决赛（全国总决赛）", "kind": "FINAL"}],
+    "NET": [{"name": "报名", "kind": "OTHER"}, {"name": "资格赛", "kind": "QUALIFIER"}, {"name": "选拔赛（分赛区）", "kind": "REGIONAL"}, {"name": "挑战赛（全国决赛）", "kind": "FINAL"}],
+    "AIC": [{"name": "报名及初赛作品提交", "kind": "OTHER"}, {"name": "初赛", "kind": "QUALIFIER"}, {"name": "复赛（线上评审）", "kind": "QUALIFIER"}, {"name": "全国总决赛（现场答辩）", "kind": "FINAL"}]
+   },
+   "structureCorrected": true,
+   "structureNote": "五子赛届数不同步：天梯/大数据/移动应用/网络技术均为第十一届，AI创意赛为第九届；天梯赛2026新增普及赛（个人赛）赛道；移动应用创新赛以启明/启迪/启航三赛道替代基线笼统口径；AI创意赛为鸿蒙+昇腾双赛道；网络技术挑战赛为资格赛/选拔赛/挑战赛三阶段（非基线的初赛/决赛两级）。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-03-07", "label": "天梯赛普及赛（个人赛）报名截止", "scope": "GPLT", "source": "https://cpoelab.szu.edu.cn"},
+   {"nodeType": "CONTEST", "startAt": "2026-03-14", "endAt": "2026-03-14", "label": "天梯赛普及赛（个人赛）线上比赛（13:30-15:30）", "scope": "GPLT", "source": "https://cpoelab.szu.edu.cn"},
+   {"nodeType": "FINAL", "startAt": "2026-04-18", "endAt": "2026-04-18", "label": "天梯赛团体赛全国总决赛（线上线下同时举行，上海理工大学承办报道）", "scope": "GPLT", "source": "https://www.usst.edu.cn"},
+   {"nodeType": "SIGNUP_START", "startAt": "2026-03-26", "endAt": null, "label": "大数据挑战赛报名系统开放（10:00，和鲸社区平台）", "scope": "BIGDATA", "source": "https://www.heywhale.com"},
+   {"nodeType": "CONTEST", "startAt": "2026-04", "endAt": null, "label": "大数据挑战赛线上赛（初赛）开赛（3月启动、4月正式开赛）", "scope": "BIGDATA", "source": "https://www.rmlt.com.cn"},
+   {"nodeType": "FINAL", "startAt": "2026-08-29", "endAt": "2026-08-29", "label": "大数据挑战赛全国总决赛（清华大学承办，6支团队晋级）", "scope": "BIGDATA", "source": "https://www.rmlt.com.cn"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-06-28", "label": "移动应用创新赛启明/启迪赛道初赛报名截止（23:59）", "scope": "APP", "source": "https://jwc.swjtu.edu.cn"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-07-22", "label": "移动应用创新赛启航赛道初赛报名截止（23:59）", "scope": "APP", "source": "https://jwc.swjtu.edu.cn"},
+   {"nodeType": "SIGNUP_START", "startAt": "2026-03-04", "endAt": null, "label": "网络技术挑战赛报名启动", "scope": "NET", "source": "https://www.cuit.edu.cn"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-04-14", "label": "网络技术挑战赛报名截止", "scope": "NET", "source": "https://www.jwc.ynu.edu.cn"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-07-26", "label": "AI创意赛（鸿蒙/昇腾赛道）报名及初赛作品提交截止（24:00）", "scope": "AIC", "source": "https://developer.huawei.com"},
+   {"nodeType": "SUBMISSION", "startAt": null, "endAt": "2026-09-30", "label": "AI创意赛复赛材料提交截止（24:00）", "scope": "AIC", "source": "https://developer.huawei.com"}
+  ],
+  "sources": [
+   "https://www.c4best.cn",
+   "https://cpoelab.szu.edu.cn",
+   "https://www.usst.edu.cn",
+   "https://ai.bnu.edu.cn",
+   "https://www.heywhale.com",
+   "https://www.rmlt.com.cn",
+   "https://jwc.swjtu.edu.cn",
+   "https://www.cuit.edu.cn",
+   "https://www.jwc.ynu.edu.cn",
+   "https://developer.huawei.com",
+   "https://www.apple.com.cn"
+  ],
+  "confidence": "中",
+  "notes": "未公布/未查到：天梯赛团体赛报名截止日（往届为赛前约一个月，2025年截止3-22）；移动应用创新赛复赛与决赛日期（往届总决赛11月初于浙大举行，2026预计秋季）；网络技术挑战赛资格赛/选拔赛/挑战赛具体日期及决赛地点；AI创意赛全国总决赛具体日期（下半年，现场答辩）。移动应用创新赛另设『海峡（两岸）赛』联动。基线中『大数据初赛2026-04-18』与天梯赛4-18混淆，已修正为4月正式开赛。"
+ }
+]

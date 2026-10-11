@@ -1,0 +1,237 @@
+[
+ {
+  "code": "CISCN",
+  "officialUrl": "http://www.ciscn.cn",
+  "seasonStatus": "已结束：第十九届作品赛决赛2026-08-20~22在哈尔滨工业大学举行，创新实践能力赛总决赛2026-08-29~30在齐鲁工业大学举行并颁奖；本届与第三届「长城杯」网数智安全大赛联合举办。",
+  "structure": {
+   "tracks": [
+    {"code": "WORKS", "name": "作品赛", "description": "分自由作品赛与命题挑战赛两个方向，全国统一线上初评后晋级全国决赛（与「长城杯」作品赛联办）"},
+    {"code": "CPRACTICE", "name": "创新实践能力赛", "description": "CTF解题+攻防对抗模式，初赛（线上）—分区半决赛（线下）—总决赛（线下）"}
+   ],
+   "stagesByTrack": {
+    "WORKS": [{"name": "全国初评（线上）", "kind": "QUALIFIER"}, {"name": "全国决赛", "kind": "FINAL"}],
+    "CPRACTICE": [{"name": "初赛（线上）", "kind": "QUALIFIER"}, {"name": "分区半决赛", "kind": "REGIONAL"}, {"name": "总决赛", "kind": "FINAL"}]
+   },
+   "structureCorrected": true,
+   "structureNote": "基线中作品赛设有「分区赛」有误：作品赛无分区赛，为全国统一线上初评后直接进入全国决赛；创新实践能力赛在初赛与总决赛之间设六个分赛区半决赛（辽宁、浙江、湖北、广东、重庆、陕西）；本届与第三届「长城杯」网数智安全大赛联合举办。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_END", "startAt": "2025-12-21", "endAt": null, "stage": "初赛（线上）", "label": "创新实践能力赛报名截止", "scope": "全国", "source": "http://www.ciscn.cn/competition/securityCompetition?compet_id=44"},
+   {"nodeType": "CONTEST", "startAt": "2025-12-28", "endAt": null, "stage": "初赛（线上）", "label": "创新实践能力赛初赛（线上CTF）", "scope": "全国", "source": "http://www.ciscn.cn/competition/securityCompetition?compet_id=44"},
+   {"nodeType": "SIGNUP_START", "startAt": "2026-05-29", "endAt": null, "stage": "全国初评（线上）", "label": "作品赛报名开始", "scope": "全国", "source": "https://pec.xjtu.edu.cn/info/1191/5475.htm"},
+   {"nodeType": "SIGNUP_END", "startAt": "2026-07-05", "endAt": null, "stage": "全国初评（线上）", "label": "作品赛报名截止（作品提交2026-07-03截止）", "scope": "全国", "source": "https://pec.xjtu.edu.cn/info/1191/5475.htm"},
+   {"nodeType": "CONTEST", "startAt": "2026-08-20", "endAt": "2026-08-22", "stage": "全国决赛", "label": "作品赛决赛（哈尔滨工业大学，164所高校457支队伍）", "scope": "全国", "source": "https://news.hit.edu.cn/2026/0825/c1510a243241/page.htm"},
+   {"nodeType": "CONTEST", "startAt": "2026-08-29", "endAt": "2026-08-30", "stage": "总决赛", "label": "创新实践能力赛总决赛暨颁奖（齐鲁工业大学）", "scope": "全国", "source": "http://www.ciscn.cn/announcement"}
+  ],
+  "sources": ["http://www.ciscn.cn/", "http://www.ciscn.cn/competition/securityCompetition?compet_id=44", "http://www.ciscn.cn/announcement", "https://news.hit.edu.cn/2026/0825/c1510a243241/page.htm", "https://pec.xjtu.edu.cn/info/1191/5475.htm", "https://ccb.itsec.gov.cn"],
+  "confidence": "高",
+  "notes": "官网 www.ciscn.cn 正确；作品赛线上初评2026-07-09、决赛名单公示07-11~25（西安交大转发通知）；哈工大官方报道确认作品赛决赛为8-20~22（光明网报道的8-19为长城杯整体活动含报到环节）；创新赛约804所高校4150支队伍参赛，半决赛承办例：浙江（杭州电子科技大学）、重庆（重庆邮电大学）、陕西（西安邮电大学）；获奖名单精确公布日未查到，写null。"
+ },
+ {
+  "code": "CSB",
+  "officialUrl": "https://www.cnsoftbei.com/",
+  "seasonStatus": "已结束：第十五届全国总决赛2026-08-23线上答辩举行并落幕，约6400余支队伍参赛。",
+  "structure": {
+   "tracks": [
+    {"code": "TOPICS", "name": "企业命题赛题（A/B/C组）", "description": "按企业真实命题组队参赛，赛题分A、B、C三组，每队不超过3名学生+1名指导教师"}
+   ],
+   "stagesByTrack": {
+    "shared": [{"name": "报名与辅导", "kind": "OTHER"}, {"name": "全国初赛评审", "kind": "QUALIFIER"}, {"name": "全国总决赛（线上答辩）", "kind": "FINAL"}]
+   },
+   "structureCorrected": true,
+   "structureNote": "第十五届无区域赛：基线「区域赛REGIONAL」更正为全国统一初赛评审（封闭式评审，2026年7月完成），全国总决赛为线上答辩；流程为报名→辅导→作品提交→初赛评审→总决赛答辩。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2026-03-24", "endAt": null, "stage": "报名与辅导", "label": "报名启动（辅导阶段同步开始）", "scope": "全国", "source": "https://www.cnsoftbei.com/"},
+   {"nodeType": "SIGNUP_END", "startAt": "2026-06-30", "endAt": null, "stage": "报名与辅导", "label": "报名及辅导阶段截止（作品提交同步截止）", "scope": "全国", "source": "https://www.cnsoftbei.com/"},
+   {"nodeType": "RESULT", "startAt": "2026-08-22", "endAt": null, "stage": "全国总决赛（线上答辩）", "label": "晋级总决赛团队名单公布", "scope": "全国", "source": "https://www.cnsoftbei.com/content-1-1359-1"},
+   {"nodeType": "CONTEST", "startAt": "2026-08-23", "endAt": "2026-08-23", "stage": "全国总决赛（线上答辩）", "label": "全国总决赛答辩（09:30-19:00，线上，当日落幕）", "scope": "全国", "source": "https://www.cnsoftbei.com/content-1-1357-1"}
+  ],
+  "sources": ["https://www.cnsoftbei.com/", "https://www.cnsoftbei.com/content-1-1357-1", "https://www.cnsoftbei.com/content-1-1359-1", "https://cst.hitwh.edu.cn"],
+  "confidence": "高",
+  "notes": "官网 cnsoftbei.com 正确；总决赛通知2026-08-13发布、晋级名单08-22公布、答辩08-23线上举行；初赛评审2026年7月封闭完成；获奖证书随后在官网发放（基线记录2026-08-29）；决赛获奖名单精确公布日未公布，写null。"
+ },
+ {
+  "code": "4C",
+  "officialUrl": "https://jsjds.blcu.edu.cn",
+  "seasonStatus": "已结束：6个国赛决赛区2026-07-17~08-20依次线下举行，国赛评审结果公示与发布为2026年9~10月。",
+  "structure": {
+   "tracks": [
+    {"code": "SOFTWARE", "name": "软件应用与开发", "description": "济南决赛区"},
+    {"code": "MICRO", "name": "微课与AI辅助教学", "description": "南京南决赛区（地点合肥）"},
+    {"code": "IOT", "name": "物联网应用与物联网创新转化（创业实践）", "description": "杭州决赛区，另设创业实践专项赛方案"},
+    {"code": "BIGDATA", "name": "大数据应用", "description": "上海决赛区"},
+    {"code": "AI", "name": "人工智能应用", "description": "南京东1决赛区（地点无锡）"},
+    {"code": "INFOVIS", "name": "信息可视化设计", "description": "南京东2决赛区（地点长春）"},
+    {"code": "MEDIA_STATIC", "name": "数媒静态设计", "description": "上海决赛区（AI+数媒静态设计）"},
+    {"code": "MEDIA_ANIM", "name": "数媒动漫与短片", "description": "南京东2决赛区（地点长春）"},
+    {"code": "MEDIA_GAME", "name": "数媒游戏与交互设计", "description": "南京东1决赛区（地点无锡）"},
+    {"code": "MUSIC", "name": "计算机音乐创作", "description": "杭州决赛区"},
+    {"code": "HANXUE", "name": "国际生「汉学」", "description": "杭州决赛区"}
+   ],
+   "stagesByTrack": {
+    "shared": [{"name": "校级选拔", "kind": "CAMPUS"}, {"name": "省级赛", "kind": "PROVINCIAL"}, {"name": "国赛决赛（6个决赛区）", "kind": "FINAL"}]
+   },
+   "structureCorrected": true,
+   "structureNote": "赛道由基线5类更正为11大类；国赛设6个决赛区：上海（大数据应用/AI+数媒静态设计，7.17-21，东华大学）、杭州（物联网/计算机音乐创作/国际生汉学，7.22-26，浙江音乐学院）、南京南（微课与AI辅助教学，7.27-31，安徽大学承办实施，地点合肥）、南京东2（信息可视化/数媒动漫与短片，8.6-10，东北师范大学，地点长春）、济南（软件应用与开发，8.11-15，青岛农业大学，地点青岛）、南京东1（人工智能应用/数媒游戏与交互设计，8.16-20，江南大学，地点无锡）；基线「上海/杭州/合肥/长春/青岛/无锡」为地点口径，官方命名为上海/杭州/南京南/南京东2/济南/南京东1。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2026-03-20", "endAt": null, "stage": "省级赛", "label": "报名系统开放、省赛报名启动（各省3-4月自定）", "scope": "全国", "source": "https://jsjds.blcu.edu.cn/info/1042/2124.htm"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-17", "endAt": "2026-07-21", "stage": "国赛决赛（6个决赛区）", "label": "上海决赛区（大数据应用/AI+数媒静态设计，东华大学承办实施）", "scope": "上海", "source": "https://jsjds.blcu.edu.cn/info/1042/2294.htm"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-22", "endAt": "2026-07-26", "stage": "国赛决赛（6个决赛区）", "label": "杭州决赛区（物联网/计算机音乐创作/国际生汉学，浙江音乐学院）", "scope": "杭州", "source": "https://jsjds.blcu.edu.cn/info/1042/2294.htm"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-27", "endAt": "2026-07-31", "stage": "国赛决赛（6个决赛区）", "label": "南京南决赛区（微课与AI辅助教学，安徽大学承办实施，地点合肥）", "scope": "合肥", "source": "https://jsjds.blcu.edu.cn/info/1042/2294.htm"},
+   {"nodeType": "CONTEST", "startAt": "2026-08-06", "endAt": "2026-08-10", "stage": "国赛决赛（6个决赛区）", "label": "南京东2决赛区（信息可视化/数媒动漫与短片，东北师范大学，地点长春）", "scope": "长春", "source": "https://jsjds.blcu.edu.cn/info/1042/2294.htm"},
+   {"nodeType": "CONTEST", "startAt": "2026-08-11", "endAt": "2026-08-15", "stage": "国赛决赛（6个决赛区）", "label": "济南决赛区（软件应用与开发，青岛农业大学，地点青岛）", "scope": "青岛", "source": "https://jsjds.blcu.edu.cn/info/1042/2294.htm"},
+   {"nodeType": "CONTEST", "startAt": "2026-08-16", "endAt": "2026-08-20", "stage": "国赛决赛（6个决赛区）", "label": "南京东1决赛区（人工智能应用/数媒游戏与交互设计，江南大学，地点无锡）", "scope": "无锡", "source": "https://jsjds.blcu.edu.cn/info/1042/2294.htm"},
+   {"nodeType": "RESULT", "startAt": "2026-09-01", "endAt": "2026-10-31", "stage": "国赛决赛（6个决赛区）", "label": "国赛评审结果公示与发布（官方口径9~10月，精确日未公布）", "scope": "全国", "source": "https://jiaowu.buaa.edu.cn"}
+  ],
+  "sources": ["https://jsjds.blcu.edu.cn/", "https://jsjds.blcu.edu.cn/info/1042/2294.htm", "https://jsjds.blcu.edu.cn/info/1042/2124.htm", "https://2026.jsjds.com.cn/", "https://jiaowu.buaa.edu.cn"],
+  "confidence": "高",
+  "notes": "官网 jsjds.blcu.edu.cn 正确，报名系统 2026.jsjds.com.cn；约900余所高校、4331支队伍参加国赛；各决赛区具体日期以官网正式通知（中大计赛函[2026]1号）为准；结果公示精确日期未公布，9~10月为官方口径（北航教务处转发通知）。"
+ },
+ {
+  "code": "NCDA",
+  "officialUrl": "https://www.ncda.org.cn",
+  "seasonStatus": "已结束：第14届国赛奖项2026-08-26公示，08-29起可下载获奖证书。",
+  "structure": {
+   "tracks": [
+    {"code": "NON_TOPIC", "name": "非命题赛道", "description": "含视觉传达设计、动画与数字媒体、交互设计、人居环境规划与设计、工业及产品设计、游戏艺术设计、AIGC、文创及城市IP等19个类别"},
+    {"code": "PUBLIC", "name": "公益赛道", "description": "公益命题创作"},
+    {"code": "INNOVATION", "name": "创新创业赛道（产教融合）", "description": "产教融合/企业命题方向，2026-06-10截止"},
+    {"code": "CHALLENGE", "name": "挑战（实践挑战）赛道", "description": "实践挑战类赛项"}
+   ],
+   "stagesByTrack": {
+    "shared": [{"name": "校赛（院系统一报名）", "kind": "CAMPUS"}, {"name": "省赛", "kind": "PROVINCIAL"}, {"name": "国赛", "kind": "FINAL"}]
+   },
+   "structureCorrected": true,
+   "structureNote": "基线4个「赛道」（视觉传达/环境设计/动画/产品设计）实为非命题赛道下的参赛类别，现更正为官方4大赛道类型：非命题、公益、创新创业（产教融合）、挑战；赛制为校赛—省赛—国赛三级，以学院为单位统一报名。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2025-10-31", "endAt": null, "stage": "校赛（院系统一报名）", "label": "作品征集/报名启动", "scope": "全国", "source": "https://www.ncda.org.cn/"},
+   {"nodeType": "SUBMISSION", "startAt": "2026-06-20", "endAt": null, "stage": "校赛（院系统一报名）", "label": "作品上传截止24:00（创新创业赛道2026-06-10截止；校方审核06-25 24:00截止）", "scope": "全国", "source": "https://www.ncda.org.cn/"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-01", "endAt": "2026-08-08", "stage": "省赛", "label": "省赛评审及省奖公布", "scope": "全国", "source": "https://www.ncda.org.cn/"},
+   {"nodeType": "CONTEST", "startAt": "2026-08-09", "endAt": "2026-08-26", "stage": "国赛", "label": "国赛评审", "scope": "全国", "source": "https://www.ncda.org.cn/"},
+   {"nodeType": "RESULT", "startAt": "2026-08-26", "endAt": null, "stage": "国赛", "label": "国赛奖项公示", "scope": "全国", "source": "https://www.ncda.org.cn/"}
+  ],
+  "sources": ["https://www.ncda.org.cn/"],
+  "confidence": "高",
+  "notes": "官网 ncda.org.cn 正确；获奖证书2026-08-29开放下载、获奖通知09-03开放下载；命题赛道如赛程有特别注明以赛道说明为准。"
+ },
+ {
+  "code": "CDEC",
+  "officialUrl": "https://www.cdec.org.cn",
+  "seasonStatus": "已结束：第20届（2025-2026年度）国赛获奖名单2026-08-25前公布。",
+  "structure": {
+   "tracks": [
+    {"code": "REGULAR", "name": "常规赛道", "description": "24个创作类别（视觉传达、动画短片、人居环境与可持续生态空间、数智影像、AI情感陪伴装置、文化遗产、中国风传统文化、符号化IP产品等）"},
+    {"code": "SPECIAL", "name": "专项赛道", "description": "11项专项命题（筑梦丝路AI、老字号·新国潮、大学生AI微短剧、天空盒游戏叙事、山西古建潮玩等）"},
+    {"code": "TEACHING", "name": "全国数字创意教学技能赛", "description": "第10届，面向高校教师，单独简章"}
+   ],
+   "stagesByTrack": {
+    "shared": [{"name": "校级赛", "kind": "CAMPUS"}, {"name": "省级赛（29个分赛区）", "kind": "PROVINCIAL"}, {"name": "全国赛", "kind": "FINAL"}]
+   },
+   "structureCorrected": true,
+   "structureNote": "基线4类别（视觉传达/环境设计/动画/游戏设计）为常规赛道下部分类别，现按官网更正为常规赛道（24类别）+专项赛道（11项）+全国数字创意教学技能赛（第10届）三条线；三级赛制，全国设29个省级分赛区。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2025-10-20", "endAt": null, "stage": "校级赛", "label": "报名及作品提交开始（免费参赛）", "scope": "全国", "source": "https://www.cdec.org.cn/articleDetail/2077"},
+   {"nodeType": "SIGNUP_END", "startAt": "2026-06-30", "endAt": null, "stage": "校级赛", "label": "报名及作品提交截止（17:00）", "scope": "全国", "source": "https://www.cdec.org.cn/articleDetail/2077"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-08", "endAt": "2026-07-20", "stage": "省级赛（29个分赛区）", "label": "省赛评审（07-20 17:00系统关闭）", "scope": "全国", "source": "https://www.cdec.org.cn/articleDetail/2077"},
+   {"nodeType": "RESULT", "startAt": "2026-07-30", "endAt": null, "stage": "省级赛（29个分赛区）", "label": "省赛获奖名单上传公示（17:00前完成）", "scope": "全国", "source": "https://www.cdec.org.cn/articleDetail/2077"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-24", "endAt": "2026-07-30", "stage": "全国赛", "label": "国赛评审（07-30 17:00系统关闭）", "scope": "全国", "source": "https://www.cdec.org.cn/articleDetail/2077"},
+   {"nodeType": "RESULT", "startAt": "2026-08-25", "endAt": null, "stage": "全国赛", "label": "国赛获奖名单公布（08-25前）", "scope": "全国", "source": "https://www.cdec.org.cn/articleDetail/2077"}
+  ],
+  "sources": ["https://www.cdec.org.cn", "https://www.cdec.org.cn/articleDetail/2077"],
+  "confidence": "高",
+  "notes": "官网 cdec.org.cn 正确；第20届简章2025-07-01发布；第21届（2027）简章已于2026-07-01发布（省赛2027-06-30前、国赛答辩2027-10），下一届周期信息已在官网更新。"
+ },
+ {
+  "code": "3DDS",
+  "officialUrl": "https://3dds.3ddl.net",
+  "seasonStatus": "进行中：第19届复赛/省赛2026年8~10月，全国总决赛2026年11~12月。",
+  "structure": {
+   "tracks": [
+    {"code": "DIGITAL", "name": "数字工业设计大赛", "description": "工业产品/外观、人机工程、机电工程、工业过程仿真、数控编程/3D打印/智能制造等"},
+    {"code": "LIFE", "name": "数字人居设计大赛", "description": "数字城市、美丽乡村、BIM、室内外与环境艺术设计、智能家居等"},
+    {"code": "CULTURE", "name": "数字文化设计大赛", "description": "文化创意、数字传媒、微电影与动漫、游戏设计、XR应用、数字文旅/文博等"},
+    {"code": "METAVERSE", "name": "元宇宙创建大赛", "description": "数字人、工业模型与数据驱动、元宇宙概念建筑等"},
+    {"code": "INDUSTRY", "name": "产业应用赛项", "description": "企业命题动态滚动发布，关注官网通知"}
+   ],
+   "stagesByTrack": {
+    "shared": [{"name": "初赛（校赛）", "kind": "CAMPUS"}, {"name": "复赛/省赛", "kind": "PROVINCIAL"}, {"name": "国赛（全国总决赛）", "kind": "FINAL"}]
+   },
+   "structureCorrected": true,
+   "structureNote": "基线3赛道补全为开放赛项四大赛（数字工业/数字人居/数字文化/元宇宙创建）+产业应用赛项；本届主题「Ai3D数实融合全民共创」。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2026-04-03", "endAt": null, "stage": "初赛（校赛）", "label": "初赛报名开始", "scope": "全国", "source": "https://www.guit.edu.cn/cysj/info/1002/6698.htm"},
+   {"nodeType": "SIGNUP_END", "startAt": "2026-06-30", "endAt": null, "stage": "初赛（校赛）", "label": "初赛报名截止", "scope": "全国", "source": "https://www.guit.edu.cn/cysj/info/1002/6698.htm"},
+   {"nodeType": "SUBMISSION", "startAt": "2026-07-20", "endAt": null, "stage": "初赛（校赛）", "label": "初赛作品/项目提交截止（04-03起可提交；初赛选拔4~8月）", "scope": "全国", "source": "https://www.guit.edu.cn/cysj/info/1002/6698.htm"},
+   {"nodeType": "CONTEST", "startAt": "2026-08-01", "endAt": "2026-10-31", "stage": "复赛/省赛", "label": "复赛/省赛选拔与评审（8~10月）", "scope": "全国", "source": "https://www.guit.edu.cn/cysj/info/1002/6698.htm"},
+   {"nodeType": "CONTEST", "startAt": "2026-11-01", "endAt": "2026-12-31", "stage": "国赛（全国总决赛）", "label": "全国总决赛（11~12月，具体以官网通知为准）", "scope": "全国", "source": "https://www.guit.edu.cn/cysj/info/1002/6698.htm"}
+  ],
+  "sources": ["https://3dds.3ddl.net/", "https://www.guit.edu.cn/cysj/info/1002/6698.htm", "https://www.shiep.edu.cn/40/1f/c6422a278559/page.htm", "https://3dshow.3ddl.net"],
+  "confidence": "高",
+  "notes": "官网 3dds.3ddl.net 正确，提交平台为 3dshow.3ddl.net 各专辑通道（个别专项赛截止不同，如低空无人专项提交至2026-10-08、复赛至10-31）；基线「报名04-20~08-23」更正为报名04-03~06-30、提交至07-20；另本届平行举办「18周年精英联赛(2025-2026)」（初赛提交2025-09-18~2026-03-25、复赛评审2026年5-6月初），日程与本届大赛不同；国赛获奖公布时间未公布，写null。"
+ },
+ {
+  "code": "SUNADA",
+  "officialUrl": "https://www.sun-ada.net",
+  "seasonStatus": "已结束：第18届（2026）全国评审获奖结果2026年9月公布。",
+  "structure": {
+   "tracks": [
+    {"code": "PRINT", "name": "平面类", "description": "含产品与包装、IP与创意周边等，每组不超过2人"},
+    {"code": "VIDEO", "name": "视频类", "description": "影视广告、微电影广告、短视频广告"},
+    {"code": "ANIM", "name": "动画类", "description": "每组不超过5人"},
+    {"code": "INTERACTIVE", "name": "互动类", "description": "每组不超过3人"},
+    {"code": "AUDIO", "name": "广播类", "description": "音频广告，每组不超过3人"},
+    {"code": "PLAN", "name": "策划案类", "description": "每组不超过5人"},
+    {"code": "COPY", "name": "文案类", "description": "每组不超过2人"},
+    {"code": "UI", "name": "UI类", "description": "每组不超过5人"}
+   ],
+   "stagesByTrack": {
+    "shared": [{"name": "校级选拔", "kind": "CAMPUS"}, {"name": "分赛区评审", "kind": "PROVINCIAL"}, {"name": "全国总评审", "kind": "FINAL"}]
+   },
+   "structureCorrected": true,
+   "structureNote": "作品类别由基线4类（平面/视频/动画/策划案）更正为8类：平面、视频、动画、互动、广播、策划案、文案、UI；流程为校级选拔→分赛区评审→全国总评审。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2026-05-10", "endAt": null, "stage": "校级选拔", "label": "线上报名/作品提交开放", "scope": "全国", "source": "https://www.sun-ada.net/"},
+   {"nodeType": "SIGNUP_END", "startAt": "2026-06-12", "endAt": null, "stage": "校级选拔", "label": "作品提交截止（16:00）", "scope": "全国", "source": "https://www.sun-ada.net/"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-01", "endAt": "2026-08-31", "stage": "全国总评审", "label": "分赛区评审与全国总评审（赛区报送全国07-05前；海南赛区06-28完成评选）", "scope": "全国", "source": "https://www.sun-ada.net/"},
+   {"nodeType": "RESULT", "startAt": "2026-09-15", "endAt": null, "stage": "全国总评审", "label": "全国评审获奖结果公布（约9月中旬，官网公示，精确日未公布）", "scope": "全国", "source": "https://www.sun-ada.net/"}
+  ],
+  "sources": ["https://www.sun-ada.net/", "https://jw.beijing.gov.cn"],
+  "confidence": "高",
+  "notes": "官网 sun-ada.net 正确；第18届校赛5-6月进行、赛区评选6月下旬-7月、全国评审结果9月中旬公布（多所高校9月中旬发布获奖通报）；本届设复活赛环节（官网已公布复活赛获奖名单）；作品须依组委会统一命题创作。"
+ },
+ {
+  "code": "HUACAN",
+  "officialUrl": "http://www.huacanjiang.com",
+  "seasonStatus": "即将开始：2026新锐设计竞赛·华灿奖官网2026-10-19开放报名，创意赛道征集截止2026-11-27 17:00（截至今日2026-10-11尚未开放）。",
+  "structure": {
+   "tracks": [
+    {"code": "CREATIVE", "name": "创意赛道", "description": "视觉传达、空间、产品、数字媒体、时尚创意、交叉创新6个领域×高校学生组/青年设计师组共12个竞赛小组"},
+    {"code": "THEMED", "name": "定向主题赛道", "description": "16个专项主题（华灿品牌设计、校园文化设计、孙中山纪念地文创、中国美术馆文创等），直入总决赛评审"}
+   ],
+   "stagesByTrack": {
+    "CREATIVE": [{"name": "校赛", "kind": "CAMPUS"}, {"name": "赛区赛（34个赛区）", "kind": "REGIONAL"}, {"name": "总决赛（网络评审+现场评审）", "kind": "FINAL"}],
+    "THEMED": [{"name": "总决赛评审", "kind": "FINAL"}]
+   },
+   "structureCorrected": true,
+   "structureNote": "基线3赛道（视觉传达/数字媒体/产品设计）为创意赛道下的领域，现更正为创意赛道+定向主题赛道两条线；创意赛道流程校赛→赛区赛（大陆30+港澳台各1+海外1共34赛区）→总决赛（网络成绩前40%进现场评审）；定向主题赛道直接进入总决赛评审；本届主题「融·合」。"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2026-10-19", "endAt": null, "stage": "校赛", "label": "官网开放报名（报名入口 www.cahe.edu.cn/site/term/906.html）", "scope": "全国", "source": "https://msys.cdu.edu.cn/info/1131/20991.htm"},
+   {"nodeType": "SIGNUP_END", "startAt": "2026-11-27", "endAt": null, "stage": "校赛", "label": "创意赛道作品征集截止（17:00）", "scope": "全国", "source": "https://msys.cdu.edu.cn/info/1131/20991.htm"},
+   {"nodeType": "SIGNUP_END", "startAt": "2026-12-29", "endAt": null, "stage": "校赛", "label": "创意赛道校赛截止（17:00）", "scope": "全国", "source": "https://msys.cdu.edu.cn/info/1131/20991.htm"},
+   {"nodeType": "SIGNUP_END", "startAt": "2027-01-29", "endAt": null, "stage": "赛区赛（34个赛区）", "label": "赛区赛提交截止（17:00）", "scope": "全国", "source": "https://msys.cdu.edu.cn/info/1131/20991.htm"},
+   {"nodeType": "SIGNUP_END", "startAt": "2027-03-05", "endAt": null, "stage": "总决赛评审", "label": "定向主题赛道作品征集截止（17:00）", "scope": "全国", "source": "https://msys.cdu.edu.cn/info/1131/20991.htm"},
+   {"nodeType": "CONTEST", "startAt": "2027-03-01", "endAt": "2027-04-30", "stage": "总决赛（网络评审+现场评审）", "label": "总决赛（2027年3-4月，网络评审+现场评审两阶段）", "scope": "全国", "source": "https://msys.cdu.edu.cn/info/1131/20991.htm"},
+   {"nodeType": "AWARD", "startAt": "2027-05-01", "endAt": "2027-05-31", "stage": "总决赛（网络评审+现场评审）", "label": "颁奖仪式及路演展示（2027年5月）", "scope": "全国", "source": "https://msys.cdu.edu.cn/info/1131/20991.htm"}
+  ],
+  "sources": ["http://www.huacanjiang.com", "https://msys.cdu.edu.cn/info/1131/20991.htm", "https://www.cahe.edu.cn/site/term/906.html"],
+  "confidence": "高",
+  "notes": "官网 huacanjiang.com 正确；2026届报名入口为 www.cahe.edu.cn/site/term/906.html；公益免费、特等奖4项各2万元、路演奖6项各1万元；参赛对象45周岁以下（1981-01-01后出生）两岸暨港澳、海外华人青年设计师及高校师生，每人最多参与5件创意赛道作品；总决赛精确日期未公布（3-4月区间口径），以官网公布为准。"
+ }
+]

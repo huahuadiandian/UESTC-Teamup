@@ -1,0 +1,664 @@
+[
+ {
+  "code": "NUEDC",
+  "name": "全国大学生电子设计竞赛",
+  "officialSite": "http://nuedc.xjtu.edu.cn",
+  "sourceUrl": "http://nuedc.xjtu.edu.cn/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "校内选拔",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "赛区测评",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "全国集中竞赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "SIGNUP_END",
+    "endAt": "2025-05-31"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2025-07-30"
+   }
+  ],
+  "seq": "8",
+  "csv": {
+   "最新届次": "2025年（奇数年国赛）",
+   "报名开始时间": "2025-03~05（各赛区）",
+   "报名截止时间": "2025-05-31",
+   "校赛/省赛时间": "赛区测评2025-08-03~08",
+   "全国赛/决赛时间": "竞赛2025-07-30~08-02；全国总测评2025-08-15~22（大连）",
+   "结果公布/颁奖时间": "全国一/二等奖404/1150项公布",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "集中竞赛由“8-01~04”更正为7-30~8-02；总测评由“8-14~22”更正为8-15~22"
+  }
+ },
+ {
+  "code": "SOCCHINA",
+  "name": "全国大学生嵌入式芯片与系统设计竞赛",
+  "officialSite": "https://www.socchina.net",
+  "sourceUrl": "https://www.socchina.net/",
+  "tracks": [
+   {
+    "code": "APP",
+    "name": "芯片应用赛道"
+   },
+   {
+    "code": "DESIGN",
+    "name": "芯片设计赛道"
+   },
+   {
+    "code": "FPGA",
+    "name": "FPGA创新设计赛道"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "APP"
+   },
+   {
+    "name": "分赛区初/复赛",
+    "kind": "REGIONAL",
+    "track": "APP"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "APP"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "DESIGN"
+   },
+   {
+    "name": "分赛区初/复赛",
+    "kind": "REGIONAL",
+    "track": "DESIGN"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "DESIGN"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "FPGA"
+   },
+   {
+    "name": "分赛区初/复赛",
+    "kind": "REGIONAL",
+    "track": "FPGA"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "FPGA"
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": "APP",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-07-06"
+   },
+   {
+    "stage": "CAMPUS",
+    "track": "APP",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-04-20"
+   },
+   {
+    "stage": "FINAL",
+    "track": "APP",
+    "nodeType": "CONTEST",
+    "startAt": "2026-11-20"
+   },
+   {
+    "stage": "FINAL",
+    "track": "APP",
+    "nodeType": "RESULT",
+    "startAt": "2026-10-09"
+   }
+  ],
+  "seq": "50",
+  "csv": {
+   "最新届次": "第九届（2026）",
+   "报名开始时间": "芯片应用赛道2026-02；FPGA赛道2026-07-06",
+   "报名截止时间": "芯片应用赛道2026-04-20；FPGA赛道2026-09-22",
+   "校赛/省赛时间": "芯片应用赛道分赛区初/复赛2026-07；FPGA初赛2026-09~11",
+   "全国赛/决赛时间": "芯片应用赛道2026-08；FPGA决赛2026-11-20~22",
+   "结果公布/颁奖时间": "芯片应用赛道2026-10-09公布获奖",
+   "当前状态": "进行中（FPGA赛道）",
+   "可信度": "中",
+   "备注": "含三赛道；芯片应用赛道已结束，FPGA决赛日期待官方二次确认"
+  }
+ },
+ {
+  "code": "CICIEC",
+  "name": "全国大学生集成电路创新创业大赛",
+  "officialSite": "https://univ.ciciec.com",
+  "sourceUrl": "http://univ.ciciec.com/",
+  "tracks": [
+   {
+    "code": "CHIP-DESIGN",
+    "name": "芯片设计赛道"
+   },
+   {
+    "code": "CHIP-APP",
+    "name": "芯片应用赛道"
+   },
+   {
+    "code": "FPGA",
+    "name": "FPGA赛道"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校内赛",
+    "kind": "CAMPUS",
+    "track": "CHIP-DESIGN"
+   },
+   {
+    "name": "分赛区决赛",
+    "kind": "REGIONAL",
+    "track": "CHIP-DESIGN"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "CHIP-DESIGN"
+   },
+   {
+    "name": "校内赛",
+    "kind": "CAMPUS",
+    "track": "CHIP-APP"
+   },
+   {
+    "name": "分赛区决赛",
+    "kind": "REGIONAL",
+    "track": "CHIP-APP"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "CHIP-APP"
+   },
+   {
+    "name": "校内赛",
+    "kind": "CAMPUS",
+    "track": "FPGA"
+   },
+   {
+    "name": "分赛区决赛",
+    "kind": "REGIONAL",
+    "track": "FPGA"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "FPGA"
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": "CHIP-DESIGN",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-03-31"
+   },
+   {
+    "stage": "REGIONAL",
+    "track": "CHIP-DESIGN",
+    "nodeType": "CONTEST",
+    "startAt": "2026-08-23"
+   }
+  ],
+  "seq": "30",
+  "csv": {
+   "最新届次": "第十届（2026）",
+   "报名开始时间": "2026-01下旬",
+   "报名截止时间": "2026-03-31",
+   "校赛/省赛时间": "校内赛2026-03~05；分赛区决赛2026-06底~07",
+   "全国赛/决赛时间": "芯片设计赛项2026-07下旬；芯片应用赛项2026-08-23（无锡）",
+   "结果公布/颁奖时间": "随总决赛",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "报名始为1月下旬；总决赛跨7月下旬~8月下旬"
+  }
+ },
+ {
+  "code": "GDESIGN",
+  "name": "全国大学生光电设计竞赛",
+  "officialSite": "https://gd.moocollege.com",
+  "sourceUrl": "https://gd.moocollege.com/",
+  "tracks": [
+   {
+    "code": "CREATIVE",
+    "name": "创意设计类"
+   },
+   {
+    "code": "COMPETE",
+    "name": "竞技类"
+   }
+  ],
+  "stages": [
+   {
+    "name": "区赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "REGIONAL",
+    "track": null,
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-05-17"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-06-20"
+   }
+  ],
+  "seq": "12",
+  "csv": {
+   "最新届次": "第十四届（2026）",
+   "报名开始时间": "2026-03起",
+   "报名截止时间": "各赛区不一（部分2026-05-17截止）",
+   "校赛/省赛时间": "区赛2026年上半年（中部5-30~31南阳理工；东部6月杭州）",
+   "全国赛/决赛时间": "全国决赛2026-06-20~21（长春理工大学）",
+   "结果公布/颁奖时间": "2026-06",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "决赛由“6月下旬”明确为2026-06-20~21"
+  }
+ },
+ {
+  "code": "CSCC",
+  "name": "全国大学生计算机系统能力大赛",
+  "officialSite": "https://cscc.educg.net",
+  "sourceUrl": "https://cscc.educg.net/",
+  "tracks": [
+   {
+    "code": "CPU",
+    "name": "CPU设计赛"
+   },
+   {
+    "code": "OS",
+    "name": "操作系统设计赛"
+   },
+   {
+    "code": "COMPILER",
+    "name": "编译系统设计赛"
+   },
+   {
+    "code": "AI",
+    "name": "智能计算赛"
+   }
+  ],
+  "stages": [
+   {
+    "name": "初赛",
+    "kind": "QUALIFIER",
+    "track": "CPU"
+   },
+   {
+    "name": "决赛",
+    "kind": "FINAL",
+    "track": "CPU"
+   },
+   {
+    "name": "初赛",
+    "kind": "QUALIFIER",
+    "track": "OS"
+   },
+   {
+    "name": "决赛",
+    "kind": "FINAL",
+    "track": "OS"
+   },
+   {
+    "name": "初赛",
+    "kind": "QUALIFIER",
+    "track": "COMPILER"
+   },
+   {
+    "name": "决赛",
+    "kind": "FINAL",
+    "track": "COMPILER"
+   },
+   {
+    "name": "初赛",
+    "kind": "QUALIFIER",
+    "track": "AI"
+   },
+   {
+    "name": "决赛",
+    "kind": "FINAL",
+    "track": "AI"
+   }
+  ],
+  "events": [
+   {
+    "stage": "QUALIFIER",
+    "track": "CPU",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-05-18"
+   },
+   {
+    "stage": "QUALIFIER",
+    "track": "CPU",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-06-15"
+   },
+   {
+    "stage": "QUALIFIER",
+    "track": "CPU",
+    "nodeType": "CONTEST",
+    "startAt": "2026-08-12"
+   },
+   {
+    "stage": "FINAL",
+    "track": "CPU",
+    "nodeType": "RESULT",
+    "startAt": "2026-08-21"
+   }
+  ],
+  "seq": "52",
+  "csv": {
+   "最新届次": "2026年",
+   "报名开始时间": "2026-05-18",
+   "报名截止时间": "2026-06-15",
+   "校赛/省赛时间": "初赛（线上）2026-06-20~07-15",
+   "全国赛/决赛时间": "先导杯2026-08-12~15；操作系统/编译/CPU赛2026-08-18~24",
+   "结果公布/颁奖时间": "2026-08-21（颁奖典礼）",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "分CPU设计、操作系统设计、编译系统设计、智能计算等赛项"
+  }
+ },
+ {
+  "code": "DTCP",
+  "name": "大学生新一代信息通信科技大赛",
+  "officialSite": null,
+  "sourceUrl": "https://www.ksup.cn/",
+  "tracks": [
+   {
+    "code": "ENG",
+    "name": "工程实践赛道"
+   },
+   {
+    "code": "EDU",
+    "name": "产教融合赛道"
+   },
+   {
+    "code": "ICT",
+    "name": "ICT通识赛道"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "ENG"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "ENG"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "ENG"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "EDU"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "EDU"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "EDU"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "ICT"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "ICT"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "ICT"
+   }
+  ],
+  "events": [],
+  "seq": "45",
+  "csv": {
+   "最新届次": "第十三届（2026）",
+   "报名开始时间": "2025-12",
+   "报名截止时间": "2026-03（官网口径3月底；部分校3-07/3-10）",
+   "校赛/省赛时间": "校赛约2026-03；省赛/区域赛2026-04中旬",
+   "全国赛/决赛时间": "全国总决赛2026-07（线下）",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "已结束",
+   "可信度": "中",
+   "备注": "官网口径更正为“省赛4月中旬、全国总决赛7月”；报名截止非统一3-10"
+  }
+ },
+ {
+  "code": "IOTSJTU",
+  "name": "全国大学生物联网设计竞赛",
+  "officialSite": "https://iot.sjtu.edu.cn",
+  "sourceUrl": "https://iot.sjtu.edu.cn/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "分赛区决赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "REGIONAL",
+    "track": null,
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-06-15"
+   },
+   {
+    "stage": "REGIONAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-08-22"
+   }
+  ],
+  "seq": "55",
+  "csv": {
+   "最新届次": "第十三届（2026）",
+   "报名开始时间": "2026-03（通知3月发布）",
+   "报名截止时间": "2026-06-15",
+   "校赛/省赛时间": "分赛区决赛2026-08-20前",
+   "全国赛/决赛时间": "全国总决赛2026-08-22~24（贵州大学）",
+   "结果公布/颁奖时间": "2026-08底",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "届次补充为“第十三届（2026）”"
+  }
+ },
+ {
+  "code": "C4",
+  "name": "中国高校计算机大赛",
+  "officialSite": null,
+  "sourceUrl": "http://www.c4best.cn/",
+  "tracks": [
+   {
+    "code": "BIGDATA",
+    "name": "大数据挑战赛"
+   },
+   {
+    "code": "GPLT",
+    "name": "团体程序设计天梯赛"
+   },
+   {
+    "code": "APP",
+    "name": "移动应用创新赛"
+   },
+   {
+    "code": "NET",
+    "name": "网络技术挑战赛"
+   },
+   {
+    "code": "AIC",
+    "name": "人工智能创意赛"
+   }
+  ],
+  "stages": [
+   {
+    "name": "报名",
+    "kind": "OTHER",
+    "track": "BIGDATA"
+   },
+   {
+    "name": "初赛",
+    "kind": "QUALIFIER",
+    "track": "BIGDATA"
+   },
+   {
+    "name": "决赛",
+    "kind": "FINAL",
+    "track": "BIGDATA"
+   },
+   {
+    "name": "报名",
+    "kind": "OTHER",
+    "track": "GPLT"
+   },
+   {
+    "name": "初赛",
+    "kind": "QUALIFIER",
+    "track": "GPLT"
+   },
+   {
+    "name": "决赛",
+    "kind": "FINAL",
+    "track": "GPLT"
+   },
+   {
+    "name": "报名",
+    "kind": "OTHER",
+    "track": "APP"
+   },
+   {
+    "name": "初赛",
+    "kind": "QUALIFIER",
+    "track": "APP"
+   },
+   {
+    "name": "决赛",
+    "kind": "FINAL",
+    "track": "APP"
+   },
+   {
+    "name": "报名",
+    "kind": "OTHER",
+    "track": "NET"
+   },
+   {
+    "name": "初赛",
+    "kind": "QUALIFIER",
+    "track": "NET"
+   },
+   {
+    "name": "决赛",
+    "kind": "FINAL",
+    "track": "NET"
+   },
+   {
+    "name": "报名",
+    "kind": "OTHER",
+    "track": "AIC"
+   },
+   {
+    "name": "初赛",
+    "kind": "QUALIFIER",
+    "track": "AIC"
+   },
+   {
+    "name": "决赛",
+    "kind": "FINAL",
+    "track": "AIC"
+   }
+  ],
+  "events": [
+   {
+    "stage": "OTHER",
+    "track": "BIGDATA",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-03-26"
+   },
+   {
+    "stage": "QUALIFIER",
+    "track": "BIGDATA",
+    "nodeType": "CONTEST",
+    "startAt": "2026-04-18"
+   }
+  ],
+  "seq": "24",
+  "csv": {
+   "最新届次": "第十一届（2026）",
+   "报名开始时间": "各子赛不一（大数据2026-03-26）",
+   "报名截止时间": "各子赛不一",
+   "校赛/省赛时间": "—",
+   "全国赛/决赛时间": "天梯2026-04-18；大数据挑战赛2026-08-29（清华大学）",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "多数已结束",
+   "可信度": "高",
+   "备注": "天梯赛4-18；大数据挑战赛国赛8-29在清华；移动应用/网络技术赛时间未公布"
+  }
+ }
+]

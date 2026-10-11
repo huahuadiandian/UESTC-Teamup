@@ -1,0 +1,212 @@
+[
+ {
+  "code": "CIC",
+  "officialUrl": "https://cy.ncss.cn",
+  "seasonStatus": "省级复赛进行中（10-25前完成省级复赛，10-31前完成入围总决赛项目推荐，总决赛2026年11月举行）",
+  "structure": {
+   "tracks": [
+    {"code": "MAIN", "name": "高教主赛道", "description": "面向本专科及研究生项目，含国际参赛项目（海外区域赛/网络评审）"},
+    {"code": "RED", "name": "“青年红色筑梦之旅”赛道", "description": "公益/乡村振兴类项目，与主赛道并列"},
+    {"code": "VOCATION", "name": "职教赛道", "description": "面向职业院校项目（基线缺失，本轮依据教高函〔2026〕26号补充）"},
+    {"code": "INDUSTRY", "name": "产业命题赛道", "description": "企业出题、高校揭榜（通知中亦称“产业赛道”），命题征集截止2026-08-15"},
+    {"code": "SPROUT", "name": "萌芽赛道", "description": "面向普通高中生创新能力展示"}
+   ],
+   "stagesByTrack": {
+    "MAIN": [{"name": "校级初赛", "kind": "CAMPUS"}, {"name": "省级复赛", "kind": "PROVINCIAL"}, {"name": "全国总决赛", "kind": "FINAL"}],
+    "RED": [{"name": "校级初赛", "kind": "CAMPUS"}, {"name": "省级复赛", "kind": "PROVINCIAL"}, {"name": "全国总决赛", "kind": "FINAL"}],
+    "VOCATION": [{"name": "校级初赛", "kind": "CAMPUS"}, {"name": "省级复赛", "kind": "PROVINCIAL"}, {"name": "全国总决赛", "kind": "FINAL"}],
+    "INDUSTRY": [{"name": "校级初赛", "kind": "CAMPUS"}, {"name": "省级复赛", "kind": "PROVINCIAL"}, {"name": "全国总决赛", "kind": "FINAL"}],
+    "SPROUT": [{"name": "校级初赛", "kind": "CAMPUS"}, {"name": "省级复赛", "kind": "PROVINCIAL"}, {"name": "全国总决赛", "kind": "FINAL"}]
+   },
+   "structureCorrected": true,
+   "structureNote": "与基线相比新增“职教赛道”（2026年通知设高教主赛道、红旅、职教、产业命题、萌芽共5条赛道，基线缺职教）；各赛道均为校赛—省复赛—总决赛三级流程，与基线一致；产业命题赛道需先选题（命题征集截止2026-08-15 12时）；高教主赛道含国际参赛项目（单独报名通道）"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2026-08-10", "endAt": null, "label": "报名系统开放（全国大学生创业服务网）", "scope": "全国", "source": "https://cy.ncss.cn/"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-09-25", "label": "报名截止（9月25日12时）", "scope": "全国", "source": "https://cy.ncss.cn/"},
+   {"nodeType": "SIGNUP_START", "startAt": "2026-08-20", "endAt": null, "label": "国际项目报名开放（0点）", "scope": "高教主赛道·国际项目", "source": "https://www.czu.cn"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-09-15", "label": "国际项目报名截止（24时）；9-16~9-25资格审核，9-26起网络评审", "scope": "高教主赛道·国际项目", "source": "https://www.czu.cn"},
+   {"nodeType": "OTHER", "startAt": null, "endAt": "2026-08-15", "label": "产业命题征集截止（8月15日12时）", "scope": "产业命题赛道", "source": "https://chuangye.qut.edu.cn"},
+   {"nodeType": "CONTEST", "startAt": "2026-08-01", "endAt": "2026-10-25", "label": "省级复赛（10月25日前完成）", "scope": "全国", "source": "https://zjzx.hbvtc.edu.cn"},
+   {"nodeType": "OTHER", "startAt": null, "endAt": "2026-10-31", "label": "入围总决赛项目推荐截止（省级教育行政部门盖章报送）", "scope": "全国", "source": "https://zjzx.hbvtc.edu.cn"},
+   {"nodeType": "CONTEST", "startAt": "2026-11-01", "endAt": "2026-11-30", "label": "全国总决赛（南京大学与南京市人民政府共同承办；仅确认至月份，具体日期以官方通知为准）", "scope": "全国", "source": "https://jw.nju.edu.cn"}
+  ],
+  "sources": ["https://cy.ncss.cn/", "https://jw.nju.edu.cn", "https://zjzx.hbvtc.edu.cn", "https://chuangye.qut.edu.cn", "http://www.moe.gov.cn"],
+  "confidence": "高",
+  "notes": "依据《教育部关于举办中国国际大学生创新大赛（2026）的通知》（教高函〔2026〕26号，2026-07-31发布），主题“我敢闯，我会创”。报名8-10开放、9-25 12时截止与基线一致并获教育部通知佐证；省级复赛10-25前完成与基线一致。总决赛承办（南京大学）经南京大学本科生院校赛通知证实。据报道本届首次在海外设区域赛（美国区域赛决赛2026年8月举行），细节未逐一核实。各校校赛时间不一（如南京大学校赛2026年5月即启动），故校赛未设统一日期。"
+ },
+ {
+  "code": "GJCXCY",
+  "officialUrl": "http://gjcxcy.bjtu.edu.cn",
+  "seasonStatus": "项目推荐/系统填报阶段（中央部委高校10-23截止、省教育厅10-30截止；年会初定2026年12月）",
+  "structure": {
+   "tracks": [
+    {"code": "ACADEMIC", "name": "学术论文交流", "description": "年会交流内容类别，约200篇（非竞赛赛道）"},
+    {"code": "EXHIBIT", "name": "成果展示交流", "description": "年会交流内容类别，约250项（非竞赛赛道）"},
+    {"code": "STARTUP", "name": "创业推介项目", "description": "年会交流内容类别，约60项；优秀项目（约12项）可直通下届中国国际大学生创新大赛总决赛"}
+   ],
+   "stagesByTrack": {
+    "ACADEMIC": [{"name": "校内遴选推荐", "kind": "CAMPUS"}, {"name": "系统填报（中央高校直报/省教育厅汇总）", "kind": "OTHER"}, {"name": "年会展示交流", "kind": "FINAL"}],
+    "EXHIBIT": [{"name": "校内遴选推荐", "kind": "CAMPUS"}, {"name": "系统填报（中央高校直报/省教育厅汇总）", "kind": "OTHER"}, {"name": "年会展示交流", "kind": "FINAL"}],
+    "STARTUP": [{"name": "校内遴选推荐", "kind": "CAMPUS"}, {"name": "系统填报（中央高校直报/省教育厅汇总）", "kind": "OTHER"}, {"name": "年会展示交流", "kind": "FINAL"}]
+   },
+   "structureCorrected": true,
+   "structureNote": "第十九届通知官方名称为“全国大学生创新年会”，交流内容分学术论文、成果展示、创业推介三类（基线tracks为空，本轮按通知补充为三个参与类别）；流程仍为校内推荐—填报报送—年会展示，与基线两级结构实质一致"
+  },
+  "events": [
+   {"nodeType": "OTHER", "startAt": "2026-09-22", "endAt": null, "label": "教育部高等教育司《关于做好第十九届全国大学生创新年会准备工作的通知》发布", "scope": "全国", "source": "http://gjcxcy.bjtu.edu.cn/"},
+   {"nodeType": "OTHER", "startAt": null, "endAt": "2026-10-08", "label": "年会联系人员信息表提交截止", "scope": "全国", "source": "http://gjcxcy.bjtu.edu.cn/"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-10-23", "label": "中央部委所属高校平台填报截止", "scope": "中央部委所属高校", "source": "http://gjcxcy.bjtu.edu.cn/"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-10-30", "label": "各省教育行政部门平台填报截止", "scope": "省属高校（经省教育厅报送）", "source": "http://gjcxcy.bjtu.edu.cn/"},
+   {"nodeType": "CONTEST", "startAt": "2026-12-01", "endAt": "2026-12-31", "label": "第十九届全国大学生创新年会（初定12月，西南交通大学主办；具体日期另行通知，仅确认至月份）", "scope": "全国", "source": "http://gjcxcy.bjtu.edu.cn/"}
+  ],
+  "sources": ["http://gjcxcy.bjtu.edu.cn/"],
+  "confidence": "高",
+  "notes": "直接读取官网平台通知原文核实：2026-09-22通知发布（与基线一致）、由西南交通大学主办（证实基线“2026-12西南交大”）、时间初定12月具体另行通知；新增中央高校10-23、省教育厅10-30两个填报截止（基线缺）。获奖/结果环节未设统一公布日期，未公布。"
+ },
+ {
+  "code": "CHINAUS",
+  "officialUrl": "https://chinaus-maker.cscse.edu.cn",
+  "seasonStatus": "已结束（总决赛7月28—31日在上海张江科学会堂举行并颁奖）",
+  "structure": {
+   "tracks": [],
+   "stagesByTrack": {
+    "OPEN": [{"name": "分赛区选拔赛", "kind": "REGIONAL"}, {"name": "全国总决赛", "kind": "FINAL"}]
+   },
+   "structureCorrected": false,
+   "structureNote": "与基线一致（分赛区选拔赛+全国总决赛；官网首页2026届信息更新滞后，沿用往届结构，未见赛道划分）"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": null, "endAt": null, "label": "各分赛区报名于2026年5月前后陆续开放（具体由各分赛区确定，无全国统一日期）", "scope": "全国（各分赛区）", "source": "https://www.sues.edu.cn"},
+   {"nodeType": "CONTEST", "startAt": "2026-06-06", "endAt": null, "label": "沈阳分赛区选拔赛", "scope": "沈阳分赛区", "source": "https://cxzx.neu.edu.cn"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-28", "endAt": "2026-07-31", "label": "全国总决赛（上海张江科学会堂，四天赛程）", "scope": "全国", "source": "https://finance.sina.com.cn/stock/t/2026-08-01/doc-inikurwe8984403.shtml"},
+   {"nodeType": "AWARD", "startAt": "2026-07-31", "endAt": null, "label": "总决赛颁奖仪式（当天落幕）", "scope": "全国", "source": "https://portal.cscse.edu.cn/lxfwzx/xwdt85/dfdt/index.html"}
+  ],
+  "sources": ["https://chinaus-maker.cscse.edu.cn/", "https://finance.sina.com.cn/stock/t/2026-08-01/doc-inikurwe8984403.shtml", "https://portal.cscse.edu.cn/lxfwzx/xwdt85/dfdt/index.html", "https://cxzx.neu.edu.cn", "https://www.sues.edu.cn"],
+  "confidence": "高",
+  "notes": "总决赛由基线“7-31单日”细化为7-28~31（多来源交叉：新浪/网易/中青报及教育部留学服务中心动态）。本届规模创新高：400余所院校、1.4万余名选手、3200余件作品。参赛年龄18—40周岁，作品须为2025年总决赛结束后新创作。北京分赛区6-14等其余分赛区日期沿用基线（本轮未逐一复核，官网首页仍显示2025届内容）。"
+ },
+ {
+  "code": "XCBDS",
+  "officialUrl": "http://www.xcbds.com",
+  "seasonStatus": "进行中（省赛阶段陆续举行，全国总决赛预计2026年11月）",
+  "structure": {
+   "tracks": [
+    {"code": "SIM", "name": "创业综合模拟赛项（主体赛项）", "description": "软件模拟创业经营对抗，为大赛主体赛项"},
+    {"code": "MKT", "name": "数字营销模拟赛项", "description": "数字营销模拟对抗赛项"},
+    {"code": "FIN", "name": "财务决策模拟赛项", "description": "财务决策模拟对抗赛项"}
+   ],
+   "stagesByTrack": {
+    "SIM": [{"name": "校赛/校内选拔赛", "kind": "CAMPUS"}, {"name": "省赛（省级选拔赛）", "kind": "PROVINCIAL"}, {"name": "全国半决赛（线上）", "kind": "QUALIFIER"}, {"name": "全国总决赛（现场）", "kind": "FINAL"}],
+    "MKT": [{"name": "校赛/校内选拔赛", "kind": "CAMPUS"}, {"name": "省赛（省级选拔赛）", "kind": "PROVINCIAL"}, {"name": "全国半决赛（线上）", "kind": "QUALIFIER"}, {"name": "全国总决赛（现场）", "kind": "FINAL"}],
+    "FIN": [{"name": "校赛/校内选拔赛", "kind": "CAMPUS"}, {"name": "省赛（省级选拔赛）", "kind": "PROVINCIAL"}, {"name": "全国半决赛（线上）", "kind": "QUALIFIER"}, {"name": "全国总决赛（现场）", "kind": "FINAL"}]
+   },
+   "structureCorrected": true,
+   "structureNote": "基线tracks为空，本轮补齐3个赛项（创业综合模拟、数字营销、财务决策，据贵州财经大学2026通知）；在基线校赛—省赛—总决赛基础上补“全国半决赛（线上）”环节，与基线“半决赛在线+总决选现场”备注一致；另按参赛学生阶段分本科组、职教组、研究生组（组别非赛道）"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2025-12-15", "endAt": null, "label": "报名开始（校级管理员申请后团队报名，无全国统一截止）", "scope": "全国", "source": "http://www.xcbds.com/"},
+   {"nodeType": "CONTEST", "startAt": "2026-11-01", "endAt": "2026-11-30", "label": "全国总决赛（2026年11月；半决赛线上+总决选现场；仅确认至月份，具体日期以组委会通知为准）", "scope": "全国", "source": "http://www.xcbds.com/"}
+  ],
+  "sources": ["http://www.xcbds.com/", "https://www.bdu.edu.cn", "https://cxxy.lntu.edu.cn", "https://news.gufe.edu.cn", "https://baike.baidu.com"],
+  "confidence": "中",
+  "notes": "官网 xcbds.com/xcbds.cn 本轮无法直连（超时），结构与日期依基线（此前高可信核实）+ 高校通知/新闻交叉确认：校赛2026年4~5月集中举行（如保定学院5-27校级选拔赛、辽宁工程技术大学报名截止5-29），省级选拔赛2026年5~10月各省陆续举行（如山东省选拔赛5-30），全国总决赛11月。主办：高等学校国家级实验教学示范中心联席会经管学科组、中国陶行知研究会；专用平台 bster.cn。每队1-3名成员+1-2名指导老师，全日制在校生、不可跨校。"
+ },
+ {
+  "code": "CUBEC",
+  "officialUrl": "https://cubec.org.cn/",
+  "seasonStatus": "进行中（创新创业竞赛全国总决赛10-17~18举行在即；全国精英赛11-13~15）",
+  "structure": {
+   "tracks": [
+    {"code": "BRAND", "name": "品牌策划竞赛", "description": "含数字营销等赛道，设知识赛、全球总决赛环节"},
+    {"code": "EXPO", "name": "会展专业创新创业实践竞赛", "description": "会展类专业竞赛"},
+    {"code": "TRADE", "name": "国际贸易竞赛", "description": "国际贸易类专业竞赛"},
+    {"code": "INNOV", "name": "创新创业竞赛", "description": "含创业计划、创业研究专题、数据智能体应用、营销模拟决策（云泽杯）等多个赛道；个人知识赛（网络机考）合格方可参加校赛"},
+    {"code": "ELITE", "name": "精英赛", "description": "全国精英赛，角逐冠亚季军（非独立报名赛道，为总决赛后精英环节）"}
+   ],
+   "stagesByTrack": {
+    "BRAND": [{"name": "知识赛（个人网络机考）", "kind": "QUALIFIER"}, {"name": "校赛", "kind": "CAMPUS"}, {"name": "省赛/全国预选赛", "kind": "PROVINCIAL"}, {"name": "全国总决赛", "kind": "FINAL"}, {"name": "全球总决赛", "kind": "INTERNATIONAL"}],
+    "EXPO": [{"name": "校赛", "kind": "CAMPUS"}, {"name": "省赛", "kind": "PROVINCIAL"}, {"name": "全国总决赛", "kind": "FINAL"}],
+    "TRADE": [{"name": "校赛", "kind": "CAMPUS"}, {"name": "省赛", "kind": "PROVINCIAL"}, {"name": "全国总决赛", "kind": "FINAL"}],
+    "INNOV": [{"name": "知识赛（个人网络机考，60分合格）", "kind": "QUALIFIER"}, {"name": "校赛（校内选拔赛）", "kind": "CAMPUS"}, {"name": "省赛（省级总决赛）", "kind": "PROVINCIAL"}, {"name": "全国总决赛", "kind": "FINAL"}],
+    "ELITE": [{"name": "全国精英赛", "kind": "NATIONAL"}]
+   },
+   "structureCorrected": true,
+   "structureNote": "赛道划分与基线一致（5项）；但阶段修正：品牌策划竞赛在校赛前有“知识赛”、全国总决赛后有“全球总决赛”（百度百科及官方规程五阶段：知识赛—校赛—省赛/全国预选赛—全国总决赛—全球总决赛）；创新创业竞赛经校方通知证实为“知识赛—校赛—省赛—全国总决赛”四阶段（基线缺知识赛）；精英赛实为全国性精英环节而非完整三级流程"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-08-07", "label": "创业计划赛道（创新创业竞赛）报名截止", "scope": "创新创业竞赛·创业计划赛道", "source": "https://ssyth.cubec.org.cn"},
+   {"nodeType": "CONTEST", "startAt": null, "endAt": "2026-08-13", "label": "创业计划赛道校赛完成截止", "scope": "创新创业竞赛·创业计划赛道", "source": "https://ssyth.cubec.org.cn"},
+   {"nodeType": "CONTEST", "startAt": null, "endAt": "2026-09-03", "label": "创业计划赛道省赛完成截止", "scope": "创新创业竞赛·创业计划赛道", "source": "https://ssyth.cubec.org.cn"},
+   {"nodeType": "CONTEST", "startAt": "2026-10-17", "endAt": "2026-10-18", "label": "创新创业竞赛（创业计划赛道）全国总决赛（线上）", "scope": "全国", "source": "https://ssyth.cubec.org.cn"},
+   {"nodeType": "AWARD", "startAt": "2026-11-13", "endAt": "2026-11-15", "label": "全国精英赛（角逐冠亚季军并颁奖）", "scope": "全国", "source": "https://ssyth.cubec.org.cn"}
+  ],
+  "sources": ["https://cubec.org.cn/", "https://ssyth.cubec.org.cn", "https://xgxy.sdmu.edu.cn/info/1044/6412.htm", "http://www.hyclbz.cn", "https://ie.wit.edu.cn"],
+  "confidence": "中",
+  "notes": "主办：中国国际贸易促进委员会商业行业委员会、中国国际商会商业行业商会、中国商业经济学会。2026年主通知为《关于举办2026年全国高校商业精英挑战赛创新创业竞赛的通知》（商贸促字〔2026〕8号），官方报名平台 ssyth.cubec.org.cn，知识赛考试平台 shangwudasai.cn。8-07/08-13/09-03/10-17~18/11-13~15 等创业计划赛道日期沿用基线（此前高可信核实），本轮经官方平台与高校通知佐证结构但未能复核到原始通知全文。各赛道时间差异大：数据智能体应用赛省赛/全国预选赛资料提交9-22前（武汉工程大学）；创业研究专题赛道5月启动报名；营销模拟决策赛道（云泽杯）9-15启动报名。全国总决赛一等奖团队可参加内地与港澳企业经营案例分析大赛。"
+ },
+ {
+  "code": "3CHUANG",
+  "officialUrl": "https://www.3chuang.net/",
+  "seasonStatus": "已结束（常规赛全国总决赛8-10~11在宁波举行，获奖名单已公示）",
+  "structure": {
+   "tracks": [
+    {"code": "REGULAR", "name": "常规赛", "description": "主题赛道（三农电商、跨境电商、乡村振兴、AI电商等），校赛—省赛—全国总决赛"},
+    {"code": "PRACTICE", "name": "实战赛", "description": "含商务大数据分析、直播电商等实战赛道，各赛道全国总决赛分散举行"},
+    {"code": "INTL", "name": "国际赛", "description": "国际参赛类别（基线缺失，据官网/启动通知补充）"}
+   ],
+   "stagesByTrack": {
+    "REGULAR": [{"name": "校赛", "kind": "CAMPUS"}, {"name": "省赛（省级选拔赛）", "kind": "PROVINCIAL"}, {"name": "全国总决赛", "kind": "FINAL"}],
+    "PRACTICE": [{"name": "校赛", "kind": "CAMPUS"}, {"name": "省赛（省级选拔赛）", "kind": "PROVINCIAL"}, {"name": "全国总决赛（各实战赛道分散举行）", "kind": "FINAL"}],
+    "INTL": [{"name": "校赛", "kind": "CAMPUS"}, {"name": "省赛（省级选拔赛）", "kind": "PROVINCIAL"}, {"name": "全国总决赛", "kind": "FINAL"}]
+   },
+   "structureCorrected": true,
+   "structureNote": "第十六届分为常规赛、实战赛与国际赛三大类别（官网及启动通知证实）：基线缺“国际赛”类别，已补；三级流程（校赛—省赛—国赛）与基线一致；实战赛为多赛道并列、各自单独举行全国总决赛（非单一场次）"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2025-10-20", "endAt": null, "label": "第十六届团队注册报名开始", "scope": "全国", "source": "https://www.3chuang.net/"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-01-20", "label": "团队注册报名截止（原定2025-12-31，官网确认延期至2026-01-20）", "scope": "全国", "source": "https://www.3chuang.net/"},
+   {"nodeType": "CONTEST", "startAt": "2026-03-11", "endAt": "2026-04-10", "label": "校赛阶段（各校自行组织）", "scope": "全国", "source": "https://www.3chuang.net/"},
+   {"nodeType": "CONTEST", "startAt": "2026-04-20", "endAt": "2026-06-22", "label": "省赛阶段（省级选拔赛）", "scope": "全国", "source": "https://www.3chuang.net/"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-10", "endAt": "2026-08-11", "label": "全国总决赛阶段（实战赛各赛道7-10起分散举行；常规赛8-10~11）", "scope": "全国", "source": "https://www.3chuang.net/"},
+   {"nodeType": "CONTEST", "startAt": "2026-08-10", "endAt": "2026-08-11", "label": "常规赛全国总决赛（宁波·浙江药科职业大学）", "scope": "常规赛", "source": "https://www.3chuang.net/"},
+   {"nodeType": "RESULT", "startAt": "2026-08-05", "endAt": "2026-08-12", "label": "获奖名单公示", "scope": "全国", "source": "https://www.3chuang.net/"}
+  ],
+  "sources": ["https://www.3chuang.net/", "https://www.siva.edu.cn", "https://cxcy.jisu.edu.cn"],
+  "confidence": "高",
+  "notes": "报名期2025-10-20~2026-01-20经官网证实（修正基线“截止2025-12-31”为实际截止2026-01-20）。常规赛国赛举办地宁波获官网新闻“第十六届三创赛全国总决赛在宁波成功举办”证实，举办校为浙江药科职业大学（位于宁波，与基线“宁波”一致）。实战赛分赛道单办国赛：商务大数据分析实战赛全国总决赛在郑州商学院、直播电商实战赛全国总决赛在贵州工贸职业学院。校赛/省赛区间及公示日期沿用基线已核实数据（官网栏目本轮仅能确认标题）。"
+ },
+ {
+  "code": "FWWB",
+  "officialUrl": "https://fwwb.org.cn",
+  "seasonStatus": "已结束（8-20~22无锡全国赛决赛，8-24公布获奖名单，8-25开放证书下载）",
+  "structure": {
+   "tracks": [
+    {"code": "A", "name": "A类·企业命题类", "description": "企业真实需求命题（阿里、百度等），经区域赛晋级全国赛"},
+    {"code": "B", "name": "B类·创业实践类", "description": "创业实践项目，经区域赛晋级全国赛"},
+    {"code": "C", "name": "C类·创客类", "description": "含OPC创客/创响无锡等专项（各校通知表述不一），单独组织评审、不参加区域赛"},
+    {"code": "D", "name": "D类·人工智能专项赛道", "description": "本届新开通：暨2026腾讯开悟人工智能全球公开赛，需在腾讯开悟平台与大赛官网双注册（官网2026-01-11发布开通说明）"}
+   ],
+   "stagesByTrack": {
+    "A": [{"name": "报名与选题", "kind": "OTHER"}, {"name": "区域赛", "kind": "REGIONAL"}, {"name": "全国赛决赛", "kind": "FINAL"}],
+    "B": [{"name": "报名与选题", "kind": "OTHER"}, {"name": "区域赛", "kind": "REGIONAL"}, {"name": "全国赛决赛", "kind": "FINAL"}],
+    "C": [{"name": "报名", "kind": "OTHER"}, {"name": "全国评审与决赛（不经区域赛）", "kind": "FINAL"}],
+    "D": [{"name": "报名与选题（双平台注册）", "kind": "OTHER"}, {"name": "区域赛", "kind": "REGIONAL"}, {"name": "全国赛决赛", "kind": "FINAL"}]
+   },
+   "structureCorrected": true,
+   "structureNote": "基线tracks为空，本轮补齐A/B/C/D四类赛道（D类为本届新设，官网2026-01-11发布开通说明）；流程与基线“区域赛—全国赛”一致，但C类单独评审、不参加区域赛"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2026-02-11", "endAt": null, "label": "网络报名开始", "scope": "全国", "source": "https://fwwb.org.cn/"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-03-20", "label": "报名截止（3月20日16:00）", "scope": "全国", "source": "https://fwwb.org.cn/"},
+   {"nodeType": "CONTEST", "startAt": "2026-06-06", "endAt": "2026-06-07", "label": "区域赛", "scope": "全国（各区域）", "source": "https://fwwb.org.cn/"},
+   {"nodeType": "RESULT", "startAt": "2026-06-29", "endAt": null, "label": "全国赛决赛晋级及三等奖名单公告（A/B/D类）", "scope": "全国", "source": "https://fwwb.org.cn/"},
+   {"nodeType": "CONTEST", "startAt": "2026-08-20", "endAt": "2026-08-22", "label": "全国赛决赛（无锡，现场答辩；江南大学承办相关活动）", "scope": "全国", "source": "https://news.jiangnan.edu.cn"},
+   {"nodeType": "RESULT", "startAt": "2026-08-24", "endAt": null, "label": "全国赛决赛获奖名单公告", "scope": "全国", "source": "https://fwwb.org.cn/"},
+   {"nodeType": "AWARD", "startAt": "2026-08-25", "endAt": null, "label": "一、二等奖获奖证书电子版开放下载（8-27发布获奖团队详细信息）", "scope": "全国", "source": "https://fwwb.org.cn/"}
+  ],
+  "sources": ["https://fwwb.org.cn/", "https://news.jiangnan.edu.cn", "https://www.saikr.com", "https://sise.uestc.edu.cn", "https://tencentarena.com"],
+  "confidence": "中",
+  "notes": "重要修正：报名截止由基线的“2026-03-31 16:00”改回大赛官方通知的“2026-03-20 16:00”（两轮独立检索均指向官方通知3-20 16:00，基线此前“由03-20更正为03-31”未找到官方依据，疑为混淆校赛截止）。全国赛决赛由基线“8-21单日”细化为8-20~22（江南大学2026-08-26新闻），获奖名单8-24公布与官网公告栏证实。大赛整体2026年2月至8月举办，承办高校江南大学。参赛对象为全日制在校生及毕业不超过5年（2021年后）的往届大学生；全国赛决赛不收费，食宿交通自理。区域赛6-6~7沿用基线（官网首页未展开该通知，未能二次复核）。"
+ }
+]

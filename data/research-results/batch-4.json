@@ -1,0 +1,325 @@
+[
+ {
+  "code": "SMARTCAR",
+  "officialUrl": "https://www.smartcar.zone",
+  "seasonStatus": "第二十一届（2026）室内总决赛已于2026-08-21~23在安徽大学结束，室外专项赛备赛中（区域赛11月中旬、总决赛12月）",
+  "structure": {
+   "tracks": [
+    {"code": "SPEED", "name": "竞速组", "description": "竞速类共11个项目，经分（省）赛区选拔后进入全国总决赛，2026年642所高校3620支队伍参赛"},
+    {"code": "CREATIVE", "name": "创意组", "description": "创意类比赛，与竞速类同期在暑期全国总决赛评审/比拼"},
+    {"code": "OUTDOOR", "name": "室外组", "description": "室外专项赛，另设校赛→区域赛→全国总决赛，总决赛于12月举行"}
+   ],
+   "stagesByTrack": {
+    "SPEED": [
+     {"name": "分（省）赛区赛", "kind": "REGIONAL"},
+     {"name": "全国总决赛（室内）", "kind": "FINAL"}
+    ],
+    "CREATIVE": [
+     {"name": "分（省）赛区赛", "kind": "REGIONAL"},
+     {"name": "全国总决赛（室内）", "kind": "FINAL"}
+    ],
+    "OUTDOOR": [
+     {"name": "校内选拔赛", "kind": "CAMPUS"},
+     {"name": "区域赛", "kind": "REGIONAL"},
+     {"name": "全国总决赛（室外）", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": false,
+   "structureNote": "与基线一致（竞速/创意/室外三组别）；补充：室外专项赛在校赛与全国总决赛之间还有区域赛一层（2026-11中旬）"
+  },
+  "events": [
+   {"nodeType": "CONTEST", "startAt": "2026-08-21", "endAt": "2026-08-23", "label": "室内全国总决赛（第二十一届，安徽大学，合肥）", "scope": "全国", "source": "https://www.smartcar.zone/channels/1150.html"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-10-10", "label": "室外专项赛校内选拔报名截止（长江师范学院通知：校赛报名截止10-10）", "scope": "各校", "source": "https://www.czu.cn"},
+   {"nodeType": "CONTEST", "startAt": null, "endAt": null, "label": "室外专项赛区域赛（2026年11月中旬，具体日期未公布）", "scope": "各区域赛区", "source": "https://www.czu.cn"},
+   {"nodeType": "CONTEST", "startAt": null, "endAt": null, "label": "室外专项赛全国总决赛（2026年12月，具体日期未公布）", "scope": "全国", "source": "https://www.czu.cn"}
+  ],
+  "sources": [
+   "https://www.smartcar.zone/",
+   "https://www.smartcar.zone/channels/1150.html",
+   "https://enroll.smartcar.zone/",
+   "https://www.czu.cn",
+   "https://m.saikr.com"
+  ],
+  "confidence": "高",
+  "notes": "官网 smartcar.zone 存在证书过期问题（浏览器可继续访问），官方报名系统 enroll.smartcar.zone。室内总决赛2026-08-21~23安徽大学由多所高校新闻（如上海海洋大学 news.sdju.edu.cn 2026-08-25）证实；室外赛三阶段时间（校赛截止10-10、区域赛11月中旬、总决赛12月）来自长江师范学院2026-09-07通知。第二十一届竞速类分赛区十一个项目、642校3620队。新闻原文完整URL未留存，仅记录到域名级。"
+ },
+ {
+  "code": "CURC",
+  "officialUrl": "https://www.curc.cn",
+  "seasonStatus": "第二十五届（2026）各赛项已全部结束：ROBOCON 7月16-17江阴、RoboMaster 7-31~8-9深圳、ROBOTAC 5-8月分赛项举行",
+  "structure": {
+   "tracks": [
+    {"code": "ROBOCON", "name": "ROBOCON", "description": "第二十五届ROBOCON暨ABU ROBOCON 2026国内选拔赛，主题「武林探秘」，含竞技赛、仿生足式机器人挑战赛、机器人排球挑战赛三个赛项"},
+    {"code": "ROBOTAC", "name": "ROBOTAC", "description": "中国原创机器人竞技赛项，2026年设深蓝使命、人形功夫搏击赛、足式机器人挑战赛、侦查任务挑战赛等赛道，全国赛落地北京"},
+    {"code": "ROBOMASTER", "name": "RoboMaster", "description": "机甲大师高校系列赛（RMUC2026），区域赛+复活赛+全国总决赛"}
+   ],
+   "stagesByTrack": {
+    "ROBOCON": [
+     {"name": "校内选拔/中期检查（2026-04-20前提交材料）", "kind": "CAMPUS"},
+     {"name": "全国赛", "kind": "FINAL"}
+    ],
+    "ROBOTAC": [
+     {"name": "校内选拔/中期检查（2026-03~04）", "kind": "CAMPUS"},
+     {"name": "全国赛（分赛项，北京等）", "kind": "FINAL"}
+    ],
+    "ROBOMASTER": [
+     {"name": "区域赛（南部长沙/东部济南/北部沈阳，2026-05~06）", "kind": "REGIONAL"},
+     {"name": "复活赛（2026-07~08）", "kind": "QUALIFIER"},
+     {"name": "全国总决赛（深圳）", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": false,
+   "structureNote": "三大赛项划分与基线一致；细化：RoboMaster在区域赛与全国赛之间还有复活赛，ROBOCON/ROBOTAC以中期检查替代预选赛层"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2025-10-29", "endAt": "2025-11-06", "label": "RoboMaster 2026 超级对抗赛正式报名", "scope": "全国", "source": "https://www.robomaster.com"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-16", "endAt": "2026-07-17", "label": "第二十五届ROBOCON全国赛（南京理工大学江阴校区，主题武林探秘，电子科技大学夺冠）", "scope": "全国", "source": "https://www.robocon.org.cn"},
+   {"nodeType": "CONTEST", "startAt": "2026-05-24", "endAt": "2026-05-25", "label": "ROBOTAC人形功夫搏击赛（雄安会展中心，北京科技大学夺冠）", "scope": "全国（雄安赛区）", "source": "https://www.xiongan.gov.cn/20260525"},
+   {"nodeType": "CONTEST", "startAt": "2026-05-13", "endAt": "2026-05-31", "label": "RoboMaster 2026区域赛（南部长沙5-13~17、东部济南5-21~25、北部沈阳5-29起）", "scope": "全国分赛区", "source": "https://www.robomaster.com"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-31", "endAt": "2026-08-09", "label": "RoboMaster 2026超级对抗赛全国总决赛（深圳湾体育中心，东北大学夺冠）", "scope": "全国", "source": "https://www.robomaster.com"}
+  ],
+  "sources": [
+   "https://www.curc.cn/",
+   "https://www.robocon.org.cn",
+   "https://zs.njust.edu.cn",
+   "https://www.robotac.cn",
+   "https://www.robomaster.com",
+   "https://www.xiongan.gov.cn/20260525"
+  ],
+  "confidence": "高",
+  "notes": "ROBOCON原基线7-09~17修正为7-16~17（7-16开幕、7-17闭幕，133校297队近5000人）。ROBOTAC官方通知（2025-11）：中期检查2026-03~04、比赛拟5-8月择机举行，实际以分赛项形式5-8月举行（雄安5-24~25等），完整全国总决赛日程未单独公布。RoboMaster区域赛/总决赛时间地点由官方及多家媒体证实。"
+ },
+ {
+  "code": "CRC",
+  "officialUrl": "https://rcccaa.drct-caa.org.cn",
+  "seasonStatus": "RoboCup赛区已于2026-05-01~05（五一假期，北京）举办；中国机器人大赛赛区总决赛2026-10-16~18杭州，即将举办",
+  "structure": {
+   "tracks": [
+    {"code": "ROBOCUP", "name": "RoboCup赛区", "description": "RoboCup机器人世界杯中国赛：类人组、仿真2D/3D、小型组、标准平台组、救援机器人/仿真、@Home及创新创意赛等"},
+    {"code": "ROBOT", "name": "中国机器人大赛赛区", "description": "中国机器人大赛：专项赛、区域赛（新疆/浙江/重庆）、职教赛道、舞蹈机器人表演赛等，2026总决赛10月杭州"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "校赛（各校选拔并晋级推荐）", "kind": "CAMPUS"},
+     {"name": "区域赛/专项赛（部分赛项）", "kind": "REGIONAL"},
+     {"name": "总决赛（RoboCup赛区5月北京；中国机器人大赛赛区10月杭州）", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "官网URL由基线的 www.caa.org.cn（学会官网）更正为大赛官网 rcccaa.drct-caa.org.cn；赛程结构补充校赛层（校赛组织与晋级推荐须知2026-03-11发布）与区域赛/专项赛层；报名系统 robotreg.drct-caa.org.cn"
+  },
+  "events": [
+   {"nodeType": "OTHER", "startAt": "2026-03-11", "endAt": null, "label": "（RoboCup赛区）校赛组织与晋级推荐须知发布，校赛负责人申报启动（2026-03-12）", "scope": "全国", "source": "https://rcccaa.drct-caa.org.cn/article_info.php?id=111"},
+   {"nodeType": "CONTEST", "startAt": "2026-05-01", "endAt": "2026-05-05", "label": "2026 RoboCup机器人世界杯中国赛（RoboCup赛区，北京首都国际会议中心，五一假期举办，报到5-01）", "scope": "全国", "source": "https://rcccaa.drct-caa.org.cn/article_info.php?id=125"},
+   {"nodeType": "CONTEST", "startAt": "2026-08-21", "endAt": "2026-08-23", "label": "中国机器人大赛赛区专项赛（北方工业大学承办）", "scope": "全国", "source": "https://rcccaa.drct-caa.org.cn/article_info.php?id=143"},
+   {"nodeType": "CONTEST", "startAt": "2026-10-16", "endAt": "2026-10-18", "label": "2026中国机器人大赛（中国机器人大赛赛区总决赛，杭州市滨江区长江路336号白马）", "scope": "全国", "source": "https://rcccaa.drct-caa.org.cn/article_info.php?id=139"}
+  ],
+  "sources": [
+   "https://rcccaa.drct-caa.org.cn/",
+   "https://rcccaa.drct-caa.org.cn/article_info.php?id=139",
+   "https://rcccaa.drct-caa.org.cn/article_info.php?id=125",
+   "https://rcccaa.drct-caa.org.cn/article_info.php?id=111",
+   "https://rcccaa.drct-caa.org.cn/article_info.php?id=143",
+   "https://robotreg.drct-caa.org.cn",
+   "https://www.caa.org.cn/Content/33.html"
+  ],
+  "confidence": "高",
+  "notes": "官网URL修正：基线 www.caa.org.cn 为中国自动化学会官网，大赛实际官网为 rcccaa.drct-caa.org.cn（CAA页面明示）。中国机器人大赛赛区总决赛10-16~18杭州由官网第一轮比赛通知（id=139）证实；RoboCup赛区报到须知PDF（官网id=125附件）载明报到2026-05-01 13:00-18:00、5-05结束，基线5-02~04修正为5-01~05区间。专项赛8-21~23北方工业大学承办来自媒体与秩序册通知交叉印证。各校校内报名截止自定（如郑州大学9-06）。"
+ },
+ {
+  "code": "CAAIROBOT",
+  "officialUrl": "https://www.caairobot.com",
+  "seasonStatus": "第二十八届（CRAIC2026）已结束：全国决赛7月25日在哈尔滨开幕（276校1357人），人形机器人专项赛全国决赛8月1日在北京首钢园举行",
+  "structure": {
+   "tracks": [
+    {"code": "ROBOT", "name": "机器人赛项", "description": "机器人应用/挑战类赛项（各省赛区组织选拔）"},
+    {"code": "AI", "name": "人工智能赛项", "description": "人工智能类赛项（含智能驾驶、智慧农业、无人机空地协同等应用方向）"},
+    {"code": "INNOV", "name": "创新赛项", "description": "创新类赛项（黑龙江省赛即设创新赛、应用赛、挑战赛三大类）"},
+    {"code": "HUMANOID", "name": "人形机器人专项赛", "description": "2026年新增独立全国决赛，8-01北京首钢园，近200校7000余人"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "校赛（各校选拔，比例各校自定）", "kind": "CAMPUS"},
+     {"name": "省级选拔赛（各省赛区，2026-06-08通知）", "kind": "PROVINCIAL"},
+     {"name": "全国决赛（哈尔滨站/合肥站/线上三站+人形专项赛北京）", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "基线三赛项（机器人/人工智能/创新）划分保留；修正补充：2026全国决赛分哈尔滨、合肥、线上三站进行，并单列人形机器人专项赛（新增HUMANOID赛道）；官网首页未公布完整赛项清单"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2026-03-01", "endAt": null, "label": "报名启动（沿用基线CSV；官方报名系统 craic.yuntop.com，精确开始日期未在官网公告页直接核到）", "scope": "全国", "source": "https://www.caairobot.com/"},
+   {"nodeType": "OTHER", "startAt": "2026-06-08", "endAt": null, "label": "省级层次选拔赛通知发布（各省选拔赛时间自定，多在6月-7月初）", "scope": "各省赛区", "source": "https://www.caairobot.com/post/notification-shengjicengcixuanbasai-craic2026/"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-25", "endAt": null, "label": "全国决赛（哈尔滨站）开幕，哈尔滨石油学院承办，276所高校1357名选手；闭幕日期未查到确切日", "scope": "全国", "source": "https://www.caairobot.com/post/notification-finalhaerbin-craic2026/"},
+   {"nodeType": "CONTEST", "startAt": "2026-08-01", "endAt": null, "label": "人形机器人专项赛全国决赛（北京首钢园开幕，近200校7000余人）", "scope": "全国", "source": "https://www.caairobot.com/post/notification-humanoid-craic2026/"}
+  ],
+  "sources": [
+   "https://www.caairobot.com/",
+   "https://www.caairobot.com/post/notification-finalhaerbin-craic2026/",
+   "https://www.caairobot.com/post/notification-finalhefei-craic2026/",
+   "https://www.caairobot.com/post/notification-online-craic2026/",
+   "https://www.caairobot.com/post/notification-humanoid-craic2026/",
+   "https://www.caairobot.com/post/notification-shengjicengcixuanbasai-craic2026/",
+   "https://craic.yuntop.com"
+  ],
+  "confidence": "中",
+  "notes": "官网通知正文均存于百度网盘附件，具体起止日未能逐日核到：哈尔滨站7-25开幕由腾讯新闻（2026-07-26）及多校喜报证实；合肥站、线上站通知分别于2026-07-04、07-02发布，具体比赛日未公布级细节未获取。省级选拔赛「6-07前完成」为基线数据，本次仅核实通知发布日6-08，未复核截止日。获奖证书8月开放下载。"
+ },
+ {
+  "code": "RAICOM",
+  "officialUrl": "https://www.raicom.com.cn",
+  "seasonStatus": "进行中：赛季2026-03-20~11-30，全国总决赛分四阶段，第四阶段10月23-30日在武汉/泰安/广西举行",
+  "structure": {
+   "tracks": [
+    {"code": "CAIR", "name": "CAIR强体赛道", "description": "2026CAIR强体赛道，含38个赛项（工程竞技、无人系统、具身机器人空间应用等）"},
+    {"code": "CAIA", "name": "CAIA设计赛道", "description": "2026CAIA设计赛道，含14个赛项（机器人创意设计、智能家居、文创设计等）"},
+    {"code": "CAIM", "name": "CAIM工创赛道", "description": "2026CAIM工创赛道，含10个赛项（具身智能、人形机器人等工业创成方向）"},
+    {"code": "CAIP", "name": "CAIP强脑赛道", "description": "2026CAIP强脑赛道，含6个赛项（智能算法及应用、智海算法调优、大模型及智能应用等）"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "校赛/省赛/区域选拔赛", "kind": "REGIONAL"},
+     {"name": "全国总决赛（按赛项分四阶段：7月杭州/8月线上线下/9月杭州/10月武汉泰安广西）", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "基线的「CAI赛道/机器人赛道/创新赛道」已过时：官方报名系统显示2026赛季为CAIR强体、CAIA设计、CAIM工创、CAIP强脑四大赛道（共68个赛项）；总决赛并非单一场次，而按赛项分四个阶段举行"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2026-03-20", "endAt": "2026-11-30", "label": "2026赛季报名窗口（官方平台赛程2026-03-20~11-30；各阶段赛项另有报名截止）", "scope": "全国", "source": "https://www.raicom.com.cn/match"},
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-07-07", "label": "总决赛第一阶段报名截止（7-07 17:00，作品提交截止7-10 17:00）", "scope": "全国", "source": "https://www.raicom.com.cn/content.html?cid=1724"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-16", "endAt": "2026-07-17", "label": "全国总决赛第一阶段（杭州电子科技大学钱塘校区，CAIA设计赛道与CAIP强脑赛道部分赛项；7-15报到）", "scope": "全国", "source": "https://www.raicom.com.cn/content.html?cid=1724"},
+   {"nodeType": "CONTEST", "startAt": null, "endAt": null, "label": "全国总决赛第二阶段（2026年8月中下旬，CAIM工创/CAIA/CAIR/CAIP部分赛项，线上线下结合；逐日赛程见通知）", "scope": "全国", "source": "https://www.raicom.com.cn/content.html?cid=1834"},
+   {"nodeType": "CONTEST", "startAt": "2026-09-24", "endAt": "2026-09-27", "label": "全国总决赛第三阶段（杭州，智能视觉-空竹侦察9-25~27、机器人创新设计与AIGC应用9-26~27、人形机器人具身智能挑战9-27等；报名截止9-19）", "scope": "全国", "source": "https://www.raicom.com.cn/content.html?cid=1947"},
+   {"nodeType": "CONTEST", "startAt": "2026-10-23", "endAt": "2026-10-30", "label": "全国总决赛第四阶段（具身机器人空间应用10-23起武汉商贸职业学院、智能算法及大模型应用10-28~29泰山科技学院、AI视觉应用10-30起广西工商职业技术学院）", "scope": "全国", "source": "https://www.raicom.com.cn/content.html?cid=1949"}
+  ],
+  "sources": [
+   "https://www.raicom.com.cn/",
+   "https://www.raicom.com.cn/docs",
+   "https://www.raicom.com.cn/match",
+   "https://www.raicom.com.cn/content.html?cid=1724",
+   "https://www.raicom.com.cn/content.html?cid=1834",
+   "https://www.raicom.com.cn/content.html?cid=1947",
+   "https://www.raicom.com.cn/content.html?cid=1949",
+   "https://service.raicom.com.cn/"
+  ],
+  "confidence": "高",
+  "notes": "重大修正：基线「杭州7-15~17、深圳8-15~18」不准确——官网组委会通知（睿抗组开[2026]32/50/57/58号）证实总决赛分四阶段：阶段一7-16~17杭电（通知文号32号）；阶段二通知文号50号（8月中下旬，通知为图片版，逐日赛程未逐项转录）；阶段三9-24~27杭州（文号57号）；阶段四10-23~30武汉/泰安/广西（文号58号）。赛季周期与报名窗口（2026-03-20~11-30）取自官方报名平台api数据。本届全国总决赛主体场地在杭州（钱塘区），未发现深圳场次证据。"
+ },
+ {
+  "code": "ROBOTCONTEST",
+  "officialUrl": "https://www.robotcontest.cn",
+  "seasonStatus": "第九届（2026）已结束：全国总决赛8-17~20在宁波、余姚举行，8-20在余姚落幕",
+  "structure": {
+   "tracks": [
+    {"code": "THEME", "name": "主题赛", "description": "家用机器人（实物组/创意实物模型组/模块化产品搭建组/具身式人工智能AIGC组）、魔方机器人、竞技格斗机器人对抗赛（统一器材组/自选器材组）"},
+    {"code": "SPECIAL", "name": "专项赛", "description": "基于ROS的机器人应用挑战赛、具身智能挑战赛（轮式足式/双足/四足人形仿生组）、VEX U智能机器人对抗赛"},
+    {"code": "CHANJIAO", "name": "产教融合赛", "description": "6项：智创未来视界专项赛、操作系统安全赛、北斗绿水青山生态智联机器人赛、华为机创师者具身智能体开发挑战赛、中国移动梧桐杯具身智能创新赛、新代电子智能融合挑战赛"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "校赛（以学校为单位报名）", "kind": "CAMPUS"},
+     {"name": "区域赛（2026-06-10前完成选拔）", "kind": "REGIONAL"},
+     {"name": "全国赛（2026-07-12~13，产教融合赛时间另定）", "kind": "NATIONAL"},
+     {"name": "全国总决赛（2026-08-17~20宁波/余姚）", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "基线「创意类/竞技类」两类划分已过时：1号通知（2025-12-12发布）证实第九届为「3主题赛+3专项赛+6产教融合赛」结构，赛制为区域赛+全国赛两级（含总决赛阶段）"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": "2026-03-01", "endAt": "2026-05-08", "label": "报名窗口（1号通知：2026-03-01起报名，5-08截止；报名与作品提交网址 robotcontest.cn）", "scope": "全国", "source": "https://www.52jingsai.com/article-23345-1.html"},
+   {"nodeType": "SUBMISSION", "startAt": null, "endAt": "2026-06-10", "label": "区域赛选拔完成截止（各参赛作品应于6-10前完成区域赛选拔）", "scope": "各区域赛区", "source": "https://www.52jingsai.com/article-23345-1.html"},
+   {"nodeType": "CONTEST", "startAt": "2026-05-24", "endAt": null, "label": "软件系统安全赛（产教融合赛道）全国总决赛（中国科学技术大学合肥高新校区）", "scope": "全国（该赛项）", "source": "https://www.hbmzu.edu.cn"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-12", "endAt": "2026-07-13", "label": "全国赛（主体赛项评审/比赛，产教融合赛具体时间以官网通知为准）", "scope": "全国", "source": "https://www.52jingsai.com/article-23345-1.html"},
+   {"nodeType": "CONTEST", "startAt": "2026-08-17", "endAt": "2026-08-20", "label": "全国总决赛（宁波、余姚两地，8-20在余姚落幕；1127所高校参与）", "scope": "全国", "source": "https://www.robotcontest.cn"}
+  ],
+  "sources": [
+   "https://www.robotcontest.cn/",
+   "https://www.52jingsai.com/article-23345-1.html",
+   "https://www.cs.sjtu.edu.cn",
+   "https://www.hbmzu.edu.cn"
+  ],
+  "confidence": "中",
+  "notes": "报名窗口、区域赛截止、全国赛7-12~13出自1号通知全文（52jingsai转载，组委会2025-12-12发布），可信度高。总决赛8-17~20宁波/余姚由多所高校新闻证实（基线8-17~19修正为8-17~20）；软件系统安全赛总决赛5-24中国科大由湖北民族大学等校新闻证实。上述新闻仅留存到域名级URL。大赛官网 robotcontest.cn 为报名平台（摩课云），通知以官网及公众号发布。"
+ },
+ {
+  "code": "MEICC",
+  "officialUrl": "https://meicc.cmes.org",
+  "seasonStatus": "2026年已结束：创新设计赛总决赛7-11~12兰州、材料成型赛（铸造工艺设计赛）总决赛7-31~8-03太原、智能制造赛总决赛8-23~27武汉",
+  "structure": {
+   "tracks": [
+    {"code": "IMIC", "name": "智能制造赛", "description": "2026年3月启动，310余所高校近2400支队伍报名，经18省市20个分赛区选拔后晋级全国总决赛（8-23~27江汉大学）"},
+    {"code": "MAT", "name": "材料成型赛", "description": "2026年主体为铸造工艺设计赛，全国总决赛暨颁奖典礼7-31~8-03在太原举行，169所高校177份作品晋级"},
+    {"code": "DESIGN", "name": "创新设计赛", "description": "2026年主体为机械产品数字化设计赛，全国总决赛7-11~12在兰州理工大学举行，近250所高校约1400份作品参赛"}
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {"name": "校内选拔（各校自行组织）", "kind": "CAMPUS"},
+     {"name": "省级或区域选拔赛（智能制造赛设分赛区；两级赛制）", "kind": "PROVINCIAL"},
+     {"name": "全国总决赛（各赛项时间地点各异）", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "三大赛道划分与基线一致；修正：官方赛制为「省级或区域选拔赛+全国总决赛」两级（校赛为校内组织环节，非独立省级赛道层）；「19赛项」的逐项清单未能在公开渠道完整核实，仅核实三赛道主体赛项"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_START", "startAt": null, "endAt": null, "label": "智能制造赛2026年3月启动报名（精确起止日未公布级核到；仅限官网报名）", "scope": "全国", "source": "http://cmes-imic.org.cn"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-11", "endAt": "2026-07-12", "label": "创新设计赛（机械产品数字化设计赛）全国总决赛（兰州理工大学承办）", "scope": "全国（该赛项）", "source": "https://www.whwl.edu.cn"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-31", "endAt": "2026-08-03", "label": "材料成型赛（铸造工艺设计赛）全国总决赛暨颁奖典礼（山西太原，169所高校）", "scope": "全国（该赛项）", "source": "https://finance.sina.com.cn"},
+   {"nodeType": "CONTEST", "startAt": "2026-08-23", "endAt": "2026-08-27", "label": "智能制造赛全国总决赛（第一阶段，江汉大学，武汉；131所高校289支队伍1275名选手晋级）", "scope": "全国（该赛项）", "source": "https://www.cmes.org"}
+  ],
+  "sources": [
+   "https://meicc.cmes.org/",
+   "http://cmes-imic.org.cn",
+   "https://www.cmes.org",
+   "https://www.whwl.edu.cn",
+   "https://finance.sina.com.cn"
+  ],
+  "confidence": "中",
+  "notes": "官网 meicc.cmes.org 为摩课云平台（SPA，正文动态加载），智能制造赛专区 cmes-imic.org.cn 连接受限。三赛道总决赛时间（7-11~12兰州、7-31~8-03太原、8-23~27武汉江汉大学）来自媒体与承办/参赛高校报道交叉印证（2026-08-31网易报道智能制造赛总决赛、2026-08-05新浪财经报道铸造工艺设计赛等），原始新闻URL仅留存到域名级，故整体置信度中。报名截止未公布级核到（上届智能制造赛参考截止5-30）。"
+ },
+ {
+  "code": "JXDS",
+  "officialUrl": "https://www.jxds.tech",
+  "seasonStatus": "第十五届（2026）已结束：决赛7-25~29在武汉理工大学举行（7-29闭幕）；第十六届（2027）参赛通知已发布",
+  "structure": {
+   "tracks": [
+    {"code": "SKILL", "name": "第一赛道·实验技能赛道", "description": "主体赛道（2012年首届起设），即传统金相技能大赛：校内初赛→分赛区复赛→全国决赛"},
+    {"code": "ANALYSIS", "name": "第二赛道·综合分析赛道", "description": "「全国大学生金相大会」，2023年第十二届起设置，2026年为「永新杯」第四届，决赛与主体赛道同期在武汉理工举行"},
+    {"code": "INNOVATION", "name": "第三赛道·创新应用赛道", "description": "「全国大学生材料分析大赛」，2025年第十四届起设置"}
+   ],
+   "stagesByTrack": {
+    "SKILL": [
+     {"name": "校内初赛", "kind": "CAMPUS"},
+     {"name": "分赛区复赛（2026-06各赛区陆续举行）", "kind": "REGIONAL"},
+     {"name": "全国决赛", "kind": "FINAL"}
+    ],
+    "ANALYSIS": [
+     {"name": "选拔/复赛", "kind": "REGIONAL"},
+     {"name": "全国决赛（金相大会）", "kind": "FINAL"}
+    ],
+    "INNOVATION": [
+     {"name": "选拔/复赛", "kind": "REGIONAL"},
+     {"name": "全国决赛（材料分析大赛）", "kind": "FINAL"}
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "基线 tracks 为空，已修正：官网载明大赛自2023年起设三个赛道（实验技能/综合分析/创新应用）；主体赛道的校内初赛→分赛区复赛→全国决赛流程与基线一致"
+  },
+  "events": [
+   {"nodeType": "SIGNUP_END", "startAt": null, "endAt": "2026-04-05", "label": "校内报名截止（沿用基线；各校自定，如郑州大学3-15、石河子大学4月中旬）", "scope": "各校", "source": "https://www.jxds.tech"},
+   {"nodeType": "CONTEST", "startAt": null, "endAt": null, "label": "分赛区复赛（2026年6月各赛区陆续举行，如山东赛区复赛在潍坊科技学院）", "scope": "各分赛区", "source": "https://www.jxds.tech"},
+   {"nodeType": "CONTEST", "startAt": "2026-07-25", "endAt": "2026-07-29", "label": "「徕卡杯」第十五届全国大学生金相技能大赛暨「永新杯」第四届全国大学生金相大会决赛（武汉理工大学南湖校区，为期五天，7-29闭幕）", "scope": "全国", "source": "https://hky.njxzc.edu.cn"}
+  ],
+  "sources": [
+   "https://www.jxds.tech/",
+   "https://www.jxds.tech/tongzhi",
+   "https://hky.njxzc.edu.cn",
+   "http://smse.whut.edu.cn",
+   "https://jwc.shzu.edu.cn"
+  ],
+  "confidence": "高",
+  "notes": "决赛7-25~29武汉理工由南京晓庄学院等高校新闻证实（7-29闭幕、为期五天，基线7-25~29维持不变）；本届由274所高校材料类院系联合主办、武汉理工大学承办，大赛自2026年3月启动。官网「当届大赛」栏目已开始发布第十六届（2027）通知（如「徕卡杯第十六届全国大学生金相技能大赛参赛通知」PDF），下一届周期已启动。校内报名截止4-05与复赛具体日期未在官网逐日核到，沿用基线并标注。"
+ }
+]

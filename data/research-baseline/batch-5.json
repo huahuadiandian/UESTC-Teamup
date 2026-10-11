@@ -1,0 +1,703 @@
+[
+ {
+  "code": "CISCN",
+  "name": "全国大学生信息安全竞赛",
+  "officialSite": "http://www.ciscn.cn",
+  "sourceUrl": "http://www.ciscn.cn/",
+  "tracks": [
+   {
+    "code": "WORKS",
+    "name": "作品赛"
+   },
+   {
+    "code": "CPRACTICE",
+    "name": "创新实践能力赛"
+   }
+  ],
+  "stages": [
+   {
+    "name": "分区赛",
+    "kind": "REGIONAL",
+    "track": "WORKS"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "WORKS"
+   },
+   {
+    "name": "分区赛",
+    "kind": "REGIONAL",
+    "track": "CPRACTICE"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "CPRACTICE"
+   }
+  ],
+  "events": [
+   {
+    "stage": "REGIONAL",
+    "track": "WORKS",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-07-05"
+   },
+   {
+    "stage": "FINAL",
+    "track": "WORKS",
+    "nodeType": "CONTEST",
+    "startAt": "2026-08-20"
+   }
+  ],
+  "seq": "13",
+  "csv": {
+   "最新届次": "第十九届（2026）",
+   "报名开始时间": "以官网通知为准",
+   "报名截止时间": "作品赛2026-07-05（作品提交7-03）",
+   "校赛/省赛时间": "分区赛（半决赛）2026年上半年",
+   "全国赛/决赛时间": "作品赛决赛2026-08-20~22（哈尔滨工业大学）；创新实践能力赛总决赛2026-08-29~30（齐鲁工业大学）",
+   "结果公布/颁奖时间": "2026-08~09",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "作品赛与创新实践能力赛分设，各决赛日期证实"
+  }
+ },
+ {
+  "code": "CSB",
+  "name": "“中国软件杯”大学生软件设计大赛",
+  "officialSite": null,
+  "sourceUrl": "https://www.cnsoftbei.com/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "区域赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "REGIONAL",
+    "track": null,
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-03-24"
+   },
+   {
+    "stage": "REGIONAL",
+    "track": null,
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-06-30"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "RESULT",
+    "startAt": "2026-08-25"
+   }
+  ],
+  "seq": "27",
+  "csv": {
+   "最新届次": "第十五届",
+   "报名开始时间": "2026-03-24",
+   "报名截止时间": "2026-06-30",
+   "校赛/省赛时间": "区域赛2026-08（名单08-25）",
+   "全国赛/决赛时间": "总决赛答辩2026-08",
+   "结果公布/颁奖时间": "区域赛名单2026-08-25；证书2026-08-29",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": ""
+  }
+ },
+ {
+  "code": "4C",
+  "name": "中国大学生计算机设计大赛",
+  "officialSite": "https://jsjds.blcu.edu.cn",
+  "sourceUrl": "https://jsjds.blcu.edu.cn/",
+  "tracks": [
+   {
+    "code": "SOFTWARE",
+    "name": "软件应用"
+   },
+   {
+    "code": "MICRO",
+    "name": "微课与教学辅助"
+   },
+   {
+    "code": "IOT",
+    "name": "物联网应用"
+   },
+   {
+    "code": "BIGDATA",
+    "name": "大数据应用"
+   },
+   {
+    "code": "MEDIA",
+    "name": "数媒设计"
+   }
+  ],
+  "stages": [
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "SOFTWARE"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "SOFTWARE"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "MICRO"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "MICRO"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "IOT"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "IOT"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "BIGDATA"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "BIGDATA"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "MEDIA"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "MEDIA"
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": "SOFTWARE",
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-17"
+   }
+  ],
+  "seq": "21",
+  "csv": {
+   "最新届次": "第19届",
+   "报名开始时间": "省赛报名2026-03~04（各省自定）",
+   "报名截止时间": "国赛报名约2026-05",
+   "校赛/省赛时间": "省赛2026-05",
+   "全国赛/决赛时间": "2026-07-17~08-20（6个决赛区）",
+   "结果公布/颁奖时间": "各决赛区结束即公布（2026-07~08）",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "决赛区：上海/杭州/合肥/长春/青岛/无锡"
+  }
+ },
+ {
+  "code": "NCDA",
+  "name": "未来设计师·全国高校数字艺术设计大赛",
+  "officialSite": "https://www.ncda.org.cn",
+  "sourceUrl": "https://www.ncda.org.cn/",
+  "tracks": [
+   {
+    "code": "VISUAL",
+    "name": "视觉传达"
+   },
+   {
+    "code": "ENV",
+    "name": "环境设计"
+   },
+   {
+    "code": "ANIM",
+    "name": "动画"
+   },
+   {
+    "code": "PRODUCT",
+    "name": "产品设计"
+   }
+  ],
+  "stages": [
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "VISUAL"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "VISUAL"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "ENV"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "ENV"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "ANIM"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "ANIM"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "PRODUCT"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "PRODUCT"
+   }
+  ],
+  "events": [
+   {
+    "stage": "PROVINCIAL",
+    "track": "VISUAL",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2025-10-31"
+   },
+   {
+    "stage": "PROVINCIAL",
+    "track": "VISUAL",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-06-20"
+   },
+   {
+    "stage": "FINAL",
+    "track": "VISUAL",
+    "nodeType": "CONTEST",
+    "startAt": "2026-08-08"
+   },
+   {
+    "stage": "FINAL",
+    "track": "VISUAL",
+    "nodeType": "RESULT",
+    "startAt": "2026-08-26"
+   }
+  ],
+  "seq": "28",
+  "csv": {
+   "最新届次": "第十四届（NCDA）",
+   "报名开始时间": "2025-10-31（作品征集起）",
+   "报名截止时间": "2026-06-20（截止投稿）",
+   "校赛/省赛时间": "省赛2026-08-08前后",
+   "全国赛/决赛时间": "国赛2026-08-08~26",
+   "结果公布/颁奖时间": "国奖公示2026-08-26",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "以学院为单位统一报名"
+  }
+ },
+ {
+  "code": "CDEC",
+  "name": "中国好创意暨全国数字艺术设计大赛",
+  "officialSite": "http://www.cdec.org.cn",
+  "sourceUrl": "http://www.cdec.org.cn/",
+  "tracks": [
+   {
+    "code": "VISUAL",
+    "name": "视觉传达"
+   },
+   {
+    "code": "ENV",
+    "name": "环境设计"
+   },
+   {
+    "code": "ANIM",
+    "name": "动画"
+   },
+   {
+    "code": "GAME",
+    "name": "游戏设计"
+   }
+  ],
+  "stages": [
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "VISUAL"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "VISUAL"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "ENV"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "ENV"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "ANIM"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "ANIM"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "GAME"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "GAME"
+   }
+  ],
+  "events": [
+   {
+    "stage": "PROVINCIAL",
+    "track": "VISUAL",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2025-10-20"
+   },
+   {
+    "stage": "PROVINCIAL",
+    "track": "VISUAL",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-06-30"
+   },
+   {
+    "stage": "FINAL",
+    "track": "VISUAL",
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-24"
+   },
+   {
+    "stage": "FINAL",
+    "track": "VISUAL",
+    "nodeType": "RESULT",
+    "startAt": "2026-08-25"
+   }
+  ],
+  "seq": "42",
+  "csv": {
+   "最新届次": "第20届（2026）",
+   "报名开始时间": "2025-10-20",
+   "报名截止时间": "2026-06-30 17:00",
+   "校赛/省赛时间": "省赛评审2026-07-08~20",
+   "全国赛/决赛时间": "国赛评审2026-07-24~30",
+   "结果公布/颁奖时间": "国赛获奖公布2026-08-25前",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": ""
+  }
+ },
+ {
+  "code": "3DDS",
+  "name": "全国三维数字化创新设计大赛",
+  "officialSite": "http://3dds.3ddl.net",
+  "sourceUrl": "http://3dds.3ddl.net/",
+  "tracks": [
+   {
+    "code": "DIGITAL",
+    "name": "数字工业"
+   },
+   {
+    "code": "CULTURE",
+    "name": "数字文化"
+   },
+   {
+    "code": "LIFE",
+    "name": "数字人居"
+   }
+  ],
+  "stages": [
+   {
+    "name": "初赛",
+    "kind": "CAMPUS",
+    "track": "DIGITAL"
+   },
+   {
+    "name": "复赛/省赛",
+    "kind": "PROVINCIAL",
+    "track": "DIGITAL"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "DIGITAL"
+   },
+   {
+    "name": "初赛",
+    "kind": "CAMPUS",
+    "track": "CULTURE"
+   },
+   {
+    "name": "复赛/省赛",
+    "kind": "PROVINCIAL",
+    "track": "CULTURE"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "CULTURE"
+   },
+   {
+    "name": "初赛",
+    "kind": "CAMPUS",
+    "track": "LIFE"
+   },
+   {
+    "name": "复赛/省赛",
+    "kind": "PROVINCIAL",
+    "track": "LIFE"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "LIFE"
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": "DIGITAL",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-04-20"
+   },
+   {
+    "stage": "CAMPUS",
+    "track": "DIGITAL",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-08-23"
+   }
+  ],
+  "seq": "43",
+  "csv": {
+   "最新届次": "第19届（2026）",
+   "报名开始时间": "2026-04-20",
+   "报名截止时间": "2026-08-23",
+   "校赛/省赛时间": "初赛选拔2026-08-24~31；复赛/省赛作品提交09-01~09-10、评审09-11~10-31",
+   "全国赛/决赛时间": "2026-11~12",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "进行中",
+   "可信度": "高",
+   "备注": "三级赛制；复赛/省赛细分为作品提交9.1-9.10与评审9.11-10.31"
+  }
+ },
+ {
+  "code": "SUNADA",
+  "name": "全国大学生广告艺术大赛",
+  "officialSite": "https://www.sun-ada.net",
+  "sourceUrl": "https://www.sun-ada.net/",
+  "tracks": [
+   {
+    "code": "PRINT",
+    "name": "平面类"
+   },
+   {
+    "code": "VIDEO",
+    "name": "视频类"
+   },
+   {
+    "code": "ANIM",
+    "name": "动画类"
+   },
+   {
+    "code": "PLAN",
+    "name": "策划案类"
+   }
+  ],
+  "stages": [
+   {
+    "name": "赛区评审",
+    "kind": "PROVINCIAL",
+    "track": "PRINT"
+   },
+   {
+    "name": "全国总评审",
+    "kind": "FINAL",
+    "track": "PRINT"
+   },
+   {
+    "name": "赛区评审",
+    "kind": "PROVINCIAL",
+    "track": "VIDEO"
+   },
+   {
+    "name": "全国总评审",
+    "kind": "FINAL",
+    "track": "VIDEO"
+   },
+   {
+    "name": "赛区评审",
+    "kind": "PROVINCIAL",
+    "track": "ANIM"
+   },
+   {
+    "name": "全国总评审",
+    "kind": "FINAL",
+    "track": "ANIM"
+   },
+   {
+    "name": "赛区评审",
+    "kind": "PROVINCIAL",
+    "track": "PLAN"
+   },
+   {
+    "name": "全国总评审",
+    "kind": "FINAL",
+    "track": "PLAN"
+   }
+  ],
+  "events": [
+   {
+    "stage": "PROVINCIAL",
+    "track": "PRINT",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-05-10"
+   },
+   {
+    "stage": "PROVINCIAL",
+    "track": "PRINT",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-06-12"
+   }
+  ],
+  "seq": "31",
+  "csv": {
+   "最新届次": "第18届（2026）",
+   "报名开始时间": "2026-05-10（线上开放）",
+   "报名截止时间": "2026-06-12 16:00",
+   "校赛/省赛时间": "赛区报送全国2026-07-05前",
+   "全国赛/决赛时间": "全国总评审2026-06~08",
+   "结果公布/颁奖时间": "获奖结果2026-09",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "结果公布由“随总评审”更正为2026-09"
+  }
+ },
+ {
+  "code": "HUACAN",
+  "name": "两岸新锐设计竞赛·华灿奖",
+  "officialSite": "http://www.huacanjiang.com",
+  "sourceUrl": "http://www.huacanjiang.com/",
+  "tracks": [
+   {
+    "code": "VISUAL",
+    "name": "视觉传达"
+   },
+   {
+    "code": "DIGITAL",
+    "name": "数字媒体"
+   },
+   {
+    "code": "PRODUCT",
+    "name": "产品设计"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "VISUAL"
+   },
+   {
+    "name": "赛区赛",
+    "kind": "REGIONAL",
+    "track": "VISUAL"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "VISUAL"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "DIGITAL"
+   },
+   {
+    "name": "赛区赛",
+    "kind": "REGIONAL",
+    "track": "DIGITAL"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "DIGITAL"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "PRODUCT"
+   },
+   {
+    "name": "赛区赛",
+    "kind": "REGIONAL",
+    "track": "PRODUCT"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "PRODUCT"
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": "VISUAL",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-10-19"
+   },
+   {
+    "stage": "CAMPUS",
+    "track": "VISUAL",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-11-27"
+   }
+  ],
+  "seq": "35",
+  "csv": {
+   "最新届次": "2026华灿奖",
+   "报名开始时间": "2026-10-19（官网开放）",
+   "报名截止时间": "创意赛道2026-11-27 17:00；定向主题赛道2027-03-05 17:00",
+   "校赛/省赛时间": "校赛截止2026-12-29；赛区赛截止2027-01-29",
+   "全国赛/决赛时间": "总决赛2027-03~04",
+   "结果公布/颁奖时间": "颁奖2027-05",
+   "当前状态": "即将开始（10-19开放）",
+   "可信度": "高",
+   "备注": "官网2026-10-19才开放，10-11尚未开始"
+  }
+ }
+]

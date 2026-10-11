@@ -1,0 +1,401 @@
+[
+ {
+  "code": "CMC",
+  "name": "全国大学生数学竞赛",
+  "officialSite": "https://www.cmathc.org.cn",
+  "sourceUrl": "https://www.cmathc.org.cn/tzgg/545.html",
+  "tracks": [
+   {
+    "code": "MATH-A",
+    "name": "数学A类"
+   },
+   {
+    "code": "MATH-B",
+    "name": "数学B类"
+   },
+   {
+    "code": "NON-MATH",
+    "name": "非数学类"
+   },
+   {
+    "code": "ECON",
+    "name": "经管类"
+   }
+  ],
+  "stages": [
+   {
+    "name": "初赛(分区赛)",
+    "kind": "QUALIFIER",
+    "track": null
+   },
+   {
+    "name": "决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "QUALIFIER",
+    "track": null,
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-10-19"
+   }
+  ],
+  "seq": "4",
+  "csv": {
+   "最新届次": "第十八届（2026）",
+   "报名开始时间": "信息未公布（各赛区自行）",
+   "报名截止时间": "2026-10-19（各赛区不一）",
+   "校赛/省赛时间": "初赛（分区赛）2026-11-14",
+   "全国赛/决赛时间": "决赛预计2027-04（大连理工大学）",
+   "结果公布/颁奖时间": "初赛奖各赛区评定；决赛奖2027年",
+   "当前状态": "报名中",
+   "可信度": "高",
+   "备注": "初赛2026-11-14获多校通知三方印证"
+  }
+ },
+ {
+  "code": "CUPT",
+  "name": "中国大学生物理学术竞赛",
+  "officialSite": null,
+  "sourceUrl": "https://pt.nankai.edu.cn/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "区域赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-08-12"
+   }
+  ],
+  "seq": "5",
+  "csv": {
+   "最新届次": "第十七届（2026）",
+   "报名开始时间": "各校自定",
+   "报名截止时间": "各校自定",
+   "校赛/省赛时间": "区域赛2026-05~07",
+   "全国赛/决赛时间": "全国决赛2026-08-12~17（苏州大学）",
+   "结果公布/颁奖时间": "2026-08",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "决赛时间地点获多校证实"
+  }
+ },
+ {
+  "code": "ICPC",
+  "name": "ACM-ICPC 国际大学生程序设计竞赛",
+  "officialSite": null,
+  "sourceUrl": "https://icpc.global/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "网络预选赛",
+    "kind": "QUALIFIER",
+    "track": null
+   },
+   {
+    "name": "区域赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "EC Final",
+    "kind": "FINAL",
+    "track": null
+   },
+   {
+    "name": "World Finals",
+    "kind": "INTERNATIONAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "INTERNATIONAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2027-01-26"
+   }
+  ],
+  "seq": "6",
+  "csv": {
+   "最新届次": "第51届（2026—2027赛季）",
+   "报名开始时间": "以各区域赛通知为准（2026-09~10）",
+   "报名截止时间": "以各站通知为准",
+   "校赛/省赛时间": "亚洲区域赛2026-10-17~12-20（西安/成都/武汉/南京/沈阳/上海/南昌/香港等）",
+   "全国赛/决赛时间": "EC Final 2027-01-26~28（杭州）",
+   "结果公布/颁奖时间": "赛后公布",
+   "当前状态": "区域赛即将开赛",
+   "可信度": "高",
+   "备注": "各站日期证实；首站西安2026-10-17尚未开赛"
+  }
+ },
+ {
+  "code": "CUMCM",
+  "name": "全国大学生数学建模竞赛",
+  "officialSite": "http://www.mcm.edu.cn",
+  "sourceUrl": "http://www.mcm.edu.cn/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "报名",
+    "kind": "OTHER",
+    "track": null
+   },
+   {
+    "name": "竞赛",
+    "kind": "NATIONAL",
+    "track": null
+   },
+   {
+    "name": "评奖",
+    "kind": "OTHER",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "NATIONAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-09-10"
+   }
+  ],
+  "seq": "7",
+  "csv": {
+   "最新届次": "2026年（高教社杯）",
+   "报名开始时间": "各校自定",
+   "报名截止时间": "各校自定",
+   "校赛/省赛时间": "无省赛，校级选拔",
+   "全国赛/决赛时间": "竞赛2026-09-10 18:00~09-13 20:00",
+   "结果公布/颁奖时间": "赛区成绩2026-10起陆续公布；全国奖约2026-11",
+   "当前状态": "已结束（成绩陆续公布）",
+   "可信度": "中",
+   "备注": "成绩公布口径由“约11月”更正为“赛区10月起、全国奖约11月”"
+  }
+ },
+ {
+  "code": "MCM",
+  "name": "美国大学生数学建模竞赛",
+  "officialSite": null,
+  "sourceUrl": "https://www.comap.com/",
+  "tracks": [
+   {
+    "code": "MCM",
+    "name": "MCM"
+   },
+   {
+    "code": "ICM",
+    "name": "ICM"
+   }
+  ],
+  "stages": [
+   {
+    "name": "报名",
+    "kind": "OTHER",
+    "track": null
+   },
+   {
+    "name": "竞赛",
+    "kind": "NATIONAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "NATIONAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2027-01-28"
+   }
+  ],
+  "seq": "38",
+  "csv": {
+   "最新届次": "2027年赛季",
+   "报名开始时间": "2026年（COMAP已开放注册）",
+   "报名截止时间": "按COMAP规定（约赛前）",
+   "校赛/省赛时间": "—",
+   "全国赛/决赛时间": "2027-01-28~02-01",
+   "结果公布/颁奖时间": "赛后约2个月",
+   "当前状态": "报名中",
+   "可信度": "高",
+   "备注": "2026赛季已结束；2027赛季已开放注册"
+  }
+ },
+ {
+  "code": "ZPY",
+  "name": "全国周培源大学生力学竞赛",
+  "officialSite": "http://zpy.cstam.org.cn",
+  "sourceUrl": "http://zpy.cstam.org.cn/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "个人赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [],
+  "seq": "26",
+  "csv": {
+   "最新届次": "第十六届（2027）",
+   "报名开始时间": "信息未公布",
+   "报名截止时间": "信息未公布",
+   "校赛/省赛时间": "无省级赛（各省设考场）",
+   "全国赛/决赛时间": "个人赛单数年举办（2027，具体未公布）",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "信息未公布",
+   "可信度": "中",
+   "备注": "每两年一届、无省级赛；第十六届（2027）通知未发布，2026为空档年"
+  }
+ },
+ {
+  "code": "WLSYCX",
+  "name": "全国大学生物理实验竞赛",
+  "officialSite": "https://wlsycx.moocollege.com",
+  "sourceUrl": "https://wlsycx.moocollege.com/",
+  "tracks": [
+   {
+    "code": "TOPIC",
+    "name": "命题类"
+   },
+   {
+    "code": "FREE",
+    "name": "自选类"
+   },
+   {
+    "code": "LECTURE",
+    "name": "讲课类"
+   },
+   {
+    "code": "INTL",
+    "name": "国际赛道"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "TOPIC"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "TOPIC"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "FREE"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "FREE"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "LECTURE"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "LECTURE"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "INTL"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "INTL"
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": "TOPIC",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-04-30"
+   }
+  ],
+  "seq": "46",
+  "csv": {
+   "最新届次": "第十二届（2026）",
+   "报名开始时间": "各校自定（部分校3~4月校内报名）",
+   "报名截止时间": "各校自定（如哈工大校内截止2026-04-30）",
+   "校赛/省赛时间": "各校自定，预赛约2026-09初",
+   "全国赛/决赛时间": "决赛窗口2026-09~11",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "进行中",
+   "可信度": "中",
+   "备注": "决赛窗口更正为2026年9-11月；“报名5-15起/截止9-15”无官方统一依据"
+  }
+ },
+ {
+  "code": "IGEM",
+  "name": "国际基因工程机器大赛（iGEM）",
+  "officialSite": "https://igem.org",
+  "sourceUrl": "https://igem.org/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "注册",
+    "kind": "QUALIFIER",
+    "track": null
+   },
+   {
+    "name": "评审与提交",
+    "kind": "OTHER",
+    "track": null
+   },
+   {
+    "name": "Grand Jamboree",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "OTHER",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-11-13"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "RESULT",
+    "startAt": "2026-11-16"
+   }
+  ],
+  "seq": "39",
+  "csv": {
+   "最新届次": "2026赛季",
+   "报名开始时间": "Stage I 2026-01",
+   "报名截止时间": "Stage II 2026年内（约7月roster freeze）",
+   "校赛/省赛时间": "—",
+   "全国赛/决赛时间": "Grand Jamboree 2026-11-13~16（巴黎）",
+   "结果公布/颁奖时间": "2026-11-16",
+   "当前状态": "进行中",
+   "可信度": "高",
+   "备注": "Wiki冻结2026-10-21"
+  }
+ }
+]

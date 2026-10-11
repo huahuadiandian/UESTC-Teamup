@@ -1,0 +1,560 @@
+[
+ {
+  "code": "SMARTCAR",
+  "name": "全国大学生智能汽车竞赛",
+  "officialSite": "https://www.smartcar.zone",
+  "sourceUrl": "https://www.smartcar.zone/",
+  "tracks": [
+   {
+    "code": "SPEED",
+    "name": "竞速组"
+   },
+   {
+    "code": "CREATIVE",
+    "name": "创意组"
+   },
+   {
+    "code": "OUTDOOR",
+    "name": "室外组"
+   }
+  ],
+  "stages": [
+   {
+    "name": "分赛区赛",
+    "kind": "REGIONAL",
+    "track": "SPEED"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "SPEED"
+   },
+   {
+    "name": "分赛区赛",
+    "kind": "REGIONAL",
+    "track": "CREATIVE"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "CREATIVE"
+   },
+   {
+    "name": "分赛区赛",
+    "kind": "REGIONAL",
+    "track": "OUTDOOR"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "OUTDOOR"
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": "SPEED",
+    "nodeType": "CONTEST",
+    "startAt": "2026-08-21"
+   }
+  ],
+  "seq": "10",
+  "csv": {
+   "最新届次": "第二十一届（2026）",
+   "报名开始时间": "2026-03起（网络报名）",
+   "报名截止时间": "各分赛区自定",
+   "校赛/省赛时间": "分赛区赛2026-07~08",
+   "全国赛/决赛时间": "室内总决赛2026-08-21~23（安徽大学）；室外总决赛2026-12底",
+   "结果公布/颁奖时间": "室内2026-08；室外2026-12",
+   "当前状态": "进行中（室外备赛）",
+   "可信度": "高",
+   "备注": "室内总决赛日期、室外12月底均证实"
+  }
+ },
+ {
+  "code": "CURC",
+  "name": "全国大学生机器人大赛（CURC）",
+  "officialSite": "https://www.curc.cn",
+  "sourceUrl": "https://www.curc.cn/",
+  "tracks": [
+   {
+    "code": "ROBOCON",
+    "name": "ROBOCON"
+   },
+   {
+    "code": "ROBOTAC",
+    "name": "ROBOTAC"
+   },
+   {
+    "code": "ROBOMASTER",
+    "name": "RoboMaster"
+   }
+  ],
+  "stages": [
+   {
+    "name": "预选赛",
+    "kind": "QUALIFIER",
+    "track": "ROBOCON"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "ROBOCON"
+   },
+   {
+    "name": "预选赛",
+    "kind": "QUALIFIER",
+    "track": "ROBOTAC"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "ROBOTAC"
+   },
+   {
+    "name": "预选赛",
+    "kind": "QUALIFIER",
+    "track": "ROBOMASTER"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "ROBOMASTER"
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": "ROBOCON",
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-09"
+   }
+  ],
+  "seq": "11",
+  "csv": {
+   "最新届次": "第二十五届（2026）",
+   "报名开始时间": "2025-09起",
+   "报名截止时间": "各赛项自定",
+   "校赛/省赛时间": "预选赛/小组赛2026年上半年",
+   "全国赛/决赛时间": "ROBOCON全国赛2026-07-09~17（南京理工大学江阴校区）",
+   "结果公布/颁奖时间": "2026-07",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "时间地点证实；含ROBOCON、ROBOTAC等赛项"
+  }
+ },
+ {
+  "code": "CRC",
+  "name": "中国机器人大赛暨RoboCup机器人世界杯中国赛",
+  "officialSite": "https://www.caa.org.cn",
+  "sourceUrl": "https://www.caa.org.cn/",
+  "tracks": [
+   {
+    "code": "ROBOCUP",
+    "name": "RoboCup赛区"
+   },
+   {
+    "code": "ROBOT",
+    "name": "中国机器人大赛赛区"
+   }
+  ],
+  "stages": [
+   {
+    "name": "赛区赛",
+    "kind": "REGIONAL",
+    "track": "ROBOCUP"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "ROBOCUP"
+   },
+   {
+    "name": "赛区赛",
+    "kind": "REGIONAL",
+    "track": "ROBOT"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "ROBOT"
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": "ROBOCUP",
+    "nodeType": "CONTEST",
+    "startAt": "2026-10-16"
+   }
+  ],
+  "seq": "25",
+  "csv": {
+   "最新届次": "2026年",
+   "报名开始时间": "信息未公布",
+   "报名截止时间": "信息未公布",
+   "校赛/省赛时间": "RoboCup中国赛区2026-05-02~04",
+   "全国赛/决赛时间": "中国机器人大赛2026-10-16~18（杭州）",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "即将举办",
+   "可信度": "高",
+   "备注": "中国机器人大赛赛区10-16~18杭州；RoboCup赛区已于5月举办"
+  }
+ },
+ {
+  "code": "CAAIROBOT",
+  "name": "中国机器人及人工智能大赛",
+  "officialSite": "https://www.caairobot.com",
+  "sourceUrl": "https://www.caairobot.com/",
+  "tracks": [
+   {
+    "code": "ROBOT",
+    "name": "机器人赛项"
+   },
+   {
+    "code": "AI",
+    "name": "人工智能赛项"
+   },
+   {
+    "code": "INNOV",
+    "name": "创新赛项"
+   }
+  ],
+  "stages": [
+   {
+    "name": "省级选拔赛",
+    "kind": "PROVINCIAL",
+    "track": "ROBOT"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "ROBOT"
+   },
+   {
+    "name": "省级选拔赛",
+    "kind": "PROVINCIAL",
+    "track": "AI"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "AI"
+   },
+   {
+    "name": "省级选拔赛",
+    "kind": "PROVINCIAL",
+    "track": "INNOV"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "INNOV"
+   }
+  ],
+  "events": [
+   {
+    "stage": "PROVINCIAL",
+    "track": "ROBOT",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-03-01"
+   }
+  ],
+  "seq": "40",
+  "csv": {
+   "最新届次": "第二十八届（2026）",
+   "报名开始时间": "2026-03-01",
+   "报名截止时间": "各省赛区自定",
+   "校赛/省赛时间": "省级选拔赛2026-06-07前",
+   "全国赛/决赛时间": "2026-07中下旬",
+   "结果公布/颁奖时间": "随决赛",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "校赛前30%进省赛"
+  }
+ },
+ {
+  "code": "RAICOM",
+  "name": "睿抗机器人开发者大赛（RAICOM）",
+  "officialSite": "https://www.raicom.com.cn",
+  "sourceUrl": "https://www.raicom.com.cn/",
+  "tracks": [
+   {
+    "code": "RAICOM-CAI",
+    "name": "CAI 赛道"
+   },
+   {
+    "code": "RAICOM-ROBOT",
+    "name": "机器人赛道"
+   },
+   {
+    "code": "RAICOM-INNOV",
+    "name": "创新赛道"
+   }
+  ],
+  "stages": [
+   {
+    "name": "区域赛",
+    "kind": "REGIONAL",
+    "track": "RAICOM-CAI"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "RAICOM-CAI"
+   },
+   {
+    "name": "区域赛",
+    "kind": "REGIONAL",
+    "track": "RAICOM-ROBOT"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "RAICOM-ROBOT"
+   },
+   {
+    "name": "区域赛",
+    "kind": "REGIONAL",
+    "track": "RAICOM-INNOV"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "RAICOM-INNOV"
+   }
+  ],
+  "events": [
+   {
+    "stage": "REGIONAL",
+    "track": "RAICOM-CAI",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-04-01"
+   },
+   {
+    "stage": "REGIONAL",
+    "track": "RAICOM-CAI",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-07-31"
+   },
+   {
+    "stage": "FINAL",
+    "track": "RAICOM-CAI",
+    "nodeType": "RESULT",
+    "startAt": "2026-08-18"
+   }
+  ],
+  "seq": "47",
+  "csv": {
+   "最新届次": "2026赛季",
+   "报名开始时间": "2026-04-01",
+   "报名截止时间": "2026-07-31",
+   "校赛/省赛时间": "省级/区域赛2026-04~09（广东省赛6-27~7-15）",
+   "全国赛/决赛时间": "全国总决赛2026-07~10（杭州7-15~17、深圳8-15~18）",
+   "结果公布/颁奖时间": "2026-08-18（总决赛落幕）",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "报名截止更正为2026-07-31、开始更正为2026-04-01"
+  }
+ },
+ {
+  "code": "ROBOTCONTEST",
+  "name": "中国高校智能机器人创意大赛",
+  "officialSite": "https://www.robotcontest.cn",
+  "sourceUrl": "https://www.robotcontest.cn/",
+  "tracks": [
+   {
+    "code": "CREATIVE",
+    "name": "创意类"
+   },
+   {
+    "code": "COMPETE",
+    "name": "竞技类"
+   }
+  ],
+  "stages": [
+   {
+    "name": "大区赛",
+    "kind": "REGIONAL",
+    "track": "CREATIVE"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "CREATIVE"
+   },
+   {
+    "name": "大区赛",
+    "kind": "REGIONAL",
+    "track": "COMPETE"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "COMPETE"
+   }
+  ],
+  "events": [
+   {
+    "stage": "REGIONAL",
+    "track": "CREATIVE",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-04-01"
+   },
+   {
+    "stage": "REGIONAL",
+    "track": "CREATIVE",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-05-08"
+   },
+   {
+    "stage": "FINAL",
+    "track": "CREATIVE",
+    "nodeType": "CONTEST",
+    "startAt": "2026-08-17"
+   }
+  ],
+  "seq": "51",
+  "csv": {
+   "最新届次": "第九届（2026）",
+   "报名开始时间": "2026-04-01（约）",
+   "报名截止时间": "2026-05-08（部分通知2026-05-10）",
+   "校赛/省赛时间": "大区赛/省赛决赛约2026-05-30~31",
+   "全国赛/决赛时间": "全国总决赛2026-08-17~19（宁波）",
+   "结果公布/颁奖时间": "2026-08中下旬",
+   "当前状态": "已结束",
+   "可信度": "中",
+   "备注": "全国总决赛8-17~19（8-19宁波落幕）证实；大区赛日期待核"
+  }
+ },
+ {
+  "code": "MEICC",
+  "name": "中国大学生机械工程创新创意大赛",
+  "officialSite": "https://meicc.cmes.org",
+  "sourceUrl": "https://meicc.cmes.org/",
+  "tracks": [
+   {
+    "code": "IMIC",
+    "name": "智能制造赛"
+   },
+   {
+    "code": "MAT",
+    "name": "材料成型赛"
+   },
+   {
+    "code": "DESIGN",
+    "name": "创新设计赛"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "IMIC"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "IMIC"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "IMIC"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "MAT"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "MAT"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "MAT"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "DESIGN"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "DESIGN"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "DESIGN"
+   }
+  ],
+  "events": [],
+  "seq": "33",
+  "csv": {
+   "最新届次": "2026年",
+   "报名开始时间": "2026-03起",
+   "报名截止时间": "各赛项自定",
+   "校赛/省赛时间": "省级/区域选拔赛2026年",
+   "全国赛/决赛时间": "各赛项全国总决赛2026-11前",
+   "结果公布/颁奖时间": "随赛项公布",
+   "当前状态": "进行中",
+   "可信度": "中",
+   "备注": "3赛道19赛项，时间各异"
+  }
+ },
+ {
+  "code": "JXDS",
+  "name": "全国大学生金相技能大赛",
+  "officialSite": "http://www.jxds.tech",
+  "sourceUrl": "http://www.jxds.tech/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "校内初赛",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "分赛区复赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-04-05"
+   },
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-25"
+   }
+  ],
+  "seq": "34",
+  "csv": {
+   "最新届次": "第十五届（2026）",
+   "报名开始时间": "2026-03（校内）",
+   "报名截止时间": "2026-04-05",
+   "校赛/省赛时间": "初赛2026-05-05前",
+   "全国赛/决赛时间": "2026-07-25~29（武汉理工大学）",
+   "结果公布/颁奖时间": "随决赛",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "报名截止由“04-06”更正为04-05；决赛由“7-25~30”更正为7-25~29"
+  }
+ }
+]

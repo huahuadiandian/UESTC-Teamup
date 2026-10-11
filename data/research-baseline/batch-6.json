@@ -1,0 +1,666 @@
+[
+ {
+  "code": "JNJP",
+  "name": "全国大学生节能减排社会实践与科技竞赛",
+  "officialSite": "http://www.jienengjianpai.org",
+  "sourceUrl": "http://www.jienengjianpai.org/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-04-12"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-31"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "RESULT",
+    "startAt": "2026-08-02"
+   }
+  ],
+  "seq": "16",
+  "csv": {
+   "最新届次": "第十九届（“大工能动杯”）",
+   "报名开始时间": "信息未公布",
+   "报名截止时间": "2026-04-12（作品提交2026-05-20）",
+   "校赛/省赛时间": "校/省赛由各校自组织",
+   "全国赛/决赛时间": "2026-07-31~08-02（大连理工大学）",
+   "结果公布/颁奖时间": "2026-08-02闭幕式现场宣布获奖名单",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "国赛由“08-01~02”更正为07-31~08-02；获奖8-02现场宣布"
+  }
+ },
+ {
+  "code": "GCXL",
+  "name": "中国大学生工程实践与创新能力大赛",
+  "officialSite": "http://www.gcxl.edu.cn",
+  "sourceUrl": "http://www.gcxl.edu.cn/",
+  "tracks": [
+   {
+    "code": "BASIC",
+    "name": "工程基础赛项"
+   },
+   {
+    "code": "SMART",
+    "name": "智能+赛项"
+   },
+   {
+    "code": "VIRTUAL",
+    "name": "虚拟仿真赛项"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "BASIC"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "BASIC"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "BASIC"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "SMART"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "SMART"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "SMART"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "VIRTUAL"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "VIRTUAL"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "VIRTUAL"
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": "BASIC",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-09-08"
+   },
+   {
+    "stage": "CAMPUS",
+    "track": "BASIC",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-09-19"
+   }
+  ],
+  "seq": "17",
+  "csv": {
+   "最新届次": "第十届（2026年选拔，国赛2027）",
+   "报名开始时间": "信息未公布（校赛通知2026-09-08）",
+   "报名截止时间": "校赛2026-09-19",
+   "校赛/省赛时间": "省赛（四川）2026-11-13~15（西南科技大学）",
+   "全国赛/决赛时间": "国赛2027年6月前后（待定）",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "进行中",
+   "可信度": "高",
+   "备注": "两年一届；四川赛区省赛2026-11-13~15；国赛2027年6月前后"
+  }
+ },
+ {
+  "code": "CIMC",
+  "name": "“西门子杯”中国智能制造挑战赛",
+  "officialSite": null,
+  "sourceUrl": "http://www.siemenscup-cimc.org.cn/",
+  "tracks": [
+   {
+    "code": "DIGITAL",
+    "name": "数字化双胞胎"
+   },
+   {
+    "code": "LOGIC",
+    "name": "逻辑控制"
+   },
+   {
+    "code": "PROCESS",
+    "name": "流程行业"
+   }
+  ],
+  "stages": [
+   {
+    "name": "分赛区初赛",
+    "kind": "REGIONAL",
+    "track": "DIGITAL"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "DIGITAL"
+   },
+   {
+    "name": "分赛区初赛",
+    "kind": "REGIONAL",
+    "track": "LOGIC"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "LOGIC"
+   },
+   {
+    "name": "分赛区初赛",
+    "kind": "REGIONAL",
+    "track": "PROCESS"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "PROCESS"
+   }
+  ],
+  "events": [
+   {
+    "stage": "REGIONAL",
+    "track": "DIGITAL",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-03-01"
+   },
+   {
+    "stage": "REGIONAL",
+    "track": "DIGITAL",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-05-31"
+   },
+   {
+    "stage": "REGIONAL",
+    "track": "DIGITAL",
+    "nodeType": "CONTEST",
+    "startAt": "2026-08-14"
+   }
+  ],
+  "seq": "19",
+  "csv": {
+   "最新届次": "第二十届",
+   "报名开始时间": "2026-03-01",
+   "报名截止时间": "2026-05-31",
+   "校赛/省赛时间": "分赛区初赛2026-07中旬（部分07-19~22）",
+   "全国赛/决赛时间": "全国总决赛2026-08-14~18（北京化工大学）",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "国赛2026-08-14~18在北京化工大学"
+  }
+ },
+ {
+  "code": "CHENGTU",
+  "name": "全国大学生先进成图技术与产品信息建模创新大赛",
+  "officialSite": "http://www.chengtudasai.com",
+  "sourceUrl": "http://www.chengtudasai.com/",
+  "tracks": [
+   {
+    "code": "MECH",
+    "name": "机械类"
+   },
+   {
+    "code": "ARCH",
+    "name": "建筑类"
+   },
+   {
+    "code": "ROAD",
+    "name": "道桥类"
+   },
+   {
+    "code": "WATER",
+    "name": "水利类"
+   }
+  ],
+  "stages": [
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "MECH"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "MECH"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "ARCH"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "ARCH"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "ROAD"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "ROAD"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "WATER"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "WATER"
+   }
+  ],
+  "events": [
+   {
+    "stage": "PROVINCIAL",
+    "track": "MECH",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-04-01"
+   },
+   {
+    "stage": "PROVINCIAL",
+    "track": "MECH",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-04-25"
+   },
+   {
+    "stage": "FINAL",
+    "track": "MECH",
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-21"
+   },
+   {
+    "stage": "FINAL",
+    "track": "MECH",
+    "nodeType": "RESULT",
+    "startAt": "2026-07-23"
+   }
+  ],
+  "seq": "20",
+  "csv": {
+   "最新届次": "第十九届（“高教杯”）",
+   "报名开始时间": "省赛报名2026-04-01",
+   "报名截止时间": "省赛2026-04-25；国赛报名2026-06-25",
+   "校赛/省赛时间": "省赛2026-05-29~30",
+   "全国赛/决赛时间": "国赛2026-07-21~23（长江大学主赛场）",
+   "结果公布/颁奖时间": "2026-07-23",
+   "当前状态": "已结束",
+   "可信度": "中",
+   "备注": "国赛由第一轮通知的07-31~08-03更正为07-21~23（长江大学）"
+  }
+ },
+ {
+  "code": "STRUCT",
+  "name": "全国大学生结构设计竞赛",
+  "officialSite": "https://www.structurecontest.com",
+  "sourceUrl": "https://www.structurecontest.com/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "分区赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-10-14"
+   }
+  ],
+  "seq": "36",
+  "csv": {
+   "最新届次": "第十九届（2026）",
+   "报名开始时间": "网上报名（各省通知）",
+   "报名截止时间": "各省自定",
+   "校赛/省赛时间": "分区赛2026-04~07",
+   "全国赛/决赛时间": "2026-10-14~18（内蒙古科技大学）",
+   "结果公布/颁奖时间": "随总决赛",
+   "当前状态": "进行中",
+   "可信度": "高",
+   "备注": "2026-08-05前各省报送名单"
+  }
+ },
+ {
+  "code": "UMIC",
+  "name": "全国大学生机械创新设计大赛",
+  "officialSite": "https://umic.moocollege.com",
+  "sourceUrl": "https://umic.moocollege.com/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": null
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-17"
+   }
+  ],
+  "seq": "9",
+  "csv": {
+   "最新届次": "第十二届（2026）",
+   "报名开始时间": "2025-10起",
+   "报名截止时间": "各校自定",
+   "校赛/省赛时间": "预赛/省赛2026年上半年",
+   "全国赛/决赛时间": "全国决赛2026-07-17~20（哈尔滨工业大学）",
+   "结果公布/颁奖时间": "2026-07",
+   "当前状态": "已结束",
+   "可信度": "中",
+   "备注": "官方赛事网为7-17~20，哈工大新闻称7-16~19，存分歧"
+  }
+ },
+ {
+  "code": "MEDU",
+  "name": "中国大学生医学技术技能大赛",
+  "officialSite": "https://medu.bjmu.edu.cn",
+  "sourceUrl": "https://medu.bjmu.edu.cn/",
+  "tracks": [
+   {
+    "code": "CLINICAL",
+    "name": "临床医学"
+   },
+   {
+    "code": "NURSING",
+    "name": "护理学"
+   },
+   {
+    "code": "PHARMACY",
+    "name": "药学"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "CLINICAL"
+   },
+   {
+    "name": "片区赛",
+    "kind": "REGIONAL",
+    "track": "CLINICAL"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "CLINICAL"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "NURSING"
+   },
+   {
+    "name": "片区赛",
+    "kind": "REGIONAL",
+    "track": "NURSING"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "NURSING"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "PHARMACY"
+   },
+   {
+    "name": "片区赛",
+    "kind": "REGIONAL",
+    "track": "PHARMACY"
+   },
+   {
+    "name": "全国赛",
+    "kind": "FINAL",
+    "track": "PHARMACY"
+   }
+  ],
+  "events": [],
+  "seq": "32",
+  "csv": {
+   "最新届次": "2026年（届次未明确公布）",
+   "报名开始时间": "各校自定",
+   "报名截止时间": "各校自定",
+   "校赛/省赛时间": "校赛2026-04~06；片区区域赛时间未公布",
+   "全国赛/决赛时间": "信息未公布",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "进行中",
+   "可信度": "低",
+   "备注": "仅见校级选拔，无公开全国赛通知；建议按校级认定"
+  }
+ },
+ {
+  "code": "JCYXDS",
+  "name": "全国大学生医学创新大赛暨“一带一路”国际竞赛",
+  "officialSite": null,
+  "sourceUrl": "https://www.jcyxds.com/",
+  "tracks": [
+   {
+    "code": "BASIC",
+    "name": "基础医学"
+   },
+   {
+    "code": "CLINICAL",
+    "name": "临床医学"
+   },
+   {
+    "code": "PHARMACY",
+    "name": "药学"
+   },
+   {
+    "code": "PUBLIC",
+    "name": "公共卫生"
+   },
+   {
+    "code": "NURSING",
+    "name": "护理学"
+   },
+   {
+    "code": "TCM",
+    "name": "中医学"
+   },
+   {
+    "code": "STOMATOLOGY",
+    "name": "口腔医学"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "BASIC"
+   },
+   {
+    "name": "复赛/分区赛",
+    "kind": "REGIONAL",
+    "track": "BASIC"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "BASIC"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "CLINICAL"
+   },
+   {
+    "name": "复赛/分区赛",
+    "kind": "REGIONAL",
+    "track": "CLINICAL"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "CLINICAL"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "PHARMACY"
+   },
+   {
+    "name": "复赛/分区赛",
+    "kind": "REGIONAL",
+    "track": "PHARMACY"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "PHARMACY"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "PUBLIC"
+   },
+   {
+    "name": "复赛/分区赛",
+    "kind": "REGIONAL",
+    "track": "PUBLIC"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "PUBLIC"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "NURSING"
+   },
+   {
+    "name": "复赛/分区赛",
+    "kind": "REGIONAL",
+    "track": "NURSING"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "NURSING"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "TCM"
+   },
+   {
+    "name": "复赛/分区赛",
+    "kind": "REGIONAL",
+    "track": "TCM"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "TCM"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "STOMATOLOGY"
+   },
+   {
+    "name": "复赛/分区赛",
+    "kind": "REGIONAL",
+    "track": "STOMATOLOGY"
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": "STOMATOLOGY"
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": "BASIC",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-04-15"
+   },
+   {
+    "stage": "FINAL",
+    "track": "BASIC",
+    "nodeType": "RESULT",
+    "startAt": "2026-08-14"
+   }
+  ],
+  "seq": "56",
+  "csv": {
+   "最新届次": "第十二届（2026）",
+   "报名开始时间": "2026-01（通知1~2月）",
+   "报名截止时间": "2026-04-15",
+   "校赛/省赛时间": "校赛2026-04-30前；复赛/区赛2026-05~07",
+   "全国赛/决赛时间": "全国总决赛2026-08中下旬（复旦大学）",
+   "结果公布/颁奖时间": "2026-08-14（高职高专赛道名单）/8月中下旬",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "报名截止由“04-14”更正为04-15；总决赛承办校为复旦大学"
+  }
+ }
+]

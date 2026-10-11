@@ -1,0 +1,442 @@
+[
+ {
+  "code": "CICF",
+  "officialUrl": "https://www.cicfbj.cn/",
+  "seasonStatus": "第十八届已于2026-07-13至20在北京举办并闭幕；第十九届信息未公布",
+  "structure": {
+   "tracks": [
+    {
+     "code": "QUNYING",
+     "name": "群英赛",
+     "description": "面向一般合唱团的团组评测体系，按组别评A/B/C/D级（各等级不设比例）"
+    },
+    {
+     "code": "JINGYING",
+     "name": "菁英赛",
+     "description": "竞赛性赛道，仅面向专业艺术院校及高校高水平专业合唱团（如南京艺术学院获本届菁英赛金奖）"
+    }
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {
+      "name": "报名",
+      "kind": "OTHER"
+     },
+     {
+      "name": "参演/合唱评测（北京）",
+      "kind": "FINAL"
+     }
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "基线的A/B/C/D四个『赛道』实为团组评测的荣誉等级评定而非赛道；第十八届创新搭建『群英赛+菁英赛』双轨竞赛体系，并按年龄分童声、少年、青年学生、成人等组别，故修正"
+  },
+  "events": [
+   {
+    "nodeType": "SIGNUP_START",
+    "startAt": "2025-11-20",
+    "endAt": null,
+    "label": "第十八届官宣并同步开启报名（官网新闻《官宣+报名|第十八届中国国际合唱节启幕》发布日；基线载2025-10-31与官网不符，已修正）",
+    "scope": "全球",
+    "source": "https://www.cicfbj.cn/"
+   },
+   {
+    "nodeType": "SIGNUP_END",
+    "startAt": null,
+    "endAt": "2026-04-19",
+    "label": "团组评测活动报名截止（活动通知：即日起至2026年4月19日截止）",
+    "scope": "全球",
+    "source": "https://www.cicfbj.cn/"
+   },
+   {
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-13",
+    "endAt": "2026-07-20",
+    "label": "第十八届中国国际合唱节（北京，国家大剧院开幕；31个国家和地区306支合唱团、约15000人参演，七大板块200余场活动）",
+    "scope": "国际",
+    "source": "https://www.cicfbj.cn/"
+   },
+   {
+    "nodeType": "RESULT",
+    "startAt": "2026-07-20",
+    "endAt": null,
+    "label": "闭幕（评测等级与菁英赛奖项在节期内产生）",
+    "scope": "国际",
+    "source": "https://www.cicfbj.cn/"
+   }
+  ],
+  "sources": [
+   "https://www.cicfbj.cn/"
+  ],
+  "confidence": "高",
+  "notes": "官网cicfbj.cn核实有效（含赛事报名入口、菁英赛申请资格表、报名指引）。《第十八届中国国际合唱节活动通知》载团组评测报名至2026-04-19截止（通知全文见Scribd收录件，未获稳定链接，故事件来源统一引官网）。基线报名开始2025-10-31已修正为官网新闻发布日2025-11-20。"
+ },
+ {
+  "code": "WCDC",
+  "officialUrl": null,
+  "seasonStatus": "2025/2026最新届次未公布；历史赛制为海内外赛区选拔赛+全球总决赛",
+  "structure": {
+   "tracks": [],
+   "stagesByTrack": {
+    "shared": [
+     {
+      "name": "赛区选拔赛",
+      "kind": "REGIONAL"
+     },
+     {
+      "name": "全球总决赛",
+      "kind": "FINAL"
+     }
+    ]
+   },
+   "structureCorrected": false,
+   "structureNote": "一致：历届设海内外赛区选拔（如澳门赛区选拔赛）+全球总决赛；最新届次与时间未公布"
+  },
+  "events": [],
+  "sources": [
+   "https://baike.baidu.com/item/世界华语辩论锦标赛",
+   "https://www.must.edu.mo"
+  ],
+  "confidence": "低",
+  "notes": "多轮检索未发现2025/2026新一届的官方信息（官网/微信/知乎均无可靠收录）。易混淆项提示：2025-07澳科大『年度总冠军』报道实为2025华语辩论世界杯（央视2025-07-12），并非本赛事；2026-04夏惟桐出席武汉『法理争鸣』版权辩论赛系受邀评论。发起人夏惟桐（华语辩论网站长、组委会执行主席）；历届报名须知多经知乎/微信公众号发布，无独立官网；第十届总决赛四强曾于2022-02产生。"
+ },
+ {
+  "code": "WCDB",
+  "officialUrl": null,
+  "seasonStatus": "2026届已结束：总决赛2026-07-13至19在北京石景山首钢园电竞中心举行，中国人民大学夺冠",
+  "structure": {
+   "tracks": [],
+   "stagesByTrack": {
+    "shared": [
+     {
+      "name": "赛区选拔赛",
+      "kind": "REGIONAL"
+     },
+     {
+      "name": "总决赛",
+      "kind": "FINAL"
+     }
+    ]
+   },
+   "structureCorrected": false,
+   "structureNote": "一致：2026年24支队伍经全球15个国家和地区赛区选拔晋级总决赛（7天赛期39场，从全球近千支高校代表队中产生，海外预选赛区扩容）；另设名校邀请赛（三亚站，2026-09下旬，中国政法大学夺冠）为系列独立活动，不计入主赛段"
+  },
+  "events": [
+   {
+    "nodeType": "OTHER",
+    "startAt": "2026-04-02",
+    "endAt": null,
+    "label": "总决赛新闻发布会暨抽签仪式（北京石景山，主题『百炼铸新声』）",
+    "scope": "全国",
+    "source": "https://view.inews.qq.com/20260403A04Q2M00"
+   },
+   {
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-13",
+    "endAt": "2026-07-19",
+    "label": "总决赛（北京石景山首钢园电竞中心，北大/清华/人大/哈佛/剑桥等24所海内外名校，39场比赛）",
+    "scope": "国际",
+    "source": "https://www.bjsjs.gov.cn/sjsdt/t20260713_763189_sjs"
+   },
+   {
+    "nodeType": "RESULT",
+    "startAt": "2026-07-19",
+    "endAt": null,
+    "label": "总决赛收官：中国人民大学夺冠，澳门大学亚军，莫纳什大学、华中师范大学为四强",
+    "scope": "国际",
+    "source": "https://baike.baidu.com/item/2026华语辩论世界杯"
+   }
+  ],
+  "sources": [
+   "https://www.bjsjs.gov.cn/sjsdt/t20260713_763189_sjs",
+   "https://view.inews.qq.com/20260403A04Q2M00",
+   "https://baike.baidu.com/item/2026华语辩论世界杯"
+  ],
+  "confidence": "高",
+  "notes": "报名与分区赛具体时间未公布（官方渠道为B站『华语辩论世界杯』账号及微信公众号，无独立官网）。2025届冠军为澳门科技大学（央视2025-07-12报道，完整URL未获）。基线总决赛日期与冠军信息经核实无误。"
+ },
+ {
+  "code": "QBIANHUI",
+  "officialUrl": null,
+  "seasonStatus": "最新届次未公布；可查首届2019年（重庆大学）及2020年全辩会·网络辩论冠军赛",
+  "structure": {
+   "tracks": [],
+   "stagesByTrack": {
+    "shared": [
+     {
+      "name": "小组赛/淘汰赛",
+      "kind": "FINAL"
+     }
+    ]
+   },
+   "structureCorrected": false,
+   "structureNote": "与基线一致；该赛事为邀请制淘汰赛制，无公开分层赛段信息"
+  },
+  "events": [],
+  "sources": [
+   "https://www.bianlunba.cn",
+   "https://www.bilibili.com"
+  ],
+  "confidence": "低",
+  "notes": "本轮再检索仍无2025/2026届次信息。全辩会为当代教育集团旗下思辨教育品牌；2020-08曾办『全辩会·网络辩论冠军赛』（初赛8-15开赛）；另有2019-12『当代智汇』国际高校群英辩论赛杭州站。注意与『新国辩』（国际华语辩论邀请赛，2025-01办第十二届）区分。bianlunba.cn为2020网络冠军赛信息页（域名来自搜索结果）。"
+ },
+ {
+  "code": "WUDT",
+  "officialUrl": null,
+  "seasonStatus": "2026赛季信息未公布；2025赛季（星辰杯·世界大学生辩论巡回赛）已结束",
+  "structure": {
+   "tracks": [],
+   "stagesByTrack": {
+    "shared": [
+     {
+      "name": "赛区赛",
+      "kind": "REGIONAL"
+     },
+     {
+      "name": "总决赛",
+      "kind": "FINAL"
+     }
+    ]
+   },
+   "structureCorrected": false,
+   "structureNote": "与基线一致（赛区赛→总决赛）；但基线sourceUrl debatetimer.cn经抓取核实为『辩之竹』辩论计时工具站（仅托管各赛事赛程主页），并非赛事官网，officialUrl修正为null"
+  },
+  "events": [],
+  "sources": [
+   "https://debatetimer.cn",
+   "http://news.pku.edu.cn"
+  ],
+  "confidence": "低",
+  "notes": "2025年设河南、东北等赛区（debatetimer.cn有『2025星辰杯世界大学生辩论巡回赛·河南赛区』赛事主页）；品牌沿革：前身为『晨星杯』（北大深研院2020-12报道获第二届晨星杯冠军）；另注意与高校科幻平台2023年创办的科幻主题『星辰杯』辩论赛同名易混。2025赛季基线日期（分区赛上半年、总决赛10月）本轮未能复核；官方报名渠道（微信公众号）未获可靠链接，2026信息未公布。"
+ },
+ {
+  "code": "XFXJXF",
+  "officialUrl": "https://qspfw.moe.gov.cn/",
+  "seasonStatus": "第十一届进行中：微课比赛全国总决赛7月底已在哈尔滨结束，法治素养能力大赛全国总决赛11月举行，12月上旬国家宪法日颁奖",
+  "structure": {
+   "tracks": [
+    {
+     "code": "LITERACY",
+     "name": "法治素养能力大赛",
+     "description": "面向大中小学生，设小学、初中、高中（含中职）、本专科高校法学专业、本专科高校非法学专业5个组别"
+    },
+    {
+     "code": "MICRO",
+     "name": "微课比赛",
+     "description": "全称『法治课教师与法治副校长微课比赛』，分法治课教师、法治副校长两赛道，设小学、初中、高中3个组别"
+    }
+   ],
+   "stagesByTrack": {
+    "LITERACY": [
+     {
+      "name": "省级选拔/网络风采展示",
+      "kind": "PROVINCIAL"
+     },
+     {
+      "name": "全国总决赛",
+      "kind": "FINAL"
+     }
+    ],
+    "MICRO": [
+     {
+      "name": "省级选拔推荐",
+      "kind": "PROVINCIAL"
+     },
+     {
+      "name": "全国总决赛",
+      "kind": "FINAL"
+     }
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "赛项划分与基线一致（法治素养+微课，均为省级选拔→全国总决赛）；补充修正：本届由教育部、最高法、最高检、公安部、司法部五部门办公厅联合部署（教政法厅函〔2026〕2号）；法治素养为5组别、微课分两赛道×3学段；另有『我与法治』故事征集、宪法主题歌曲传唱、宪法晨读等非竞赛子项"
+  },
+  "events": [
+   {
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-07-01",
+    "endAt": null,
+    "label": "普法网『网络风采展示』专栏报名/作品上传开始（日期为基线前期核实数据，本轮未检索到普法网原始公告链接；来源仅证实专栏机制：自主报名、胜出者直接晋级法治素养全国总决赛）",
+    "scope": "全国",
+    "source": "https://edu.sh.gov.cn/xxgk2_zdgz_jyfz_02/20260703/8fd0d1604f2e4bbc9c0714546f75cf64.html"
+   },
+   {
+    "nodeType": "SIGNUP_END",
+    "startAt": null,
+    "endAt": "2026-10-10",
+    "label": "网络风采展示作品上传截止（日期为基线前期核实数据，同上需以普法网网站公告复核）",
+    "scope": "全国",
+    "source": "https://edu.sh.gov.cn/xxgk2_zdgz_jyfz_02/20260703/8fd0d1604f2e4bbc9c0714546f75cf64.html"
+   },
+   {
+    "nodeType": "CONTEST",
+    "startAt": "2026-07-28",
+    "endAt": "2026-07-31",
+    "label": "微课比赛全国总决赛（黑龙江大学·哈尔滨；31省区市+新疆兵团+香港特别行政区194名选手）",
+    "scope": "全国",
+    "source": "https://jyt.hlj.gov.cn"
+   },
+   {
+    "nodeType": "CONTEST",
+    "startAt": "2026-11",
+    "endAt": null,
+    "label": "法治素养能力大赛全国总决赛（教育部通知载11月开展，具体日期未公布；基线误将7-28挂为法治素养决赛已改正）",
+    "scope": "全国",
+    "source": "http://www.moe.gov.cn/srcsite/A02/s5913/s5914/202606/t20260612_1440516.html"
+   },
+   {
+    "nodeType": "RESULT",
+    "startAt": "2026-12",
+    "endAt": null,
+    "label": "国家宪法日『宪法晨读』暨全国总决赛颁奖仪式（12月上旬，第十三个国家宪法日）",
+    "scope": "全国",
+    "source": "http://www.moe.gov.cn/srcsite/A02/s5913/s5914/202606/t20260612_1440516.html"
+   }
+  ],
+  "sources": [
+   "http://www.moe.gov.cn/srcsite/A02/s5913/s5914/202606/t20260612_1440516.html",
+   "https://edu.sh.gov.cn/xxgk2_zdgz_jyfz_02/20260703/8fd0d1604f2e4bbc9c0714546f75cf64.html",
+   "https://jyt.hlj.gov.cn"
+  ],
+  "confidence": "高",
+  "notes": "教政法厅函〔2026〕2号（2026-06-16公布，五部门联发）：活动时间2026年5月至12月，活动平台为教育部全国青少年普法网（qspfw.moe.gov.cn，后续通知/新闻/公示经其发布）；全国总决赛选手由省级教育行政部门组织地方比赛选拔并公示后推荐，部属高校按所在地参加省级比赛。省级选拔各省9月底前后完成（如河南省级决赛2026-10-17~18；湖南/陕西参赛名单公示9-20~25）。微课总决赛通知原载『8月』，实际2026-07-28~31在黑龙江大学举行。基线网络风采展示起止（07-01/10-10）本轮未能从原始公告复核，建议以普法网公告为准。"
+ },
+ {
+  "code": "WLWHJ",
+  "officialUrl": "https://dxs.moe.gov.cn/zx/hd/wlwhj/",
+  "seasonStatus": "第八届已结束：作品征集2025-05-21至10-15，遴选结果2026-08-31前后公示（31省区市和新疆兵团57499件作品遴选1370件入选）",
+  "structure": {
+   "tracks": [
+    {
+     "code": "LIGHT",
+     "name": "光影趣青春",
+     "description": "微视频、系列短视频、微电影等视频类作品"
+    },
+    {
+     "code": "IMAGE",
+     "name": "影像创意汇",
+     "description": "第八届通知附件1设置的赛道之一"
+    },
+    {
+     "code": "PIC",
+     "name": "网图新视界",
+     "description": "第八届通知附件1设置的赛道之一"
+    },
+    {
+     "code": "WRITING",
+     "name": "网语青年说",
+     "description": "第八届通知附件1设置的赛道之一"
+    },
+    {
+     "code": "MUSIC",
+     "name": "校园好声音",
+     "description": "第八届通知附件1设置的赛道之一"
+    },
+    {
+     "code": "DIGITAL",
+     "name": "数智新技艺",
+     "description": "第八届新设赛道，数字/AI创作方向（官网有『数智新技艺』创新经验分享会）"
+    },
+    {
+     "code": "INNO",
+     "name": "网创梦工厂",
+     "description": "第八届通知附件1设置的赛道之一"
+    }
+   ],
+   "stagesByTrack": {
+    "shared": [
+     {
+      "name": "作品征集/省级推选",
+      "kind": "PROVINCIAL"
+     },
+     {
+      "name": "全国遴选",
+      "kind": "FINAL"
+     }
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "基线5赛道（短视频/摄影/网文/歌曲/公益广告）为旧届划分；第八届通知（教育部办公厅、中央网信办秘书局，2025-06-06发布）设7个赛道：光影趣青春、影像创意汇、网图新视界、网语青年说、校园好声音、数智新技艺、网创梦工厂，故修正；阶段划分（省级推选→全国遴选）与基线一致"
+  },
+  "events": [
+   {
+    "nodeType": "SIGNUP_START",
+    "startAt": "2025-05-21",
+    "endAt": null,
+    "label": "作品征集开始（通知载征集时间2025-05-21至2025-10-15；基线『2025-07校内征集』系个别高校校内安排，改为官方征集期）",
+    "scope": "全国",
+    "source": "https://dxs.moe.gov.cn/zx/hd/wlwhj/"
+   },
+   {
+    "nodeType": "SIGNUP_END",
+    "startAt": null,
+    "endAt": "2025-10-15",
+    "label": "作品征集截止",
+    "scope": "全国",
+    "source": "https://dxs.moe.gov.cn/zx/hd/wlwhj/"
+   },
+   {
+    "nodeType": "RESULT",
+    "startAt": "2026-08-31",
+    "endAt": null,
+    "label": "第八届遴选结果公示（教育部思想政治工作司；公示原文未获直接链接，日期经思政时间2026-08-31及山东科技大学2026-09-07等获奖报道佐证）",
+    "scope": "全国",
+    "source": "https://dxs.moe.gov.cn/zx/hd/wlwhj/"
+   }
+  ],
+  "sources": [
+   "https://dxs.moe.gov.cn/zx/hd/wlwhj/",
+   "https://news.sdust.edu.cn"
+  ],
+  "confidence": "高",
+  "notes": "通知由教育部办公厅、中央网信办秘书局2025-06-06印发（moe.gov.cn思政司栏目，完整原文URL未获）；学生赛道承办为『中国大学生在线』，同期面向教师的『全国高校网络教育优秀作品推选展示活动』征集优秀网络文章、工作案例、微课、新媒体作品、AI+思政作品5类（征集期相同）；第七届入选名单曾于2024-09-24公布。官网dxs.moe.gov.cn/zx/hd/wlwhj/核实有效。"
+ },
+ {
+  "code": "SCXIJU",
+  "officialUrl": "https://www.yscz.org.cn/",
+  "seasonStatus": "第二十届已结束（2025，达州通川）；第二十一届未公布——该赛事约两年一届（十九届2023、二十届2025），预计2027年",
+  "structure": {
+   "tracks": [],
+   "stagesByTrack": {
+    "shared": [
+     {
+      "name": "初赛/复赛",
+      "kind": "OTHER"
+     },
+     {
+      "name": "决赛（全省集中比赛）",
+      "kind": "FINAL"
+     }
+    ]
+   },
+   "structureCorrected": true,
+   "structureNote": "基线仅『参赛』单一阶段；据百度百科及媒体报道，本届经初赛、复赛、决赛三个环节（70个作品入围决赛），故补充"
+  },
+  "events": [
+   {
+    "nodeType": "CONTEST",
+    "startAt": "2025-06-16",
+    "endAt": "2025-06-20",
+    "label": "决赛（达州通川巴山大剧院，70个作品入围，为期5天；中国网载6-17拉开帷幕）",
+    "scope": "全省",
+    "source": "https://www.sohu.com/a/904733615_121106884"
+   },
+   {
+    "nodeType": "RESULT",
+    "startAt": "2025-07-25",
+    "endAt": null,
+    "label": "闭幕式暨汇报演出（巴山大剧院，省文旅厅副厅长袁艺宣布闭幕；本届共评出28个优秀作品，一等奖4个）",
+    "scope": "全省",
+    "source": "http://www.dazhou.gov.cn/news-show-265586.html"
+   }
+  ],
+  "sources": [
+   "http://www.dazhou.gov.cn/news-show-265586.html",
+   "http://sc.china.com.cn/2025-06/18/content_43148452.html",
+   "https://www.sohu.com/a/904733615_121106884",
+   "http://sc.people.com.cn/BIG5/n2/2025/0619/c345167-41265216.html"
+  ],
+  "confidence": "高",
+  "notes": "主办：中共四川省委宣传部、四川省文化和旅游厅、达州市人民政府；四川省戏剧艺术领域最高规格专业赛事。百度百科词条载该届2025-01-14启动（https://baike.baidu.com/item/四川省第二十届戏剧小品（小戏）比赛）。基线『拟获奖公示6-25、获奖结果公布7-24』为前期核实数据，原始公示链接本轮未复得，故结果节点采用达州市政府网闭幕报道（7-25）。基线『决赛6-16/17开幕为期5天』与搜狐（6-16至20）、中国网（6-17启幕）报道吻合，已定为2025-06-16~20。officialUrl为四川省艺术创作促进中心官网（基线沿用，主办方关联站点，非赛事专网）。"
+ }
+]

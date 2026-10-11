@@ -1,0 +1,624 @@
+[
+ {
+  "code": "UCC",
+  "name": "“外研社·国才杯”“理解当代中国”全国大学生外语能力大赛",
+  "officialSite": null,
+  "sourceUrl": "https://ucc.fltrp.com/",
+  "tracks": [
+   {
+    "code": "SPEECH",
+    "name": "英语演讲"
+   },
+   {
+    "code": "DEBATE",
+    "name": "英语辩论"
+   },
+   {
+    "code": "WRITING",
+    "name": "英语写作"
+   },
+   {
+    "code": "READING",
+    "name": "英语阅读"
+   },
+   {
+    "code": "INTEGRATED",
+    "name": "英语综合能力"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "SPEECH"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "SPEECH"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "SPEECH"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "DEBATE"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "DEBATE"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "DEBATE"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "WRITING"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "WRITING"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "WRITING"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "READING"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "READING"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "READING"
+   },
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": "INTEGRATED"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "INTEGRATED"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "INTEGRATED"
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": "SPEECH",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-03-21"
+   }
+  ],
+  "seq": "14",
+  "csv": {
+   "最新届次": "2026年",
+   "报名开始时间": "2026-03-21（大赛启动）",
+   "报名截止时间": "各赛项不一",
+   "校赛/省赛时间": "校赛2026-09~10；省赛2026-10~11",
+   "全国赛/决赛时间": "全国决赛2026-12",
+   "结果公布/颁奖时间": "2026-12（预计）",
+   "当前状态": "省赛/校赛进行中",
+   "可信度": "中",
+   "备注": "启动由“4月”更正为2026-03-21；校赛补充为9~10月"
+  }
+ },
+ {
+  "code": "SFLEP",
+  "name": "“外教社杯”全国高校学生跨文化能力大赛",
+  "officialSite": null,
+  "sourceUrl": "https://ict.sflep.com/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": null
+   },
+   {
+    "name": "全国总决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-12-03"
+   }
+  ],
+  "seq": "54",
+  "csv": {
+   "最新届次": "第九届（2026）",
+   "报名开始时间": "各校自定（校赛3月起）",
+   "报名截止时间": "各校自定",
+   "校赛/省赛时间": "校赛2026-03起；省赛2026-05~11（黑龙江5-30~31，部分省10月）",
+   "全国赛/决赛时间": "全国总决赛2026-12-03~06（上海外国语大学）",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "进行中",
+   "可信度": "高",
+   "备注": "全国总决赛12-03~06证实；省赛“11-15前”偏窄，有省份5月/10月举行"
+  }
+ },
+ {
+  "code": "I21ST",
+  "name": "“21世纪杯”全国英语演讲比赛",
+  "officialSite": null,
+  "sourceUrl": "https://contest.i21st.cn/",
+  "tracks": [
+   {
+    "code": "UNIV",
+    "name": "大学组"
+   },
+   {
+    "code": "SENIOR",
+    "name": "高中组"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校园选拔",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "地区赛",
+    "kind": "REGIONAL",
+    "track": null
+   },
+   {
+    "name": "全国半决赛/总决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [],
+  "seq": "53",
+  "csv": {
+   "最新届次": "第31届（2026）",
+   "报名开始时间": "2026-01",
+   "报名截止时间": "2026-04（校园选拔/地区初赛1~4月）",
+   "校赛/省赛时间": "地区半决赛/决赛2026-04~07",
+   "全国赛/决赛时间": "全国半决赛/总决赛2026-10（拟）",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "进行中",
+   "可信度": "高",
+   "备注": "官网原文一致；全国赛地点待定"
+  }
+ },
+ {
+  "code": "CSSC",
+  "name": "全国大学生市场调查与分析大赛",
+  "officialSite": "http://www.china-cssc.org",
+  "sourceUrl": "http://www.china-cssc.org/",
+  "tracks": [],
+  "stages": [
+   {
+    "name": "校赛",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": null
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "SIGNUP_START",
+    "startAt": "2026-09-21"
+   },
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-10-31"
+   },
+   {
+    "stage": "FINAL",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2027-04-30"
+   }
+  ],
+  "seq": "22",
+  "csv": {
+   "最新届次": "第十七届（“正大杯”）",
+   "报名开始时间": "2026-09-21~30",
+   "报名截止时间": "本科组2026-10-31（研究生/留学生组2026-11-15）",
+   "校赛/省赛时间": "校赛2027-03-22前",
+   "全国赛/决赛时间": "省赛2027-04-30前；国赛2027年（待定）",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "报名中",
+   "可信度": "高",
+   "备注": "知识赛2026-11-01~11-20；第十六届（2026）已结束"
+  }
+ },
+ {
+  "code": "MILAN",
+  "name": "米兰设计周--中国高校设计学科师生优秀作品展",
+  "officialSite": null,
+  "sourceUrl": "http://www.milan-aap.org.cn/",
+  "tracks": [
+   {
+    "code": "VISUAL",
+    "name": "视觉传达"
+   },
+   {
+    "code": "ENV",
+    "name": "环境设计"
+   },
+   {
+    "code": "PRODUCT",
+    "name": "产品设计"
+   }
+  ],
+  "stages": [
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "VISUAL"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "VISUAL"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "ENV"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "ENV"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "PRODUCT"
+   },
+   {
+    "name": "国赛",
+    "kind": "FINAL",
+    "track": "PRODUCT"
+   }
+  ],
+  "events": [
+   {
+    "stage": "PROVINCIAL",
+    "track": "VISUAL",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2027-03-31"
+   }
+  ],
+  "seq": "37",
+  "csv": {
+   "最新届次": "第十一届（2027赛季）",
+   "报名开始时间": "2026-10",
+   "报名截止时间": "2027-03-31（部分校）~2027-04",
+   "校赛/省赛时间": "省赛评审2027-04~05",
+   "全国赛/决赛时间": "国赛评审2027-05~06",
+   "结果公布/颁奖时间": "颁奖典礼2027-07~08",
+   "当前状态": "报名中",
+   "可信度": "高",
+   "备注": "第十届（2026）已于2026-07颁奖结束"
+  }
+ },
+ {
+  "code": "CULSC",
+  "name": "全国大学生生命科学竞赛",
+  "officialSite": "https://culsc.cn",
+  "sourceUrl": "https://culsc.cn/",
+  "tracks": [
+   {
+    "code": "RESEARCH",
+    "name": "科学探究类"
+   },
+   {
+    "code": "INNOV",
+    "name": "创新创业类"
+   }
+  ],
+  "stages": [
+   {
+    "name": "网评",
+    "kind": "QUALIFIER",
+    "track": "RESEARCH"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "RESEARCH"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "RESEARCH"
+   },
+   {
+    "name": "网评",
+    "kind": "QUALIFIER",
+    "track": "INNOV"
+   },
+   {
+    "name": "省赛",
+    "kind": "PROVINCIAL",
+    "track": "INNOV"
+   },
+   {
+    "name": "全国决赛",
+    "kind": "FINAL",
+    "track": "INNOV"
+   }
+  ],
+  "events": [
+   {
+    "stage": "QUALIFIER",
+    "track": "RESEARCH",
+    "nodeType": "SIGNUP_START",
+    "startAt": "2025-08-01"
+   },
+   {
+    "stage": "QUALIFIER",
+    "track": "RESEARCH",
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-01-15"
+   }
+  ],
+  "seq": "48",
+  "csv": {
+   "最新届次": "第十一届（2026）",
+   "报名开始时间": "科学探究类2025-08-01；创新创业类2026-01-20",
+   "报名截止时间": "科学探究类2026-01-15；创新创业类2026-04-20",
+   "校赛/省赛时间": "网评/省赛2026-06~07",
+   "全国赛/决赛时间": "全国决赛2026-07下旬",
+   "结果公布/颁奖时间": "已结束（具体公布日未明）",
+   "当前状态": "已结束",
+   "可信度": "中",
+   "备注": "科学探究类证实；创新创业类起止未独立核实，保留"
+  }
+ },
+ {
+  "code": "NECCS",
+  "name": "全国大学生英语竞赛",
+  "officialSite": null,
+  "sourceUrl": "https://www.neccs.org.cn/",
+  "tracks": [
+   {
+    "code": "A",
+    "name": "研究生类"
+   },
+   {
+    "code": "B",
+    "name": "英语专业类"
+   },
+   {
+    "code": "C",
+    "name": "非英语专业本科"
+   },
+   {
+    "code": "D",
+    "name": "体育艺术类"
+   }
+  ],
+  "stages": [
+   {
+    "name": "初赛",
+    "kind": "CAMPUS",
+    "track": null
+   },
+   {
+    "name": "决赛",
+    "kind": "FINAL",
+    "track": null
+   }
+  ],
+  "events": [
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "SIGNUP_START",
+    "startAt": "2025-12-17"
+   },
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "SIGNUP_END",
+    "endAt": "2026-03-13"
+   },
+   {
+    "stage": "CAMPUS",
+    "track": null,
+    "nodeType": "CONTEST",
+    "startAt": "2026-05-10"
+   }
+  ],
+  "seq": "B1",
+  "csv": {
+   "最新届次": "第28届（2026）",
+   "报名开始时间": "2025-12-17",
+   "报名截止时间": "2026-03-13",
+   "校赛/省赛时间": "初赛2026-04-12",
+   "全国赛/决赛时间": "决赛2026-05-10",
+   "结果公布/颁奖时间": "2026-06（特/一等奖名单6-01起陆续公布）",
+   "当前状态": "已结束",
+   "可信度": "高",
+   "备注": "全部证实，无分歧；第29届（2027）约2026-12启动"
+  }
+ },
+ {
+  "code": "ARTSHOW",
+  "name": "全国大学生艺术展演",
+  "officialSite": null,
+  "sourceUrl": "https://www.moe.gov.cn/",
+  "tracks": [
+   {
+    "code": "VOCAL",
+    "name": "声乐"
+   },
+   {
+    "code": "INSTR",
+    "name": "器乐"
+   },
+   {
+    "code": "DANCE",
+    "name": "舞蹈"
+   },
+   {
+    "code": "DRAMA",
+    "name": "戏剧"
+   },
+   {
+    "code": "RECITE",
+    "name": "朗诵"
+   },
+   {
+    "code": "WORKSHOP",
+    "name": "艺术实践工作坊"
+   }
+  ],
+  "stages": [
+   {
+    "name": "校级展演",
+    "kind": "CAMPUS",
+    "track": "VOCAL"
+   },
+   {
+    "name": "省级展演",
+    "kind": "PROVINCIAL",
+    "track": "VOCAL"
+   },
+   {
+    "name": "全国汇演",
+    "kind": "FINAL",
+    "track": "VOCAL"
+   },
+   {
+    "name": "校级展演",
+    "kind": "CAMPUS",
+    "track": "INSTR"
+   },
+   {
+    "name": "省级展演",
+    "kind": "PROVINCIAL",
+    "track": "INSTR"
+   },
+   {
+    "name": "全国汇演",
+    "kind": "FINAL",
+    "track": "INSTR"
+   },
+   {
+    "name": "校级展演",
+    "kind": "CAMPUS",
+    "track": "DANCE"
+   },
+   {
+    "name": "省级展演",
+    "kind": "PROVINCIAL",
+    "track": "DANCE"
+   },
+   {
+    "name": "全国汇演",
+    "kind": "FINAL",
+    "track": "DANCE"
+   },
+   {
+    "name": "校级展演",
+    "kind": "CAMPUS",
+    "track": "DRAMA"
+   },
+   {
+    "name": "省级展演",
+    "kind": "PROVINCIAL",
+    "track": "DRAMA"
+   },
+   {
+    "name": "全国汇演",
+    "kind": "FINAL",
+    "track": "DRAMA"
+   },
+   {
+    "name": "校级展演",
+    "kind": "CAMPUS",
+    "track": "RECITE"
+   },
+   {
+    "name": "省级展演",
+    "kind": "PROVINCIAL",
+    "track": "RECITE"
+   },
+   {
+    "name": "全国汇演",
+    "kind": "FINAL",
+    "track": "RECITE"
+   },
+   {
+    "name": "校级展演",
+    "kind": "CAMPUS",
+    "track": "WORKSHOP"
+   },
+   {
+    "name": "省级展演",
+    "kind": "PROVINCIAL",
+    "track": "WORKSHOP"
+   },
+   {
+    "name": "全国汇演",
+    "kind": "FINAL",
+    "track": "WORKSHOP"
+   }
+  ],
+  "events": [],
+  "seq": "B2",
+  "csv": {
+   "最新届次": "第八届（2026-2027）",
+   "报名开始时间": "校级展演2026-04起",
+   "报名截止时间": "信息未公布",
+   "校赛/省赛时间": "省级展演2026年内",
+   "全国赛/决赛时间": "全国汇演2027年",
+   "结果公布/颁奖时间": "信息未公布",
+   "当前状态": "进行中",
+   "可信度": "高",
+   "备注": "三阶段（校/省/全国汇演），全国汇演在2027年"
+  }
+ }
+]
