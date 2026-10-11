@@ -20,4 +20,7 @@ assets
 data
 docs
 **/*.md
+# 豁免：关于页通过 ?raw 引用以下文档参与前端构建
+!apps/web/src/views/about/docs
+!apps/web/src/views/about/docs/**
 LICENSE
