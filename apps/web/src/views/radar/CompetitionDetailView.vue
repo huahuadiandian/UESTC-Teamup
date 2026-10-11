@@ -258,7 +258,7 @@ async function submitFeedback() {
       <!-- ================= 头部 ================= -->
       <section class="glass p-24px animate-appear relative overflow-hidden">
         <div class="hero-glow" />
-        <div class="flex items-start justify-between gap-12px flex-wrap relative">
+        <div class="detail-head-row flex items-start justify-between gap-12px flex-wrap relative">
           <div class="min-w-0 flex-1">
             <div class="flex items-center gap-8px flex-wrap mb-10px">
               <span class="chip status-chip" :class="statusMeta.cls">
@@ -297,7 +297,7 @@ async function submitFeedback() {
               <el-tag v-for="t in comp.tags" :key="t" size="small" effect="plain" round>{{ t }}</el-tag>
             </div>
           </div>
-          <div class="flex gap-8px shrink-0">
+          <div class="detail-head-actions flex gap-8px shrink-0">
             <el-button round @click="toggleFavorite">{{ favorite ? '★ 已关注' : '☆ 关注' }}</el-button>
             <el-button round tag="a" href="/api/calendar.ics" target="_blank">📅 订阅 .ics</el-button>
           </div>
@@ -752,6 +752,21 @@ async function submitFeedback() {
   flex-wrap: wrap;
   gap: 8px;
 }
+/* 移动端头部：信息与操作按钮上下堆叠，避免左侧内容被按钮列挤压成窄条 */
+@media (max-width: 768px) {
+  .detail-head-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .detail-head-actions {
+    width: 100%;
+  }
+  .detail-head-actions .el-button {
+    flex: 1 1 0;
+    margin-left: 0 !important;
+  }
+}
+
 /* 移动端：赛道多时横向滑动，避免换行堆叠占满半屏 */
 @media (max-width: 768px) {
   .track-tabs {
