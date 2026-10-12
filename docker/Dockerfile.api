@@ -51,13 +51,18 @@ COPY --from=build --chown=node:node /repo/packages/shared/dist  ./packages/share
 COPY             --chown=node:node packages/shared/package.json ./packages/shared/
 COPY --from=build --chown=node:node /repo/apps/api/dist         ./apps/api/dist
 COPY             --chown=node:node apps/api/prisma       ./apps/api/prisma
+# 生产迁移守卫（docs/DEPLOY_DB.md 的预检 / 破坏性迁移阻断步骤）在容器内执行，
+# 精简镜像不含源码，需按原布局单独拷入 scripts/，否则文档里的命令会 404
+COPY             --chown=node:node apps/api/scripts      ./apps/api/scripts
 COPY             --chown=node:node apps/api/package.json ./apps/api/
 COPY             --chown=node:node package.json pnpm-workspace.yaml ./
 USER node
 EXPOSE 3000
 WORKDIR /repo/apps/api
 # 首次部署 / 升级后执行迁移（本目录含 prisma/schema.prisma 与 migrations/）：
-#   docker compose exec api npx prisma migrate deploy
+#   docker compose exec api node scripts/safe-migrate.mjs           # 预检（只读）
+#   docker compose exec api node scripts/safe-migrate.mjs --deploy  # 执行（破坏性迁移需显式确认）
+# 勿裸跑 prisma migrate deploy：破坏性迁移会被无差别执行，见 docs/DEPLOY_DB.md
 # 生产确需种子数据时（精简镜像不含 tsx，用编译产物代替）：
 #   docker compose exec -e ALLOW_PROD_SEED=true api node dist/prisma/seed.js
 CMD ["node", "dist/src/main.js"]
