@@ -23,6 +23,28 @@ const GLOBAL_PER_MINUTE = 10; // 全局每分钟上限（保护邮件额度）
 const MAX_FAILS = 5; // 验证码连错作废阈值
 
 /**
+ * 「同 IP」维度只对真实客户端 IP 生效。
+ *
+ * 2026-10-13 线上事故：本机 Docker 经端口发布（userland proxy）转发，真实客户端 IP
+ * 在进入 nginx 之前就被替换为网桥网关地址（如 172.19.0.1）；nginx 转发
+ * `X-Forwarded-For: $remote_addr` 后，后端 `req.ip` 对所有用户恒为同一个私网地址。
+ * 此时 `DAILY_PER_IP` 退化成全站共享桶——当天发满 20 封后所有用户都被拒
+ * （表现为「无法发送验证码」，直到北京时间次日 0 点）。
+ * 因此当 IP 为私网 / 回环 / 链路本地 / unknown 时跳过该维度，由
+ * 「每邮箱 5 次 + 全局每分钟 10 + 全局每天 200」兜底；取到真实公网 IP 时照常生效。
+ */
+const PRIVATE_IP_RE = /^(?:0\.|10\.|127\.|169\.254\.|192\.168\.|172\.(?:1[6-9]|2\d|3[01])\.)/;
+
+function isRealClientIp(ip: string): boolean {
+  if (!ip || ip === 'unknown') return false;
+  const v = ip.trim().toLowerCase().replace(/^::ffff:/, ''); // 兼容 IPv4-mapped IPv6
+  if (v === '::1') return false;
+  if (PRIVATE_IP_RE.test(v)) return false; // IPv4 私网段
+  if (/^(?:fc|fd|fe80)/.test(v)) return false; // IPv6 ULA / 链路本地
+  return true;
+}
+
+/**
  * 密码登录失败锁定（Issue 12）：同邮箱连错 LOGIN_EMAIL_MAX_FAILS 次锁定
  * LOGIN_LOCK_SECONDS；同 IP 失败 LOGIN_IP_MAX_FAILS 次 / LOGIN_IP_WINDOW_SECONDS
  * 内拒绝密码登录。验证码登录不受影响（第二因子仍可用，合法用户不会被完全锁死）。
@@ -85,6 +107,8 @@ export class AuthService {
 
     const cfg = FLOWS[flow];
     const day = dayStamp();
+    // IP 维度仅在能取到真实客户端 IP 时参与限流（见 isRealClientIp 注释）
+    const ipLimitOn = isRealClientIp(ip);
     const keys: SendQuotaKeys & { code: string; fail: string } = {
       code: `${cfg.ns}:code:${email}`,
       fail: `${cfg.ns}:fail:${email}`,
@@ -103,24 +127,24 @@ export class AuthService {
 
     // 先占用配额再校验；任一超限即回滚全部计数与冷却锁（S4c：失败不能把用户锁死在失败态）
     const emailCount = await this.redis.incrWithTtl(keys.emailQuota, dayTtl);
-    const ipCount = await this.redis.incrWithTtl(keys.ipQuota, dayTtl);
+    const ipCount = ipLimitOn ? await this.redis.incrWithTtl(keys.ipQuota, dayTtl) : 0;
     const minuteCount = await this.redis.incrWithTtl(keys.globalMinute, 120);
     const dayCount = await this.redis.incrWithTtl(keys.globalDay, dayTtl);
 
     if (emailCount > DAILY_PER_EMAIL) {
-      await this.rollbackSendQuota(keys);
+      await this.rollbackSendQuota(keys, ipLimitOn);
       throw new BadRequestException('该邮箱今日发送次数已达上限');
     }
-    if (ipCount > DAILY_PER_IP) {
-      await this.rollbackSendQuota(keys);
+    if (ipLimitOn && ipCount > DAILY_PER_IP) {
+      await this.rollbackSendQuota(keys, ipLimitOn);
       throw new BadRequestException('当前网络发送次数已达上限，请明日再试');
     }
     if (minuteCount > GLOBAL_PER_MINUTE) {
-      await this.rollbackSendQuota(keys);
+      await this.rollbackSendQuota(keys, ipLimitOn);
       throw new BadRequestException('当前发送人数较多，请稍后再试');
     }
     if (dayCount > globalDailyLimit()) {
-      await this.rollbackSendQuota(keys);
+      await this.rollbackSendQuota(keys, ipLimitOn);
       throw new BadRequestException('今日邮件发送额度已用完，请明日再试');
     }
 
@@ -133,7 +157,7 @@ export class AuthService {
     } catch (err) {
       // 发信失败必须回滚：清验证码 + 释放冷却与配额，避免「看似已发送实则不可用」
       await this.redis.del(keys.code);
-      await this.rollbackSendQuota(keys);
+      await this.rollbackSendQuota(keys, ipLimitOn);
       this.logger.error(`验证码邮件发送失败: ${email} (${flow}) ${(err as Error)?.message ?? String(err)}`);
       throw new BadRequestException('邮件发送失败，请稍后重试');
     }
@@ -142,11 +166,11 @@ export class AuthService {
     return { devCode: process.env.NODE_ENV !== 'production' ? code : undefined };
   }
 
-  /** 发信失败 / 配额拒绝时回滚：释放冷却锁并归还已占用的计数 */
-  private async rollbackSendQuota(keys: SendQuotaKeys) {
+  /** 发信失败 / 配额拒绝时回滚：释放冷却锁并归还已占用的计数（ipLimitOn=false 时未占用 IP 计数） */
+  private async rollbackSendQuota(keys: SendQuotaKeys, ipLimitOn: boolean) {
     await this.redis.del(keys.cooldown);
     await this.redis.decr(keys.emailQuota);
-    await this.redis.decr(keys.ipQuota);
+    if (ipLimitOn) await this.redis.decr(keys.ipQuota);
     await this.redis.decr(keys.globalMinute);
     await this.redis.decr(keys.globalDay);
   }

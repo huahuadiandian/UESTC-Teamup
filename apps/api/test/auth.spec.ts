@@ -118,13 +118,27 @@ test('sendCode：同邮箱每日 5 次上限，拒绝时回滚冷却与配额', 
   assert.equal(await redis.get(`verify:cooldown:${email}`), null, '超限拒绝应释放冷却锁');
 });
 
-test('sendCode：同 IP 每日上限', async () => {
+test('sendCode：同 IP 每日上限（真实公网 IP 才生效）', async () => {
   const redis = new FakeRedisService();
   const mail = new FakeMail();
   const auth = makeAuth(mail, redis);
 
-  await redis.set(`verify:quota:ip:10.9.9.9:${dayStamp()}`, '20', 3600);
-  await assert.rejects(auth.sendCode(campusEmail(5), '10.9.9.9'), /当前网络发送次数已达上限/);
+  await redis.set(`verify:quota:ip:203.0.113.9:${dayStamp()}`, '20', 3600);
+  await assert.rejects(auth.sendCode(campusEmail(5), '203.0.113.9'), /当前网络发送次数已达上限/);
+});
+
+test('sendCode：代理/私网 IP（如 Docker 网关）不参与 IP 维度限流（2026-10-13 事故回归）', async () => {
+  const redis = new FakeRedisService();
+  const mail = new FakeMail();
+  const auth = makeAuth(mail, redis);
+  const proxyIp = '172.19.0.1'; // 端口发布后 req.ip 恒为该网关地址，被全站用户共享
+
+  // 该私网桶即使已顶格，也不得阻断发码——否则「每 IP 20 次」退化成全站共享桶
+  await redis.set(`verify:quota:ip:${proxyIp}:${dayStamp()}`, '9999', 3600);
+  const res = await auth.sendCode(campusEmail(10), proxyIp);
+
+  assert.match(res.devCode ?? '', /^\d{6}$/);
+  assert.equal(mail.sent.length, 1);
 });
 
 test('sendCode：全局每分钟上限（保护邮件额度）', async () => {
