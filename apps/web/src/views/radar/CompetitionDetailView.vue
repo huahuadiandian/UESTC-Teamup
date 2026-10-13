@@ -4,7 +4,7 @@ import { useRoute, useRouter } from 'vue-router';
 import { ElMessage } from 'element-plus';
 import { AudienceLabel, CompetitionFormatLabel, Audience, CompetitionFormat } from '@teamup/shared';
 import { api } from '../../api/client';
-import { fmtDate, daysLeft, type CompetitionDetail, type TeamSummary, type CompetitionStageView, type BonusStandardView } from '../../api/types';
+import { fmtDate, daysLeft, dayjs, type CompetitionDetail, type TeamSummary, type CompetitionStageView, type BonusStandardView } from '../../api/types';
 import { safeHref, hrefHost } from '../../utils/safeHref';
 import LevelChips from '../../components/LevelChips.vue';
 import TeamCardMeta from '../../components/TeamCardMeta.vue';
@@ -131,6 +131,18 @@ function nodeLabel(e: { nodeType: string; label: string | null }) {
 }
 function nodeIcon(e: { nodeType: string }) {
   return NODE_META[e.nodeType]?.icon ?? '•';
+}
+
+/**
+ * 时间节点区间文案：只显示到「日」。
+ * 时间节点按「本地日边界」入库（startAt = 当日 00:00、endAt = 当日 23:59:59），
+ * 时刻只是数据边界、没有信息量，真正的时刻写在节点 label 里。
+ */
+function eventRangeText(e: { startAt: string | null; endAt: string | null }): string {
+  const s = e.startAt ? dayjs(e.startAt) : null;
+  const en = e.endAt ? dayjs(e.endAt) : null;
+  if (s && en && !en.isSame(s, 'day')) return `${s.format('YYYY-MM-DD')} → ${en.format('YYYY-MM-DD')}`;
+  return (s ?? en)?.format('YYYY-MM-DD') ?? '时间待定';
 }
 /** 时间点是否已过期 */
 function isPast(s: string | null) {
@@ -317,7 +329,7 @@ async function submitFeedback() {
           <div class="cd-icon">⏳</div>
           <div>
             <div class="cd-label">报名截止</div>
-            <div class="cd-date">{{ fmtDate(nextDeadline, true) }}</div>
+            <div class="cd-date">{{ fmtDate(nextDeadline) }}</div>
           </div>
         </div>
         <div class="cd-right">
@@ -437,9 +449,7 @@ async function submitFeedback() {
                     {{ nodeLabel(e) }}
                     <el-icon v-if="e.isLocked" class="text-11px color-ink-faint"><i-ep-lock /></el-icon>
                   </div>
-                  <div class="event-date">
-                    {{ fmtDate(e.startAt, true) }}<template v-if="e.endAt && e.endAt !== e.startAt"> → {{ fmtDate(e.endAt, true) }}</template>
-                  </div>
+                  <div class="event-date">{{ eventRangeText(e) }}</div>
                   <div v-if="e.location" class="text-11px color-ink-faint">{{ e.location }}</div>
                 </div>
                 <el-button link size="small" type="primary" class="!text-11px" @click="openCorrection(`event:${e.id}:${e.endAt ? 'endAt' : 'startAt'}`, `${s.name} · ${nodeLabel(e)}`, e.endAt ?? e.startAt)">纠错</el-button>

@@ -65,7 +65,7 @@ const payloadText = (n: NotificationItem): { title: string; desc: string; link?:
     case 'DDL_REMINDER':
       return {
         title: `⏰ 「${p.competitionName}」${p.stage}`,
-        desc: `距截止还有 ${p.daysLeft} 天（${fmtDate(p.endAt as string, true)}），抓紧报名`,
+        desc: `距截止还有 ${p.daysLeft} 天（${fmtDate(p.endAt as string)}），抓紧报名`,
         link: '/calendar',
       };
     case 'CORRECTION_NEW':

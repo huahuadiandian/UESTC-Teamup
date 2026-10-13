@@ -144,7 +144,7 @@ function reload() {
             >{{ d.daysLeft <= 0 ? '今天' : d.daysLeft }}天</span>
             <div class="flex-1 min-w-0">
               <div class="text-14px font-semibold truncate color-ink">{{ d.competitionName }}</div>
-              <div class="text-12px color-ink-faint">{{ d.stage }} · {{ fmtDate(d.endAt, true) }}</div>
+              <div class="text-12px color-ink-faint">{{ d.stage }} · {{ fmtDate(d.endAt) }}</div>
             </div>
           </router-link>
         </div>

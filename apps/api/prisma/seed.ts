@@ -325,8 +325,11 @@ async function main() {
           trackId: e.track ? (trackIdByCode[e.track] ?? null) : null,
           nodeType: e.nodeType,
           label: e.label ?? null,
-          startAt: e.startAt ? new Date(`${e.startAt}T00:00:00Z`) : null,
-          endAt: e.endAt ? new Date(`${e.endAt}T16:00:00Z`) : null,
+          // 日期按「本地日边界」入库（+08:00）：startAt = 当日 00:00、endAt = 当日 23:59:59。
+          // 早期写成 UTC 边界的 00:00Z / 16:00Z，按本地时区渲染会让 endAt 整整晚一天
+          // （脚本 apps/api/scripts/fix-event-datetimes.ts 已对存量数据做过同口径订正）。
+          startAt: e.startAt ? new Date(`${e.startAt}T00:00:00+08:00`) : null,
+          endAt: e.endAt ? new Date(`${e.endAt}T23:59:59+08:00`) : null,
         },
       });
     }
