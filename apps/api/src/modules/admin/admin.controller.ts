@@ -16,8 +16,15 @@ import {
   ValidateNested,
 } from 'class-validator';
 import { Admin, CurrentUser, Public, Roles } from '../../common/auth/decorators';
-import { Audience, CompetitionFormat, EventNodeType, Level, PublishStatus } from '@prisma/client';
-import { AdminService, type UpsertCompetitionInput, type UpsertEventInput } from './admin.service';
+import { Audience, BonusTier, CompetitionFormat, EventNodeType, Level, PublishStatus, StageKind } from '@prisma/client';
+import {
+  AdminService,
+  type UpsertCompetitionInput,
+  type UpsertEventInput,
+  type TrackInput,
+  type StageInput,
+  type EventInput,
+} from './admin.service';
 import { ReportsService } from './reports.service';
 import { AnnouncementsService } from './announcements.service';
 
@@ -69,6 +76,50 @@ class CompetitionDto {
 class CorrectionReviewDto {
   @IsString() action!: 'accept' | 'reject';
   @IsOptional() @IsString() note?: string;
+}
+
+/** 赛道（赛道/赛项）维护：字段缺省=不改，显式 null=清空 */
+class TrackDto {
+  @IsOptional()
+  @IsString()
+  @Matches(/^[A-Za-z0-9_-]{1,60}$/, { message: '赛道编码只能包含字母、数字、下划线、连字符，最长 60 字' })
+  code?: string;
+
+  @IsOptional() @IsString() @Length(1, 120) name?: string;
+  @IsOptional() @IsString() @Length(0, 120) shortName?: string | null;
+  @IsOptional() @IsString() @Length(0, 2000) description?: string | null;
+  @IsOptional() @IsInt() @Min(0) @Max(9999) sortOrder?: number;
+  @IsOptional() @IsEnum(CompetitionFormat) format?: CompetitionFormat | null;
+  @IsOptional() @IsInt() @Min(1) @Max(99) teamSizeMin?: number | null;
+  @IsOptional() @IsInt() @Min(1) @Max(99) teamSizeMax?: number | null;
+  @IsOptional() @IsBoolean() isActive?: boolean;
+}
+
+/** 赛程阶段维护：trackId 为 null / 缺省 = 全赛事共享阶段 */
+class StageDto {
+  @IsOptional() @IsString() trackId?: string | null;
+
+  @IsOptional()
+  @IsString()
+  @Matches(/^[A-Za-z0-9_-]{1,60}$/, { message: '阶段编码只能包含字母、数字、下划线、连字符，最长 60 字' })
+  code?: string;
+
+  @IsOptional() @IsString() @Length(1, 120) name?: string;
+  @IsOptional() @IsEnum(StageKind) stageKind?: StageKind;
+  @IsOptional() @IsString() @Length(0, 200) scope?: string | null;
+  @IsOptional() @IsInt() @Min(0) @Max(9999) sequence?: number;
+  @IsOptional() @IsEnum(BonusTier) bonusTier?: BonusTier | null;
+  @IsOptional() @IsString() @Length(0, 1000) note?: string | null;
+}
+
+/** 时间节点维护（挂在阶段上） */
+class AdminEventDto {
+  @IsOptional() @IsString() stageId?: string;
+  @IsOptional() @IsEnum(EventNodeType) nodeType?: EventNodeType;
+  @IsOptional() @IsString() @Length(0, 120) label?: string | null;
+  @IsOptional() @IsString() @Length(0, 200) location?: string | null;
+  @IsOptional() @IsDateString() startAt?: string | null;
+  @IsOptional() @IsDateString() endAt?: string | null;
 }
 
 class PageDto {
@@ -180,6 +231,66 @@ export class AdminController {
   @Delete('competitions/:id/fields/:key')
   deleteCustomField(@Param('id') id: string, @Param('key') key: string) {
     return this.admin.deleteCustomField(id, key);
+  }
+
+  // ---------- 赛道 / 赛程阶段 / 时间节点（结构维护） ----------
+  //
+  // 三维结构：Competition → Track（赛道）→ Stage（阶段）→ Event（时间节点）。
+  // 时间节点也可随竞赛主体的 PUT 一起提交（events 字段），这里的独立端点供编辑页
+  // 逐条即时落库使用，避免整表单 diff 的连带影响。
+
+  @Roles('ADMIN', 'CONTRIBUTOR')
+  @Post('competitions/:id/tracks')
+  createTrack(@Param('id') id: string, @Body() dto: TrackDto) {
+    return this.admin.createTrack(id, dto as TrackInput);
+  }
+
+  @Roles('ADMIN', 'CONTRIBUTOR')
+  @Put('tracks/:trackId')
+  updateTrack(@Param('trackId') trackId: string, @Body() dto: TrackDto) {
+    return this.admin.updateTrack(trackId, dto as TrackInput);
+  }
+
+  @Roles('ADMIN', 'CONTRIBUTOR')
+  @Delete('tracks/:trackId')
+  deleteTrack(@Param('trackId') trackId: string) {
+    return this.admin.deleteTrack(trackId);
+  }
+
+  @Roles('ADMIN', 'CONTRIBUTOR')
+  @Post('competitions/:id/stages')
+  createStage(@Param('id') id: string, @Body() dto: StageDto) {
+    return this.admin.createStage(id, dto as StageInput);
+  }
+
+  @Roles('ADMIN', 'CONTRIBUTOR')
+  @Put('stages/:stageId')
+  updateStage(@Param('stageId') stageId: string, @Body() dto: StageDto) {
+    return this.admin.updateStage(stageId, dto as StageInput);
+  }
+
+  @Roles('ADMIN', 'CONTRIBUTOR')
+  @Delete('stages/:stageId')
+  deleteStage(@Param('stageId') stageId: string) {
+    return this.admin.deleteStage(stageId);
+  }
+
+  @Roles('ADMIN', 'CONTRIBUTOR')
+  @Post('competitions/:id/events')
+  createEvent(@Param('id') id: string, @Body() dto: AdminEventDto) {
+    return this.admin.createEvent(id, dto as EventInput);
+  }
+
+  @Roles('ADMIN', 'CONTRIBUTOR')
+  @Put('events/:eventId')
+  updateEvent(@Param('eventId') eventId: string, @Body() dto: AdminEventDto) {
+    return this.admin.updateEvent(eventId, dto as EventInput);
+  }
+
+  @Roles('ADMIN', 'CONTRIBUTOR')
+  @Delete('events/:eventId')
+  deleteEvent(@Param('eventId') eventId: string) {
+    return this.admin.deleteEvent(eventId);
   }
 
   // ---------- 组队帖管理（删除帖子） ----------

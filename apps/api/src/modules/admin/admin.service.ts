@@ -1,6 +1,7 @@
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import {
   Audience,
+  BonusTier,
   CompetitionFormat,
   CorrectionStatus,
   EventNodeType,
@@ -8,6 +9,7 @@ import {
   Prisma,
   PublishStatus,
   RevisionOrigin,
+  StageKind,
 } from '@prisma/client';
 import { PrismaService } from '../../common/prisma.service';
 import { NotificationService } from '../notification/notification.service';
@@ -48,6 +50,41 @@ export interface UpsertCompetitionInput {
   tags?: string[];
   /** 时间节点：按 stageId 归属，支持增删改（人工维护赛程的核心入口） */
   events?: UpsertEventInput[];
+}
+
+/** 赛道维护入参：字段缺省表示「不改」，显式 null 表示「清空」 */
+export interface TrackInput {
+  code?: string;
+  name?: string;
+  shortName?: string | null;
+  description?: string | null;
+  sortOrder?: number;
+  format?: CompetitionFormat | null;
+  teamSizeMin?: number | null;
+  teamSizeMax?: number | null;
+  isActive?: boolean;
+}
+
+/** 赛程阶段维护入参；trackId = null 表示全赛事共享阶段 */
+export interface StageInput {
+  trackId?: string | null;
+  code?: string;
+  name?: string;
+  stageKind?: StageKind;
+  scope?: string | null;
+  sequence?: number;
+  bonusTier?: BonusTier | null;
+  note?: string | null;
+}
+
+/** 时间节点维护入参 */
+export interface EventInput {
+  stageId?: string;
+  nodeType?: EventNodeType;
+  label?: string | null;
+  startAt?: string | null;
+  endAt?: string | null;
+  location?: string | null;
 }
 
 /** 竞赛主体上需要记版本的字段 */
@@ -166,13 +203,16 @@ export class AdminService {
             if (!keepIds.has(ev.id) && !ev.isLocked) await tx.competitionEvent.delete({ where: { id: ev.id } });
           }
           for (const e of events) {
+            const evStartAt = e.startAt ? new Date(e.startAt) : null;
+            const evEndAt = e.endAt ? new Date(e.endAt) : null;
+            assertDateOrder(evStartAt, evEndAt);
             const data = {
               stageId: e.stageId,
               nodeType: e.nodeType,
               label: e.label ?? null,
               location: e.location ?? null,
-              startAt: e.startAt ? new Date(e.startAt) : null,
-              endAt: e.endAt ? new Date(e.endAt) : null,
+              startAt: evStartAt,
+              endAt: evEndAt,
             };
             if (e.id && !e.id.startsWith('new-')) {
               const old = existing.events.find((x) => x.id === e.id);
@@ -234,6 +274,322 @@ export class AdminService {
         customFields: { orderBy: { createdAt: 'asc' } },
       },
     });
+  }
+
+  // ---------- 赛道 / 赛程阶段 / 时间节点（结构维护） ----------
+  //
+  // 后台此前只能改赛事级标量和「挂在已有阶段上」的时间节点：赛道只读、阶段无法新增，
+  // 导致没有阶段骨架的竞赛根本没法录入赛程。这里补齐三维结构的完整增删改：
+  // Competition → CompetitionTrack（赛道）→ CompetitionStage（阶段）→ CompetitionEvent（时间节点）。
+  // 结构变更后重算竞赛的派生字段 hasTracks / stageChain（列表与详情页直接读这两个字段）。
+
+  /** 重算派生字段：hasTracks（是否有赛道）与 stageChain（主链展示缓存） */
+  async recomputeStructure(competitionId: string) {
+    const [trackCount, sharedStages, firstTrack] = await this.prisma.$transaction([
+      this.prisma.competitionTrack.count({ where: { competitionId } }),
+      this.prisma.competitionStage.findMany({
+        where: { competitionId, trackId: null },
+        orderBy: [{ sequence: 'asc' }, { id: 'asc' }],
+        select: { name: true },
+      }),
+      this.prisma.competitionTrack.findFirst({
+        where: { competitionId },
+        orderBy: [{ sortOrder: 'asc' }, { id: 'asc' }],
+        select: { stages: { orderBy: [{ sequence: 'asc' }, { id: 'asc' }], select: { name: true } } },
+      }),
+    ]);
+    // 主链优先取全赛事共享阶段；没有共享阶段时用第一条赛道的阶段链
+    const source = sharedStages.length ? sharedStages : firstTrack?.stages ?? [];
+    const names: string[] = [];
+    for (const s of source) if (!names.includes(s.name)) names.push(s.name);
+    await this.prisma.competition.update({
+      where: { id: competitionId },
+      data: { hasTracks: trackCount > 0, stageChain: names.length ? names.join(' → ') : null },
+    });
+  }
+
+  private async requireCompetition(competitionId: string) {
+    const comp = await this.prisma.competition.findUnique({ where: { id: competitionId }, select: { id: true } });
+    if (!comp) throw new NotFoundException('竞赛不存在');
+    return comp;
+  }
+
+  private async requireTrack(competitionId: string, trackId: string) {
+    const track = await this.prisma.competitionTrack.findFirst({
+      where: { id: trackId, competitionId },
+      select: { id: true },
+    });
+    if (!track) throw new BadRequestException('赛道不存在或不属于该竞赛');
+    return track;
+  }
+
+  // ----- 赛道 -----
+
+  async createTrack(competitionId: string, input: TrackInput) {
+    await this.requireCompetition(competitionId);
+    const code = (input.code ?? '').trim();
+    if (!code) throw new BadRequestException('赛道编码不能为空（跨届次稳定标识，如 A / PRACTICE）');
+    const max = await this.prisma.competitionTrack.aggregate({
+      where: { competitionId },
+      _max: { sortOrder: true },
+    });
+    try {
+      const track = await this.prisma.competitionTrack.create({
+        data: {
+          competitionId,
+          code,
+          name: (input.name ?? '').trim() || code,
+          shortName: input.shortName?.trim() || null,
+          description: input.description?.trim() || null,
+          sortOrder: input.sortOrder ?? (max._max.sortOrder ?? -1) + 1,
+          format: input.format ?? null,
+          teamSizeMin: input.teamSizeMin ?? null,
+          teamSizeMax: input.teamSizeMax ?? null,
+          isActive: input.isActive ?? true,
+        },
+      });
+      await this.recomputeStructure(competitionId);
+      return track;
+    } catch (e) {
+      if (e instanceof Prisma.PrismaClientKnownRequestError && e.code === 'P2002') {
+        throw new BadRequestException(`赛道编码「${code}」在该竞赛下已存在`);
+      }
+      throw e;
+    }
+  }
+
+  async updateTrack(trackId: string, input: TrackInput) {
+    const track = await this.prisma.competitionTrack.findUnique({ where: { id: trackId } });
+    if (!track) throw new NotFoundException('赛道不存在');
+
+    const data: Prisma.CompetitionTrackUncheckedUpdateInput = {};
+    if (input.code !== undefined) {
+      const code = input.code.trim();
+      if (!code) throw new BadRequestException('赛道编码不能为空');
+      data.code = code;
+    }
+    if (input.name !== undefined) data.name = input.name.trim() || track.name;
+    if (input.shortName !== undefined) data.shortName = input.shortName?.trim() || null;
+    if (input.description !== undefined) data.description = input.description?.trim() || null;
+    if (input.sortOrder !== undefined) data.sortOrder = input.sortOrder;
+    if (input.format !== undefined) data.format = input.format;
+    if (input.teamSizeMin !== undefined) data.teamSizeMin = input.teamSizeMin;
+    if (input.teamSizeMax !== undefined) data.teamSizeMax = input.teamSizeMax;
+    if (input.isActive !== undefined) data.isActive = input.isActive;
+
+    try {
+      const updated = await this.prisma.competitionTrack.update({ where: { id: trackId }, data });
+      await this.recomputeStructure(track.competitionId);
+      return updated;
+    } catch (e) {
+      if (e instanceof Prisma.PrismaClientKnownRequestError && e.code === 'P2002') {
+        throw new BadRequestException('赛道编码在该竞赛下已存在');
+      }
+      throw e;
+    }
+  }
+
+  /** 删除赛道：其下阶段与时间节点由外键级联清理（前端需二次确认并提示影响面） */
+  async deleteTrack(trackId: string) {
+    const track = await this.prisma.competitionTrack.findUnique({
+      where: { id: trackId },
+      select: { competitionId: true, _count: { select: { stages: true } } },
+    });
+    if (!track) throw new NotFoundException('赛道不存在');
+    await this.prisma.competitionTrack.delete({ where: { id: trackId } });
+    await this.recomputeStructure(track.competitionId);
+    return { deleted: true, removedStages: track._count.stages };
+  }
+
+  // ----- 赛程阶段 -----
+
+  async createStage(competitionId: string, input: StageInput) {
+    await this.requireCompetition(competitionId);
+    const trackId = input.trackId ?? null;
+    if (trackId) await this.requireTrack(competitionId, trackId);
+    const code = (input.code ?? '').trim();
+    if (!code) throw new BadRequestException('阶段编码不能为空（稳定标识，如 SIGNUP / FINAL）');
+    if (!input.stageKind) throw new BadRequestException('请选择阶段类型');
+    // Postgres 唯一约束在 trackId 为 NULL 时不生效，共享阶段需应用层查重
+    const dup = await this.prisma.competitionStage.findFirst({
+      where: { competitionId, trackId, code },
+      select: { id: true },
+    });
+    if (dup) throw new BadRequestException(`该作用域下阶段编码「${code}」已存在`);
+
+    const max = await this.prisma.competitionStage.aggregate({
+      where: { competitionId, trackId },
+      _max: { sequence: true },
+    });
+    const stage = await this.prisma.competitionStage.create({
+      data: {
+        competitionId,
+        trackId,
+        code,
+        name: (input.name ?? '').trim() || code,
+        stageKind: input.stageKind,
+        scope: input.scope?.trim() || null,
+        sequence: input.sequence ?? (max._max.sequence ?? -1) + 1,
+        bonusTier: input.bonusTier ?? null,
+        note: input.note?.trim() || null,
+      },
+    });
+    await this.recomputeStructure(competitionId);
+    return stage;
+  }
+
+  async updateStage(stageId: string, input: StageInput) {
+    const stage = await this.prisma.competitionStage.findUnique({ where: { id: stageId } });
+    if (!stage) throw new NotFoundException('赛程阶段不存在');
+
+    // trackId 显式给出时校验归属，并同步该阶段下所有节点的 trackId
+    let movedTrackId: string | null | undefined;
+    if (input.trackId !== undefined) {
+      const next = input.trackId ?? null;
+      if (next) await this.requireTrack(stage.competitionId, next);
+      movedTrackId = next;
+    }
+    const nextTrackId = movedTrackId === undefined ? stage.trackId : movedTrackId;
+    const nextCode = input.code !== undefined ? input.code.trim() : stage.code;
+    if (input.code !== undefined && !nextCode) throw new BadRequestException('阶段编码不能为空');
+    if (input.code !== undefined || movedTrackId !== undefined) {
+      const dup = await this.prisma.competitionStage.findFirst({
+        where: { competitionId: stage.competitionId, trackId: nextTrackId, code: nextCode, id: { not: stageId } },
+        select: { id: true },
+      });
+      if (dup) throw new BadRequestException(`该作用域下阶段编码「${nextCode}」已存在`);
+    }
+
+    const data: Prisma.CompetitionStageUncheckedUpdateInput = {};
+    if (input.code !== undefined) data.code = nextCode;
+    if (input.name !== undefined) data.name = input.name.trim() || stage.name;
+    if (movedTrackId !== undefined) data.trackId = movedTrackId;
+    if (input.stageKind !== undefined) data.stageKind = input.stageKind;
+    if (input.scope !== undefined) data.scope = input.scope?.trim() || null;
+    if (input.sequence !== undefined) data.sequence = input.sequence;
+    if (input.bonusTier !== undefined) data.bonusTier = input.bonusTier;
+    if (input.note !== undefined) data.note = input.note?.trim() || null;
+
+    const updated = await this.prisma.$transaction(async (tx) => {
+      const s = await tx.competitionStage.update({ where: { id: stageId }, data });
+      if (movedTrackId !== undefined && movedTrackId !== stage.trackId) {
+        await tx.competitionEvent.updateMany({ where: { stageId }, data: { trackId: movedTrackId } });
+      }
+      return s;
+    });
+    await this.recomputeStructure(stage.competitionId);
+    return updated;
+  }
+
+  /** 删除阶段：其下时间节点由外键级联清理 */
+  async deleteStage(stageId: string) {
+    const stage = await this.prisma.competitionStage.findUnique({
+      where: { id: stageId },
+      select: { competitionId: true, _count: { select: { events: true } } },
+    });
+    if (!stage) throw new NotFoundException('赛程阶段不存在');
+    await this.prisma.competitionStage.delete({ where: { id: stageId } });
+    await this.recomputeStructure(stage.competitionId);
+    return { deleted: true, removedEvents: stage._count.events };
+  }
+
+  // ----- 时间节点 -----
+
+  async createEvent(competitionId: string, input: EventInput) {
+    if (!input.stageId) throw new BadRequestException('请选择所属阶段');
+    if (!input.nodeType) throw new BadRequestException('请选择节点类型');
+    const stage = await this.prisma.competitionStage.findFirst({
+      where: { id: input.stageId, competitionId },
+      select: { id: true, trackId: true },
+    });
+    if (!stage) throw new BadRequestException('阶段不存在或不属于该竞赛');
+    const startAt = input.startAt ? new Date(input.startAt) : null;
+    const endAt = input.endAt ? new Date(input.endAt) : null;
+    assertDateOrder(startAt, endAt);
+    return this.prisma.competitionEvent.create({
+      data: {
+        competitionId,
+        stageId: stage.id,
+        trackId: stage.trackId,
+        nodeType: input.nodeType,
+        label: input.label?.trim() || null,
+        location: input.location?.trim() || null,
+        startAt,
+        endAt,
+      },
+    });
+  }
+
+  /** 修改节点：日期变化自动加锁 + 记 MANUAL 版本（与主编辑入口同口径） */
+  async updateEvent(eventId: string, input: EventInput) {
+    const old = await this.prisma.competitionEvent.findUnique({ where: { id: eventId } });
+    if (!old) throw new NotFoundException('时间节点不存在');
+
+    let stageId = old.stageId;
+    let trackId = old.trackId;
+    if (input.stageId !== undefined && input.stageId !== old.stageId) {
+      const stage = await this.prisma.competitionStage.findFirst({
+        where: { id: input.stageId, competitionId: old.competitionId },
+        select: { id: true, trackId: true },
+      });
+      if (!stage) throw new BadRequestException('阶段不存在或不属于该竞赛');
+      stageId = stage.id;
+      trackId = stage.trackId;
+    }
+
+    const startAt = input.startAt !== undefined ? (input.startAt ? new Date(input.startAt) : null) : old.startAt;
+    const endAt = input.endAt !== undefined ? (input.endAt ? new Date(input.endAt) : null) : old.endAt;
+    assertDateOrder(startAt, endAt);
+    const nodeType = input.nodeType ?? old.nodeType;
+    const dateChanged =
+      String(old.startAt ?? '') !== String(startAt ?? '') || String(old.endAt ?? '') !== String(endAt ?? '');
+
+    const updated = await this.prisma.competitionEvent.update({
+      where: { id: eventId },
+      data: {
+        stageId,
+        trackId,
+        nodeType,
+        label: input.label !== undefined ? input.label?.trim() || null : old.label,
+        location: input.location !== undefined ? input.location?.trim() || null : old.location,
+        startAt,
+        endAt,
+        isLocked: dateChanged ? true : old.isLocked,
+      },
+    });
+
+    if (dateChanged) {
+      await this.prisma.competitionRevision.createMany({
+        data: [
+          {
+            competitionId: old.competitionId,
+            stageId,
+            eventId,
+            field: 'startAt',
+            oldValue: old.startAt?.toISOString() ?? null,
+            newValue: startAt?.toISOString() ?? null,
+            origin: RevisionOrigin.MANUAL,
+          },
+          {
+            competitionId: old.competitionId,
+            stageId,
+            eventId,
+            field: 'endAt',
+            oldValue: old.endAt?.toISOString() ?? null,
+            newValue: endAt?.toISOString() ?? null,
+            origin: RevisionOrigin.MANUAL,
+          },
+        ],
+      });
+    }
+    return updated;
+  }
+
+  async deleteEvent(eventId: string) {
+    const ev = await this.prisma.competitionEvent.findUnique({ where: { id: eventId }, select: { id: true } });
+    if (!ev) throw new NotFoundException('时间节点不存在');
+    await this.prisma.competitionEvent.delete({ where: { id: eventId } });
+    return { deleted: true };
   }
 
   // ---------- 竞赛自定义字段 ----------
@@ -363,14 +719,15 @@ export class AdminService {
     };
   }
 
-  /** 管理台详情：levels / tags 摊平成字符串数组；events / stages 供时间节点维护（Issue 8） */
+  /** 管理台详情：levels / tags 摊平成字符串数组；tracks / stages / events 供结构维护（赛道与时间节点） */
   async adminDetail(id: string) {
     const row = await this.prisma.competition.findUnique({
       where: { id },
       include: {
         levels: true,
         tags: true,
-        tracks: { orderBy: [{ sortOrder: 'asc' }], select: { id: true, code: true, name: true } },
+        // 赛道完整标量字段：编辑页需要 sortOrder / 赛制 / 人数等
+        tracks: { orderBy: [{ sortOrder: 'asc' }, { id: 'asc' }] },
         stages: {
           orderBy: [{ sequence: 'asc' }],
           include: { events: { orderBy: [{ startAt: 'asc' }] } },
@@ -605,6 +962,13 @@ export class AdminService {
 }
 
 const CORRECTABLE_SIMPLE = new Set(['name', 'organizer', 'officialUrl', 'intro', 'bonusCategory', 'bonusSpecialRule']);
+
+/** 时间节点区间校验：前端已拦，但接口可被直接调用，服务端必须自己兜底 */
+function assertDateOrder(startAt: Date | null, endAt: Date | null): void {
+  if (startAt && endAt && endAt.getTime() < startAt.getTime()) {
+    throw new BadRequestException('截止时间不能早于开始时间');
+  }
+}
 
 /** URL 类字段：采纳写入前必须校验 scheme，只允许 http/https */
 const URL_FIELDS = new Set(['officialUrl', 'sourceUrl']);
